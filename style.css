@@ -1,0 +1,14 @@
+.greenbox {
+  padding: 1em;
+  background: MediumSeaGreen;
+  opacity: 0.5;
+  color: white;
+  border: 6px darkblue;
+  border-radius: 25px;
+  font: 30px;
+}
+.center {
+  text-align: center;
+  color: white;
+  font: small-caps bold 20px;
+}
