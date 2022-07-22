@@ -1,2 +1,3 @@
-# data_sci_biologists
-BIOL3207 @ the ANU
+# Data Science for Biologists
+
+This repo hosts material for BIOL3207 run at the ANU.
