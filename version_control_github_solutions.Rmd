@@ -1,0 +1,101 @@
+---
+title: "Solutions for Version Control, Git and GitHub"
+author: "Daniel Noble"
+date: "`r Sys.Date()`"
+output: 
+    bookdown::html_document2: 
+      css: style.css
+      toc: yes
+      toc_depth: 4
+      theme: cosmo
+      number_sections: no
+      toc_float: yes
+      highlight: pygments
+      fig_width: 4 
+      fig_height: 3
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(vembedr)
+```
+
+```{r klippy, echo=FALSE, include=TRUE}
+library(klippy)
+klippy::klippy(
+  lang = c("r", "markdown"),
+  all_precode = FALSE,
+  position = c("top", "right"),
+  color = "darkred",
+  tooltip_message = "Copy code",
+  tooltip_success = "Copied!"
+)
+```
+
+
+# **Task 1**: Setting up a repo
+
+To setup a repo you need to create one on `GitHub`. In a browser window, login to your `GitHub` account. Create a new repo and add a `README` file to it so that people know what the repo is meant to achieve. You can click on a tab to add one by default. The video below will walk you through the process. 
+
+<br>
+
+```{r, echo=FALSE}
+embed_url("https://youtu.be/zg1lkQlxUT4") %>% use_align("center")
+```
+
+# **Task 2**: Cloning your repo to *your* local computer
+
+Now that you have created a repo, you need to create a local copy on your computer. This process is called **cloning**. To clone the repo to your computer, along with all the files, think first about where you want your repo to 'live'. 
+
+I usually suggest adding these repos to some cloud storage system like *Dropbox* or *OneDrive* (which is free with your ANU u#). The reason for this is that it is then secondarily backed up. While GitHub creates a backup for you, this isn't complete unless your changes are staged and pushed up to the cloud. If you forgot, and your computer dies, well, so long! Best to play it safe. 
+
+To clone, if you have already connected your `GitHub` to your `GitHub Desktop` application than it's fairly easy. Navigate to `GitHub Desktop` on your computer and follow the simple steps outlined in the video below.
+
+<br>
+
+```{r, echo=FALSE}
+embed_url("https://youtu.be/wWAd7SrX3HY") %>% use_align("center")
+```
+
+# **Task 3**: Adding files, commiting (staging) and pushing to GitHub
+
+You now have your repo on your computer. Remember where you save the repo to. I cloned my repo to my *Dropbox* account so I will find my repo folder in *Dropbox* on my computer. 
+
+This folder now acts like any folder on your computer but it now has a special 'connection' with the repo on `GitHub`, which will mean that any changes on your local folder can be tracked and pushed up into the cloud. 
+
+You can add files, change and save existing files and these will be tracked. To add files, navigate to your folder on your computer.
+
+>**Hint**: `GitHub Desktop` has a handy feature on the repo's front page for you to click on and take you directly to the folder)
+
+Once you're in the folder, add a few files to the repo. If you then navigate back to `GitHub Desktop` you will now notice that these files are identified by `Git` and you can see they are not yet tracked. 
+
+To track these, you need to stage/commit these. You can do that in the bottom left corner. Leave a message that details what you're doing and why so your future self, and any collaborators, know why something was done. Then click the `commit` button. You will notice that this moves the file to the staging area, but it's still not yet up on `GitHub`. You need to then push this up to the cloud by clicking the `push` button. See the video below for the full process.
+
+
+<br>
+
+```{r, echo=FALSE}
+embed_url("https://youtu.be/uCAoKFxe5cw") %>% use_align("center")
+```
+
+
+# **Task 4**: Editing file, saving, committing and pushing to GitHub
+
+Right! Now that we have a bunch of files, we are ready to make changes to existing files. Just like in **Task 3** we need to keep track of the changes. 
+
+Let's edit the `README` file. It's pretty basic at the moment and I'd like to add some more detail. 
+
+Navigate to your folder on your computer and open up the `README` file in a text editor, like `Sublime Text`, `Notepad` or something very Windows oriented. Edit the `README` file to give it a better description. If this was a analysis project you might also describe all the files in the folder, what they are used for or even provide metadata describing columns of the key data file that is used for analysis.
+
+After you have made edits **save** your file normally. Navigate back toe `GitHub Desktop`. You'll now notice that the README file is identified as having changed. We can even see what what exactly has changed. The 'red' are the lines that were modified or removed and the `green` are the lines that were changed. 
+
+Just like **Task 3** you need to stage / commit these changes and push them up. The video below shows you that process again. Remember to leave a detailed commit message!
+
+<br>
+
+```{r, echo=FALSE}
+embed_url("https://youtu.be/rm4KAhhsprs") %>% use_align("center")
+```
+
