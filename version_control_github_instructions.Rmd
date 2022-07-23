@@ -43,6 +43,7 @@ klippy::klippy(
 *   How to commit?
 *   How to add collaborators?
 *   How to use issues?
+*   How to resolve conflicts?
 
 <br>
 
@@ -135,58 +136,80 @@ Please keep the level 1 headings we have given you above, so it's easy for us to
 
 Fundamental to project organisation is maintaining a consistent, uniform and simple set of working files that can be understood by your future self, collaborators and interested folks wanting to reproduce your analyses or re-use code or your data. We also want to keep a history of how such files change in case we find some new code we write results in older code no longer running. 
 
-For complex projects with many collaborators maintaining tidiness and keeping track of changing files can be very challenging! While file sharing services like Dropbox and OneDrive are easy to use and can maintain a consistent file set on your computer(s) and/or among collaborators, it has some serious disadvantages. It can’t tell you what has changed within files. It also can’t easily deal with conflicts between files when you and your collaborators are working at the same time on the same things. 
+For complex projects with many collaborators maintaining tidiness and keeping track of changing files can be very challenging! While file sharing services like *Dropbox* and *OneDrive* are easy to use and can maintain a consistent file set on your computer(s) and/or among collaborators it has some disadvantages. It can’t tell you what has changed within files. It also can’t easily deal with conflicts between files when you and your collaborators are working at the same time on the same things. 
 
 This often leads to a build up “too afraid to delete” files that no one, including yourself, knows what to do with, but you're too afraid to delete in case you ruin something. A little bit of organising can keep chaos from compounding and maintain reproducibility (for both you and others) through the development of data science projects.
 
-Ideally, it would be nice to easily see the current (and hopefully best) set of files, but to be able to see who has changed them and what specific parts of the files have been modified. We also want a workflow that allows us to go back in time -- a versioned history -- in case something has changed that breaks your code. Keeping a record of the evolution of a particular project is also important to be able to quickly solve problems when (not if) they arise. 
+Ideally, it would be nice to easily see the current (and hopefully best) set of files, but to be able to see who has changed them and what specific parts of the files have been modified. We also want a workflow that allows us to go back in time -- a history that has documented the evolution of files -- in case something has changed that breaks your code. Keeping a record of how files for a particular project has changed is also important to be able to quickly solve problems when (not if) they arise. 
 
 ### **Version Control to the Rescue!**
 
-What is version control? Well, version control is a file storage, documentation and tracking system. In other words, it allows you to keep a documented history of files and file structures as a specific project develops. It's is used extensively in data science for: 1) building code and programs; 2) analyzing biological data and 3) maintaining databases. 
+What is version control? Version control is a file storage, documentation and tracking system. In other words, it allows you to keep a documented history of files and file structures as a specific project develops. It's used extensively in data science for: 1) building code and programs; 2) analyzing biological data and 3) maintaining databases. 
 
-**Git* is a type of version control system that we'll be using in this workshop. It's extremely powerful and is probably the most widely used version control system, not only in biology, but a multitude of different fields (e.g. computer science, engineering etc). 
+>**Git** is a type of version control system that we'll be using in this workshop. It's extremely powerful and is probably the most widely used version control system, not only in biology, but a multitude of different fields (e.g. computer science, engineering etc). 
 
 ```{r, echo=FALSE}
 embed_url("https://www.youtube.com/watch?v=xQujH0ElTUg") %>% use_align("center")
 ```
 
+### **GitHub** and **GitHub Desktop**
 
-### **Version Control Advantages** 
-The major advantages of using version control over just using Dropbox / OneDrive include:
+Now that you know that *Git* is a type of version control system, and you know more about how version control works, what is *GitHub*? 
+
+*Git* is great because it allows you to track files and file structure on your local computer. However, what if you want to collaborate? We need a 'cloud' interface that makes use of the power of *Git*, but allows everyone to have the same history of events. 
+
+That's where *GitHub* comes into play. *GitHub* is essentially the cloud/online version of your *Git* project. It hosts your files, and the history of the project in the cloud! *GitHub Desktop*, in contrast, is the application that you use to communicate changes on your local computer up to *GitHub*. 
+
+### **Advantages of Version Control** 
+There are major advantages of using version control over just using *Dropbox* / *OneDrive*.
 
 1. It keeps track of all files relevant to a specific project and/or that are necessary for its reproducibility by assigning them a unique identifier.
 
-2. It documents the evolution of every file in a project, including data, manuscripts and code, by permitting the user to assign a commit tag describing how the file was changed.
+2. It documents the evolution of every file in a project, including data, manuscripts and code, by permitting the user to assign a commit tag describing how the file or set of files has changed.
 
 3. It automatically indicates who, when and where a specific file was modified, identifying the in text locations that have changed.
 
 4. It keeps a recorded history of all the changed files, allowing you to move back in time to look at older version of files or the state of the project at an earlier time.
 
-5. It auto merges files that you and collaborators are working on at the same time and introduces conflict markers in the text of the file if the same lines have been edited. This forces one to deal with and correct conflicts immediately.
+5. It auto merges files that you and collaborators are working on at the same time and introduces conflict markers in the text of the file if the same lines have been edited. This forces you and others to deal with and correct conflicts immediately.
 
 6. It makes running analyses and scripts on servers much easier.
 
 7. It promotes easier collaboration between lab members and co-authors by keeping files in sync and annotated across diverse platforms.
 
-8. Makes it much easier at the end of a project to quickly share and store data and code relevant for reproducing the project (analyses, paper etc) which is often a necessary pre-requisite for publishing.
+8. It makes it much easier at the end of a project to quickly share and store data and code relevant for reproducing the project (analyses, paper etc) which is often a necessary pre-requisite for publishing.
 
-9. Makes it easier to correct mistakes within a project by allowing you to track down the relevant colleague (or vise versa) when issues arise after updates or changes.
+9. It makes it easier to correct mistakes within a project by allowing you to track down the relevant colleague (or *vis versa*) when issues arise after updates or changes.
 
-10. Forces you to think about the relevant parts of the project that are essential for it’s reproducibility and allows you to customize what is tracked.
+10. It forces you to think about the relevant parts of the project that are essential for it’s reproducibility and allows you to customize what is tracked.
 
 
-# **Task 1**: 
+# **Before you start**
 
-# **Task 2**: 
+>Before the workshop you should have already downloaded [*GitHub Desktop*](https://desktop.github.com/) and created an [*GitHub*](https://github.com/) account. If you haven't already done so please do this **before** starting the tasks. 
+
+# **Task 1**: Setting up a repository (repo)
+
+Create a new repository (repo) on your [*GitHub*](https://github.com/) account. Keep the repo name: 1) informative; 2) short; 3) and avoid 'spaces' in your repo name. For point 3, you can us '_' or '.' between words. This makes it easier when you want to code path names to your project. 
+
+# **Task 2**: Clone your repository
+
+Great! You have a repo. Now what? It's currently up in the cloud. That's not as useful as having it on your computer. 
+
+For your next task, clone down your repository to your computer. Cloning makes a 'copy' of your new repo -- creating a new folder on your computer. This folder is somewhat special though because it retains 'lines of communication' with the folder on *GitHub*. 
+
+Use the [*GitHub Desktop*](https://desktop.github.com/) application you downloaded on your computer to clone your new repository. 
+
+<br>
+
+:::: {.greenbox data-latex=""}
+::: {.center data-latex=""}
+**Relax!**
+:::
+When you get to this point, put your green post-it on your laptop (green tick on zoom), and, relax, see if you can help others, or keep trying things out in R and R Markdown. We'll go over the solutions soon.
+::::
 
 # **Task 3**: 
 
 
-:::: {.greenbox data-latex=""}
-::: {.center data-latex=""}
-Relax!
-:::
-When you get to this point, put your green post-it on your laptop (green tick on zoom), and, relax, see if you can help others, or keep trying things out in R and R Markdown. We'll go over the solutions soon.
-::::
 
