@@ -152,15 +152,23 @@ What is version control? Version control is a file storage, documentation and tr
 embed_url("https://www.youtube.com/watch?v=xQujH0ElTUg") %>% use_align("center")
 ```
 
-### **GitHub** and **GitHub Desktop**
+### **GitHub and GitHub Desktop**
 
 Now that you know that *Git* is a type of version control system, and you know more about how version control works, what is *GitHub*? 
 
 *Git* is great because it allows you to track files and file structure on your local computer. However, what if you want to collaborate? We need a 'cloud' interface that makes use of the power of *Git*, but allows everyone to have the same history of events. 
 
-That's where *GitHub* comes into play. *GitHub* is essentially the cloud/online version of your *Git* project. It hosts your files, and the history of the project in the cloud! *GitHub Desktop*, in contrast, is the application that you use to communicate changes on your local computer up to *GitHub*. 
+That's where *GitHub* comes into play. *GitHub* is essentially the cloud/online version of your *Git* project. It hosts your files, and the history of the project, in the cloud! *GitHub Desktop*, in contrast, is the application that you use to communicate changes on your local computer up to *GitHub*. Once changes to files in your repo are made on your local computer you then **add** these files to the staging area, **commit** a detailed message about what was changed and why, and then **push** these changes to *GitHub*. These changes are then available to be **pulled** down from the cloud by your collaborators. This allows a project to be in sync across many, many different local computers. 
 
-### **Advantages of Version Control** 
+```{r, fig.align='center', echo = FALSE, fig.cap="Git and GitHub make for a powerful collaborative version control system. GitHub Desktop is a useful application that is used to interface your local Git project with GitHub."}
+magick::image_read("./videos/mgithub.jpg")
+```
+
+
+The **pull**--**add**--**commit**--**push** sequence is all your need to remember when working in a *GitHub* repository, particularly if you have collaborators. Before you start, **pull** down any new changes that might be in the cloud because your collaborator might have been pulling an 'all nighter' to get some data analysis done. You want to make sure that you have the most recent version of their files. Then, you go on to work normally and remember to **add** and **commit** files regularly as you get important work finished. You can push up all at once, or you may want to push changes a few times a day so that the project in the cloud has your most up-to-date files as well. 
+
+
+### **Advantages of Version Control (Git)** 
 There are major advantages of using version control over just using *Dropbox* / *OneDrive*.
 
 1. It keeps track of all files relevant to a specific project and/or that are necessary for its reproducibility by assigning them a unique identifier.
@@ -204,9 +212,9 @@ Use the [*GitHub Desktop*](https://desktop.github.com/) application you download
 
 :::: {.greenbox data-latex=""}
 ::: {.center data-latex=""}
-**Relax!**
+<font size="18">**Relax!**</font>
 :::
-When you get to this point, put your green post-it on your laptop (green tick on zoom), and, relax, see if you can help others, or keep trying things out in R and R Markdown. We'll go over the solutions soon.
+**When you get to this point, put your green post-it on your laptop (green tick on zoom), and, relax, see if you can help others, or keep trying things out in R and R Markdown. We'll go over the solutions soon.**
 ::::
 
 # **Task 3**: 
