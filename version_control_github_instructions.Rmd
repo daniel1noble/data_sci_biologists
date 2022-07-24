@@ -63,22 +63,16 @@ Here are a few ground rules to keep things running smoothly:
 Remember, no programmers know it all, so don't struggle alone too long, but before you ask for help do try:
 
 * If you're looking for ideas of how to start:
-  * googling for what you want to do (e.g. 'set point transparency in ggplot')
-  * searching [stack overflow](https://stackoverflow.com/search) for what you want
-      * try using tags (e.g. `[ggplot]`) to narrow down your search, e.g. search `[ggplot2] adjust point transparency`
-  * use the amazing R studio [cheat sheets](https://www.rstudio.com/resources/cheatsheets/)
-  * working from the examples in the help files (e.g. type `?geom_point` in the console)
-
-* If your code isn't working:
-  * googling the error message if you get one (try putting it in double quotes)
-  * rubber-duck debugging
-  * `printf()` debugging 
-  * building a reprex
+  * googling for what you want to do (e.g. 'creating a repo github')
+  * searching [GitHub Desktop Documentation](https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop) for what you want
+  * use the amazing [Git Tutorial Videos](https://www.gitkraken.com/learn/git/tutorials)
 
 If none of this works, ask your neighbour, use your red sticky note (or raised hand on zoom) to get help from a demonstrator. 
 <br>
 
 #### Before you begin {.tabset .tabset-fade .tabset-pills}
+
+>Before the workshop you should have already downloaded [*GitHub Desktop*](https://desktop.github.com/) and created an [*GitHub*](https://github.com/) account. If you haven't already done so please do this **before** starting the tasks.
 
 1. Open RStudio
 
@@ -167,6 +161,15 @@ magick::image_read("./videos/mgithub.jpg")
 
 The **pull**--**add**--**commit**--**push** sequence is all your need to remember when working in a *GitHub* repository, particularly if you have collaborators. Before you start, **pull** down any new changes that might be in the cloud because your collaborator might have been pulling an 'all nighter' to get some data analysis done. You want to make sure that you have the most recent version of their files. Then, you go on to work normally and remember to **add** and **commit** files regularly as you get important work finished. You can push up all at once, or you may want to push changes a few times a day so that the project in the cloud has your most up-to-date files as well. 
 
+>**Important**: Binary files like word and excel files are not good to track because Git will not be able to track their contents. Try to keep the files you track to simple tex-based files like `.txt` and `.csv`. 
+
+#### Public versus Private Repositories
+
+*GitHub* has two types of repositories. 'Private` repositories are those that are only accessed and viewed online by you and your collaborators on the project. 'Public' repositories are those that can be viewed by *anyone*, even if they are outside the project. 
+
+By default, *GitHub* creates 'public' repos and you need to actually pay for 'private' repos. The reason is that *GitHub* is encouraging code sharing and transparency but also community coding by keeping the code open source. This is arguably one of the major successes of *GitHub*. Anyone can access the code, modify it, improve upon it or even update it with new features. This is incredibly valuable because it can result in code and data being more broadly accessible, usable and encourage new and exciting collaborations. 
+
+Don't worry though. People can't just change your repo. They still need to be invited as collaborators or you need to approve of a `pull request` if these changes are to take effect in your repo. 
 
 ### **Advantages of Version Control (Git)** 
 There are major advantages of using version control over just using *Dropbox* / *OneDrive*.
@@ -192,10 +195,6 @@ There are major advantages of using version control over just using *Dropbox* / 
 10. It forces you to think about the relevant parts of the project that are essential for it’s reproducibility and allows you to customize what is tracked.
 
 
-# **Before you start**
-
->Before the workshop you should have already downloaded [*GitHub Desktop*](https://desktop.github.com/) and created an [*GitHub*](https://github.com/) account. If you haven't already done so please do this **before** starting the tasks. 
-
 # **Task 1**: Setting up a repository (repo)
 
 Create a new repository (repo) on your [*GitHub*](https://github.com/) account. Keep the repo name: 1) informative; 2) short; 3) and avoid 'spaces' in your repo name. For point 3, you can us '_' or '.' between words. This makes it easier when you want to code path names to your project. 
@@ -217,7 +216,59 @@ Use the [*GitHub Desktop*](https://desktop.github.com/) application you download
 **When you get to this point, put your green post-it on your laptop (green tick on zoom), and, relax, see if you can help others, or keep trying things out in R and R Markdown. We'll go over the solutions soon.**
 ::::
 
-# **Task 3**: 
+# **Task 3**: Adding files, commiting (staging) and pushing to GitHub
 
+Now that you have your *GitHub* repo cloned (i.e., downloaded) onto your computer navigate to this folder on your computer. 
+
+>**Hint**: `GitHub Desktop` has a handy feature on the repo's front page for you to click on and take you directly to the folder)
+
+Create: 1) a new RStudio project file and 2) add a new Rmarkdown file in this directory. 
+
+Once added go back to your *GitHub Desktop* application. What's changed? Commit a message about why you added these files and push this up to your *GitHub* repo.
+
+# **Task 4**: Editing file, saving, committing and pushing to GitHub
+
+Open up your new Rmarkdown file that you created and are now tracking in your repo. Edit this file by making your own summary notes (can just be bullet points on each step) on **Tasks 1 & 2** so you remember how to create a repo and clone this down on your computer. 
+
+Save this file, commit and push it up to *GitHub*. 
+
+:::: {.greenbox data-latex=""}
+::: {.center data-latex=""}
+<font size="18">**Relax!**</font>
+:::
+**When you get to this point, put your green post-it on your laptop (green tick on zoom), and, relax, see if you can help others, or keep trying things out in R and R Markdown. We'll go over the solutions soon.**
+::::
+
+
+# **Task 5**: Adding collaborators to your repo
+
+You now have a repo that's ready to share with the world. You've made this repo public, so everyone can see it, which is very transparent! Others can always join in on the fun. Great work. 
+
+Let's now invite a collaborator. Complete the following:
+
+1) Team up with the person beside you. 
+2) Ask them for their GitHub username and add them to your *GitHub* repo. This is done on your *GitHub* repo through the browser by managing collaborators in the `settings` tab. You should also give **them** your username so they can do the same for you. 
+3) Once added to their repository, clone their repository onto your local computer. 
+4) Open up their Rmarkdown file that describes the steps for creating and cloning a repo. Read these steps. Edit one of the steps that is unclear to you to try and make it more clear. 
+5) Save the file. 
+6) Commit and push these changes up.
+
+# **Task 6**: Pulling down changes and creating an issue on *GitHub*
+
+Your partner has made some changes. You won't see these changes yet because they are on *GitHub* in the cloud!
+
+Complete the following steps:
+
+1) Go to your *GitHub Desktop* application. Pull down changes to *your* repo that your partner sent to *GitHub*.
+2) Review these changes and 
+
+:::: {.greenbox data-latex=""}
+::: {.center data-latex=""}
+<font size="18">**Relax!**</font>
+:::
+**When you get to this point, put your green post-it on your laptop (green tick on zoom), and, relax, see if you can help others, or keep trying things out in R and R Markdown. We'll go over the solutions soon.**
+::::
+
+# **Task 7**: Resolving conflicts
 
 
