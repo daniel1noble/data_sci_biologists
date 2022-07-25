@@ -279,4 +279,27 @@ Complete the following steps:
 
 # **Task 7**: Resolving conflicts
 
+Conflicts are common. They occur when you and your collaborator are working on the same lines of the same file. If you are working on different parts of the same file Git will auto-merge these changes. It will do this seamlessly for you. However, it's more common than you think that you and your collaborator are editing the same place of a file. *Git* is powerful for resolving these conflicts (assuming you're working with .txt or .csv style files). 
 
+Create a conflict yourself and learn how to recognize conflicts and resolve them when they happen. 
+
+Complete the following:
+
+1) You and your partner should open the same file at the same time. To keep it simple, open the `README` file. 
+2) Each of you edit the same line in the file. For example, each of you can give the title of the project a different name.
+3) Each of you save the file.
+4) Tell your partner to commit and push up their changes to *GitHub*. You do the same with your partner's repo.
+5) Each of you now pull down the change. What do you notice happens to your file when you pull down the changes? What does *GitHub Desktop* tell you?
+6) Open the 'conflicted' README file.
+7) What do you see in the file? Describe in your notebook what is different about the README file.
+8) Resolve the conflict. Pick a change you like best, delete all other conflict markers and text.
+9) Commit and push up the changes to *GitHub*
+
+<br> 
+
+:::: {.greenbox data-latex=""}
+::: {.center data-latex=""}
+<font size="18">**Relax!**</font>
+:::
+**When you get to this point, put your green post-it on your laptop (green tick on zoom), and, relax, see if you can help others, or keep trying things out in R and R Markdown. We'll go over the solutions soon.**
+::::
