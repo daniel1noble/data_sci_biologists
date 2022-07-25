@@ -104,7 +104,7 @@ embed_url("https://youtu.be/rm4KAhhsprs") %>% use_align("center")
 First, pull down any changes on *GitHub Desktop*. To do that, follow the video below:
 
 
-Second, to create an issue you need to head to your *GitHub* account in a browser window. Login to your *GitHub* account and go to your repo. Click on the `Issues` tab. There, you can create a new issue and assign collabortors to specific tasks. Follow the video below to see how.
+Second, to create an issue you need to head to your *GitHub* account in a browser window. Login to your *GitHub* account and go to your repo. Click on the `Issues` tab. There, you can create a new issue and assign collaborators to specific tasks. Follow the video below to see how.
 
 ```{r, echo=FALSE}
 embed_url("https://youtu.be/nkjs9fJS9RU") %>% use_align("center")
