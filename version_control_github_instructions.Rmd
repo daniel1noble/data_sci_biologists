@@ -260,7 +260,15 @@ Your partner has made some changes. You won't see these changes yet because they
 Complete the following steps:
 
 1) Go to your *GitHub Desktop* application. Pull down changes to *your* repo that your partner sent to *GitHub*.
-2) Review these changes and 
+2) Review these changes. In the Rmarkdown header add the date these changes were finalised. Commit and push up these new changes.
+
+Now that you have a collaborator it's a good idea to create a To Do list. One place to do this is though *GitHub* issues. Issues can be used to identify bugs in code or suggest enhancements / additions to code, to get collaborators to check data or even just create a to do list so everyone has tasks that they can keep track of. We'll use it to set up a set of tasks for the project. Assume the project will be for you and your collaborator to analyse a big biological dataset together. 
+
+Complete the following steps:
+
+1) Create a new 'To Do List' issue on your *GitHub* project.
+2) Create a *To Do* 'tick' box that lists three different tasks that will be the next steps in setting up the project. These tasks could be anything. Adding data, updating the README or meta-data, running some exploratory analysis and adding plotting code. 
+3) Use tags to identify who (you or your partner) is meant to do those tasks. 
 
 :::: {.greenbox data-latex=""}
 ::: {.center data-latex=""}
