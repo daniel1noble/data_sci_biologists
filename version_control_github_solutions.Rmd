@@ -99,6 +99,8 @@ Just like **Task 3** you need to stage / commit these changes and push them up. 
 embed_url("https://youtu.be/rm4KAhhsprs") %>% use_align("center")
 ```
 
+# **Task 5**: Adding collaborators to your repo
+
 # **Task 6**: Pulling down changes and creating an issue on *GitHub*
 
 First, pull down any changes on *GitHub Desktop*. To do that, follow the video below:
@@ -113,3 +115,4 @@ Second, to create an issue you need to head to your *GitHub* account in a browse
 embed_url("https://youtu.be/nkjs9fJS9RU") %>% use_align("center")
 ```
 
+# **Task 7**: Resolving conflicts
