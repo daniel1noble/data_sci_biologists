@@ -101,6 +101,13 @@ embed_url("https://youtu.be/rm4KAhhsprs") %>% use_align("center")
 
 # **Task 5**: Adding collaborators to your repo
 
+You can add collaborators very easily on *GitHub*. Follow the video below to see how that is done.
+
+```{r, echo=FALSE}
+embed_url("https://youtu.be/KsWnosLmaM8") %>% use_align("center")
+```
+
+
 # **Task 6**: Pulling down changes and creating an issue on *GitHub*
 
 First, pull down any changes on *GitHub Desktop*. To do that, follow the video below:
