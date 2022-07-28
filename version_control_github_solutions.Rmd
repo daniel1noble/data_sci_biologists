@@ -107,6 +107,12 @@ You can add collaborators very easily on *GitHub*. Follow the video below to see
 embed_url("https://youtu.be/KsWnosLmaM8") %>% use_align("center")
 ```
 
+Once you have added collaborators you can clone their repo so that you have a mirror copy.
+
+```{r, echo=FALSE}
+embed_url("https://youtu.be/3SIoYJT1WLs") %>% use_align("center")
+```
+
 
 # **Task 6**: Pulling down changes and creating an issue on *GitHub*
 
