@@ -129,3 +129,9 @@ embed_url("https://youtu.be/nkjs9fJS9RU") %>% use_align("center")
 ```
 
 # **Task 7**: Resolving conflicts
+
+Resolving conflicts can be somewhat complicated. This is only possible if files are NOT binary files (i.e., word, excel). Text-based files that you would use for code make it easy to identify and resolve conflicts so that you don't ever have to worry about what changes are most up-to-date. The video below shows you, from the both your perspective and that of your collaborators how conflicts are created and how you can resolve them.
+
+```{r, echo=FALSE}
+embed_url("https://youtu.be/CIOJPuyk7ls") %>% use_align("center")
+```
