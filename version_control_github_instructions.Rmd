@@ -194,6 +194,9 @@ There are major advantages of using version control over just using *Dropbox* / 
 
 10. It forces you to think about the relevant parts of the project that are essential for it’s reproducibility and allows you to customize what is tracked.
 
+# **Let's jump in!**
+
+Now that you have some familiarity with *GitHub* and *Git*, lets try to get ourselves set up and orientated. In groups, find a partner and complete the following tasks. Think about how you would describe to others how to complete these tasks. Two of you from a single group will be chosen randomly to come up and teach the class how to complete each task.
 
 # **Task 1**: Setting up a repository (repo)
 
