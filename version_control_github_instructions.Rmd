@@ -306,3 +306,9 @@ Complete the following:
 :::
 **When you get to this point, put your green post-it on your laptop (green tick on zoom), and, relax, see if you can help others, or keep trying things out in R and R Markdown. We'll go over the solutions soon.**
 ::::
+
+# **Task 8**: Branching and merging
+
+If you're coding and want to do something experimental it's good practice to do this on a separate branch to make sure that your existing code doesn't break. This is very useful for analysis or building your own software. *GitHub* also makes use of certain branch names to create webpages that can be used to render and host your code and reports. *GitHub* generally designates this branch as `gh-pages`. 
+
+Try creating a new branch in your repo. Call this branch `testing`. 
