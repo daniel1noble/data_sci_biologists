@@ -12,3 +12,13 @@
   color: white;
   font: small-caps bold 20px;
 }
+
+.bluebox {
+  padding: 1em;
+  background: darkblue;
+  opacity: 0.5;
+  color: white;
+  border: 6px darkblue;
+  border-radius: 25px;
+  font: 30px;
+}
