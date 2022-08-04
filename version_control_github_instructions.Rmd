@@ -216,7 +216,7 @@ Use the [*GitHub Desktop*](https://desktop.github.com/) application you download
 ::: {.center data-latex=""}
 <font size="18">**Relax!**</font>
 :::
-**When you get to this point, put your green post-it on your laptop (green tick on zoom), and, relax, see if you can help others, or keep trying things out in R and R Markdown. We'll go over the solutions soon.**
+**When you get to this point, put your green post-it on your laptop (green tick on zoom), and, relax. See if you can help others in your group. We'll have two reps from a random group present their solutions soon.**
 ::::
 
 # **Task 3**: Adding files, commiting (staging) and pushing to GitHub
@@ -239,7 +239,7 @@ Save this file, commit and push it up to *GitHub*.
 ::: {.center data-latex=""}
 <font size="18">**Relax!**</font>
 :::
-**When you get to this point, put your green post-it on your laptop (green tick on zoom), and, relax, see if you can help others, or keep trying things out in R and R Markdown. We'll go over the solutions soon.**
+**When you get to this point, put your green post-it on your laptop (green tick on zoom), and, relax. See if you can help others in your group. We'll have two reps from a random group present their solutions soon.**
 ::::
 
 
@@ -277,7 +277,7 @@ Complete the following steps:
 ::: {.center data-latex=""}
 <font size="18">**Relax!**</font>
 :::
-**When you get to this point, put your green post-it on your laptop (green tick on zoom), and, relax, see if you can help others, or keep trying things out in R and R Markdown. We'll go over the solutions soon.**
+**When you get to this point, put your green post-it on your laptop (green tick on zoom), and, relax. See if you can help others in your group. We'll have two reps from a random group present their solutions soon.**
 ::::
 
 # **Task 7**: Resolving conflicts
@@ -304,8 +304,19 @@ Complete the following:
 ::: {.center data-latex=""}
 <font size="18">**Relax!**</font>
 :::
-**When you get to this point, put your green post-it on your laptop (green tick on zoom), and, relax, see if you can help others, or keep trying things out in R and R Markdown. We'll go over the solutions soon.**
+**When you get to this point, put your green post-it on your laptop (green tick on zoom), and, relax. See if you can help others in your group. We'll have two reps from a random group present their solutions soon.**
 ::::
+
+<br>
+
+:::: {.bluebox data-latex=""}
+::: {.center data-latex=""}
+<font size="18">**Stretch Tasks**</font>
+:::
+**The next couple of tasks are bonus. We'll try these out if we have time, but you can better familiarise yourself with GitHub by trying these out as homework yourself.**
+::::
+
+<br>
 
 # **Task 8**: Branching and merging
 
