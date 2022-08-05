@@ -323,3 +323,8 @@ Complete the following:
 If you're coding and want to do something experimental it's good practice to do this on a separate branch to make sure that your existing code doesn't break. This is very useful for analysis or building your own software. *GitHub* also makes use of certain branch names to create webpages that can be used to render and host your code and reports. *GitHub* generally designates this branch as `gh-pages`. 
 
 Try creating a new branch in your repo. Call this branch `testing`. 
+
+
+# **Task 9**: GitHub Pages Webpage 
+
+*GitHub* is not only a great place for hosting your project, but it's also useful for hosting webpages! This can be really useful for providing a simple way for users to 'see' your results.
