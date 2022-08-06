@@ -313,7 +313,7 @@ Complete the following:
 ::: {.center data-latex=""}
 <font size="18">**Stretch Tasks**</font>
 :::
-**The next couple of tasks are bonus. We'll try these out if we have time, but you can better familiarise yourself with GitHub by trying these out as homework yourself.**
+**The next couple of tasks are bonus. Try these out if we have time. These tasks will allow you to better familiarise yourself with *GitHub* and show you some handy features to make your repo more visible/shareable.**
 ::::
 
 <br>
