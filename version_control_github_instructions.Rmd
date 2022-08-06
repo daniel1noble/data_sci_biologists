@@ -325,6 +325,6 @@ If you're coding and want to do something experimental it's good practice to do 
 Try creating a new branch in your repo. Call this branch `testing`. 
 
 
-# **Task 9**: GitHub Pages Webpage 
+# **Task 9**: GitHub Webpage 
 
-*GitHub* is not only a great place for hosting your project, but it's also useful for hosting webpages! This can be really useful for providing a simple way for users to 'see' your results.
+*GitHub* is not only a great place for hosting your project, but it's also useful for hosting webpages! This can be really useful for providing a simple way for others to 'see' your results. You simply just send them the link.
