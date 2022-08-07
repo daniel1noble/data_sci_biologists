@@ -74,42 +74,6 @@ If none of this works, ask your neighbour, use your red sticky note (or raised h
 
 >Before the workshop you should have already downloaded [*GitHub Desktop*](https://desktop.github.com/) and created an [*GitHub*](https://github.com/) account. If you haven't already done so please do this **before** starting the tasks.
 
-1. Open RStudio
-
-2. Create a new R project for this workshop
-
-3. Download the raw data for this workshop from wattle, and save it in a `/raw_data` file in the folder with your R project
-
-4. Create a new ‘R Markdown’ file for the answers, give it a meaningful name, and save it in the folder with your R project
-
-5. Delete the contents of the R markdown file, and replace it with the text below
-
-6. Enter your U number and the date into the appropriate places in the top of your R markdown file
-
-```
----
-title: "[Name of this workshop] solutions"
-author: "Your U Number"
-date: "the date"
-output:  
-    html_document:
-        toc: true
-        toc_depth: 4
-        theme: cosmo
-        number_sections: true
-        toc_float: true
-        highlight: pygments
----
-
-# Task 1: 
-
-# Task 2: 
-
-# Task 3: 
-
-# Task 4: 
-
-```
 <br>
 
 #### Remember it's a lab book {.tabset .tabset-fade .tabset-pills}
@@ -198,6 +162,12 @@ There are major advantages of using version control over just using *Dropbox* / 
 
 Now that you have some familiarity with *GitHub* and *Git*, lets try to get ourselves set up and orientated. In groups, find a partner and complete the following tasks. Think about how you would describe to others how to complete these tasks. Two of you from a single group will be chosen randomly to come up and teach the class how to complete each task.
 
+:::: {.organgebox data-latex=""}
+::: {.center data-latex=""}
+<font size="18">**Task 1 & 2** should take ~20 minutes</font>
+:::
+::::
+
 # **Task 1**: Setting up a repository (repo)
 
 Create a new repository (repo) on your [*GitHub*](https://github.com/) account. Keep the repo name: 1) informative; 2) short; 3) and avoid 'spaces' in your repo name. For point 3, you can us '_' or '.' between words. This makes it easier when you want to code path names to your project. 
@@ -217,6 +187,14 @@ Use the [*GitHub Desktop*](https://desktop.github.com/) application you download
 <font size="18">**Relax!**</font>
 :::
 **When you get to this point, put your green post-it on your laptop (green tick on zoom), and, relax. See if you can help others in your group. We'll have two reps from a random group present their solutions soon.**
+::::
+
+<br>
+
+:::: {.organgebox data-latex=""}
+::: {.center data-latex=""}
+<font size="18">**Task 3 & 4** should take ~20 minutes</font>
+:::
 ::::
 
 # **Task 3**: Adding files, commiting (staging) and pushing to GitHub
@@ -242,6 +220,14 @@ Save this file, commit and push it up to *GitHub*.
 **When you get to this point, put your green post-it on your laptop (green tick on zoom), and, relax. See if you can help others in your group. We'll have two reps from a random group present their solutions soon.**
 ::::
 
+
+<br>
+
+:::: {.organgebox data-latex=""}
+::: {.center data-latex=""}
+<font size="18">**Task 5 & 6** should take ~30 minutes</font>
+:::
+::::
 
 # **Task 5**: Adding collaborators to your repo
 
@@ -278,6 +264,14 @@ Complete the following steps:
 <font size="18">**Relax!**</font>
 :::
 **When you get to this point, put your green post-it on your laptop (green tick on zoom), and, relax. See if you can help others in your group. We'll have two reps from a random group present their solutions soon.**
+::::
+
+<br>
+
+:::: {.organgebox data-latex=""}
+::: {.center data-latex=""}
+<font size="18">**Task 7** should take ~20 minutes</font>
+:::
 ::::
 
 # **Task 7**: Resolving conflicts
