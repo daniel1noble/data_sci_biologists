@@ -193,7 +193,7 @@ Use the [*GitHub Desktop*](https://desktop.github.com/) application you download
 
 :::: {.organgebox data-latex=""}
 ::: {.center data-latex=""}
-<font size="18">**Task 3 & 4** should take ~20 minutes</font>
+<font size="18">**Task 3--5** should take ~25 minutes</font>
 :::
 ::::
 
@@ -213,6 +213,16 @@ Open up your new Rmarkdown file that you created and are now tracking in your re
 
 Save this file, commit and push it up to *GitHub*. 
 
+# **Task 5**: Adding .gitignore file to control tracking
+
+Not all files in a repo need to be tracked by Git. For example, anything that you create using R code in your Rmarkdown files, such as figures, need not necessarily be tracked. That's because, well, the code can re-create these figures. 
+
+In RStudio, create a text file called `.gitignore` and save this file to the root of your repo. The "root" is the main directory folder that you cloned down. In your repo, add the following folders: `output/figures/`. In short, add a folder called `output/` in the main directory and then, **inside** the `output/` folder add a `figures/` folder. Add the path to the figures folder to your `.gitignore` file and save this file. Commit and push the `.gitignore` file to your repo.
+
+In your Rmarkdown file, use the data that you stored to create a single figure, anything you want really, and save this figure to the `output/figures/` folder. Check your *GitHub Desktop*. What do you notice?
+
+<br>
+
 :::: {.greenbox data-latex=""}
 ::: {.center data-latex=""}
 <font size="18">**Relax!**</font>
@@ -220,16 +230,15 @@ Save this file, commit and push it up to *GitHub*.
 **When you get to this point, put your green post-it on your laptop (green tick on zoom), and, relax. See if you can help others in your group. We'll have two reps from a random group present their solutions soon.**
 ::::
 
-
 <br>
 
 :::: {.organgebox data-latex=""}
 ::: {.center data-latex=""}
-<font size="18">**Task 5 & 6** should take ~30 minutes</font>
+<font size="18">**Task 6 & 7** should take ~30 minutes</font>
 :::
 ::::
 
-# **Task 5**: Adding collaborators to your repo
+# **Task 6**: Adding collaborators to your repo
 
 You now have a repo that's ready to share with the world. You've made this repo public, so everyone can see it, which is very transparent! Others can always join in on the fun. Great work. 
 
@@ -242,7 +251,7 @@ Let's now invite a collaborator. Complete the following:
 5) Save the file. 
 6) Commit and push these changes up.
 
-# **Task 6**: Pulling down changes and creating an issue on *GitHub*
+# **Task 7**: Pulling down changes and creating an issue on *GitHub*
 
 Your partner has made some changes. You won't see these changes yet because they are on *GitHub* in the cloud!
 
@@ -270,11 +279,11 @@ Complete the following steps:
 
 :::: {.organgebox data-latex=""}
 ::: {.center data-latex=""}
-<font size="18">**Task 7** should take ~20 minutes</font>
+<font size="18">**Task 8** should take ~20 minutes</font>
 :::
 ::::
 
-# **Task 7**: Resolving conflicts
+# **Task 8**: Resolving conflicts
 
 Conflicts are common. They occur when you and your collaborator are working on the same lines of the same file. If you are working on different parts of the same file Git will auto-merge these changes. It will do this seamlessly for you. However, it's more common than you think that you and your collaborator are editing the same place of a file. *Git* is powerful for resolving these conflicts (assuming you're working with .txt or .csv style files). 
 
@@ -312,13 +321,13 @@ Complete the following:
 
 <br>
 
-# **Task 8**: Branching and merging
+# **Task 9**: Branching and merging
 
 If you're coding and want to do something experimental it's good practice to do this on a separate branch to make sure that your existing code doesn't break. This is very useful for analysis or building your own software. *GitHub* also makes use of certain branch names to create webpages that can be used to render and host your code and reports. *GitHub* generally designates this branch as `gh-pages`. 
 
 Try creating a new branch in your repo. Call this branch `testing`. 
 
 
-# **Task 9**: GitHub Webpage 
+# **Task 10**: GitHub Webpage 
 
 *GitHub* is not only a great place for hosting your project, but it's also useful for hosting webpages! This can be really useful for providing a simple way for others to 'see' your results. You simply just send them the link.
