@@ -123,7 +123,7 @@ magick::image_read("./videos/mgithub.jpg")
 ```
 
 
-The **pull**--**add**--**commit**--**push** sequence is all your need to remember when working in a *GitHub* repository, particularly if you have collaborators. Before you start, **pull** down any new changes that might be in the cloud because your collaborator might have been pulling an 'all nighter' to get some data analysis done. You want to make sure that you have the most recent version of their files. Then, you go on to work normally and remember to **add** and **commit** files regularly as you get important work finished. You can push up all at once, or you may want to push changes a few times a day so that the project in the cloud has your most up-to-date files as well. 
+The **pull**--**add**--**commit**--**push** sequence is all you need to remember when working in a *GitHub* repository, particularly if you have collaborators. Before you start, **pull** down any new changes that might be in the cloud because your collaborator might have been pulling an 'all nighter' to get some data analysis done. You want to make sure that you have the most recent version of their files. Then, you go on to work normally and remember to **add** and **commit** files regularly as you get important work finished. You can push up all at once, or you may want to push changes a few times a day so that the project in the cloud has your most up-to-date files as well. 
 
 >**Important**: Binary files like word and excel files are not good to track because Git will not be able to track their contents. Try to keep the files you track to simple tex-based files like `.txt` and `.csv`. 
 
@@ -131,7 +131,7 @@ The **pull**--**add**--**commit**--**push** sequence is all your need to remembe
 
 *GitHub* has two types of repositories. 'Private` repositories are those that are only accessed and viewed online by you and your collaborators on the project. 'Public' repositories are those that can be viewed by *anyone*, even if they are outside the project. 
 
-By default, *GitHub* creates 'public' repos and you need to actually pay for 'private' repos. The reason is that *GitHub* is encouraging code sharing and transparency but also community coding by keeping the code open source. This is arguably one of the major successes of *GitHub*. Anyone can access the code, modify it, improve upon it or even update it with new features. This is incredibly valuable because it can result in code and data being more broadly accessible, usable and encourage new and exciting collaborations. 
+By default, *GitHub* creates 'public' repos and you need to actually pay for 'private' repos. The reason is that *GitHub* is encouraging code sharing and transparency but also community coding by keeping the code open source. This is arguably one of the major successes of *GitHub*. Anyone can access the code, modify it, improve upon it or even update it with new features. This is incredibly valuable because it can result in code and data being more broadly accessible, usable, robust and encourage new and exciting collaborations. 
 
 Don't worry though. People can't just change your repo. They still need to be invited as collaborators or you need to approve of a `pull request` if these changes are to take effect in your repo. 
 
@@ -323,9 +323,9 @@ Complete the following:
 
 # **Task 9**: Branching and merging
 
-If you're coding and want to do something experimental it's good practice to do this on a separate branch to make sure that your existing code doesn't break. This is very useful for analysis or building your own software. *GitHub* also makes use of certain branch names to create webpages that can be used to render and host your code and reports. *GitHub* generally designates this branch as `gh-pages`. 
+If you're coding and want to do something experimental it's good practice to do this on a separate branch to make sure that your existing code doesn't break other parts of your project. This is very useful for analysis or building your own software. *GitHub* also makes use of certain branch names to create webpages that can be used to render and host your code and reports. *GitHub* generally designates this branch as `gh-pages`. More on that in the next task.
 
-Try creating a new branch in your repo. Call this branch `testing`. 
+Try creating a new branch in your repo. Call this branch `testing`. This will "duplicate" your main branch, but put you along a separate path to it. 
 
 
 # **Task 10**: GitHub Webpage 
