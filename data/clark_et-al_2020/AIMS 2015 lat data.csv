@@ -1,0 +1,2241 @@
+treatment,population,fishID,experimenter,number,score_offset,score
+CO2,Wild,1,Natalie,1,1,1
+CO2,Wild,1,Natalie,2,1,1
+CO2,Wild,1,Natalie,3,1,1
+CO2,Wild,1,Natalie,4,1,1
+CO2,Wild,1,Natalie,5,1,1
+CO2,Wild,1,Natalie,6,1,0
+CO2,Wild,1,Natalie,7,0,0
+CO2,Wild,1,Natalie,8,0,0
+CO2,Wild,1,Natalie,9,0,0
+CO2,Wild,1,Natalie,10,0,0
+CO2,Wild,2,Natalie,1,1,1
+CO2,Wild,2,Natalie,2,1,1
+CO2,Wild,2,Natalie,3,0,1
+CO2,Wild,2,Natalie,4,0,1
+CO2,Wild,2,Natalie,5,0,1
+CO2,Wild,2,Natalie,6,0,1
+CO2,Wild,2,Natalie,7,0,0
+CO2,Wild,2,Natalie,8,0,0
+CO2,Wild,2,Natalie,9,0,0
+CO2,Wild,2,Natalie,10,0,0
+CO2,Wild,3,Natalie,1,1,1
+CO2,Wild,3,Natalie,2,1,1
+CO2,Wild,3,Natalie,3,1,1
+CO2,Wild,3,Natalie,4,0,1
+CO2,Wild,3,Natalie,5,0,1
+CO2,Wild,3,Natalie,6,0,1
+CO2,Wild,3,Natalie,7,0,0
+CO2,Wild,3,Natalie,8,0,0
+CO2,Wild,3,Natalie,9,0,0
+CO2,Wild,3,Natalie,10,0,0
+CO2,Wild,4,Natalie,1,1,1
+CO2,Wild,4,Natalie,2,1,1
+CO2,Wild,4,Natalie,3,1,1
+CO2,Wild,4,Natalie,4,0,1
+CO2,Wild,4,Natalie,5,0,1
+CO2,Wild,4,Natalie,6,0,1
+CO2,Wild,4,Natalie,7,0,1
+CO2,Wild,4,Natalie,8,0,0
+CO2,Wild,4,Natalie,9,0,0
+CO2,Wild,4,Natalie,10,0,0
+CO2,Wild,5,Natalie,1,1,1
+CO2,Wild,5,Natalie,2,1,1
+CO2,Wild,5,Natalie,3,1,1
+CO2,Wild,5,Natalie,4,1,1
+CO2,Wild,5,Natalie,5,1,1
+CO2,Wild,5,Natalie,6,0,1
+CO2,Wild,5,Natalie,7,0,0
+CO2,Wild,5,Natalie,8,0,0
+CO2,Wild,5,Natalie,9,0,0
+CO2,Wild,5,Natalie,10,0,0
+CO2,Wild,6,Natalie,1,1,1
+CO2,Wild,6,Natalie,2,1,1
+CO2,Wild,6,Natalie,3,1,1
+CO2,Wild,6,Natalie,4,1,1
+CO2,Wild,6,Natalie,5,0,1
+CO2,Wild,6,Natalie,6,0,0
+CO2,Wild,6,Natalie,7,0,0
+CO2,Wild,6,Natalie,8,0,0
+CO2,Wild,6,Natalie,9,0,0
+CO2,Wild,6,Natalie,10,0,0
+CO2,Wild,7,Natalie,1,1,1
+CO2,Wild,7,Natalie,2,1,1
+CO2,Wild,7,Natalie,3,0,1
+CO2,Wild,7,Natalie,4,0,1
+CO2,Wild,7,Natalie,5,0,0
+CO2,Wild,7,Natalie,6,0,0
+CO2,Wild,7,Natalie,7,0,0
+CO2,Wild,7,Natalie,8,0,0
+CO2,Wild,7,Natalie,9,0,0
+CO2,Wild,7,Natalie,10,0,0
+CO2,Wild,8,Natalie,1,1,1
+CO2,Wild,8,Natalie,2,1,1
+CO2,Wild,8,Natalie,3,1,1
+CO2,Wild,8,Natalie,4,1,1
+CO2,Wild,8,Natalie,5,0,0
+CO2,Wild,8,Natalie,6,0,0
+CO2,Wild,8,Natalie,7,0,0
+CO2,Wild,8,Natalie,8,0,0
+CO2,Wild,8,Natalie,9,0,0
+CO2,Wild,8,Natalie,10,0,0
+CO2,Wild,9,Natalie,1,1,1
+CO2,Wild,9,Natalie,2,1,1
+CO2,Wild,9,Natalie,3,1,1
+CO2,Wild,9,Natalie,4,1,1
+CO2,Wild,9,Natalie,5,1,1
+CO2,Wild,9,Natalie,6,0,1
+CO2,Wild,9,Natalie,7,0,0
+CO2,Wild,9,Natalie,8,0,0
+CO2,Wild,9,Natalie,9,0,0
+CO2,Wild,9,Natalie,10,0,0
+CO2,Wild,10,Natalie,1,1,1
+CO2,Wild,10,Natalie,2,1,1
+CO2,Wild,10,Natalie,3,1,1
+CO2,Wild,10,Natalie,4,0,1
+CO2,Wild,10,Natalie,5,0,0
+CO2,Wild,10,Natalie,6,0,0
+CO2,Wild,10,Natalie,7,0,0
+CO2,Wild,10,Natalie,8,0,0
+CO2,Wild,10,Natalie,9,0,0
+CO2,Wild,10,Natalie,10,0,0
+CO2,Wild,11,Natalie,1,1,1
+CO2,Wild,11,Natalie,2,1,1
+CO2,Wild,11,Natalie,3,1,1
+CO2,Wild,11,Natalie,4,1,1
+CO2,Wild,11,Natalie,5,1,0
+CO2,Wild,11,Natalie,6,0,0
+CO2,Wild,11,Natalie,7,0,0
+CO2,Wild,11,Natalie,8,0,0
+CO2,Wild,11,Natalie,9,0,0
+CO2,Wild,11,Natalie,10,0,0
+CO2,Wild,12,Natalie,1,1,1
+CO2,Wild,12,Natalie,2,0,1
+CO2,Wild,12,Natalie,3,0,0
+CO2,Wild,12,Natalie,4,0,0
+CO2,Wild,12,Natalie,5,0,0
+CO2,Wild,12,Natalie,6,0,0
+CO2,Wild,12,Natalie,7,0,0
+CO2,Wild,12,Natalie,8,0,0
+CO2,Wild,12,Natalie,9,0,0
+CO2,Wild,12,Natalie,10,0,0
+CO2,Wild,13,Natalie,1,1,1
+CO2,Wild,13,Natalie,2,1,1
+CO2,Wild,13,Natalie,3,1,1
+CO2,Wild,13,Natalie,4,1,1
+CO2,Wild,13,Natalie,5,0,1
+CO2,Wild,13,Natalie,6,0,1
+CO2,Wild,13,Natalie,7,0,1
+CO2,Wild,13,Natalie,8,0,0
+CO2,Wild,13,Natalie,9,0,0
+CO2,Wild,13,Natalie,10,0,0
+CO2,Wild,14,Natalie,1,0,1
+CO2,Wild,14,Natalie,2,0,1
+CO2,Wild,14,Natalie,3,0,1
+CO2,Wild,14,Natalie,4,0,1
+CO2,Wild,14,Natalie,5,0,1
+CO2,Wild,14,Natalie,6,0,0
+CO2,Wild,14,Natalie,7,0,0
+CO2,Wild,14,Natalie,8,0,0
+CO2,Wild,14,Natalie,9,0,0
+CO2,Wild,14,Natalie,10,0,0
+CO2,Wild,15,Natalie,1,1,1
+CO2,Wild,15,Natalie,2,1,1
+CO2,Wild,15,Natalie,3,1,1
+CO2,Wild,15,Natalie,4,0,0
+CO2,Wild,15,Natalie,5,0,0
+CO2,Wild,15,Natalie,6,0,0
+CO2,Wild,15,Natalie,7,0,0
+CO2,Wild,15,Natalie,8,0,0
+CO2,Wild,15,Natalie,9,0,0
+CO2,Wild,15,Natalie,10,0,0
+CO2,Wild,16,Natalie,1,1,1
+CO2,Wild,16,Natalie,2,1,1
+CO2,Wild,16,Natalie,3,1,1
+CO2,Wild,16,Natalie,4,1,1
+CO2,Wild,16,Natalie,5,1,0
+CO2,Wild,16,Natalie,6,0,0
+CO2,Wild,16,Natalie,7,0,0
+CO2,Wild,16,Natalie,8,0,0
+CO2,Wild,16,Natalie,9,0,0
+CO2,Wild,16,Natalie,10,0,0
+CO2,Wild,17,Natalie,1,0,1
+CO2,Wild,17,Natalie,2,0,1
+CO2,Wild,17,Natalie,3,0,1
+CO2,Wild,17,Natalie,4,0,0
+CO2,Wild,17,Natalie,5,0,0
+CO2,Wild,17,Natalie,6,0,0
+CO2,Wild,17,Natalie,7,0,0
+CO2,Wild,17,Natalie,8,0,0
+CO2,Wild,17,Natalie,9,0,0
+CO2,Wild,17,Natalie,10,0,0
+CO2,Wild,18,Natalie,1,1,1
+CO2,Wild,18,Natalie,2,1,1
+CO2,Wild,18,Natalie,3,1,1
+CO2,Wild,18,Natalie,4,0,1
+CO2,Wild,18,Natalie,5,0,0
+CO2,Wild,18,Natalie,6,0,0
+CO2,Wild,18,Natalie,7,0,0
+CO2,Wild,18,Natalie,8,0,0
+CO2,Wild,18,Natalie,9,0,0
+CO2,Wild,18,Natalie,10,0,0
+CO2,Wild,19,Natalie,1,1,1
+CO2,Wild,19,Natalie,2,1,1
+CO2,Wild,19,Natalie,3,1,1
+CO2,Wild,19,Natalie,4,1,1
+CO2,Wild,19,Natalie,5,1,0
+CO2,Wild,19,Natalie,6,0,0
+CO2,Wild,19,Natalie,7,0,0
+CO2,Wild,19,Natalie,8,0,0
+CO2,Wild,19,Natalie,9,0,0
+CO2,Wild,19,Natalie,10,0,0
+CO2,Wild,20,Natalie,1,1,1
+CO2,Wild,20,Natalie,2,1,1
+CO2,Wild,20,Natalie,3,1,1
+CO2,Wild,20,Natalie,4,0,1
+CO2,Wild,20,Natalie,5,0,1
+CO2,Wild,20,Natalie,6,0,0
+CO2,Wild,20,Natalie,7,0,0
+CO2,Wild,20,Natalie,8,0,0
+CO2,Wild,20,Natalie,9,0,0
+CO2,Wild,20,Natalie,10,0,0
+CO2,Wild,21,Natalie,1,1,1
+CO2,Wild,21,Natalie,2,1,1
+CO2,Wild,21,Natalie,3,1,1
+CO2,Wild,21,Natalie,4,0,0
+CO2,Wild,21,Natalie,5,0,0
+CO2,Wild,21,Natalie,6,0,0
+CO2,Wild,21,Natalie,7,0,0
+CO2,Wild,21,Natalie,8,0,0
+CO2,Wild,21,Natalie,9,0,0
+CO2,Wild,21,Natalie,10,0,0
+CO2,Wild,22,Natalie,1,1,1
+CO2,Wild,22,Natalie,2,1,1
+CO2,Wild,22,Natalie,3,1,0
+CO2,Wild,22,Natalie,4,1,0
+CO2,Wild,22,Natalie,5,1,0
+CO2,Wild,22,Natalie,6,0,0
+CO2,Wild,22,Natalie,7,0,0
+CO2,Wild,22,Natalie,8,0,0
+CO2,Wild,22,Natalie,9,0,0
+CO2,Wild,22,Natalie,10,0,0
+CO2,Wild,23,Natalie,1,1,1
+CO2,Wild,23,Natalie,2,1,1
+CO2,Wild,23,Natalie,3,1,1
+CO2,Wild,23,Natalie,4,1,1
+CO2,Wild,23,Natalie,5,1,1
+CO2,Wild,23,Natalie,6,1,0
+CO2,Wild,23,Natalie,7,1,0
+CO2,Wild,23,Natalie,8,0,0
+CO2,Wild,23,Natalie,9,0,0
+CO2,Wild,23,Natalie,10,0,0
+CO2,Wild,24,Natalie,1,1,1
+CO2,Wild,24,Natalie,2,1,1
+CO2,Wild,24,Natalie,3,1,1
+CO2,Wild,24,Natalie,4,1,1
+CO2,Wild,24,Natalie,5,1,1
+CO2,Wild,24,Natalie,6,1,1
+CO2,Wild,24,Natalie,7,0,1
+CO2,Wild,24,Natalie,8,0,1
+CO2,Wild,24,Natalie,9,0,0
+CO2,Wild,24,Natalie,10,0,0
+CO2,Wild,25,Natalie,1,1,1
+CO2,Wild,25,Natalie,2,1,1
+CO2,Wild,25,Natalie,3,1,1
+CO2,Wild,25,Natalie,4,1,1
+CO2,Wild,25,Natalie,5,1,1
+CO2,Wild,25,Natalie,6,1,1
+CO2,Wild,25,Natalie,7,1,0
+CO2,Wild,25,Natalie,8,0,0
+CO2,Wild,25,Natalie,9,0,0
+CO2,Wild,25,Natalie,10,0,0
+CO2,Wild,26,Natalie,1,1,1
+CO2,Wild,26,Natalie,2,0,1
+CO2,Wild,26,Natalie,3,0,1
+CO2,Wild,26,Natalie,4,0,1
+CO2,Wild,26,Natalie,5,0,1
+CO2,Wild,26,Natalie,6,0,0
+CO2,Wild,26,Natalie,7,0,0
+CO2,Wild,26,Natalie,8,0,0
+CO2,Wild,26,Natalie,9,0,0
+CO2,Wild,26,Natalie,10,0,0
+CO2,Wild,27,Natalie,1,1,1
+CO2,Wild,27,Natalie,2,1,1
+CO2,Wild,27,Natalie,3,1,1
+CO2,Wild,27,Natalie,4,0,1
+CO2,Wild,27,Natalie,5,0,1
+CO2,Wild,27,Natalie,6,0,1
+CO2,Wild,27,Natalie,7,0,0
+CO2,Wild,27,Natalie,8,0,0
+CO2,Wild,27,Natalie,9,0,0
+CO2,Wild,27,Natalie,10,0,0
+CO2,RHQ,28,Natalie ,1,1,1
+CO2,RHQ,28,Natalie ,2,1,0
+CO2,RHQ,28,Natalie ,3,1,0
+CO2,RHQ,28,Natalie ,4,0,0
+CO2,RHQ,28,Natalie ,5,0,0
+CO2,RHQ,28,Natalie ,6,0,0
+CO2,RHQ,28,Natalie ,7,0,0
+CO2,RHQ,28,Natalie ,8,0,0
+CO2,RHQ,28,Natalie ,9,0,0
+CO2,RHQ,28,Natalie ,10,0,0
+CO2,RHQ,29,Natalie ,1,1,1
+CO2,RHQ,29,Natalie ,2,1,1
+CO2,RHQ,29,Natalie ,3,1,1
+CO2,RHQ,29,Natalie ,4,1,1
+CO2,RHQ,29,Natalie ,5,1,1
+CO2,RHQ,29,Natalie ,6,1,1
+CO2,RHQ,29,Natalie ,7,1,1
+CO2,RHQ,29,Natalie ,8,0,0
+CO2,RHQ,29,Natalie ,9,0,0
+CO2,RHQ,29,Natalie ,10,0,0
+CO2,RHQ,30,Natalie ,1,1,1
+CO2,RHQ,30,Natalie ,2,1,1
+CO2,RHQ,30,Natalie ,3,1,1
+CO2,RHQ,30,Natalie ,4,1,1
+CO2,RHQ,30,Natalie ,5,0,1
+CO2,RHQ,30,Natalie ,6,0,1
+CO2,RHQ,30,Natalie ,7,0,1
+CO2,RHQ,30,Natalie ,8,0,0
+CO2,RHQ,30,Natalie ,9,0,0
+CO2,RHQ,30,Natalie ,10,0,0
+CO2,RHQ,31,Natalie ,1,1,1
+CO2,RHQ,31,Natalie ,2,1,0
+CO2,RHQ,31,Natalie ,3,1,0
+CO2,RHQ,31,Natalie ,4,1,0
+CO2,RHQ,31,Natalie ,5,0,0
+CO2,RHQ,31,Natalie ,6,0,0
+CO2,RHQ,31,Natalie ,7,0,0
+CO2,RHQ,31,Natalie ,8,0,0
+CO2,RHQ,31,Natalie ,9,0,0
+CO2,RHQ,31,Natalie ,10,0,0
+CO2,RHQ,32,Natalie ,1,1,1
+CO2,RHQ,32,Natalie ,2,1,1
+CO2,RHQ,32,Natalie ,3,1,1
+CO2,RHQ,32,Natalie ,4,1,1
+CO2,RHQ,32,Natalie ,5,0,1
+CO2,RHQ,32,Natalie ,6,0,1
+CO2,RHQ,32,Natalie ,7,0,0
+CO2,RHQ,32,Natalie ,8,0,0
+CO2,RHQ,32,Natalie ,9,0,0
+CO2,RHQ,32,Natalie ,10,0,0
+CO2,RHQ,33,Natalie ,1,1,1
+CO2,RHQ,33,Natalie ,2,1,1
+CO2,RHQ,33,Natalie ,3,1,0
+CO2,RHQ,33,Natalie ,4,1,0
+CO2,RHQ,33,Natalie ,5,1,0
+CO2,RHQ,33,Natalie ,6,1,0
+CO2,RHQ,33,Natalie ,7,0,0
+CO2,RHQ,33,Natalie ,8,0,0
+CO2,RHQ,33,Natalie ,9,0,0
+CO2,RHQ,33,Natalie ,10,0,0
+CO2,RHQ,34,Natalie ,1,1,1
+CO2,RHQ,34,Natalie ,2,1,1
+CO2,RHQ,34,Natalie ,3,1,1
+CO2,RHQ,34,Natalie ,4,1,1
+CO2,RHQ,34,Natalie ,5,1,1
+CO2,RHQ,34,Natalie ,6,0,1
+CO2,RHQ,34,Natalie ,7,0,0
+CO2,RHQ,34,Natalie ,8,0,0
+CO2,RHQ,34,Natalie ,9,0,0
+CO2,RHQ,34,Natalie ,10,0,0
+CO2,RHQ,35,Natalie ,1,1,1
+CO2,RHQ,35,Natalie ,2,1,1
+CO2,RHQ,35,Natalie ,3,1,1
+CO2,RHQ,35,Natalie ,4,0,1
+CO2,RHQ,35,Natalie ,5,0,1
+CO2,RHQ,35,Natalie ,6,0,1
+CO2,RHQ,35,Natalie ,7,0,0
+CO2,RHQ,35,Natalie ,8,0,0
+CO2,RHQ,35,Natalie ,9,0,0
+CO2,RHQ,35,Natalie ,10,0,0
+CO2,RHQ,36,Natalie ,1,1,1
+CO2,RHQ,36,Natalie ,2,1,1
+CO2,RHQ,36,Natalie ,3,1,1
+CO2,RHQ,36,Natalie ,4,1,1
+CO2,RHQ,36,Natalie ,5,1,1
+CO2,RHQ,36,Natalie ,6,1,1
+CO2,RHQ,36,Natalie ,7,1,0
+CO2,RHQ,36,Natalie ,8,1,0
+CO2,RHQ,36,Natalie ,9,0,0
+CO2,RHQ,36,Natalie ,10,0,0
+CO2,RHQ,37,Natalie ,1,1,1
+CO2,RHQ,37,Natalie ,2,1,1
+CO2,RHQ,37,Natalie ,3,1,1
+CO2,RHQ,37,Natalie ,4,1,1
+CO2,RHQ,37,Natalie ,5,1,1
+CO2,RHQ,37,Natalie ,6,0,0
+CO2,RHQ,37,Natalie ,7,0,0
+CO2,RHQ,37,Natalie ,8,0,0
+CO2,RHQ,37,Natalie ,9,0,0
+CO2,RHQ,37,Natalie ,10,0,0
+CO2,RHQ,38,Natalie ,1,1,1
+CO2,RHQ,38,Natalie ,2,1,1
+CO2,RHQ,38,Natalie ,3,1,1
+CO2,RHQ,38,Natalie ,4,0,1
+CO2,RHQ,38,Natalie ,5,0,0
+CO2,RHQ,38,Natalie ,6,0,0
+CO2,RHQ,38,Natalie ,7,0,0
+CO2,RHQ,38,Natalie ,8,0,0
+CO2,RHQ,38,Natalie ,9,0,0
+CO2,RHQ,38,Natalie ,10,0,0
+CO2,RHQ,39,Natalie ,1,1,1
+CO2,RHQ,39,Natalie ,2,1,1
+CO2,RHQ,39,Natalie ,3,1,0
+CO2,RHQ,39,Natalie ,4,1,0
+CO2,RHQ,39,Natalie ,5,1,0
+CO2,RHQ,39,Natalie ,6,1,0
+CO2,RHQ,39,Natalie ,7,0,0
+CO2,RHQ,39,Natalie ,8,0,0
+CO2,RHQ,39,Natalie ,9,0,0
+CO2,RHQ,39,Natalie ,10,0,0
+CO2,RHQ,40,Natalie ,1,1,1
+CO2,RHQ,40,Natalie ,2,1,1
+CO2,RHQ,40,Natalie ,3,1,1
+CO2,RHQ,40,Natalie ,4,1,1
+CO2,RHQ,40,Natalie ,5,1,1
+CO2,RHQ,40,Natalie ,6,0,1
+CO2,RHQ,40,Natalie ,7,0,0
+CO2,RHQ,40,Natalie ,8,0,0
+CO2,RHQ,40,Natalie ,9,0,0
+CO2,RHQ,40,Natalie ,10,0,0
+CO2,RHQ,41,Natalie ,1,1,1
+CO2,RHQ,41,Natalie ,2,1,1
+CO2,RHQ,41,Natalie ,3,1,1
+CO2,RHQ,41,Natalie ,4,0,1
+CO2,RHQ,41,Natalie ,5,0,1
+CO2,RHQ,41,Natalie ,6,0,1
+CO2,RHQ,41,Natalie ,7,0,0
+CO2,RHQ,41,Natalie ,8,0,0
+CO2,RHQ,41,Natalie ,9,0,0
+CO2,RHQ,41,Natalie ,10,0,0
+CO2,RHQ,42,Natalie ,1,1,1
+CO2,RHQ,42,Natalie ,2,1,1
+CO2,RHQ,42,Natalie ,3,1,1
+CO2,RHQ,42,Natalie ,4,1,1
+CO2,RHQ,42,Natalie ,5,0,1
+CO2,RHQ,42,Natalie ,6,0,1
+CO2,RHQ,42,Natalie ,7,0,0
+CO2,RHQ,42,Natalie ,8,0,0
+CO2,RHQ,42,Natalie ,9,0,0
+CO2,RHQ,42,Natalie ,10,0,0
+CO2,RHQ,43,Natalie ,1,1,1
+CO2,RHQ,43,Natalie ,2,1,1
+CO2,RHQ,43,Natalie ,3,0,0
+CO2,RHQ,43,Natalie ,4,0,0
+CO2,RHQ,43,Natalie ,5,0,0
+CO2,RHQ,43,Natalie ,6,0,0
+CO2,RHQ,43,Natalie ,7,0,0
+CO2,RHQ,43,Natalie ,8,0,0
+CO2,RHQ,43,Natalie ,9,0,0
+CO2,RHQ,43,Natalie ,10,0,0
+CO2,RHQ,44,Natalie ,1,1,1
+CO2,RHQ,44,Natalie ,2,1,1
+CO2,RHQ,44,Natalie ,3,1,1
+CO2,RHQ,44,Natalie ,4,1,1
+CO2,RHQ,44,Natalie ,5,0,1
+CO2,RHQ,44,Natalie ,6,0,0
+CO2,RHQ,44,Natalie ,7,0,0
+CO2,RHQ,44,Natalie ,8,0,0
+CO2,RHQ,44,Natalie ,9,0,0
+CO2,RHQ,44,Natalie ,10,0,0
+CO2,RHQ,45,Natalie ,1,1,1
+CO2,RHQ,45,Natalie ,2,1,1
+CO2,RHQ,45,Natalie ,3,1,1
+CO2,RHQ,45,Natalie ,4,1,1
+CO2,RHQ,45,Natalie ,5,1,1
+CO2,RHQ,45,Natalie ,6,0,0
+CO2,RHQ,45,Natalie ,7,0,0
+CO2,RHQ,45,Natalie ,8,0,0
+CO2,RHQ,45,Natalie ,9,0,0
+CO2,RHQ,45,Natalie ,10,0,0
+CO2,RHQ,46,Natalie ,1,1,1
+CO2,RHQ,46,Natalie ,2,1,1
+CO2,RHQ,46,Natalie ,3,1,1
+CO2,RHQ,46,Natalie ,4,1,1
+CO2,RHQ,46,Natalie ,5,1,1
+CO2,RHQ,46,Natalie ,6,1,0
+CO2,RHQ,46,Natalie ,7,0,0
+CO2,RHQ,46,Natalie ,8,0,0
+CO2,RHQ,46,Natalie ,9,0,0
+CO2,RHQ,46,Natalie ,10,0,0
+CO2,RHQ,47,Natalie ,1,1,1
+CO2,RHQ,47,Natalie ,2,1,1
+CO2,RHQ,47,Natalie ,3,1,0
+CO2,RHQ,47,Natalie ,4,0,0
+CO2,RHQ,47,Natalie ,5,0,0
+CO2,RHQ,47,Natalie ,6,0,0
+CO2,RHQ,47,Natalie ,7,0,0
+CO2,RHQ,47,Natalie ,8,0,0
+CO2,RHQ,47,Natalie ,9,0,0
+CO2,RHQ,47,Natalie ,10,0,0
+CO2,Wild,48,Natalie ,1,1,1
+CO2,Wild,48,Natalie ,2,1,1
+CO2,Wild,48,Natalie ,3,1,1
+CO2,Wild,48,Natalie ,4,1,1
+CO2,Wild,48,Natalie ,5,1,1
+CO2,Wild,48,Natalie ,6,1,1
+CO2,Wild,48,Natalie ,7,0,1
+CO2,Wild,48,Natalie ,8,0,0
+CO2,Wild,48,Natalie ,9,0,0
+CO2,Wild,48,Natalie ,10,0,0
+CO2,Wild,49,Natalie ,1,1,1
+CO2,Wild,49,Natalie ,2,1,1
+CO2,Wild,49,Natalie ,3,1,1
+CO2,Wild,49,Natalie ,4,1,0
+CO2,Wild,49,Natalie ,5,1,0
+CO2,Wild,49,Natalie ,6,1,0
+CO2,Wild,49,Natalie ,7,1,0
+CO2,Wild,49,Natalie ,8,1,0
+CO2,Wild,49,Natalie ,9,0,0
+CO2,Wild,49,Natalie ,10,0,0
+CO2,Wild,50,Natalie ,1,1,1
+CO2,Wild,50,Natalie ,2,1,1
+CO2,Wild,50,Natalie ,3,1,1
+CO2,Wild,50,Natalie ,4,1,1
+CO2,Wild,50,Natalie ,5,1,1
+CO2,Wild,50,Natalie ,6,1,0
+CO2,Wild,50,Natalie ,7,1,0
+CO2,Wild,50,Natalie ,8,1,0
+CO2,Wild,50,Natalie ,9,0,0
+CO2,Wild,50,Natalie ,10,0,0
+CO2,Wild,51,Natalie ,1,1,1
+CO2,Wild,51,Natalie ,2,1,1
+CO2,Wild,51,Natalie ,3,1,1
+CO2,Wild,51,Natalie ,4,0,0
+CO2,Wild,51,Natalie ,5,0,0
+CO2,Wild,51,Natalie ,6,0,0
+CO2,Wild,51,Natalie ,7,0,0
+CO2,Wild,51,Natalie ,8,0,0
+CO2,Wild,51,Natalie ,9,0,0
+CO2,Wild,51,Natalie ,10,0,0
+CO2,Wild,52,Natalie ,1,1,1
+CO2,Wild,52,Natalie ,2,1,1
+CO2,Wild,52,Natalie ,3,1,1
+CO2,Wild,52,Natalie ,4,1,1
+CO2,Wild,52,Natalie ,5,1,1
+CO2,Wild,52,Natalie ,6,0,0
+CO2,Wild,52,Natalie ,7,0,0
+CO2,Wild,52,Natalie ,8,0,0
+CO2,Wild,52,Natalie ,9,0,0
+CO2,Wild,52,Natalie ,10,0,0
+CO2,Wild,53,Natalie ,1,1,1
+CO2,Wild,53,Natalie ,2,1,1
+CO2,Wild,53,Natalie ,3,1,1
+CO2,Wild,53,Natalie ,4,0,1
+CO2,Wild,53,Natalie ,5,0,0
+CO2,Wild,53,Natalie ,6,0,0
+CO2,Wild,53,Natalie ,7,0,0
+CO2,Wild,53,Natalie ,8,0,0
+CO2,Wild,53,Natalie ,9,0,0
+CO2,Wild,53,Natalie ,10,0,0
+CO2,Wild,54,Natalie ,1,1,1
+CO2,Wild,54,Natalie ,2,1,1
+CO2,Wild,54,Natalie ,3,1,0
+CO2,Wild,54,Natalie ,4,1,0
+CO2,Wild,54,Natalie ,5,0,0
+CO2,Wild,54,Natalie ,6,0,0
+CO2,Wild,54,Natalie ,7,0,0
+CO2,Wild,54,Natalie ,8,0,0
+CO2,Wild,54,Natalie ,9,0,0
+CO2,Wild,54,Natalie ,10,0,0
+CO2,Wild,55,Natalie ,1,1,1
+CO2,Wild,55,Natalie ,2,1,1
+CO2,Wild,55,Natalie ,3,1,1
+CO2,Wild,55,Natalie ,4,1,1
+CO2,Wild,55,Natalie ,5,0,1
+CO2,Wild,55,Natalie ,6,0,1
+CO2,Wild,55,Natalie ,7,0,0
+CO2,Wild,55,Natalie ,8,0,0
+CO2,Wild,55,Natalie ,9,0,0
+CO2,Wild,55,Natalie ,10,0,0
+CO2,Wild,56,Natalie ,1,1,1
+CO2,Wild,56,Natalie ,2,1,1
+CO2,Wild,56,Natalie ,3,1,1
+CO2,Wild,56,Natalie ,4,0,0
+CO2,Wild,56,Natalie ,5,0,0
+CO2,Wild,56,Natalie ,6,0,0
+CO2,Wild,56,Natalie ,7,0,0
+CO2,Wild,56,Natalie ,8,0,0
+CO2,Wild,56,Natalie ,9,0,0
+CO2,Wild,56,Natalie ,10,0,0
+CO2,Wild,57,Natalie ,1,1,1
+CO2,Wild,57,Natalie ,2,1,1
+CO2,Wild,57,Natalie ,3,1,1
+CO2,Wild,57,Natalie ,4,1,1
+CO2,Wild,57,Natalie ,5,1,0
+CO2,Wild,57,Natalie ,6,0,0
+CO2,Wild,57,Natalie ,7,0,0
+CO2,Wild,57,Natalie ,8,0,0
+CO2,Wild,57,Natalie ,9,0,0
+CO2,Wild,57,Natalie ,10,0,0
+CO2,Wild,58,Natalie ,1,1,1
+CO2,Wild,58,Natalie ,2,1,1
+CO2,Wild,58,Natalie ,3,1,0
+CO2,Wild,58,Natalie ,4,0,0
+CO2,Wild,58,Natalie ,5,0,0
+CO2,Wild,58,Natalie ,6,0,0
+CO2,Wild,58,Natalie ,7,0,0
+CO2,Wild,58,Natalie ,8,0,0
+CO2,Wild,58,Natalie ,9,0,0
+CO2,Wild,58,Natalie ,10,0,0
+CO2,Wild,59,Natalie ,1,1,1
+CO2,Wild,59,Natalie ,2,1,1
+CO2,Wild,59,Natalie ,3,1,1
+CO2,Wild,59,Natalie ,4,1,1
+CO2,Wild,59,Natalie ,5,1,0
+CO2,Wild,59,Natalie ,6,0,0
+CO2,Wild,59,Natalie ,7,0,0
+CO2,Wild,59,Natalie ,8,0,0
+CO2,Wild,59,Natalie ,9,0,0
+CO2,Wild,59,Natalie ,10,0,0
+CO2,Wild,60,Natalie ,1,1,1
+CO2,Wild,60,Natalie ,2,1,1
+CO2,Wild,60,Natalie ,3,1,1
+CO2,Wild,60,Natalie ,4,1,1
+CO2,Wild,60,Natalie ,5,0,0
+CO2,Wild,60,Natalie ,6,0,0
+CO2,Wild,60,Natalie ,7,0,0
+CO2,Wild,60,Natalie ,8,0,0
+CO2,Wild,60,Natalie ,9,0,0
+CO2,Wild,60,Natalie ,10,0,0
+CO2,Wild,61,Natalie ,1,1,1
+CO2,Wild,61,Natalie ,2,1,1
+CO2,Wild,61,Natalie ,3,1,1
+CO2,Wild,61,Natalie ,4,0,1
+CO2,Wild,61,Natalie ,5,0,0
+CO2,Wild,61,Natalie ,6,0,0
+CO2,Wild,61,Natalie ,7,0,0
+CO2,Wild,61,Natalie ,8,0,0
+CO2,Wild,61,Natalie ,9,0,0
+CO2,Wild,61,Natalie ,10,0,0
+CO2,Wild,62,Natalie ,1,0,1
+CO2,Wild,62,Natalie ,2,0,1
+CO2,Wild,62,Natalie ,3,0,1
+CO2,Wild,62,Natalie ,4,0,1
+CO2,Wild,62,Natalie ,5,0,1
+CO2,Wild,62,Natalie ,6,0,0
+CO2,Wild,62,Natalie ,7,0,0
+CO2,Wild,62,Natalie ,8,0,0
+CO2,Wild,62,Natalie ,9,0,0
+CO2,Wild,62,Natalie ,10,0,0
+CO2,RHQ,63,Natalie,1,1,1
+CO2,RHQ,63,Natalie,2,1,1
+CO2,RHQ,63,Natalie,3,0,1
+CO2,RHQ,63,Natalie,4,0,0
+CO2,RHQ,63,Natalie,5,0,0
+CO2,RHQ,63,Natalie,6,0,0
+CO2,RHQ,63,Natalie,7,0,0
+CO2,RHQ,63,Natalie,8,0,0
+CO2,RHQ,63,Natalie,9,0,0
+CO2,RHQ,63,Natalie,10,0,0
+CO2,RHQ,64,Natalie,1,1,1
+CO2,RHQ,64,Natalie,2,1,1
+CO2,RHQ,64,Natalie,3,1,1
+CO2,RHQ,64,Natalie,4,0,0
+CO2,RHQ,64,Natalie,5,0,0
+CO2,RHQ,64,Natalie,6,0,0
+CO2,RHQ,64,Natalie,7,0,0
+CO2,RHQ,64,Natalie,8,0,0
+CO2,RHQ,64,Natalie,9,0,0
+CO2,RHQ,64,Natalie,10,0,0
+CO2,RHQ,65,Natalie,1,1,1
+CO2,RHQ,65,Natalie,2,1,1
+CO2,RHQ,65,Natalie,3,1,1
+CO2,RHQ,65,Natalie,4,0,1
+CO2,RHQ,65,Natalie,5,0,0
+CO2,RHQ,65,Natalie,6,0,0
+CO2,RHQ,65,Natalie,7,0,0
+CO2,RHQ,65,Natalie,8,0,0
+CO2,RHQ,65,Natalie,9,0,0
+CO2,RHQ,65,Natalie,10,0,0
+CO2,RHQ,66,Natalie,1,1,1
+CO2,RHQ,66,Natalie,2,1,1
+CO2,RHQ,66,Natalie,3,1,1
+CO2,RHQ,66,Natalie,4,1,1
+CO2,RHQ,66,Natalie,5,1,1
+CO2,RHQ,66,Natalie,6,0,1
+CO2,RHQ,66,Natalie,7,0,0
+CO2,RHQ,66,Natalie,8,0,0
+CO2,RHQ,66,Natalie,9,0,0
+CO2,RHQ,66,Natalie,10,0,0
+CO2,RHQ,67,Natalie,1,1,1
+CO2,RHQ,67,Natalie,2,1,1
+CO2,RHQ,67,Natalie,3,1,1
+CO2,RHQ,67,Natalie,4,1,1
+CO2,RHQ,67,Natalie,5,0,1
+CO2,RHQ,67,Natalie,6,0,1
+CO2,RHQ,67,Natalie,7,0,0
+CO2,RHQ,67,Natalie,8,0,0
+CO2,RHQ,67,Natalie,9,0,0
+CO2,RHQ,67,Natalie,10,0,0
+CO2,RHQ,68,Natalie,1,1,1
+CO2,RHQ,68,Natalie,2,1,1
+CO2,RHQ,68,Natalie,3,0,1
+CO2,RHQ,68,Natalie,4,0,1
+CO2,RHQ,68,Natalie,5,0,1
+CO2,RHQ,68,Natalie,6,0,0
+CO2,RHQ,68,Natalie,7,0,0
+CO2,RHQ,68,Natalie,8,0,0
+CO2,RHQ,68,Natalie,9,0,0
+CO2,RHQ,68,Natalie,10,0,0
+CO2,RHQ,69,Natalie,1,1,1
+CO2,RHQ,69,Natalie,2,1,1
+CO2,RHQ,69,Natalie,3,0,1
+CO2,RHQ,69,Natalie,4,0,1
+CO2,RHQ,69,Natalie,5,0,1
+CO2,RHQ,69,Natalie,6,0,1
+CO2,RHQ,69,Natalie,7,0,0
+CO2,RHQ,69,Natalie,8,0,0
+CO2,RHQ,69,Natalie,9,0,0
+CO2,RHQ,69,Natalie,10,0,0
+CO2,RHQ,70,Natalie,1,1,1
+CO2,RHQ,70,Natalie,2,1,1
+CO2,RHQ,70,Natalie,3,1,1
+CO2,RHQ,70,Natalie,4,1,1
+CO2,RHQ,70,Natalie,5,1,1
+CO2,RHQ,70,Natalie,6,1,0
+CO2,RHQ,70,Natalie,7,0,0
+CO2,RHQ,70,Natalie,8,0,0
+CO2,RHQ,70,Natalie,9,0,0
+CO2,RHQ,70,Natalie,10,0,0
+CO2,RHQ,71,Natalie,1,1,1
+CO2,RHQ,71,Natalie,2,1,1
+CO2,RHQ,71,Natalie,3,1,1
+CO2,RHQ,71,Natalie,4,1,1
+CO2,RHQ,71,Natalie,5,0,0
+CO2,RHQ,71,Natalie,6,0,0
+CO2,RHQ,71,Natalie,7,0,0
+CO2,RHQ,71,Natalie,8,0,0
+CO2,RHQ,71,Natalie,9,0,0
+CO2,RHQ,71,Natalie,10,0,0
+CO2,RHQ,72,Natalie,1,1,1
+CO2,RHQ,72,Natalie,2,1,1
+CO2,RHQ,72,Natalie,3,1,1
+CO2,RHQ,72,Natalie,4,1,0
+CO2,RHQ,72,Natalie,5,1,0
+CO2,RHQ,72,Natalie,6,1,0
+CO2,RHQ,72,Natalie,7,0,0
+CO2,RHQ,72,Natalie,8,0,0
+CO2,RHQ,72,Natalie,9,0,0
+CO2,RHQ,72,Natalie,10,0,0
+CO2,RHQ,73,Natalie,1,1,1
+CO2,RHQ,73,Natalie,2,1,1
+CO2,RHQ,73,Natalie,3,1,1
+CO2,RHQ,73,Natalie,4,0,1
+CO2,RHQ,73,Natalie,5,0,1
+CO2,RHQ,73,Natalie,6,0,1
+CO2,RHQ,73,Natalie,7,0,0
+CO2,RHQ,73,Natalie,8,0,0
+CO2,RHQ,73,Natalie,9,0,0
+CO2,RHQ,73,Natalie,10,0,0
+CO2,RHQ,74,Natalie,1,1,1
+CO2,RHQ,74,Natalie,2,1,1
+CO2,RHQ,74,Natalie,3,1,1
+CO2,RHQ,74,Natalie,4,1,1
+CO2,RHQ,74,Natalie,5,1,1
+CO2,RHQ,74,Natalie,6,1,1
+CO2,RHQ,74,Natalie,7,0,1
+CO2,RHQ,74,Natalie,8,0,0
+CO2,RHQ,74,Natalie,9,0,0
+CO2,RHQ,74,Natalie,10,0,0
+CO2,RHQ,75,Natalie,1,1,1
+CO2,RHQ,75,Natalie,2,1,1
+CO2,RHQ,75,Natalie,3,1,1
+CO2,RHQ,75,Natalie,4,0,1
+CO2,RHQ,75,Natalie,5,0,1
+CO2,RHQ,75,Natalie,6,0,1
+CO2,RHQ,75,Natalie,7,0,1
+CO2,RHQ,75,Natalie,8,0,1
+CO2,RHQ,75,Natalie,9,0,1
+CO2,RHQ,75,Natalie,10,0,0
+CO2,RHQ,76,Natalie,1,0,1
+CO2,RHQ,76,Natalie,2,0,1
+CO2,RHQ,76,Natalie,3,0,1
+CO2,RHQ,76,Natalie,4,0,1
+CO2,RHQ,76,Natalie,5,0,1
+CO2,RHQ,76,Natalie,6,0,1
+CO2,RHQ,76,Natalie,7,0,1
+CO2,RHQ,76,Natalie,8,0,0
+CO2,RHQ,76,Natalie,9,0,0
+CO2,RHQ,76,Natalie,10,0,0
+CO2,RHQ,77,Natalie,1,1,1
+CO2,RHQ,77,Natalie,2,1,1
+CO2,RHQ,77,Natalie,3,1,1
+CO2,RHQ,77,Natalie,4,1,1
+CO2,RHQ,77,Natalie,5,1,0
+CO2,RHQ,77,Natalie,6,1,0
+CO2,RHQ,77,Natalie,7,1,0
+CO2,RHQ,77,Natalie,8,0,0
+CO2,RHQ,77,Natalie,9,0,0
+CO2,RHQ,77,Natalie,10,0,0
+CO2,RHQ,78,Natalie,1,1,1
+CO2,RHQ,78,Natalie,2,1,1
+CO2,RHQ,78,Natalie,3,0,1
+CO2,RHQ,78,Natalie,4,0,1
+CO2,RHQ,78,Natalie,5,0,0
+CO2,RHQ,78,Natalie,6,0,0
+CO2,RHQ,78,Natalie,7,0,0
+CO2,RHQ,78,Natalie,8,0,0
+CO2,RHQ,78,Natalie,9,0,0
+CO2,RHQ,78,Natalie,10,0,0
+CO2,RHQ,79,Natalie,1,1,1
+CO2,RHQ,79,Natalie,2,1,1
+CO2,RHQ,79,Natalie,3,1,1
+CO2,RHQ,79,Natalie,4,1,1
+CO2,RHQ,79,Natalie,5,1,1
+CO2,RHQ,79,Natalie,6,1,1
+CO2,RHQ,79,Natalie,7,0,1
+CO2,RHQ,79,Natalie,8,0,0
+CO2,RHQ,79,Natalie,9,0,0
+CO2,RHQ,79,Natalie,10,0,0
+CO2,RHQ,80,Natalie,1,1,1
+CO2,RHQ,80,Natalie,2,1,1
+CO2,RHQ,80,Natalie,3,1,1
+CO2,RHQ,80,Natalie,4,1,1
+CO2,RHQ,80,Natalie,5,0,1
+CO2,RHQ,80,Natalie,6,0,1
+CO2,RHQ,80,Natalie,7,0,1
+CO2,RHQ,80,Natalie,8,0,0
+CO2,RHQ,80,Natalie,9,0,0
+CO2,RHQ,80,Natalie,10,0,0
+CO2,RHQ,81,Natalie,1,1,1
+CO2,RHQ,81,Natalie,2,1,1
+CO2,RHQ,81,Natalie,3,1,1
+CO2,RHQ,81,Natalie,4,0,1
+CO2,RHQ,81,Natalie,5,0,1
+CO2,RHQ,81,Natalie,6,0,1
+CO2,RHQ,81,Natalie,7,0,1
+CO2,RHQ,81,Natalie,8,0,0
+CO2,RHQ,81,Natalie,9,0,0
+CO2,RHQ,81,Natalie,10,0,0
+CO2,RHQ,82,Natalie,1,1,1
+CO2,RHQ,82,Natalie,2,1,1
+CO2,RHQ,82,Natalie,3,1,1
+CO2,RHQ,82,Natalie,4,1,1
+CO2,RHQ,82,Natalie,5,0,1
+CO2,RHQ,82,Natalie,6,0,1
+CO2,RHQ,82,Natalie,7,0,0
+CO2,RHQ,82,Natalie,8,0,0
+CO2,RHQ,82,Natalie,9,0,0
+CO2,RHQ,82,Natalie,10,0,0
+CO2,RHQ,83,Natalie,1,1,1
+CO2,RHQ,83,Natalie,2,1,1
+CO2,RHQ,83,Natalie,3,1,0
+CO2,RHQ,83,Natalie,4,1,0
+CO2,RHQ,83,Natalie,5,1,0
+CO2,RHQ,83,Natalie,6,1,0
+CO2,RHQ,83,Natalie,7,1,0
+CO2,RHQ,83,Natalie,8,0,0
+CO2,RHQ,83,Natalie,9,0,0
+CO2,RHQ,83,Natalie,10,0,0
+CO2,RHQ,84,Natalie,1,1,1
+CO2,RHQ,84,Natalie,2,1,1
+CO2,RHQ,84,Natalie,3,1,1
+CO2,RHQ,84,Natalie,4,1,1
+CO2,RHQ,84,Natalie,5,1,1
+CO2,RHQ,84,Natalie,6,1,0
+CO2,RHQ,84,Natalie,7,1,0
+CO2,RHQ,84,Natalie,8,0,0
+CO2,RHQ,84,Natalie,9,0,0
+CO2,RHQ,84,Natalie,10,0,0
+CO2,RHQ,85,Natalie,1,1,1
+CO2,RHQ,85,Natalie,2,1,1
+CO2,RHQ,85,Natalie,3,1,1
+CO2,RHQ,85,Natalie,4,0,1
+CO2,RHQ,85,Natalie,5,0,0
+CO2,RHQ,85,Natalie,6,0,0
+CO2,RHQ,85,Natalie,7,0,0
+CO2,RHQ,85,Natalie,8,0,0
+CO2,RHQ,85,Natalie,9,0,0
+CO2,RHQ,85,Natalie,10,0,0
+CO2,RHQ,86,Natalie,1,1,1
+CO2,RHQ,86,Natalie,2,1,1
+CO2,RHQ,86,Natalie,3,1,1
+CO2,RHQ,86,Natalie,4,1,0
+CO2,RHQ,86,Natalie,5,1,0
+CO2,RHQ,86,Natalie,6,1,0
+CO2,RHQ,86,Natalie,7,1,0
+CO2,RHQ,86,Natalie,8,0,0
+CO2,RHQ,86,Natalie,9,0,0
+CO2,RHQ,86,Natalie,10,0,0
+CO2,RHQ,87,Natalie,1,1,1
+CO2,RHQ,87,Natalie,2,1,1
+CO2,RHQ,87,Natalie,3,1,1
+CO2,RHQ,87,Natalie,4,1,1
+CO2,RHQ,87,Natalie,5,1,1
+CO2,RHQ,87,Natalie,6,1,1
+CO2,RHQ,87,Natalie,7,1,1
+CO2,RHQ,87,Natalie,8,1,1
+CO2,RHQ,87,Natalie,9,0,1
+CO2,RHQ,87,Natalie,10,0,0
+CO2,RHQ,88,Natalie,1,1,1
+CO2,RHQ,88,Natalie,2,1,1
+CO2,RHQ,88,Natalie,3,1,1
+CO2,RHQ,88,Natalie,4,1,1
+CO2,RHQ,88,Natalie,5,1,0
+CO2,RHQ,88,Natalie,6,0,0
+CO2,RHQ,88,Natalie,7,0,0
+CO2,RHQ,88,Natalie,8,0,0
+CO2,RHQ,88,Natalie,9,0,0
+CO2,RHQ,88,Natalie,10,0,0
+CO2,RHQ,89,Natalie,1,1,1
+CO2,RHQ,89,Natalie,2,1,1
+CO2,RHQ,89,Natalie,3,1,1
+CO2,RHQ,89,Natalie,4,1,1
+CO2,RHQ,89,Natalie,5,0,1
+CO2,RHQ,89,Natalie,6,0,1
+CO2,RHQ,89,Natalie,7,0,0
+CO2,RHQ,89,Natalie,8,0,0
+CO2,RHQ,89,Natalie,9,0,0
+CO2,RHQ,89,Natalie,10,0,0
+CO2,RHQ,90,Natalie,1,1,1
+CO2,RHQ,90,Natalie,2,1,1
+CO2,RHQ,90,Natalie,3,1,1
+CO2,RHQ,90,Natalie,4,1,1
+CO2,RHQ,90,Natalie,5,1,1
+CO2,RHQ,90,Natalie,6,0,1
+CO2,RHQ,90,Natalie,7,0,1
+CO2,RHQ,90,Natalie,8,0,0
+CO2,RHQ,90,Natalie,9,0,0
+CO2,RHQ,90,Natalie,10,0,0
+CO2,RHQ,91,Natalie,1,1,1
+CO2,RHQ,91,Natalie,2,1,1
+CO2,RHQ,91,Natalie,3,0,1
+CO2,RHQ,91,Natalie,4,0,1
+CO2,RHQ,91,Natalie,5,0,0
+CO2,RHQ,91,Natalie,6,0,0
+CO2,RHQ,91,Natalie,7,0,0
+CO2,RHQ,91,Natalie,8,0,0
+CO2,RHQ,91,Natalie,9,0,0
+CO2,RHQ,91,Natalie,10,0,0
+CO2,RHQ,92,Natalie,1,1,1
+CO2,RHQ,92,Natalie,2,0,1
+CO2,RHQ,92,Natalie,3,0,1
+CO2,RHQ,92,Natalie,4,0,1
+CO2,RHQ,92,Natalie,5,0,1
+CO2,RHQ,92,Natalie,6,0,0
+CO2,RHQ,92,Natalie,7,0,0
+CO2,RHQ,92,Natalie,8,0,0
+CO2,RHQ,92,Natalie,9,0,0
+CO2,RHQ,92,Natalie,10,0,0
+CO2,RHQ,93,Natalie,1,1,1
+CO2,RHQ,93,Natalie,2,1,1
+CO2,RHQ,93,Natalie,3,1,0
+CO2,RHQ,93,Natalie,4,1,0
+CO2,RHQ,93,Natalie,5,1,0
+CO2,RHQ,93,Natalie,6,0,0
+CO2,RHQ,93,Natalie,7,0,0
+CO2,RHQ,93,Natalie,8,0,0
+CO2,RHQ,93,Natalie,9,0,0
+CO2,RHQ,93,Natalie,10,0,0
+CO2,RHQ,94,Natalie,1,1,1
+CO2,RHQ,94,Natalie,2,1,1
+CO2,RHQ,94,Natalie,3,1,1
+CO2,RHQ,94,Natalie,4,1,1
+CO2,RHQ,94,Natalie,5,1,1
+CO2,RHQ,94,Natalie,6,1,1
+CO2,RHQ,94,Natalie,7,0,0
+CO2,RHQ,94,Natalie,8,0,0
+CO2,RHQ,94,Natalie,9,0,0
+CO2,RHQ,94,Natalie,10,0,0
+CO2,RHQ,95,Natalie,1,1,1
+CO2,RHQ,95,Natalie,2,1,1
+CO2,RHQ,95,Natalie,3,1,1
+CO2,RHQ,95,Natalie,4,1,1
+CO2,RHQ,95,Natalie,5,0,1
+CO2,RHQ,95,Natalie,6,0,1
+CO2,RHQ,95,Natalie,7,0,1
+CO2,RHQ,95,Natalie,8,0,0
+CO2,RHQ,95,Natalie,9,0,0
+CO2,RHQ,95,Natalie,10,0,0
+CO2,RHQ,96,Natalie,1,1,1
+CO2,RHQ,96,Natalie,2,1,1
+CO2,RHQ,96,Natalie,3,1,1
+CO2,RHQ,96,Natalie,4,1,1
+CO2,RHQ,96,Natalie,5,1,1
+CO2,RHQ,96,Natalie,6,1,1
+CO2,RHQ,96,Natalie,7,0,1
+CO2,RHQ,96,Natalie,8,0,0
+CO2,RHQ,96,Natalie,9,0,0
+CO2,RHQ,96,Natalie,10,0,0
+CO2,RHQ,97,Natalie,1,1,1
+CO2,RHQ,97,Natalie,2,1,1
+CO2,RHQ,97,Natalie,3,1,1
+CO2,RHQ,97,Natalie,4,1,1
+CO2,RHQ,97,Natalie,5,0,0
+CO2,RHQ,97,Natalie,6,0,0
+CO2,RHQ,97,Natalie,7,0,0
+CO2,RHQ,97,Natalie,8,0,0
+CO2,RHQ,97,Natalie,9,0,0
+CO2,RHQ,97,Natalie,10,0,0
+CO2,RHQ,98,Natalie,1,1,1
+CO2,RHQ,98,Natalie,2,1,1
+CO2,RHQ,98,Natalie,3,1,1
+CO2,RHQ,98,Natalie,4,1,1
+CO2,RHQ,98,Natalie,5,1,0
+CO2,RHQ,98,Natalie,6,1,0
+CO2,RHQ,98,Natalie,7,0,0
+CO2,RHQ,98,Natalie,8,0,0
+CO2,RHQ,98,Natalie,9,0,0
+CO2,RHQ,98,Natalie,10,0,0
+CO2,RHQ,99,Natalie,1,1,1
+CO2,RHQ,99,Natalie,2,1,1
+CO2,RHQ,99,Natalie,3,1,1
+CO2,RHQ,99,Natalie,4,0,1
+CO2,RHQ,99,Natalie,5,0,1
+CO2,RHQ,99,Natalie,6,0,1
+CO2,RHQ,99,Natalie,7,0,1
+CO2,RHQ,99,Natalie,8,0,0
+CO2,RHQ,99,Natalie,9,0,0
+CO2,RHQ,99,Natalie,10,0,0
+CO2,RHQ,100,Natalie,1,1,1
+CO2,RHQ,100,Natalie,2,1,1
+CO2,RHQ,100,Natalie,3,1,1
+CO2,RHQ,100,Natalie,4,1,1
+CO2,RHQ,100,Natalie,5,1,0
+CO2,RHQ,100,Natalie,6,0,0
+CO2,RHQ,100,Natalie,7,0,0
+CO2,RHQ,100,Natalie,8,0,0
+CO2,RHQ,100,Natalie,9,0,0
+CO2,RHQ,100,Natalie,10,0,0
+CO2,RHQ,101,Natalie,1,1,0
+CO2,RHQ,101,Natalie,2,1,0
+CO2,RHQ,101,Natalie,3,1,0
+CO2,RHQ,101,Natalie,4,1,0
+CO2,RHQ,101,Natalie,5,1,0
+CO2,RHQ,101,Natalie,6,1,0
+CO2,RHQ,101,Natalie,7,0,0
+CO2,RHQ,101,Natalie,8,0,0
+CO2,RHQ,101,Natalie,9,0,0
+CO2,RHQ,101,Natalie,10,0,0
+CO2,RHQ,102,Natalie,1,1,1
+CO2,RHQ,102,Natalie,2,1,1
+CO2,RHQ,102,Natalie,3,1,1
+CO2,RHQ,102,Natalie,4,1,0
+CO2,RHQ,102,Natalie,5,1,0
+CO2,RHQ,102,Natalie,6,1,0
+CO2,RHQ,102,Natalie,7,1,0
+CO2,RHQ,102,Natalie,8,1,0
+CO2,RHQ,102,Natalie,9,0,0
+CO2,RHQ,102,Natalie,10,0,0
+CO2,RHQ,103,Natalie,1,1,1
+CO2,RHQ,103,Natalie,2,0,1
+CO2,RHQ,103,Natalie,3,0,1
+CO2,RHQ,103,Natalie,4,0,1
+CO2,RHQ,103,Natalie,5,0,1
+CO2,RHQ,103,Natalie,6,0,1
+CO2,RHQ,103,Natalie,7,0,0
+CO2,RHQ,103,Natalie,8,0,0
+CO2,RHQ,103,Natalie,9,0,0
+CO2,RHQ,103,Natalie,10,0,0
+CO2,RHQ,104,Natalie,1,1,1
+CO2,RHQ,104,Natalie,2,0,1
+CO2,RHQ,104,Natalie,3,0,1
+CO2,RHQ,104,Natalie,4,0,1
+CO2,RHQ,104,Natalie,5,0,0
+CO2,RHQ,104,Natalie,6,0,0
+CO2,RHQ,104,Natalie,7,0,0
+CO2,RHQ,104,Natalie,8,0,0
+CO2,RHQ,104,Natalie,9,0,0
+CO2,RHQ,104,Natalie,10,0,0
+Control,RHQ,105,Anne,1,1,1
+Control,RHQ,105,Anne,2,1,1
+Control,RHQ,105,Anne,3,1,1
+Control,RHQ,105,Anne,4,1,1
+Control,RHQ,105,Anne,5,0,1
+Control,RHQ,105,Anne,6,0,1
+Control,RHQ,105,Anne,7,0,0
+Control,RHQ,105,Anne,8,0,0
+Control,RHQ,105,Anne,9,0,0
+Control,RHQ,105,Anne,10,0,0
+Control,RHQ,106,Anne,1,1,1
+Control,RHQ,106,Anne,2,1,1
+Control,RHQ,106,Anne,3,1,1
+Control,RHQ,106,Anne,4,1,1
+Control,RHQ,106,Anne,5,0,0
+Control,RHQ,106,Anne,6,0,0
+Control,RHQ,106,Anne,7,0,0
+Control,RHQ,106,Anne,8,0,0
+Control,RHQ,106,Anne,9,0,0
+Control,RHQ,106,Anne,10,0,0
+Control,RHQ,107,Anne,1,1,1
+Control,RHQ,107,Anne,2,1,1
+Control,RHQ,107,Anne,3,1,1
+Control,RHQ,107,Anne,4,0,1
+Control,RHQ,107,Anne,5,0,1
+Control,RHQ,107,Anne,6,0,1
+Control,RHQ,107,Anne,7,0,1
+Control,RHQ,107,Anne,8,0,0
+Control,RHQ,107,Anne,9,0,0
+Control,RHQ,107,Anne,10,0,0
+Control,RHQ,108,Anne,1,1,1
+Control,RHQ,108,Anne,2,0,1
+Control,RHQ,108,Anne,3,0,0
+Control,RHQ,108,Anne,4,0,0
+Control,RHQ,108,Anne,5,0,0
+Control,RHQ,108,Anne,6,0,0
+Control,RHQ,108,Anne,7,0,0
+Control,RHQ,108,Anne,8,0,0
+Control,RHQ,108,Anne,9,0,0
+Control,RHQ,108,Anne,10,0,0
+Control,RHQ,109,Anne,1,1,1
+Control,RHQ,109,Anne,2,1,1
+Control,RHQ,109,Anne,3,1,1
+Control,RHQ,109,Anne,4,1,1
+Control,RHQ,109,Anne,5,0,1
+Control,RHQ,109,Anne,6,0,1
+Control,RHQ,109,Anne,7,0,0
+Control,RHQ,109,Anne,8,0,0
+Control,RHQ,109,Anne,9,0,0
+Control,RHQ,109,Anne,10,0,0
+Control,RHQ,110,Anne,1,1,1
+Control,RHQ,110,Anne,2,1,1
+Control,RHQ,110,Anne,3,1,1
+Control,RHQ,110,Anne,4,1,1
+Control,RHQ,110,Anne,5,0,1
+Control,RHQ,110,Anne,6,0,1
+Control,RHQ,110,Anne,7,0,1
+Control,RHQ,110,Anne,8,0,0
+Control,RHQ,110,Anne,9,0,0
+Control,RHQ,110,Anne,10,0,0
+Control,RHQ,111,Anne,1,1,1
+Control,RHQ,111,Anne,2,0,1
+Control,RHQ,111,Anne,3,0,1
+Control,RHQ,111,Anne,4,0,1
+Control,RHQ,111,Anne,5,0,1
+Control,RHQ,111,Anne,6,0,1
+Control,RHQ,111,Anne,7,0,1
+Control,RHQ,111,Anne,8,0,0
+Control,RHQ,111,Anne,9,0,0
+Control,RHQ,111,Anne,10,0,0
+Control,RHQ,112,Anne,1,1,1
+Control,RHQ,112,Anne,2,0,0
+Control,RHQ,112,Anne,3,0,0
+Control,RHQ,112,Anne,4,0,0
+Control,RHQ,112,Anne,5,0,0
+Control,RHQ,112,Anne,6,0,0
+Control,RHQ,112,Anne,7,0,0
+Control,RHQ,112,Anne,8,0,0
+Control,RHQ,112,Anne,9,0,0
+Control,RHQ,112,Anne,10,0,0
+Control,RHQ,113,Anne,1,1,1
+Control,RHQ,113,Anne,2,1,1
+Control,RHQ,113,Anne,3,1,1
+Control,RHQ,113,Anne,4,0,1
+Control,RHQ,113,Anne,5,0,1
+Control,RHQ,113,Anne,6,0,0
+Control,RHQ,113,Anne,7,0,0
+Control,RHQ,113,Anne,8,0,0
+Control,RHQ,113,Anne,9,0,0
+Control,RHQ,113,Anne,10,0,0
+Control,RHQ,114,Anne,1,1,1
+Control,RHQ,114,Anne,2,1,1
+Control,RHQ,114,Anne,3,1,1
+Control,RHQ,114,Anne,4,0,1
+Control,RHQ,114,Anne,5,0,1
+Control,RHQ,114,Anne,6,0,1
+Control,RHQ,114,Anne,7,0,0
+Control,RHQ,114,Anne,8,0,0
+Control,RHQ,114,Anne,9,0,0
+Control,RHQ,114,Anne,10,0,0
+Control,RHQ,115,Anne,1,1,1
+Control,RHQ,115,Anne,2,0,1
+Control,RHQ,115,Anne,3,0,1
+Control,RHQ,115,Anne,4,0,1
+Control,RHQ,115,Anne,5,0,1
+Control,RHQ,115,Anne,6,0,1
+Control,RHQ,115,Anne,7,0,1
+Control,RHQ,115,Anne,8,0,1
+Control,RHQ,115,Anne,9,0,0
+Control,RHQ,115,Anne,10,0,0
+Control,RHQ,116,Anne,1,1,1
+Control,RHQ,116,Anne,2,1,1
+Control,RHQ,116,Anne,3,1,1
+Control,RHQ,116,Anne,4,1,1
+Control,RHQ,116,Anne,5,1,1
+Control,RHQ,116,Anne,6,0,0
+Control,RHQ,116,Anne,7,0,0
+Control,RHQ,116,Anne,8,0,0
+Control,RHQ,116,Anne,9,0,0
+Control,RHQ,116,Anne,10,0,0
+Control,RHQ,117,Anne,1,1,1
+Control,RHQ,117,Anne,2,1,1
+Control,RHQ,117,Anne,3,1,1
+Control,RHQ,117,Anne,4,1,1
+Control,RHQ,117,Anne,5,0,1
+Control,RHQ,117,Anne,6,0,1
+Control,RHQ,117,Anne,7,0,1
+Control,RHQ,117,Anne,8,0,1
+Control,RHQ,117,Anne,9,0,1
+Control,RHQ,117,Anne,10,0,1
+Control,RHQ,118,Anne,1,1,1
+Control,RHQ,118,Anne,2,1,1
+Control,RHQ,118,Anne,3,1,1
+Control,RHQ,118,Anne,4,0,1
+Control,RHQ,118,Anne,5,0,0
+Control,RHQ,118,Anne,6,0,0
+Control,RHQ,118,Anne,7,0,0
+Control,RHQ,118,Anne,8,0,0
+Control,RHQ,118,Anne,9,0,0
+Control,RHQ,118,Anne,10,0,0
+Control,RHQ,119,Anne,1,1,1
+Control,RHQ,119,Anne,2,0,1
+Control,RHQ,119,Anne,3,0,1
+Control,RHQ,119,Anne,4,0,1
+Control,RHQ,119,Anne,5,0,1
+Control,RHQ,119,Anne,6,0,1
+Control,RHQ,119,Anne,7,0,1
+Control,RHQ,119,Anne,8,0,0
+Control,RHQ,119,Anne,9,0,0
+Control,RHQ,119,Anne,10,0,0
+Control,RHQ,120,RH,1,1,1
+Control,RHQ,120,RH,2,1,1
+Control,RHQ,120,RH,3,1,1
+Control,RHQ,120,RH,4,0,1
+Control,RHQ,120,RH,5,0,0
+Control,RHQ,120,RH,6,0,0
+Control,RHQ,120,RH,7,0,0
+Control,RHQ,120,RH,8,0,0
+Control,RHQ,120,RH,9,0,0
+Control,RHQ,120,RH,10,0,0
+Control,RHQ,121,Anne,1,1,1
+Control,RHQ,121,Anne,2,0,1
+Control,RHQ,121,Anne,3,0,1
+Control,RHQ,121,Anne,4,0,1
+Control,RHQ,121,Anne,5,0,1
+Control,RHQ,121,Anne,6,0,1
+Control,RHQ,121,Anne,7,0,1
+Control,RHQ,121,Anne,8,0,1
+Control,RHQ,121,Anne,9,0,1
+Control,RHQ,121,Anne,10,0,0
+Control,RHQ,122,Anne,1,1,1
+Control,RHQ,122,Anne,2,1,1
+Control,RHQ,122,Anne,3,1,1
+Control,RHQ,122,Anne,4,1,1
+Control,RHQ,122,Anne,5,0,1
+Control,RHQ,122,Anne,6,0,0
+Control,RHQ,122,Anne,7,0,0
+Control,RHQ,122,Anne,8,0,0
+Control,RHQ,122,Anne,9,0,0
+Control,RHQ,122,Anne,10,0,0
+Control,RHQ,123,Anne,1,1,1
+Control,RHQ,123,Anne,2,0,1
+Control,RHQ,123,Anne,3,0,1
+Control,RHQ,123,Anne,4,0,1
+Control,RHQ,123,Anne,5,0,1
+Control,RHQ,123,Anne,6,0,1
+Control,RHQ,123,Anne,7,0,1
+Control,RHQ,123,Anne,8,0,1
+Control,RHQ,123,Anne,9,0,1
+Control,RHQ,123,Anne,10,0,1
+Control,RHQ,124,Anne,1,1,1
+Control,RHQ,124,Anne,2,1,1
+Control,RHQ,124,Anne,3,1,1
+Control,RHQ,124,Anne,4,1,0
+Control,RHQ,124,Anne,5,0,0
+Control,RHQ,124,Anne,6,0,0
+Control,RHQ,124,Anne,7,0,0
+Control,RHQ,124,Anne,8,0,0
+Control,RHQ,124,Anne,9,0,0
+Control,RHQ,124,Anne,10,0,0
+Control,RHQ,125,Anne,1,1,1
+Control,RHQ,125,Anne,2,1,1
+Control,RHQ,125,Anne,3,1,1
+Control,RHQ,125,Anne,4,0,1
+Control,RHQ,125,Anne,5,0,1
+Control,RHQ,125,Anne,6,0,1
+Control,RHQ,125,Anne,7,0,1
+Control,RHQ,125,Anne,8,0,1
+Control,RHQ,125,Anne,9,0,0
+Control,RHQ,125,Anne,10,0,0
+Control,RHQ,126,Anne,1,1,1
+Control,RHQ,126,Anne,2,1,1
+Control,RHQ,126,Anne,3,0,1
+Control,RHQ,126,Anne,4,0,1
+Control,RHQ,126,Anne,5,0,1
+Control,RHQ,126,Anne,6,0,1
+Control,RHQ,126,Anne,7,0,1
+Control,RHQ,126,Anne,8,0,0
+Control,RHQ,126,Anne,9,0,0
+Control,RHQ,126,Anne,10,0,0
+Control,RHQ,127,Anne,1,1,1
+Control,RHQ,127,Anne,2,1,1
+Control,RHQ,127,Anne,3,1,1
+Control,RHQ,127,Anne,4,1,1
+Control,RHQ,127,Anne,5,0,1
+Control,RHQ,127,Anne,6,0,1
+Control,RHQ,127,Anne,7,0,0
+Control,RHQ,127,Anne,8,0,0
+Control,RHQ,127,Anne,9,0,0
+Control,RHQ,127,Anne,10,0,0
+Control,RHQ,128,Anne,1,1,1
+Control,RHQ,128,Anne,2,1,1
+Control,RHQ,128,Anne,3,0,1
+Control,RHQ,128,Anne,4,0,1
+Control,RHQ,128,Anne,5,0,1
+Control,RHQ,128,Anne,6,0,1
+Control,RHQ,128,Anne,7,0,1
+Control,RHQ,128,Anne,8,0,0
+Control,RHQ,128,Anne,9,0,0
+Control,RHQ,128,Anne,10,0,0
+Control,RHQ,129,Anne,1,1,1
+Control,RHQ,129,Anne,2,1,1
+Control,RHQ,129,Anne,3,1,1
+Control,RHQ,129,Anne,4,1,1
+Control,RHQ,129,Anne,5,1,1
+Control,RHQ,129,Anne,6,0,1
+Control,RHQ,129,Anne,7,0,1
+Control,RHQ,129,Anne,8,0,0
+Control,RHQ,129,Anne,9,0,0
+Control,RHQ,129,Anne,10,0,0
+Control,Wild,130,Anne,1,1,1
+Control,Wild,130,Anne,2,1,1
+Control,Wild,130,Anne,3,1,1
+Control,Wild,130,Anne,4,1,1
+Control,Wild,130,Anne,5,1,0
+Control,Wild,130,Anne,6,0,0
+Control,Wild,130,Anne,7,0,0
+Control,Wild,130,Anne,8,0,0
+Control,Wild,130,Anne,9,0,0
+Control,Wild,130,Anne,10,0,0
+Control,Wild,131,Anne,1,1,1
+Control,Wild,131,Anne,2,1,1
+Control,Wild,131,Anne,3,1,1
+Control,Wild,131,Anne,4,1,0
+Control,Wild,131,Anne,5,1,0
+Control,Wild,131,Anne,6,0,0
+Control,Wild,131,Anne,7,0,0
+Control,Wild,131,Anne,8,0,0
+Control,Wild,131,Anne,9,0,0
+Control,Wild,131,Anne,10,0,0
+Control,Wild,132,Anne,1,1,1
+Control,Wild,132,Anne,2,1,1
+Control,Wild,132,Anne,3,1,1
+Control,Wild,132,Anne,4,0,0
+Control,Wild,132,Anne,5,0,0
+Control,Wild,132,Anne,6,0,0
+Control,Wild,132,Anne,7,0,0
+Control,Wild,132,Anne,8,0,0
+Control,Wild,132,Anne,9,0,0
+Control,Wild,132,Anne,10,0,0
+Control,Wild,133,Anne,1,1,1
+Control,Wild,133,Anne,2,1,1
+Control,Wild,133,Anne,3,1,1
+Control,Wild,133,Anne,4,1,0
+Control,Wild,133,Anne,5,0,0
+Control,Wild,133,Anne,6,0,0
+Control,Wild,133,Anne,7,0,0
+Control,Wild,133,Anne,8,0,0
+Control,Wild,133,Anne,9,0,0
+Control,Wild,133,Anne,10,0,0
+Control,Wild,134,Anne,1,1,1
+Control,Wild,134,Anne,2,1,1
+Control,Wild,134,Anne,3,1,0
+Control,Wild,134,Anne,4,1,0
+Control,Wild,134,Anne,5,0,0
+Control,Wild,134,Anne,6,0,0
+Control,Wild,134,Anne,7,0,0
+Control,Wild,134,Anne,8,0,0
+Control,Wild,134,Anne,9,0,0
+Control,Wild,134,Anne,10,0,0
+Control,Wild,135,Anne,1,1,1
+Control,Wild,135,Anne,2,1,1
+Control,Wild,135,Anne,3,0,1
+Control,Wild,135,Anne,4,0,1
+Control,Wild,135,Anne,5,0,0
+Control,Wild,135,Anne,6,0,0
+Control,Wild,135,Anne,7,0,0
+Control,Wild,135,Anne,8,0,0
+Control,Wild,135,Anne,9,0,0
+Control,Wild,135,Anne,10,0,0
+Control,Wild,136,Anne,1,1,1
+Control,Wild,136,Anne,2,1,1
+Control,Wild,136,Anne,3,1,1
+Control,Wild,136,Anne,4,1,1
+Control,Wild,136,Anne,5,0,0
+Control,Wild,136,Anne,6,0,0
+Control,Wild,136,Anne,7,0,0
+Control,Wild,136,Anne,8,0,0
+Control,Wild,136,Anne,9,0,0
+Control,Wild,136,Anne,10,0,0
+Control,Wild,137,Anne,1,1,1
+Control,Wild,137,Anne,2,1,1
+Control,Wild,137,Anne,3,1,1
+Control,Wild,137,Anne,4,1,1
+Control,Wild,137,Anne,5,0,1
+Control,Wild,137,Anne,6,0,1
+Control,Wild,137,Anne,7,0,0
+Control,Wild,137,Anne,8,0,0
+Control,Wild,137,Anne,9,0,0
+Control,Wild,137,Anne,10,0,0
+Control,Wild,138,Anne,1,1,1
+Control,Wild,138,Anne,2,1,1
+Control,Wild,138,Anne,3,1,1
+Control,Wild,138,Anne,4,0,1
+Control,Wild,138,Anne,5,0,1
+Control,Wild,138,Anne,6,0,1
+Control,Wild,138,Anne,7,0,1
+Control,Wild,138,Anne,8,0,0
+Control,Wild,138,Anne,9,0,0
+Control,Wild,138,Anne,10,0,0
+Control,Wild,139,Anne,1,1,1
+Control,Wild,139,Anne,2,1,1
+Control,Wild,139,Anne,3,1,1
+Control,Wild,139,Anne,4,0,1
+Control,Wild,139,Anne,5,0,1
+Control,Wild,139,Anne,6,0,0
+Control,Wild,139,Anne,7,0,0
+Control,Wild,139,Anne,8,0,0
+Control,Wild,139,Anne,9,0,0
+Control,Wild,139,Anne,10,0,0
+Control,Wild,140,Anne,1,1,1
+Control,Wild,140,Anne,2,1,1
+Control,Wild,140,Anne,3,1,1
+Control,Wild,140,Anne,4,1,1
+Control,Wild,140,Anne,5,1,1
+Control,Wild,140,Anne,6,1,0
+Control,Wild,140,Anne,7,0,0
+Control,Wild,140,Anne,8,0,0
+Control,Wild,140,Anne,9,0,0
+Control,Wild,140,Anne,10,0,0
+Control,Wild,141,Anne,1,1,1
+Control,Wild,141,Anne,2,1,1
+Control,Wild,141,Anne,3,0,1
+Control,Wild,141,Anne,4,0,1
+Control,Wild,141,Anne,5,0,1
+Control,Wild,141,Anne,6,0,1
+Control,Wild,141,Anne,7,0,1
+Control,Wild,141,Anne,8,0,0
+Control,Wild,141,Anne,9,0,0
+Control,Wild,141,Anne,10,0,0
+Control,Wild,142,Anne,1,1,1
+Control,Wild,142,Anne,2,1,0
+Control,Wild,142,Anne,3,1,0
+Control,Wild,142,Anne,4,1,0
+Control,Wild,142,Anne,5,1,0
+Control,Wild,142,Anne,6,1,0
+Control,Wild,142,Anne,7,1,0
+Control,Wild,142,Anne,8,1,0
+Control,Wild,142,Anne,9,0,0
+Control,Wild,142,Anne,10,0,0
+Control,Wild,143,Anne,1,1,1
+Control,Wild,143,Anne,2,1,1
+Control,Wild,143,Anne,3,1,1
+Control,Wild,143,Anne,4,1,1
+Control,Wild,143,Anne,5,1,0
+Control,Wild,143,Anne,6,1,0
+Control,Wild,143,Anne,7,0,0
+Control,Wild,143,Anne,8,0,0
+Control,Wild,143,Anne,9,0,0
+Control,Wild,143,Anne,10,0,0
+Control,Wild,144,Anne,1,1,1
+Control,Wild,144,Anne,2,1,1
+Control,Wild,144,Anne,3,1,1
+Control,Wild,144,Anne,4,1,1
+Control,Wild,144,Anne,5,1,1
+Control,Wild,144,Anne,6,1,1
+Control,Wild,144,Anne,7,0,1
+Control,Wild,144,Anne,8,0,0
+Control,Wild,144,Anne,9,0,0
+Control,Wild,144,Anne,10,0,0
+Control,Wild,145,Anne,1,1,1
+Control,Wild,145,Anne,2,1,1
+Control,Wild,145,Anne,3,1,1
+Control,Wild,145,Anne,4,0,1
+Control,Wild,145,Anne,5,0,1
+Control,Wild,145,Anne,6,0,0
+Control,Wild,145,Anne,7,0,0
+Control,Wild,145,Anne,8,0,0
+Control,Wild,145,Anne,9,0,0
+Control,Wild,145,Anne,10,0,0
+Control,Wild,146,Anne,1,1,1
+Control,Wild,146,Anne,2,1,1
+Control,Wild,146,Anne,3,1,1
+Control,Wild,146,Anne,4,1,1
+Control,Wild,146,Anne,5,1,1
+Control,Wild,146,Anne,6,1,1
+Control,Wild,146,Anne,7,0,1
+Control,Wild,146,Anne,8,0,1
+Control,Wild,146,Anne,9,0,1
+Control,Wild,146,Anne,10,0,1
+Control,Wild,147,Anne,1,1,1
+Control,Wild,147,Anne,2,1,1
+Control,Wild,147,Anne,3,1,1
+Control,Wild,147,Anne,4,1,1
+Control,Wild,147,Anne,5,0,1
+Control,Wild,147,Anne,6,0,0
+Control,Wild,147,Anne,7,0,0
+Control,Wild,147,Anne,8,0,0
+Control,Wild,147,Anne,9,0,0
+Control,Wild,147,Anne,10,0,0
+Control,Wild,148,Anne,1,1,1
+Control,Wild,148,Anne,2,1,1
+Control,Wild,148,Anne,3,1,1
+Control,Wild,148,Anne,4,1,1
+Control,Wild,148,Anne,5,1,1
+Control,Wild,148,Anne,6,1,0
+Control,Wild,148,Anne,7,1,0
+Control,Wild,148,Anne,8,0,0
+Control,Wild,148,Anne,9,0,0
+Control,Wild,148,Anne,10,0,0
+Control,Wild,149,Anne,1,1,1
+Control,Wild,149,Anne,2,1,1
+Control,Wild,149,Anne,3,1,1
+Control,Wild,149,Anne,4,1,1
+Control,Wild,149,Anne,5,0,1
+Control,Wild,149,Anne,6,0,1
+Control,Wild,149,Anne,7,0,1
+Control,Wild,149,Anne,8,0,0
+Control,Wild,149,Anne,9,0,0
+Control,Wild,149,Anne,10,0,0
+Control,Wild,150,Anne,1,1,1
+Control,Wild,150,Anne,2,1,1
+Control,Wild,150,Anne,3,1,1
+Control,Wild,150,Anne,4,1,1
+Control,Wild,150,Anne,5,1,1
+Control,Wild,150,Anne,6,1,1
+Control,Wild,150,Anne,7,1,0
+Control,Wild,150,Anne,8,1,0
+Control,Wild,150,Anne,9,0,0
+Control,Wild,150,Anne,10,0,0
+Control,RHQ,151,Anne,1,1,1
+Control,RHQ,151,Anne,2,1,1
+Control,RHQ,151,Anne,3,1,1
+Control,RHQ,151,Anne,4,1,1
+Control,RHQ,151,Anne,5,1,1
+Control,RHQ,151,Anne,6,0,1
+Control,RHQ,151,Anne,7,0,0
+Control,RHQ,151,Anne,8,0,0
+Control,RHQ,151,Anne,9,0,0
+Control,RHQ,151,Anne,10,0,0
+Control,RHQ,152,Anne,1,1,1
+Control,RHQ,152,Anne,2,1,1
+Control,RHQ,152,Anne,3,1,1
+Control,RHQ,152,Anne,4,0,1
+Control,RHQ,152,Anne,5,0,1
+Control,RHQ,152,Anne,6,0,1
+Control,RHQ,152,Anne,7,0,1
+Control,RHQ,152,Anne,8,0,1
+Control,RHQ,152,Anne,9,0,0
+Control,RHQ,152,Anne,10,0,0
+Control,RHQ,153,Anne,1,1,1
+Control,RHQ,153,Anne,2,1,1
+Control,RHQ,153,Anne,3,0,1
+Control,RHQ,153,Anne,4,0,1
+Control,RHQ,153,Anne,5,0,1
+Control,RHQ,153,Anne,6,0,1
+Control,RHQ,153,Anne,7,0,1
+Control,RHQ,153,Anne,8,0,0
+Control,RHQ,153,Anne,9,0,0
+Control,RHQ,153,Anne,10,0,0
+Control,RHQ,154,Anne,1,1,1
+Control,RHQ,154,Anne,2,1,1
+Control,RHQ,154,Anne,3,1,1
+Control,RHQ,154,Anne,4,0,1
+Control,RHQ,154,Anne,5,0,1
+Control,RHQ,154,Anne,6,0,1
+Control,RHQ,154,Anne,7,0,1
+Control,RHQ,154,Anne,8,0,1
+Control,RHQ,154,Anne,9,0,0
+Control,RHQ,154,Anne,10,0,0
+Control,RHQ,155,Anne,1,1,1
+Control,RHQ,155,Anne,2,0,1
+Control,RHQ,155,Anne,3,0,1
+Control,RHQ,155,Anne,4,0,1
+Control,RHQ,155,Anne,5,0,1
+Control,RHQ,155,Anne,6,0,1
+Control,RHQ,155,Anne,7,0,1
+Control,RHQ,155,Anne,8,0,0
+Control,RHQ,155,Anne,9,0,0
+Control,RHQ,155,Anne,10,0,0
+Control,RHQ,156,Anne,1,1,1
+Control,RHQ,156,Anne,2,1,1
+Control,RHQ,156,Anne,3,1,1
+Control,RHQ,156,Anne,4,1,0
+Control,RHQ,156,Anne,5,1,0
+Control,RHQ,156,Anne,6,0,0
+Control,RHQ,156,Anne,7,0,0
+Control,RHQ,156,Anne,8,0,0
+Control,RHQ,156,Anne,9,0,0
+Control,RHQ,156,Anne,10,0,0
+Control,RHQ,157,Anne,1,1,1
+Control,RHQ,157,Anne,2,1,1
+Control,RHQ,157,Anne,3,1,1
+Control,RHQ,157,Anne,4,0,0
+Control,RHQ,157,Anne,5,0,0
+Control,RHQ,157,Anne,6,0,0
+Control,RHQ,157,Anne,7,0,0
+Control,RHQ,157,Anne,8,0,0
+Control,RHQ,157,Anne,9,0,0
+Control,RHQ,157,Anne,10,0,0
+Control,RHQ,158,Anne,1,1,1
+Control,RHQ,158,Anne,2,1,1
+Control,RHQ,158,Anne,3,1,1
+Control,RHQ,158,Anne,4,0,1
+Control,RHQ,158,Anne,5,0,1
+Control,RHQ,158,Anne,6,0,1
+Control,RHQ,158,Anne,7,0,1
+Control,RHQ,158,Anne,8,0,1
+Control,RHQ,158,Anne,9,0,1
+Control,RHQ,158,Anne,10,0,0
+Control,RHQ,159,Anne,1,1,1
+Control,RHQ,159,Anne,2,1,1
+Control,RHQ,159,Anne,3,1,1
+Control,RHQ,159,Anne,4,1,1
+Control,RHQ,159,Anne,5,1,0
+Control,RHQ,159,Anne,6,1,0
+Control,RHQ,159,Anne,7,0,0
+Control,RHQ,159,Anne,8,0,0
+Control,RHQ,159,Anne,9,0,0
+Control,RHQ,159,Anne,10,0,0
+Control,RHQ,160,Anne,1,1,1
+Control,RHQ,160,Anne,2,1,1
+Control,RHQ,160,Anne,3,1,1
+Control,RHQ,160,Anne,4,0,1
+Control,RHQ,160,Anne,5,0,1
+Control,RHQ,160,Anne,6,0,0
+Control,RHQ,160,Anne,7,0,0
+Control,RHQ,160,Anne,8,0,0
+Control,RHQ,160,Anne,9,0,0
+Control,RHQ,160,Anne,10,0,0
+Control,RHQ,161,Anne,1,0,1
+Control,RHQ,161,Anne,2,0,1
+Control,RHQ,161,Anne,3,0,1
+Control,RHQ,161,Anne,4,0,1
+Control,RHQ,161,Anne,5,0,0
+Control,RHQ,161,Anne,6,0,0
+Control,RHQ,161,Anne,7,0,0
+Control,RHQ,161,Anne,8,0,0
+Control,RHQ,161,Anne,9,0,0
+Control,RHQ,161,Anne,10,0,0
+Control,RHQ,162,Anne,1,1,1
+Control,RHQ,162,Anne,2,1,1
+Control,RHQ,162,Anne,3,1,1
+Control,RHQ,162,Anne,4,0,0
+Control,RHQ,162,Anne,5,0,0
+Control,RHQ,162,Anne,6,0,0
+Control,RHQ,162,Anne,7,0,0
+Control,RHQ,162,Anne,8,0,0
+Control,RHQ,162,Anne,9,0,0
+Control,RHQ,162,Anne,10,0,0
+Control,RHQ,163,Anne,1,1,1
+Control,RHQ,163,Anne,2,1,1
+Control,RHQ,163,Anne,3,1,1
+Control,RHQ,163,Anne,4,0,1
+Control,RHQ,163,Anne,5,0,1
+Control,RHQ,163,Anne,6,0,0
+Control,RHQ,163,Anne,7,0,0
+Control,RHQ,163,Anne,8,0,0
+Control,RHQ,163,Anne,9,0,0
+Control,RHQ,163,Anne,10,0,0
+Control,RHQ,164,Anne,1,1,1
+Control,RHQ,164,Anne,2,0,1
+Control,RHQ,164,Anne,3,0,1
+Control,RHQ,164,Anne,4,0,0
+Control,RHQ,164,Anne,5,0,0
+Control,RHQ,164,Anne,6,0,0
+Control,RHQ,164,Anne,7,0,0
+Control,RHQ,164,Anne,8,0,0
+Control,RHQ,164,Anne,9,0,0
+Control,RHQ,164,Anne,10,0,0
+Control,RHQ,165,Anne,1,1,1
+Control,RHQ,165,Anne,2,0,1
+Control,RHQ,165,Anne,3,0,1
+Control,RHQ,165,Anne,4,0,0
+Control,RHQ,165,Anne,5,0,0
+Control,RHQ,165,Anne,6,0,0
+Control,RHQ,165,Anne,7,0,0
+Control,RHQ,165,Anne,8,0,0
+Control,RHQ,165,Anne,9,0,0
+Control,RHQ,165,Anne,10,0,0
+Control,RHQ,166,Anne,1,1,1
+Control,RHQ,166,Anne,2,1,1
+Control,RHQ,166,Anne,3,1,1
+Control,RHQ,166,Anne,4,0,1
+Control,RHQ,166,Anne,5,0,1
+Control,RHQ,166,Anne,6,0,1
+Control,RHQ,166,Anne,7,0,0
+Control,RHQ,166,Anne,8,0,0
+Control,RHQ,166,Anne,9,0,0
+Control,RHQ,166,Anne,10,0,0
+Control,RHQ,167,Anne,1,1,1
+Control,RHQ,167,Anne,2,1,1
+Control,RHQ,167,Anne,3,1,1
+Control,RHQ,167,Anne,4,1,1
+Control,RHQ,167,Anne,5,1,0
+Control,RHQ,167,Anne,6,1,0
+Control,RHQ,167,Anne,7,1,0
+Control,RHQ,167,Anne,8,1,0
+Control,RHQ,167,Anne,9,0,0
+Control,RHQ,167,Anne,10,0,0
+Control,RHQ,168,Anne,1,0,1
+Control,RHQ,168,Anne,2,0,1
+Control,RHQ,168,Anne,3,0,1
+Control,RHQ,168,Anne,4,0,1
+Control,RHQ,168,Anne,5,0,0
+Control,RHQ,168,Anne,6,0,0
+Control,RHQ,168,Anne,7,0,0
+Control,RHQ,168,Anne,8,0,0
+Control,RHQ,168,Anne,9,0,0
+Control,RHQ,168,Anne,10,0,0
+Control,Wild,169,Dani,1,1,1
+Control,Wild,169,Dani,2,1,1
+Control,Wild,169,Dani,3,1,1
+Control,Wild,169,Dani,4,1,0
+Control,Wild,169,Dani,5,0,0
+Control,Wild,169,Dani,6,0,0
+Control,Wild,169,Dani,7,0,0
+Control,Wild,169,Dani,8,0,0
+Control,Wild,169,Dani,9,0,0
+Control,Wild,169,Dani,10,0,0
+Control,Wild,170,Dani,1,1,1
+Control,Wild,170,Dani,2,0,1
+Control,Wild,170,Dani,3,0,1
+Control,Wild,170,Dani,4,0,1
+Control,Wild,170,Dani,5,0,0
+Control,Wild,170,Dani,6,0,0
+Control,Wild,170,Dani,7,0,0
+Control,Wild,170,Dani,8,0,0
+Control,Wild,170,Dani,9,0,0
+Control,Wild,170,Dani,10,0,0
+Control,Wild,171,Dani,1,1,1
+Control,Wild,171,Dani,2,1,1
+Control,Wild,171,Dani,3,1,1
+Control,Wild,171,Dani,4,1,1
+Control,Wild,171,Dani,5,1,0
+Control,Wild,171,Dani,6,0,0
+Control,Wild,171,Dani,7,0,0
+Control,Wild,171,Dani,8,0,0
+Control,Wild,171,Dani,9,0,0
+Control,Wild,171,Dani,10,0,0
+Control,Wild,172,Dani,1,0,1
+Control,Wild,172,Dani,2,0,1
+Control,Wild,172,Dani,3,0,1
+Control,Wild,172,Dani,4,0,1
+Control,Wild,172,Dani,5,0,1
+Control,Wild,172,Dani,6,0,1
+Control,Wild,172,Dani,7,0,1
+Control,Wild,172,Dani,8,0,0
+Control,Wild,172,Dani,9,0,0
+Control,Wild,172,Dani,10,0,0
+Control,Wild,173,Dani,1,1,1
+Control,Wild,173,Dani,2,1,1
+Control,Wild,173,Dani,3,1,1
+Control,Wild,173,Dani,4,1,1
+Control,Wild,173,Dani,5,1,1
+Control,Wild,173,Dani,6,1,1
+Control,Wild,173,Dani,7,1,0
+Control,Wild,173,Dani,8,0,0
+Control,Wild,173,Dani,9,0,0
+Control,Wild,173,Dani,10,0,0
+Control,Wild,174,Dani,1,1,1
+Control,Wild,174,Dani,2,1,1
+Control,Wild,174,Dani,3,1,1
+Control,Wild,174,Dani,4,0,1
+Control,Wild,174,Dani,5,0,1
+Control,Wild,174,Dani,6,0,0
+Control,Wild,174,Dani,7,0,0
+Control,Wild,174,Dani,8,0,0
+Control,Wild,174,Dani,9,0,0
+Control,Wild,174,Dani,10,0,0
+Control,Wild,175,Anne,1,1,1
+Control,Wild,175,Anne,2,1,1
+Control,Wild,175,Anne,3,1,1
+Control,Wild,175,Anne,4,1,1
+Control,Wild,175,Anne,5,1,0
+Control,Wild,175,Anne,6,1,0
+Control,Wild,175,Anne,7,0,0
+Control,Wild,175,Anne,8,0,0
+Control,Wild,175,Anne,9,0,0
+Control,Wild,175,Anne,10,0,0
+Control,Wild,176,Anne,1,1,1
+Control,Wild,176,Anne,2,1,1
+Control,Wild,176,Anne,3,1,1
+Control,Wild,176,Anne,4,1,1
+Control,Wild,176,Anne,5,0,1
+Control,Wild,176,Anne,6,0,1
+Control,Wild,176,Anne,7,0,1
+Control,Wild,176,Anne,8,0,1
+Control,Wild,176,Anne,9,0,0
+Control,Wild,176,Anne,10,0,0
+Control,Wild,177,Anne,1,1,1
+Control,Wild,177,Anne,2,1,1
+Control,Wild,177,Anne,3,1,1
+Control,Wild,177,Anne,4,0,0
+Control,Wild,177,Anne,5,0,0
+Control,Wild,177,Anne,6,0,0
+Control,Wild,177,Anne,7,0,0
+Control,Wild,177,Anne,8,0,0
+Control,Wild,177,Anne,9,0,0
+Control,Wild,177,Anne,10,0,0
+Control,Wild,178,Anne,1,1,1
+Control,Wild,178,Anne,2,1,1
+Control,Wild,178,Anne,3,1,1
+Control,Wild,178,Anne,4,1,1
+Control,Wild,178,Anne,5,0,1
+Control,Wild,178,Anne,6,0,1
+Control,Wild,178,Anne,7,0,1
+Control,Wild,178,Anne,8,0,0
+Control,Wild,178,Anne,9,0,0
+Control,Wild,178,Anne,10,0,0
+Control,Wild,179,Anne,1,1,1
+Control,Wild,179,Anne,2,1,1
+Control,Wild,179,Anne,3,1,1
+Control,Wild,179,Anne,4,0,1
+Control,Wild,179,Anne,5,0,1
+Control,Wild,179,Anne,6,0,1
+Control,Wild,179,Anne,7,0,1
+Control,Wild,179,Anne,8,0,1
+Control,Wild,179,Anne,9,0,0
+Control,Wild,179,Anne,10,0,0
+Control,Wild,180,Anne,1,1,1
+Control,Wild,180,Anne,2,1,1
+Control,Wild,180,Anne,3,1,0
+Control,Wild,180,Anne,4,1,0
+Control,Wild,180,Anne,5,1,0
+Control,Wild,180,Anne,6,1,0
+Control,Wild,180,Anne,7,1,0
+Control,Wild,180,Anne,8,0,0
+Control,Wild,180,Anne,9,0,0
+Control,Wild,180,Anne,10,0,0
+Control,Wild,181,Anne,1,1,1
+Control,Wild,181,Anne,2,1,1
+Control,Wild,181,Anne,3,0,1
+Control,Wild,181,Anne,4,0,1
+Control,Wild,181,Anne,5,0,0
+Control,Wild,181,Anne,6,0,0
+Control,Wild,181,Anne,7,0,0
+Control,Wild,181,Anne,8,0,0
+Control,Wild,181,Anne,9,0,0
+Control,Wild,181,Anne,10,0,0
+Control,Wild,182,Anne,1,1,1
+Control,Wild,182,Anne,2,1,1
+Control,Wild,182,Anne,3,1,0
+Control,Wild,182,Anne,4,0,0
+Control,Wild,182,Anne,5,0,0
+Control,Wild,182,Anne,6,0,0
+Control,Wild,182,Anne,7,0,0
+Control,Wild,182,Anne,8,0,0
+Control,Wild,182,Anne,9,0,0
+Control,Wild,182,Anne,10,0,0
+Control,Wild,183,Anne,1,1,1
+Control,Wild,183,Anne,2,0,1
+Control,Wild,183,Anne,3,0,1
+Control,Wild,183,Anne,4,0,1
+Control,Wild,183,Anne,5,0,1
+Control,Wild,183,Anne,6,0,0
+Control,Wild,183,Anne,7,0,0
+Control,Wild,183,Anne,8,0,0
+Control,Wild,183,Anne,9,0,0
+Control,Wild,183,Anne,10,0,0
+Control,Wild,184,Anne,1,1,1
+Control,Wild,184,Anne,2,1,0
+Control,Wild,184,Anne,3,0,0
+Control,Wild,184,Anne,4,0,0
+Control,Wild,184,Anne,5,0,0
+Control,Wild,184,Anne,6,0,0
+Control,Wild,184,Anne,7,0,0
+Control,Wild,184,Anne,8,0,0
+Control,Wild,184,Anne,9,0,0
+Control,Wild,184,Anne,10,0,0
+Control,Wild,185,Anne,1,1,1
+Control,Wild,185,Anne,2,1,1
+Control,Wild,185,Anne,3,0,1
+Control,Wild,185,Anne,4,0,1
+Control,Wild,185,Anne,5,0,1
+Control,Wild,185,Anne,6,0,1
+Control,Wild,185,Anne,7,0,1
+Control,Wild,185,Anne,8,0,1
+Control,Wild,185,Anne,9,0,1
+Control,Wild,185,Anne,10,0,1
+Control,Wild,186,Anne,1,1,1
+Control,Wild,186,Anne,2,1,1
+Control,Wild,186,Anne,3,0,1
+Control,Wild,186,Anne,4,0,1
+Control,Wild,186,Anne,5,0,1
+Control,Wild,186,Anne,6,0,1
+Control,Wild,186,Anne,7,0,0
+Control,Wild,186,Anne,8,0,0
+Control,Wild,186,Anne,9,0,0
+Control,Wild,186,Anne,10,0,0
+Control,Wild,187,Natalie,1,1,1
+Control,Wild,187,Natalie,2,0,1
+Control,Wild,187,Natalie,3,0,1
+Control,Wild,187,Natalie,4,0,1
+Control,Wild,187,Natalie,5,0,0
+Control,Wild,187,Natalie,6,0,0
+Control,Wild,187,Natalie,7,0,0
+Control,Wild,187,Natalie,8,0,0
+Control,Wild,187,Natalie,9,0,0
+Control,Wild,187,Natalie,10,0,0
+Control,Wild,188,Natalie,1,1,1
+Control,Wild,188,Natalie,2,1,1
+Control,Wild,188,Natalie,3,1,1
+Control,Wild,188,Natalie,4,1,1
+Control,Wild,188,Natalie,5,1,1
+Control,Wild,188,Natalie,6,0,1
+Control,Wild,188,Natalie,7,0,1
+Control,Wild,188,Natalie,8,0,1
+Control,Wild,188,Natalie,9,0,0
+Control,Wild,188,Natalie,10,0,0
+Control,Wild,189,Natalie,1,1,1
+Control,Wild,189,Natalie,2,0,1
+Control,Wild,189,Natalie,3,0,1
+Control,Wild,189,Natalie,4,0,1
+Control,Wild,189,Natalie,5,0,0
+Control,Wild,189,Natalie,6,0,0
+Control,Wild,189,Natalie,7,0,0
+Control,Wild,189,Natalie,8,0,0
+Control,Wild,189,Natalie,9,0,0
+Control,Wild,189,Natalie,10,0,0
+Control,Wild,190,Natalie,1,1,1
+Control,Wild,190,Natalie,2,1,1
+Control,Wild,190,Natalie,3,1,1
+Control,Wild,190,Natalie,4,1,1
+Control,Wild,190,Natalie,5,1,1
+Control,Wild,190,Natalie,6,1,1
+Control,Wild,190,Natalie,7,1,0
+Control,Wild,190,Natalie,8,0,0
+Control,Wild,190,Natalie,9,0,0
+Control,Wild,190,Natalie,10,0,0
+Control,Wild,191,Natalie,1,1,1
+Control,Wild,191,Natalie,2,1,1
+Control,Wild,191,Natalie,3,1,1
+Control,Wild,191,Natalie,4,0,1
+Control,Wild,191,Natalie,5,0,0
+Control,Wild,191,Natalie,6,0,0
+Control,Wild,191,Natalie,7,0,0
+Control,Wild,191,Natalie,8,0,0
+Control,Wild,191,Natalie,9,0,0
+Control,Wild,191,Natalie,10,0,0
+Control,Wild,192,Natalie,1,1,1
+Control,Wild,192,Natalie,2,1,1
+Control,Wild,192,Natalie,3,0,1
+Control,Wild,192,Natalie,4,0,0
+Control,Wild,192,Natalie,5,0,0
+Control,Wild,192,Natalie,6,0,0
+Control,Wild,192,Natalie,7,0,0
+Control,Wild,192,Natalie,8,0,0
+Control,Wild,192,Natalie,9,0,0
+Control,Wild,192,Natalie,10,0,0
+Control,Wild,193,Natalie,1,1,1
+Control,Wild,193,Natalie,2,1,1
+Control,Wild,193,Natalie,3,1,0
+Control,Wild,193,Natalie,4,1,0
+Control,Wild,193,Natalie,5,0,0
+Control,Wild,193,Natalie,6,0,0
+Control,Wild,193,Natalie,7,0,0
+Control,Wild,193,Natalie,8,0,0
+Control,Wild,193,Natalie,9,0,0
+Control,Wild,193,Natalie,10,0,0
+Control,Wild,194,Natalie,1,1,1
+Control,Wild,194,Natalie,2,1,1
+Control,Wild,194,Natalie,3,1,1
+Control,Wild,194,Natalie,4,0,1
+Control,Wild,194,Natalie,5,0,1
+Control,Wild,194,Natalie,6,0,1
+Control,Wild,194,Natalie,7,0,1
+Control,Wild,194,Natalie,8,0,1
+Control,Wild,194,Natalie,9,0,0
+Control,Wild,194,Natalie,10,0,0
+Control,Wild,195,Natalie,1,1,1
+Control,Wild,195,Natalie,2,1,1
+Control,Wild,195,Natalie,3,1,1
+Control,Wild,195,Natalie,4,1,1
+Control,Wild,195,Natalie,5,1,1
+Control,Wild,195,Natalie,6,1,1
+Control,Wild,195,Natalie,7,0,0
+Control,Wild,195,Natalie,8,0,0
+Control,Wild,195,Natalie,9,0,0
+Control,Wild,195,Natalie,10,0,0
+Control,Wild,196,Natalie,1,0,1
+Control,Wild,196,Natalie,2,0,1
+Control,Wild,196,Natalie,3,0,1
+Control,Wild,196,Natalie,4,0,1
+Control,Wild,196,Natalie,5,0,1
+Control,Wild,196,Natalie,6,0,1
+Control,Wild,196,Natalie,7,0,1
+Control,Wild,196,Natalie,8,0,1
+Control,Wild,196,Natalie,9,0,0
+Control,Wild,196,Natalie,10,0,0
+Control,Wild,197,Natalie,1,1,1
+Control,Wild,197,Natalie,2,1,1
+Control,Wild,197,Natalie,3,1,1
+Control,Wild,197,Natalie,4,1,1
+Control,Wild,197,Natalie,5,0,1
+Control,Wild,197,Natalie,6,0,1
+Control,Wild,197,Natalie,7,0,1
+Control,Wild,197,Natalie,8,0,1
+Control,Wild,197,Natalie,9,0,0
+Control,Wild,197,Natalie,10,0,0
+Control,Wild,198,Natalie,1,1,1
+Control,Wild,198,Natalie,2,1,1
+Control,Wild,198,Natalie,3,1,0
+Control,Wild,198,Natalie,4,1,0
+Control,Wild,198,Natalie,5,1,0
+Control,Wild,198,Natalie,6,0,0
+Control,Wild,198,Natalie,7,0,0
+Control,Wild,198,Natalie,8,0,0
+Control,Wild,198,Natalie,9,0,0
+Control,Wild,198,Natalie,10,0,0
+Control,RHQ,199,Natalie ,1,1,1
+Control,RHQ,199,Natalie ,2,1,1
+Control,RHQ,199,Natalie ,3,1,1
+Control,RHQ,199,Natalie ,4,1,1
+Control,RHQ,199,Natalie ,5,1,1
+Control,RHQ,199,Natalie ,6,0,1
+Control,RHQ,199,Natalie ,7,0,1
+Control,RHQ,199,Natalie ,8,0,1
+Control,RHQ,199,Natalie ,9,0,1
+Control,RHQ,199,Natalie ,10,0,0
+Control,RHQ,200,Natalie ,1,1,1
+Control,RHQ,200,Natalie ,2,1,1
+Control,RHQ,200,Natalie ,3,1,1
+Control,RHQ,200,Natalie ,4,1,1
+Control,RHQ,200,Natalie ,5,0,1
+Control,RHQ,200,Natalie ,6,0,1
+Control,RHQ,200,Natalie ,7,0,0
+Control,RHQ,200,Natalie ,8,0,0
+Control,RHQ,200,Natalie ,9,0,0
+Control,RHQ,200,Natalie ,10,0,0
+Control,RHQ,201,Natalie ,1,1,1
+Control,RHQ,201,Natalie ,2,1,1
+Control,RHQ,201,Natalie ,3,1,1
+Control,RHQ,201,Natalie ,4,1,0
+Control,RHQ,201,Natalie ,5,0,0
+Control,RHQ,201,Natalie ,6,0,0
+Control,RHQ,201,Natalie ,7,0,0
+Control,RHQ,201,Natalie ,8,0,0
+Control,RHQ,201,Natalie ,9,0,0
+Control,RHQ,201,Natalie ,10,0,0
+Control,RHQ,202,Natalie ,1,1,1
+Control,RHQ,202,Natalie ,2,1,1
+Control,RHQ,202,Natalie ,3,1,1
+Control,RHQ,202,Natalie ,4,1,1
+Control,RHQ,202,Natalie ,5,1,1
+Control,RHQ,202,Natalie ,6,0,1
+Control,RHQ,202,Natalie ,7,0,1
+Control,RHQ,202,Natalie ,8,0,0
+Control,RHQ,202,Natalie ,9,0,0
+Control,RHQ,202,Natalie ,10,0,0
+Control,RHQ,203,Natalie ,1,1,1
+Control,RHQ,203,Natalie ,2,1,1
+Control,RHQ,203,Natalie ,3,1,1
+Control,RHQ,203,Natalie ,4,1,0
+Control,RHQ,203,Natalie ,5,1,0
+Control,RHQ,203,Natalie ,6,1,0
+Control,RHQ,203,Natalie ,7,0,0
+Control,RHQ,203,Natalie ,8,0,0
+Control,RHQ,203,Natalie ,9,0,0
+Control,RHQ,203,Natalie ,10,0,0
+Control,RHQ,204,Natalie ,1,1,1
+Control,RHQ,204,Natalie ,2,1,1
+Control,RHQ,204,Natalie ,3,1,1
+Control,RHQ,204,Natalie ,4,1,1
+Control,RHQ,204,Natalie ,5,1,0
+Control,RHQ,204,Natalie ,6,0,0
+Control,RHQ,204,Natalie ,7,0,0
+Control,RHQ,204,Natalie ,8,0,0
+Control,RHQ,204,Natalie ,9,0,0
+Control,RHQ,204,Natalie ,10,0,0
+Control,RHQ,205,Natalie ,1,1,1
+Control,RHQ,205,Natalie ,2,0,1
+Control,RHQ,205,Natalie ,3,0,1
+Control,RHQ,205,Natalie ,4,0,0
+Control,RHQ,205,Natalie ,5,0,0
+Control,RHQ,205,Natalie ,6,0,0
+Control,RHQ,205,Natalie ,7,0,0
+Control,RHQ,205,Natalie ,8,0,0
+Control,RHQ,205,Natalie ,9,0,0
+Control,RHQ,205,Natalie ,10,0,0
+Control,RHQ,206,Natalie ,1,1,1
+Control,RHQ,206,Natalie ,2,1,1
+Control,RHQ,206,Natalie ,3,1,1
+Control,RHQ,206,Natalie ,4,0,1
+Control,RHQ,206,Natalie ,5,0,1
+Control,RHQ,206,Natalie ,6,0,1
+Control,RHQ,206,Natalie ,7,0,1
+Control,RHQ,206,Natalie ,8,0,0
+Control,RHQ,206,Natalie ,9,0,0
+Control,RHQ,206,Natalie ,10,0,0
+Control,RHQ,207,Natalie ,1,1,1
+Control,RHQ,207,Natalie ,2,1,1
+Control,RHQ,207,Natalie ,3,1,1
+Control,RHQ,207,Natalie ,4,1,1
+Control,RHQ,207,Natalie ,5,0,0
+Control,RHQ,207,Natalie ,6,0,0
+Control,RHQ,207,Natalie ,7,0,0
+Control,RHQ,207,Natalie ,8,0,0
+Control,RHQ,207,Natalie ,9,0,0
+Control,RHQ,207,Natalie ,10,0,0
+Control,Wild,208,Natalie,1,1,1
+Control,Wild,208,Natalie,2,0,1
+Control,Wild,208,Natalie,3,0,1
+Control,Wild,208,Natalie,4,0,0
+Control,Wild,208,Natalie,5,0,0
+Control,Wild,208,Natalie,6,0,0
+Control,Wild,208,Natalie,7,0,0
+Control,Wild,208,Natalie,8,0,0
+Control,Wild,208,Natalie,9,0,0
+Control,Wild,208,Natalie,10,0,0
+Control,Wild,209,Natalie,1,1,1
+Control,Wild,209,Natalie,2,1,1
+Control,Wild,209,Natalie,3,1,1
+Control,Wild,209,Natalie,4,1,1
+Control,Wild,209,Natalie,5,1,0
+Control,Wild,209,Natalie,6,1,0
+Control,Wild,209,Natalie,7,0,0
+Control,Wild,209,Natalie,8,0,0
+Control,Wild,209,Natalie,9,0,0
+Control,Wild,209,Natalie,10,0,0
+Control,Wild,210,Natalie,1,1,1
+Control,Wild,210,Natalie,2,1,0
+Control,Wild,210,Natalie,3,1,0
+Control,Wild,210,Natalie,4,1,0
+Control,Wild,210,Natalie,5,1,0
+Control,Wild,210,Natalie,6,1,0
+Control,Wild,210,Natalie,7,0,0
+Control,Wild,210,Natalie,8,0,0
+Control,Wild,210,Natalie,9,0,0
+Control,Wild,210,Natalie,10,0,0
+Control,RHQ,211,Natalie,1,1,1
+Control,RHQ,211,Natalie,2,1,1
+Control,RHQ,211,Natalie,3,1,1
+Control,RHQ,211,Natalie,4,1,1
+Control,RHQ,211,Natalie,5,0,1
+Control,RHQ,211,Natalie,6,0,1
+Control,RHQ,211,Natalie,7,0,1
+Control,RHQ,211,Natalie,8,0,1
+Control,RHQ,211,Natalie,9,0,0
+Control,RHQ,211,Natalie,10,0,0
+Control,RHQ,212,Natalie,1,1,1
+Control,RHQ,212,Natalie,2,1,1
+Control,RHQ,212,Natalie,3,1,1
+Control,RHQ,212,Natalie,4,1,1
+Control,RHQ,212,Natalie,5,1,0
+Control,RHQ,212,Natalie,6,1,0
+Control,RHQ,212,Natalie,7,1,0
+Control,RHQ,212,Natalie,8,1,0
+Control,RHQ,212,Natalie,9,0,0
+Control,RHQ,212,Natalie,10,0,0
+Control,RHQ,213,Natalie,1,1,1
+Control,RHQ,213,Natalie,2,1,1
+Control,RHQ,213,Natalie,3,1,1
+Control,RHQ,213,Natalie,4,0,1
+Control,RHQ,213,Natalie,5,0,1
+Control,RHQ,213,Natalie,6,0,1
+Control,RHQ,213,Natalie,7,0,0
+Control,RHQ,213,Natalie,8,0,0
+Control,RHQ,213,Natalie,9,0,0
+Control,RHQ,213,Natalie,10,0,0
+Control,RHQ,214,Natalie,1,1,1
+Control,RHQ,214,Natalie,2,1,1
+Control,RHQ,214,Natalie,3,1,1
+Control,RHQ,214,Natalie,4,0,1
+Control,RHQ,214,Natalie,5,0,0
+Control,RHQ,214,Natalie,6,0,0
+Control,RHQ,214,Natalie,7,0,0
+Control,RHQ,214,Natalie,8,0,0
+Control,RHQ,214,Natalie,9,0,0
+Control,RHQ,214,Natalie,10,0,0
+Control,RHQ,215,Natalie,1,1,1
+Control,RHQ,215,Natalie,2,1,1
+Control,RHQ,215,Natalie,3,1,1
+Control,RHQ,215,Natalie,4,1,0
+Control,RHQ,215,Natalie,5,0,0
+Control,RHQ,215,Natalie,6,0,0
+Control,RHQ,215,Natalie,7,0,0
+Control,RHQ,215,Natalie,8,0,0
+Control,RHQ,215,Natalie,9,0,0
+Control,RHQ,215,Natalie,10,0,0
+Control,RHQ,216,Natalie,1,1,1
+Control,RHQ,216,Natalie,2,1,1
+Control,RHQ,216,Natalie,3,1,1
+Control,RHQ,216,Natalie,4,1,1
+Control,RHQ,216,Natalie,5,1,1
+Control,RHQ,216,Natalie,6,0,1
+Control,RHQ,216,Natalie,7,0,0
+Control,RHQ,216,Natalie,8,0,0
+Control,RHQ,216,Natalie,9,0,0
+Control,RHQ,216,Natalie,10,0,0
+Control,RHQ,217,Natalie,1,1,1
+Control,RHQ,217,Natalie,2,1,1
+Control,RHQ,217,Natalie,3,1,1
+Control,RHQ,217,Natalie,4,1,1
+Control,RHQ,217,Natalie,5,1,1
+Control,RHQ,217,Natalie,6,0,1
+Control,RHQ,217,Natalie,7,0,0
+Control,RHQ,217,Natalie,8,0,0
+Control,RHQ,217,Natalie,9,0,0
+Control,RHQ,217,Natalie,10,0,0
+Control,RHQ,218,Natalie,1,1,1
+Control,RHQ,218,Natalie,2,1,1
+Control,RHQ,218,Natalie,3,1,1
+Control,RHQ,218,Natalie,4,1,1
+Control,RHQ,218,Natalie,5,1,1
+Control,RHQ,218,Natalie,6,0,1
+Control,RHQ,218,Natalie,7,0,0
+Control,RHQ,218,Natalie,8,0,0
+Control,RHQ,218,Natalie,9,0,0
+Control,RHQ,218,Natalie,10,0,0
+Control,RHQ,219,Natalie,1,1,1
+Control,RHQ,219,Natalie,2,0,1
+Control,RHQ,219,Natalie,3,0,1
+Control,RHQ,219,Natalie,4,0,1
+Control,RHQ,219,Natalie,5,0,0
+Control,RHQ,219,Natalie,6,0,0
+Control,RHQ,219,Natalie,7,0,0
+Control,RHQ,219,Natalie,8,0,0
+Control,RHQ,219,Natalie,9,0,0
+Control,RHQ,219,Natalie,10,0,0
+Control,RHQ,220,Natalie,1,1,1
+Control,RHQ,220,Natalie,2,1,1
+Control,RHQ,220,Natalie,3,1,1
+Control,RHQ,220,Natalie,4,1,1
+Control,RHQ,220,Natalie,5,1,1
+Control,RHQ,220,Natalie,6,0,1
+Control,RHQ,220,Natalie,7,0,1
+Control,RHQ,220,Natalie,8,0,0
+Control,RHQ,220,Natalie,9,0,0
+Control,RHQ,220,Natalie,10,0,0
+Control,RHQ,221,Natalie,1,1,1
+Control,RHQ,221,Natalie,2,1,1
+Control,RHQ,221,Natalie,3,1,1
+Control,RHQ,221,Natalie,4,1,1
+Control,RHQ,221,Natalie,5,1,0
+Control,RHQ,221,Natalie,6,0,0
+Control,RHQ,221,Natalie,7,0,0
+Control,RHQ,221,Natalie,8,0,0
+Control,RHQ,221,Natalie,9,0,0
+Control,RHQ,221,Natalie,10,0,0
+Control,RHQ,222,Natalie,1,1,1
+Control,RHQ,222,Natalie,2,1,1
+Control,RHQ,222,Natalie,3,1,1
+Control,RHQ,222,Natalie,4,0,1
+Control,RHQ,222,Natalie,5,0,1
+Control,RHQ,222,Natalie,6,0,0
+Control,RHQ,222,Natalie,7,0,0
+Control,RHQ,222,Natalie,8,0,0
+Control,RHQ,222,Natalie,9,0,0
+Control,RHQ,222,Natalie,10,0,0
+Control,RHQ,223,Natalie,1,1,1
+Control,RHQ,223,Natalie,2,1,1
+Control,RHQ,223,Natalie,3,1,1
+Control,RHQ,223,Natalie,4,0,0
+Control,RHQ,223,Natalie,5,0,0
+Control,RHQ,223,Natalie,6,0,0
+Control,RHQ,223,Natalie,7,0,0
+Control,RHQ,223,Natalie,8,0,0
+Control,RHQ,223,Natalie,9,0,0
+Control,RHQ,223,Natalie,10,0,0
+Control,RHQ,224,Natalie,1,1,1
+Control,RHQ,224,Natalie,2,1,1
+Control,RHQ,224,Natalie,3,1,1
+Control,RHQ,224,Natalie,4,1,1
+Control,RHQ,224,Natalie,5,1,0
+Control,RHQ,224,Natalie,6,1,0
+Control,RHQ,224,Natalie,7,0,0
+Control,RHQ,224,Natalie,8,0,0
+Control,RHQ,224,Natalie,9,0,0
+Control,RHQ,224,Natalie,10,0,0

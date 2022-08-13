@@ -1,0 +1,561 @@
+Location,Species,Treatment,Fish_ID,SL_mm,Size_group,Time_in_cue,Comment
+AIMS 2015,Acantho,CO2,428,9.30716581,small,67.4480737,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,429,9.30716581,small,29.20875421,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,430,9.30978653,small,49.04166667,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,431,9.30978653,small,66.93003356,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,432,9.312305639,small,56.96588736,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,433,9.312305639,small,43.42647594,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,434,9.315070308,small,50.71070234,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,435,9.315070308,small,87.8683129,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,436,9.31768256,small,46.875,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,437,9.31768256,small,50,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,438,9.320205903,small,49.03866729,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,439,9.320205903,small,43.14287929,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,440,9.323040429,small,58.34731544,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,441,9.323040429,small,47.89375372,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,442,9.325603993,small,40.04166667,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,443,9.325603993,small,47.56136385,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,444,9.328214128,small,40.31493232,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,445,9.328214128,small,63.34111121,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,446,9.330754406,small,83.20833333,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,447,9.330754406,small,69.95325002,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,448,9.333301035,small,39.08333333,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,449,9.333301035,small,58.16107383,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,450,9.335828611,small,23.09267911,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,451,9.335828611,small,42.84508248,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,452,9.338449331,small,41.69629939,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,453,9.338449331,small,19.81658104,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,500,10.39385007,small,58.91938861,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,501,10.39385007,small,51.38070988,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,502,10.39633108,small,45.83144891,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,503,10.39633108,small,41.76151913,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,504,10.39882478,small,59.17195326,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,505,10.39882478,small,74.84307094,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,506,10.4012952,small,71.58497927,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,507,10.4012952,small,25.4876043,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,508,10.40382701,small,50.29215359,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,509,10.40382701,small,69.23292553,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,510,10.4065684,small,48.21149731,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,511,10.4065684,small,47.13534123,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,512,10.41820075,small,51.49056063,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,513,10.41820075,small,58.14572456,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,514,10.42067541,small,35.03454774,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,515,10.42067541,small,86.67393807,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,516,10.42318393,small,53.58333333,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,517,10.42318393,small,84.88292661,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,518,10.42574749,small,46.41666667,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,519,10.42574749,small,15.11707339,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,520,10.42844442,small,35.66666667,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,521,10.42844442,small,26.80151973,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,522,10.43094024,small,68.39091084,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,CO2,523,10.43094024,small,78.94485239,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,454,9.479887764,small,31.98024485,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,455,9.479887764,small,37.52297472,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,456,9.482434392,small,81.50138079,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,457,9.482434392,small,44.5,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,458,9.485154606,small,32.91522637,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,459,9.485154606,small,34.58008806,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,460,9.487652546,small,56.70762173,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,461,9.487652546,small,71.94110877,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,462,9.498124841,small,39.5,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,463,9.498124841,small,9.901416393,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,464,9.50069899,small,36.97829716,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,465,9.50069899,small,42.03868786,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,466,9.503262553,small,57.7947001,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,467,9.503262553,small,45.9151908,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,468,9.50585152,small,72.92699348,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,469,9.50585152,small,2.311495475,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,470,9.508525162,small,30.34128978,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,471,9.508525162,small,50.87646077,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,472,9.511061206,small,50,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,473,9.511061206,small,29.7640563,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,474,9.51368616,small,29.91903172,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,475,9.51368616,small,47.54929898,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,476,9.516304763,small,17.6593763,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,477,9.516304763,small,24.84990012,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,478,9.518855625,small,23.61725293,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,479,9.518855625,small,30.56804858,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,524,10.57874631,small,44.20833333,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,525,10.57874631,small,26.37372846,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,526,10.58130352,small,12.67683946,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,527,10.58130352,small,46.33965879,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,528,10.58390519,small,72.13376461,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,529,10.58390519,small,52.43800019,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,530,10.58643911,small,34.66637945,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,531,10.58643911,small,30.51728678,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,532,10.58892647,small,49.58333333,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,533,10.58892647,small,25.54308974,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,534,10.59142864,small,26.00396494,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,535,10.59142864,small,49.01068275,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,536,10.59393293,small,46.28971898,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,537,10.59393293,small,13.9180379,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,538,10.59646263,small,48.43576389,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,539,10.59646263,small,12.61079806,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,540,10.59920613,small,8.925848637,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,541,10.59920613,small,43.95563967,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,542,10.60180144,small,54.95385906,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,543,10.60180144,small,46.03074096,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,544,10.60433749,small,86.78373632,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,545,10.60433749,small,14.44003983,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,546,10.60698361,small,36.75473802,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+AIMS 2015,Acantho,control,547,10.60698361,small,9.144308943,"18 min pred trials, took 240+300 and 720-780 s sections only from RHQ3 (small fish)"
+LIRS 2014,Lemon,control,day 4 tank 3 fish 1,19.54609117,medium,73.71262458,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,control,day 4 tank 3 fish 3,26.55073425,medium,47.14403974,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,control,day 4 tank 3 fish 4,23.92399309,medium,33.20589429,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,control,day 4 tank 3 fish 5,30.92863617,medium,53.0375266,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,control,day 4 tank 3 fish 6,24.79957348,medium,33.16823406,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,control,day 4 tank 3 fish 8,28.30189502,medium,28.43241063,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,CO2,day 5 tank 1 fish 1,23.92399309,medium,17.49838194,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,CO2,day 5 tank 1 fish 2,28.30189502,medium,0,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,CO2,day 5 tank 1 fish 4,28.30189502,medium,26.87016562,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,CO2,day 5 tank 1 fish 5,22.17283232,medium,45.17629839,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,control,day 6 tank 4 fish 2,28.30189502,medium,98.87312187,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,control,day 6 tank 4 fish 3,27.42631463,medium,15.16380196,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,control,day 6 tank 4 fish 4,27.42631463,medium,0.689655172,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,control,day 6 tank 4 fish 6,23.92399309,medium,5.485435618,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,control,day 6 tank 4 fish 7,30.05305578,medium,26.87733754,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,control,day 6 tank 4 fish 5,24.79957348,medium,7.239325439,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,control,day 6 tank 4 fish 8,30.05305578,medium,1.243339254,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,CO2,day 6 tank 2 fish 1,25.67515386,medium,24.1190536,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,CO2,day 6 tank 2 fish 2,28.30189502,medium,66.79657081,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,CO2,day 6 tank 2 fish 3,29.1774754,medium,56.66442285,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,CO2,day 6 tank 2 fish 4,30.05305578,medium,31.35332165,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,CO2,day 6 tank 2 fish 5,23.92399309,medium,48.82251938,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,CO2,day 7 tank 6 fish 1,26.55073425,medium,40.40898333,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,CO2,day 7 tank 6 fish 2,32.67979694,medium,27.7558976,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,CO2,day 7 tank 6 fish 3,30.92863617,medium,21.37540931,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,CO2,day 7 tank 6 fish 4,30.92863617,medium,14.56201272,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,CO2,day 7 tank 6 fish 5,22.17283232,medium,37.99256711,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,CO2,day 7 tank 6 fish 6,34.43095771,medium,21.49687265,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,CO2,day 7 tank 6 fish 7,31.80421655,medium,0,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,CO2,day 7 tank 6 fish 8,28.30189502,medium,50.56749544,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,CO2,day 7 tank 5 fish 1,30.92863617,medium,55.76225045,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,CO2,day 7 tank 5 fish 2,25.67515386,medium,22.97423936,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,CO2,day 7 tank 5 fish 3,33.55537732,medium,62.28617234,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,CO2,day 7 tank 5 fish 4,23.04841271,medium,69.5067102,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,CO2,day 7 tank 5 fish 5,24.79957348,medium,49.44295488,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,CO2,day 7 tank 5 fish 6,30.92863617,medium,50.81669691,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,control,day 8 tank 7 fish 1,24.79957348,medium,46.60090303,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,control,day 8 tank 7 fish 2,23.92399309,medium,50,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,control,day 8 tank 7 fish 3,27.42631463,medium,57.26760812,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,control,day 8 tank 7 fish 4,30.05305578,medium,8.442053986,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,control,day 8 tank 7 fish 5,32.67979694,medium,52.21745857,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,control,day 8 tank 7 fish 6,34.43095771,medium,32.80427675,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,control,day 8 tank 8 fish 1,30.05305578,medium,0,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,control,day 8 tank 8 fish 3,26.55073425,medium,44.11844543,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,control,day 8 tank 8 fish 4,28.30189502,medium,30.10275406,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,control,day 8 tank 8 fish 5,34.43095771,medium,6.518421255,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,control,day 8 tank 8 fish 6,24.79957348,medium,16.70382355,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Lemon,control,day 8 tank 8 fish 7,28.30189502,medium,55.9471393,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Chromis,CO2,Tank 1 fish 1,,,62.06925957,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Chromis,CO2,Tank 1 fish 2,,,32.61781192,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Chromis,CO2,Tank 1 fish 3,,,48.66749007,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Chromis,CO2,Tank 1 fish 4,,,22.78833822,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Chromis,control,Tank 4 fish 1,,,41.97173732,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Chromis,control,Tank 4 fish 2,,,99.83333333,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Chromis,control,Tank 4 fish 3,,,6.584533311,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Chromis,control,Tank 4 fish 4,,,38.53880415,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Chromis,control,Tank 4 fish 5,,,53.14927518,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Chromis,control,Tank 3 fish 1,19.54609117,medium,22.73385285,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Chromis,control,Tank 3 fish 2,23.92399309,medium,74.37559676,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Chromis,control,Tank 3 fish 3,17.7949304,medium,32.27820226,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Chromis,control,Tank 3 fish 4,32.67979694,medium,23.56665297,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Chromis,control,Tank 4 fish 1_2,26.55073425,medium,17.08403169,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Chromis,control,Tank 4 fish 2_2,30.92863617,medium,71.39709594,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Chromis,control,Tank 4 fish 3_2,23.04841271,medium,35.9392023,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Chromis,control,Tank 4 fish 4_2,22.17283232,medium,21.13048026,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Chromis,control,Tank 4 fish 5_2,21.29725194,medium,27.86594427,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Chromis,control,Tank 4 fish 6_2,43.18676155,big,14.08284922,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Chromis,control,Tank 4 fish 7_2,28.30189502,medium,51.5993266,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Chromis,control,Tank 4 fish 8_2,19.54609117,medium,34.21491543,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Chromis,control,Tank 8 fish 1,34.43095771,medium,30.70985604,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Chromis,control,Tank 8 fish 2,43.18676155,big,16.26057318,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Chromis,control,Tank 7 fish 1,19.54609117,medium,20.01237533,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Chromis,control,Tank 7 fish 2,35.30653809,big,5.817648663,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Chromis,control,Tank 7 fish 5,34.43095771,medium,0,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Chromis,control,Tank 7 fish 6,21.29725194,medium,58.04411765,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Chromis,control,Tank 7 fish 7,23.92399309,medium,11.86041757,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Chromis,CO2,Tank 5 fish 1,19.54609117,medium,14.84482954,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Chromis,CO2,Tank 5 fish 2,20.42167155,medium,37.95464914,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Chromis,CO2,Tank 5 fish 3,32.67979694,medium,8.962751408,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Chromis,CO2,Tank 5 fish 4,32.67979694,medium,59.64182871,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Chromis,CO2,Tank 2 fish 1,17.7949304,medium,20.80409803,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Chromis,CO2,Tank 2 fish 2,26.55073425,medium,51.04166667,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Chromis,CO2,Tank 2 fish 3,23.92399309,medium,0.208333333,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Chromis,CO2,Tank 2 fish 4,18.67051078,medium,47.69882529,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Chromis,CO2,Tank 2 fish 5,30.92863617,medium,19.81078341,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Chromis,CO2,Tank 6 fish 1,24.79957348,medium,29.51833123,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Chromis,CO2,Tank 6 fish 3,37.05769886,big,26.6071992,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Chromis,control,Tank 8 fish 3,15.16818925,medium,100,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Ambon,CO2,day 5 tank 1 fish 3,35.30653809,big,23.8631252,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Ambon,CO2,day 7 tank 6 fish 4,30.92863617,medium,14.56201272,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Ambon,CO2,day 7 tank 6 fish 6,34.43095771,medium,21.49687265,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Ambon,CO2,day 7 tank 6 fish 7,31.80421655,medium,0,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Ambon,CO2,day 7 tank 5 fish 8,37.93327925,big,45.14169901,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Ambon,CO2,day 7 tank 5 fish 1,30.05305578,medium,49.91776911,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Ambon,CO2,day 7 tank 5 fish 2,35.30653809,big,12.57378382,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Ambon,CO2,day 7 tank 5 fish 4,48.44024386,big,32.98380404,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Ambon,CO2,day 7 tank 5 fish 5,32.67979694,medium,51.98779461,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Ambon,CO2,day 7 tank 6 fish 1,27.42631463,medium,50,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Ambon,CO2,day 7 tank 6 fish 2,51.9425654,big,22.01594907,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Ambon,CO2,day 7 tank 6 fish 3,38.80885963,big,13.97707231,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Ambon,CO2,day 7 tank 1 fish 1,38.80885963,big,30.542692,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Ambon,CO2,day 7 tank 1 fish 2,37.93327925,big,45.19642857,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Ambon,CO2,day 7 tank 1 fish 3,26.55073425,medium,50,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Ambon,CO2,day 7 tank 1 fish 4,37.93327925,big,36.74812331,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Ambon,control,day 8 tank 7 fish 2,43.18676155,big,16.01501397,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Ambon,control,day 8 tank 7 fish 3,37.05769886,big,45.80275728,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Ambon,control,day 8 tank 7 fish 6,30.92863617,medium,29.6143813,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Ambon,control,day 8 tank 3 fish 1,37.05769886,big,50,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Ambon,control,day 8 tank 3 fish 2,52.81814578,big,24.37563112,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Ambon,control,day 8 tank 3 fish 3,34.43095771,medium,52.65691886,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Ambon,control,day 8 tank 3 fish 5,24.79957348,medium,32.66393151,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Ambon,control,day 8 tank 8 fish 1,36.18211848,big,65.77677263,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Ambon,control,day 8 tank 8 fish 4,43.18676155,big,21.17676657,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Ambon,CO2,day 9 tank 2 fish 1,26.55073425,medium,25.27644196,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Ambon,CO2,day 9 tank 2 fish 2,30.05305578,medium,40.66276306,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Ambon,CO2,day 9 tank 2 fish 3,35.30653809,big,29.25556411,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Ambon,CO2,day 9 tank 2 fish 4,28.30189502,medium,100,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Ambon,CO2,day 9 tank 2 fish 5,23.04841271,medium,51.0651983,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Ambon,CO2,day 9 tank 2 fish 6,37.05769886,big,20.66656332,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Ambon,CO2,day 9 tank 2 fish 7,37.05769886,big,21.79354106,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Ambon,control,day 9 tank 4 fish 1,38.80885963,big,14.95177764,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Ambon,control,day 9 tank 4 fish 2,23.92399309,medium,32.54487531,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Ambon,control,day 9 tank 4 fish 3,43.18676155,big,28.75886789,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Ambon,control,day 9 tank 4 fish 4,31.80421655,medium,2.314814815,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Ambon,control,day 9 tank 4 fish 5,32.67979694,medium,29.02753851,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Ambon,control,day 9 tank 4 fish 6,30.92863617,medium,30.92785197,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Humbug,control,day 12 tank 3 fish 1,63.3251104,big,11.02814753,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Humbug,control,day 12 tank 3 fish 2,26.55073425,medium,28.57194336,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Humbug,control,day 12 tank 3 fish 4,25.67515386,medium,24.08463607,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Humbug,control,day 12 tank 3 fish 5,18.67051078,medium,21.22442892,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Humbug,control,day 12 tank 3 fish 6,41.43560078,big,39.77161614,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Humbug,control,day 12 tank 4 fish 1,,,68.12321543,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Humbug,control,day 12 tank 4 fish 2,21.29725194,medium,16.91752399,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Humbug,control,day 12 tank 4 fish 3,26.55073425,medium,18.50393701,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Humbug,control,day 12 tank 7 fish 1,38.80885963,big,48.97435897,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Humbug,control,day 12 tank 7 fish 2,37.05769886,big,10.56109846,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Humbug,control,day 13 tank 7 fish 3,20.42167155,medium,17.37840842,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Humbug,control,day 13 tank 7 fish 5,23.92399309,medium,46.0328459,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Humbug,control,day 13 tank 7 fish 6,57.19604771,big,47.13314248,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Humbug,control,day 13 tank 8 fish 1,43.18676155,big,75.06357178,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Humbug,control,day 13 tank 8 fish 2,23.92399309,medium,57.49241814,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Humbug,control,day 13 tank 8 fish 4,28.30189502,medium,50,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Humbug,control,day 13 tank 8 fish 5,40.5600204,big,33.1605965,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Humbug,control,day 13 tank 8 fish 6,31.80421655,medium,50,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Humbug,CO2,day 14 tank 1 fish 1,26.55073425,medium,34.70186473,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Humbug,CO2,day 14 tank 1 fish 2,30.05305578,medium,28.70787775,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Humbug,CO2,day 14 tank 1 fish 3,45.81350271,big,50,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Humbug,CO2,day 14 tank 1 fish 4,21.29725194,medium,16.60758948,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Humbug,CO2,day 14 tank 1 fish 5,61.57394963,big,50.91362126,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Humbug,CO2,day 14 tank 1 fish 6,26.55073425,medium,21.2501147,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Humbug,CO2,day 14 tank 1 fish 7,26.55073425,medium,15.22192947,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Humbug,CO2,day 14 tank 2 fish 1,54.56930655,big,50.07217738,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Humbug,CO2,day 14 tank 2 fish 2,32.67979694,medium,58.79166667,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Humbug,CO2,day 14 tank 5 fish 1,63.3251104,big,32.72608153,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Humbug,CO2,day 14 tank 5 fish 2,33.55537732,medium,51.24514649,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Humbug,CO2,day 14 tank 5 fish 3,22.17283232,medium,42.21298269,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Humbug,CO2,day 14 tank 5 fish 4,16.04376963,medium,77.05396175,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Humbug,CO2,day 14 tank 5 fish 5,29.1774754,medium,62.42916663,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Humbug,CO2,day 14 tank 6 fish 1,28.30189502,medium,48.24746331,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Humbug,CO2,day 14 tank 6 fish 2,39.68444001,big,65.79447407,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Humbug,CO2,day 14 tank 6 fish 3,41.43560078,big,21.7349128,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Humbug,CO2,day 14 tank 6 fish 4,23.92399309,medium,37.3381866,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Humbug,CO2,day 14 tank 6 fish 5,48.44024386,big,50.14387037,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2014,Humbug,CO2,day 14 tank 6 fish 6,30.05305578,medium,40.10119048,"18 min pred trials, mean of 5+6 min (240+300 start) and 13+14 min (720+780 start)"
+LIRS 2016,Acantho,control,52,8,small,49.75,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,51,8,small,26.31281221,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,57,9,small,49.075783,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,56,9,small,23.24472543,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,62,8.5,small,49.54166667,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,61,8.5,small,57.25676277,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,67,9,small,40.38977146,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,66,9,small,49.70784641,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,72,13,small,50.97292724,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,71,10,small,38.86825534,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,54,16,medium,9.313540208,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,53,16,medium,49.30434783,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,59,16,medium,14.76749662,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,58,15,medium,53.35290864,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,64,14,small,47.38535132,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,63,14,small,15.59775062,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,69,13.5,small,45.54120604,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,68,16,medium,35.13378778,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,74,32,medium,50.3376053,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,73,35,medium,100,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,79,18,medium,25.19748158,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,78,20,medium,9.460141903,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,89,19,medium,34.26542718,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,88,19,medium,21.8418197,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,99,29,medium,29.16788337,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,98,30,medium,28.93823038,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,104,31,medium,33.40858417,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,103,30,medium,41.29773173,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,55,41,big,50,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,60,41,big,51.41093474,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,65,46,big,41.26254181,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,70,51,big,50,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,75,49,big,45.14237856,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,CO2,109,24,medium,9.229916271,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,CO2,108,17,medium,22.27170284,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,CO2,114,17.5,medium,24.49925027,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,CO2,113,18,medium,7.925501067,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,CO2,119,17,medium,29.03884818,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,CO2,118,16,medium,41.65035858,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,CO2,124,16,medium,26.46305365,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,CO2,123,18,medium,10.06394288,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,CO2,129,27,medium,33.75836052,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,CO2,128,25,medium,25.99788205,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,CO2,134,33,medium,71.08899945,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,CO2,133,28,medium,52.47068229,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,80,36,big,8.666522015,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,85,39,big,53.24127079,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,90,32,medium,41.44407346,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,95,51,big,23.0084928,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,100,39,big,61.11442471,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,105,42,big,52.10084034,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,CO2,110,43,big,47.89915966,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,CO2,115,39,big,9.592097941,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,CO2,120,41,big,28.18303281,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,CO2,125,40,big,36.60477742,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,CO2,130,44,big,35.36748875,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,CO2,135,34,medium,50.87316176,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,77,9,small,43.00778263,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,76,9,small,47.2977299,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,82,9,small,67.00345311,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,81,9,small,50,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,87,9,small,65.64408714,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,86,9,small,50,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,92,8.5,small,44.62705691,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,91,8.5,small,50,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,97,9,small,65.38711289,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,96,9,small,47.18123862,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,102,9,small,50.21030257,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,101,9,small,50,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,CO2,107,9,small,47.11956226,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,CO2,106,9,small,55.986723,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,CO2,112,9,small,40.99457429,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,CO2,111,9,small,38.36926831,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,CO2,117,8.5,small,88.71071041,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,CO2,116,8.5,small,43.78112248,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,CO2,122,9,small,5.375,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,CO2,121,9,small,49.95819398,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,CO2,127,9,small,47.69636432,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,CO2,126,9,small,28.30938566,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,CO2,132,9,small,46.83401898,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,CO2,131,9,small,34.22698181,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,CO2,137,8,small,57.45960772,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,CO2,136,8,small,56.75557414,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,CO2,142,10,small,23.33713066,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,CO2,141,9,small,56.95833333,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,CO2,147,8,small,85.79984199,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,CO2,146,8,small,31.32398313,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,CO2,152,9,small,48.37770383,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,CO2,151,9,small,26.87137648,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,CO2,157,8,small,45.71547421,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,CO2,156,8,small,62.05887556,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,CO2,162,8,small,51.66880027,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,197,9,small,48.83591021,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,196,9,small,14.02835052,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,202,8,small,13.59401261,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,201,8,small,46.15166803,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,207,6,small,50.54090801,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,212,8,small,42.01881735,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,211,8,small,40.96768765,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,217,9.5,small,37.57971014,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,216,9.5,small,53.91153401,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,222,9,small,79.76138633,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,221,9,small,44.69607023,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,227,9,small,34.12560827,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,226,9,small,53.24462264,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,232,8.5,small,40.05175427,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,231,8.5,small,55.93003413,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,237,8,small,24.69758851,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,236,8,small,91.32302405,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,242,8.5,small,83.6477591,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,241,8.5,small,33.56743615,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,247,9,small,42.69219016,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,246,9,small,39.19523017,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,252,8,small,75.53256014,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,251,8,small,8.844882272,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,CO2,139,23,medium,50.37668134,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,CO2,138,25,medium,50,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,CO2,144,26,medium,76.32194163,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,CO2,143,26,medium,34.97569807,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,CO2,149,14,small,43.19066873,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,CO2,148,15,medium,43.31566464,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,CO2,154,15,medium,49.67524917,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,CO2,153,15,medium,24.27757386,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,CO2,159,15,medium,23.45757043,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,CO2,158,15,medium,30.98738546,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,CO2,164,15,medium,26.10023608,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,CO2,163,14,small,26.96499562,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,199,18,medium,17.54323345,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,198,18,medium,20.62784964,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,204,22,medium,20.14851774,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,203,17,medium,42.46333142,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,209,17,medium,30.4959096,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,214,24,medium,25.63445057,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,213,26,medium,45.46686079,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,219,15.5,medium,40.96726238,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,218,17,medium,50.22500942,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,224,14,small,39.27824065,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,223,16,medium,53.69674931,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,229,17,medium,24.73407785,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,228,16,medium,17.28122347,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,234,18.5,medium,7.254558812,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,233,19,medium,54.39218671,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,239,16.5,medium,44.66492679,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,238,17,medium,30.89119544,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,244,19,medium,18.18652323,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,243,20,medium,40.5439551,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,249,23,medium,60.36836546,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,248,22,medium,50,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,253,25,medium,29.78025876,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,CO2,140,41,big,54.78031561,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,CO2,145,36,big,50,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,CO2,150,40,big,62.50592351,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,CO2,155,40,big,44.47480184,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,CO2,160,34,medium,38.52527552,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,CO2,165,38,big,31.61076258,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,200,35,medium,20.02981143,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,205,33,medium,9.465797373,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,210,33,medium,25.6687572,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,215,32,medium,21.76822827,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,220,41,big,27.72378497,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,225,35,medium,49.74832215,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,230,32,medium,37.95044463,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,235,45,big,32.94036245,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,240,31,medium,47.46973,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,245,32,medium,31.75663573,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,250,34,medium,13.25980801,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,255,39,big,21.24969597,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,257,8,small,50,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,256,8,small,14.33034864,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,262,8,small,64.9708798,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,261,8,small,46.84293757,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,267,9,small,43.82010218,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,266,9,small,35.54278149,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,272,8,small,66.48373415,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,271,8,small,38.16447324,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,277,8,small,43.05297873,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,276,8,small,45.68003275,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,282,8,small,50,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,281,8,small,47.54187605,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,CO2,259,21,medium,36.51575568,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,CO2,264,16,medium,38.17162863,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,CO2,263,18,medium,17.0924311,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,CO2,269,18,medium,36.41469125,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,CO2,268,19,medium,17.13597145,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,CO2,274,15,medium,37.25757574,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,273,22,medium,50,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,279,15,medium,46.06876281,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,278,17.5,medium,28.53133757,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,CO2,260,34,medium,52.52951096,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,CO2,265,34,medium,31.44071062,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,CO2,270,29,medium,30.37971436,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,CO2,275,34,medium,48.75883495,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,CO2,280,35,medium,22.59677029,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,CO2,285,35,medium,42.89519349,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,287,8.5,small,39.07407407,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,286,8.5,small,56.45218146,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,292,9,small,31.44370123,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,291,9,small,69,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,297,8,small,50,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,296,8,small,18.99484757,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,301,8,small,70.98759013,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,307,8.5,small,34.22818792,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,306,8.5,small,50,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,312,8,small,50,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,311,8,small,45.65288181,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,317,9,small,3.652792101,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,316,9,small,25.24647682,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,322,8,small,59.68965998,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,321,8,small,80.42566646,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,327,8,small,78.43979933,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,326,8,small,70.70942075,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,332,8,small,84.63663175,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,331,8,small,36.51892475,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,337,9,small,38.75285453,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,336,9,small,50,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,342,10.5,small,58.51828686,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,341,10.5,small,54.86712232,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,347,10,small,42.81035675,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,346,10,small,57.21854377,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,352,11,small,46.38103161,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,351,11,small,44.20951366,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,357,9,small,58.70398251,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,356,14,small,53.04212414,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,362,8.5,small,55.89715352,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,361,8.5,small,43.64225621,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,367,8,small,41.51802376,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,366,8,small,74.4549493,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,372,8,small,50,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,371,8,small,50,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,377,8.5,small,50,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,376,8.5,small,33.66197307,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,382,9,small,43.80097636,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,381,9,small,50,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,387,9.5,small,45.74290484,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,386,9.5,small,65.03210741,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,392,7.5,small,31.78287348,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,391,7.5,small,56.91049589,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,289,24,medium,28.45833333,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,288,22,medium,61.58238614,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,294,27,medium,45.27027027,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,293,25,medium,45.6302521,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,299,17.5,medium,53.87521095,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,298,22,medium,40.09795189,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,304,18,medium,64.39880206,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,303,22,medium,19.68324308,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,309,20,medium,16.38911773,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,308,23,medium,57.43697479,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,313,23,medium,50,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,319,28,medium,67.24637681,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,318,28,medium,58.42204481,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,324,22.5,medium,58.12611012,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,323,22,medium,11.65497884,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,328,23,medium,33.97838562,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,334,26,medium,20.52004239,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,333,24,medium,43.90592418,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,339,24,medium,27.16181322,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,338,29,medium,74.25028835,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,344,15,medium,37.35218779,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,343,15,medium,24.81162115,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,349,15,medium,37.13509746,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,348,14.5,small,18.62226957,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,354,15.5,medium,58.05252652,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,control,353,14,small,14.02838345,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,359,17,medium,32.52911814,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,358,18.5,medium,15.08333333,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,369,16.5,medium,19.04025959,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,368,17,medium,24.77397351,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,374,16.5,medium,50.85740072,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,373,17,medium,23.23150793,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,379,20,medium,77.32060625,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,378,20,medium,9.523461164,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,384,24,medium,50,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,383,24.5,medium,48.15959214,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,389,26,medium,50,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,388,25.5,medium,45.38263257,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,394,25,medium,65.08945643,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,393,28,medium,49.90566038,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,CO2,290,35,medium,47.89073766,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,CO2,295,36,big,9.991138764,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,CO2,300,44,big,50,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,CO2,305,31,medium,66.66666667,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,CO2,310,35,medium,95.26869159,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Acantho,CO2,315,40,big,50,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,320,33,medium,31.43431261,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,325,36,big,50,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,330,39,big,41.76568043,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,335,35,medium,29.77541479,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,340,40,big,24.68610442,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,control,350,44,big,79.12414966,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,360,39,big,66.80128993,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,365,42,big,26.17845118,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,control,370,37,big,19.20470909,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Whitedams,CO2,375,37,big,30.05953407,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,CO2,385,30,medium,37.18586533,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,CO2,390,39,big,50.66666667,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
+LIRS 2016,Humbug,CO2,395,33.5,medium,50.96659507,80 min trials: pred cue was turned on to one channel at 40 min (2400) then switched to the other channel at 60 min (3600) for 20 min. Values here a mean of 2 sections - 2580+2640; 3780+3840
