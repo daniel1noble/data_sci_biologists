@@ -193,7 +193,7 @@ Use the [*GitHub Desktop*](https://desktop.github.com/) application you download
 
 :::: {.organgebox data-latex=""}
 ::: {.center data-latex=""}
-<font size="18">**Task 3--5** should take ~25 minutes</font>
+<font size="18">**Task 3--5** should take ~30 minutes</font>
 :::
 ::::
 
@@ -203,15 +203,28 @@ Now that you have your *GitHub* repo cloned (i.e., downloaded) onto your compute
 
 >**Hint**: `GitHub Desktop` has a handy feature on the repo's front page for you to click on and take you directly to the folder)
 
-Create: 1) a new RStudio project file and 2) add a new Rmarkdown file in this directory. Remember how we have been setting up our RMarkdown file structure. Make sure that you mimic that structure so that you can render the html version of it.
+Create: 1) a new RStudio project file, 2) download the `OA_activitydat_20190302_BIOL3207.csv` from Wattle and add this to a `data/` folder in your repo and 3) add a new Rmarkdown file in this directory that has relevant yaml header with your name, date ect. Remember how we have been setting up our RMarkdown file structure. Make sure that you mimic that structure so that you can render the html version of it.
 
 Once added go back to your *GitHub Desktop* application. What's changed? Commit a message about why you added these files and push this up to your *GitHub* repo. Take a look at your *GitHub* repo online. What's changed?
 
 # **Task 4**: Editing file, saving, committing and pushing to GitHub
 
-Open up your new Rmarkdown file that you created and are now tracking in your repo. Edit this file by making your own summary notes (can just be bullet points on each step) on **Tasks 1 & 2** so you remember how to create a repo and clone this down on your computer. 
+Open up your new Rmarkdown file that you created and are now tracking in your repo. Edit this file by adding code to first load the `OA_activitydat_20190302_BIOL3207.csv`. The `OA_activitydat_20190302_BIOL3207.csv` is a data set on ocean acidification effects on fish behaviour that was published in Nature in 2020. The detailed meta-data for each column are as follows:
 
-Save this file, commit and push it up to *GitHub*. Check again how your *GitHub* repo online looks. Click on the file and see what in the file has changed.
+| Column Name	|	Description	  |
+| -------------	|	:-----------: |	
+| loc		|	Location, and year, where the data were collected. AIMS = Australian Institute of Marine Science; LIRS = Lizard Island Research Station |
+species	|		Species name: acantho = Acanthochromis; Ambon = Pomacentrus amboinensis; Chromis = Chromis atripectoralis; Humbug = Dascyllus aruanus; Lemon = Pomacentrus moluccensis	|
+treatment	|	Elevated CO2 [CO2] (850-1,050 µatm) or control [Control] (400 - 450 µatm) groups |
+animal_id	|	Fish identity |
+sl	|		Standard length of the fish in mm |
+size	|		Size grouping of the fish, separated at 15 mm standard length into 'big' or 'small' |
+activity	|	Number of seconds the fish was active per minute, averaged across the duration of the trial |
+comment		|	Comment with notes on the origin of the data | 
+
+Second, there are a bunch of extra columns and missing data in the dataset. Use your data wrangling skills to explcitly code a chunk to remove the missing data, check that there are no spelling issues in variables and drop out columns that are not relevant (e.g, `comment` column and `loc` can probably go for now).
+
+Once you have finished adding this code, save this file, commit and push it up to *GitHub*. Check again how your *GitHub* repo online looks. Click on the file and see what in the file has changed.
 
 # **Task 5**: Adding .gitignore file to control tracking
 
@@ -223,7 +236,7 @@ As a first step, add `*.html` to your `.gitignore` file. Save this file. Now, kn
 
 As a second demonstration, in your repo, add the following folders: `output/figures/`. In short, add a folder called `output/` in the main directory and then, **inside** the `output/` folder add a `figures/` folder. Add the path to the figures folder to your `.gitignore` file and save this file. 
 
-In your Rmarkdown file, use the data that you stored to create a single figure, anything you want really, and save this figure to the `output/figures/` folder. Check your *GitHub Desktop*. What do you notice?
+In your Rmarkdown file, use the data that you stored (i.e., `OA_activitydat_20190302_BIOL3207.csv`) to create a single figure, anything you want really, and save this figure to the `output/figures/` folder. Check your *GitHub Desktop*. What do you notice?
 
 Commit and push the `.gitignore` file to your repo. What do you notice about the differences in file structure on *GitHub* compared to your local directory?
 
