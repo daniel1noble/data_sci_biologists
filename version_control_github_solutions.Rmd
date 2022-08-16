@@ -34,6 +34,12 @@ klippy::klippy(
 )
 ```
 
+# Install Necessary Packages
+
+```{r, packages}
+pacman::p_load(tidyverse, ggforce, magick, png)
+```
+
 
 # **Task 1**: Setting up a repo
 
@@ -59,6 +65,16 @@ To clone, if you have already connected your `GitHub` to your `GitHub Desktop` a
 embed_url("https://youtu.be/wWAd7SrX3HY") %>% use_align("center")
 ```
 
+Everyone should now have the EXACT same repo structure. As such, the code should work if they remember about how to code using relative path names. I'll explain more in the workshop.
+
+```{r, data}
+
+# Load data. Again, this code should work across ALL computers.
+data <- read_csv("./data/clark_et-al_2020/OA_activitydat_20190302_BIOL3207.csv")
+
+```
+
+
 # **Task 3**: Adding files, commiting (staging) and pushing to GitHub
 
 You now have your repo on your computer. Remember where you save the repo to. I cloned my repo to my *Dropbox* account so I will find my repo folder in *Dropbox* on my computer. 
@@ -80,6 +96,10 @@ To track these, you need to stage/commit these. You can do that in the bottom le
 embed_url("https://youtu.be/uCAoKFxe5cw") %>% use_align("center")
 ```
 
+
+```{r, echo = TRUE}
+
+```
 
 # **Task 4**: Editing file, saving, committing and pushing to GitHub
 
