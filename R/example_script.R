@@ -14,7 +14,7 @@ data_clean <- data %>% filter(!is.na(activity)) %>% select(-c("...1", "comment",
 str(data_clean)
 
 # Summarise the mean and SE, n for each speceis by treatment combination which we can add to the plot!
-summary_data <- data_clean %>% group_by(species, treatment) %>% summarise(x = mean(activity), se=sd(activity) / n(), n = n())
+summary_data <- data_clean %>% group_by(species, treatment) %>% summarise(x = mean(activity), se=sd(activity) / sqrt(length(unique(animal_id))), ids = length(unique(animal_id)), n = n())
 
 ## Make a cool plot of the data based on species and treatment
 
@@ -29,8 +29,8 @@ whitedams <- readPNG("./pics/whitedams.png")
 # Now lets make a plot, boy this took me a while, and I'm still not happy with it, but it's looking cool!
 ggplot(data_clean, aes(x =species, y = activity)) +
   geom_violin(aes(fill = treatment, col = treatment), alpha = 0.8) +
-  geom_sina(data = . %>% filter(activity >= 25), aes(fill = treatment, col = treatment), colour = "orange", alpha=0.2) + # Here's a COOL feature. You can wrangle data directly from data frame to highly something neat, like activities all above and below 25. The '.' is meant to represent the tibble data frame and just like we would manipulate there we can do the same here.
-  geom_sina(data = . %>% filter(activity <= 25), aes(fill = treatment, col = treatment), colour = "blue", alpha=0.2) +
+  geom_sina(data = . %>% filter(activity >= 25), aes(fill = treatment, col = treatment), colour = "black", alpha=0.2) + # Here's a COOL feature. You can wrangle data directly from data frame to highly something neat, like activities all above and below 25. The '.' is meant to represent the tibble data frame and just like we would manipulate there we can do the same here.
+  geom_sina(data = . %>% filter(activity <= 25), aes(fill = treatment, col = treatment), colour = "gray", alpha=0.2) +
   labs(x = "Species", y = "Activity (s)", fill = "Treatment", col = "Treatment") +
   ylim(0, 100) +  # Make axes large as we may want to add in pictures of the species
   geom_errorbar(data = summary_data, aes(x = species, y = x, ymin = x+2*se, ymax = x-2*se), position=position_dodge2(width = 0.01, padding = 0.5), size = 0.5) +   # We've already created the means and se data so we can feed this new tibble in
