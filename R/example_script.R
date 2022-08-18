@@ -13,7 +13,7 @@ str(data)
 data_clean <- data %>% filter(!is.na(activity)) %>% select(-c("...1", "comment", "loc"))
 str(data_clean)
 
-# Summarise the mean and SE, n for each speceis by treatment combination which we can add to the plot!
+# Summaries the mean and SE, n for each species by treatment combination which we can add to the plot!
 summary_data <- data_clean %>% group_by(species, treatment) %>% summarise(x = mean(activity), se=sd(activity) / sqrt(length(unique(animal_id))), ids = length(unique(animal_id)), n = n())
 
 ## Make a cool plot of the data based on species and treatment
