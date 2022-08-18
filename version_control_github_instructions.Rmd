@@ -229,7 +229,7 @@ comment		|	Comment with notes on the origin of the data |
 
 2) Clean up the data. There are a bunch of extra columns and missing data in the dataset. Use your new found data wrangling skills to explicitly code a chunk to:
     a) Remove the missing data
-    b) Check that there are no spelling issues in variables 
+    b) Check that there are no spelling issues in `species` and `treatment` and create a table of summary data that includes 1) the mean, 2) the standard deviation and 3) the sample sizes of unique fish across ALL six fish species for each treatment.
     c) Drop out columns that are not relevant (e.g, `comment` column and `loc` can probably go for now).
 
 Once you have finished adding this code, save this file, commit and push it up to *GitHub*. Check again how your *GitHub* repo online looks. Click on the file and see what in the file has changed.
