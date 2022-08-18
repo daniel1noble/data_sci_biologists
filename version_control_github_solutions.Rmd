@@ -65,15 +65,6 @@ To clone, if you have already connected your `GitHub` to your `GitHub Desktop` a
 embed_url("https://youtu.be/wWAd7SrX3HY") %>% use_align("center")
 ```
 
-Everyone should now have the EXACT same repo structure. As such, the code should work if they remember about how to code using relative path names. I'll explain more in the workshop.
-
-```{r, data}
-
-# Load data. Again, this code should work across ALL computers.
-data <- read_csv("./data/clark_et-al_2020/OA_activitydat_20190302_BIOL3207.csv")
-
-```
-
 
 # **Task 3**: Adding files, commiting (staging) and pushing to GitHub
 
@@ -85,7 +76,13 @@ You can add files, change and save existing files and these will be tracked. To 
 
 >**Hint**: `GitHub Desktop` has a handy feature on the repo's front page for you to click on and take you directly to the folder)
 
-Once you're in the folder, add a few files to the repo. If you then navigate back to `GitHub Desktop` you will now notice that these files are identified by `Git` and you can see they are not yet tracked. 
+Once you're in the folder, add a few files to the repo. We've done this before, so it's easy, just add the following:
+
+1) a new RStudio project file 
+2) The `OA_activitydat_20190302_BIOL3207.csv` from Wattle and add this to a `data/` folder in your repo 
+3) The Rmarkdown file you have created a bunch of times before in previous workshops. 
+
+If you then navigate back to `GitHub Desktop` you will now notice that these files are identified by `Git` and you can see they are not yet tracked. 
 
 To track these, you need to stage/commit these. You can do that in the bottom left corner. Leave a message that details what you're doing and why so your future self, and any collaborators, know why something was done. Then click the `commit` button. You will notice that this moves the file to the staging area, but it's still not yet up on `GitHub`. You need to then push this up to the cloud by clicking the `push` button. See the video below for the full process.
 
@@ -97,19 +94,45 @@ embed_url("https://youtu.be/uCAoKFxe5cw") %>% use_align("center")
 ```
 
 
-```{r, echo = TRUE}
+# **Task 4**: Editing file, saving, committing and pushing to GitHub
+
+Right! Now that we have a bunch of files, we are ready to make changes to existing files. Just like in **Task 3** we need to keep track of the changes. To Start, we're going to edit the Rmarkdown file we created and add code chunks.
+
+
+First, lets load the data file (`OA_activitydat_20190302_BIOL3207.csv`). Everyone should now have the EXACT same repo structure. As such, the code should work if they remember about how to code using relative path names. 
+
+```{r, data, results='hide', message=FALSE}
+
+# Load data. Again, this code should work across ALL computers.
+data <- read_csv("./data/clark_et-al_2020/OA_activitydat_20190302_BIOL3207.csv")
 
 ```
 
-# **Task 4**: Editing file, saving, committing and pushing to GitHub
+The second step is to clean up the datafile to get it ready for analysis and plotting. Lots of ways to do this, but here's an example using tidyverse to remove missing data and select only relevant rows.
 
-Right! Now that we have a bunch of files, we are ready to make changes to existing files. Just like in **Task 3** we need to keep track of the changes. 
+```{r, tidy=TRUE}
+## Data wrangling; get rid of NA's and remove unnecessary 
+## columns like row names from file, comments and location
+data_clean <- data %>% filter(!is.na(activity)) %>% select(-c("...1", "comment", "loc"))
+head(data_clean)
+```
 
-Let's edit the `README` file. It's pretty basic at the moment and I'd like to add some more detail. 
+Then, we can summarises data and check for any spelling errors in a single step that uses the tidyverse:
 
-Navigate to your folder on your computer and open up the `README` file in a text editor, like `Sublime Text`, `Notepad` or something very Windows oriented. Edit the `README` file to give it a better description. If this was a analysis project you might also describe all the files in the folder, what they are used for or even provide metadata describing columns of the key data file that is used for analysis.
+```{r, tidy=TRUE}
+## Have a look for any spelling mistakes in species / treatment 
+## but also lets summarise the data: mean, se, number of fish / observations
+summary_data <- data_clean %>% 
+                group_by(species, treatment) %>% 
+                summarise(  x = mean(activity), 
+                           se = sd(activity) / sqrt(length(unique(animal_id))), 
+                          ids = length(unique(animal_id)), 
+                            n = n())
+summary_data
+```
 
-After you have made edits **save** your file normally. Navigate back toe `GitHub Desktop`. You'll now notice that the README file is identified as having changed. We can even see what what exactly has changed. The 'red' are the lines that were modified or removed and the `green` are the lines that were changed. 
+
+After you have made edits **save** your file normally. Navigate back to `GitHub Desktop`. You'll now notice that the RMarkdown file is identified as having changed. We can even see what what exactly has changed. The 'red' are the lines that were modified or removed and the `green` are the lines that were changed. 
 
 Just like **Task 3** you need to stage / commit these changes and push them up. The video below shows you that process again. Remember to leave a detailed commit message!
 
