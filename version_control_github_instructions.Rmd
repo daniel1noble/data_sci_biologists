@@ -170,12 +170,11 @@ Now that you have some familiarity with *GitHub* and *Git*, lets try to get ours
 
 # **Task 1**: Setting up a repository (repo)
 
-Create a new repository (repo) on your [*GitHub*](https://github.com/) account. Keep the repo name: 1) informative; 2) short; 3) and avoid 'spaces' in your repo name. For point 3, you can us '_' or '.' between words. This makes it easier when you want to code path names to your project. 
+Create a new repository (repo) on your [*GitHub*](https://github.com/) account. Keep the repo name: 1) informative; 2) short; 3) and avoid 'spaces' in your repo name. For point 3, you can use '_' (i.e., 'snake case') or '.' between words. This makes it easier when you want to code path names to your project. 
 
 # **Task 2**: Clone your repository
 
 Great! You have a repo. Now what? It's currently up in the cloud. That's not as useful as having it on your computer. 
-
 For your next task, clone down your repository to your computer. Cloning makes a 'copy' of your new repo -- creating a new folder on your computer. This folder is somewhat special though because it retains 'lines of communication' with the folder on *GitHub*. 
 
 Use the [*GitHub Desktop*](https://desktop.github.com/) application you downloaded on your computer to clone your new repository. 
@@ -199,7 +198,7 @@ Use the [*GitHub Desktop*](https://desktop.github.com/) application you download
 
 # **Task 3**: Adding files, commiting (staging) and pushing to GitHub
 
-Now that you have your *GitHub* repo cloned (i.e., downloaded) onto your computer navigate to this folder on your computer. 
+Now that you have your *GitHub* repo cloned (i.e., downloaded) onto your computer navigate to this folder. 
 
 >**Hint**: `GitHub Desktop` has a handy feature on the repo's front page for you to click on and take you directly to the folder)
 
@@ -215,7 +214,7 @@ Once added go back to your *GitHub Desktop* application. What has changed? Commi
 
 Open up your new Rmarkdown file that you created and are now tracking in your repo. Complete the following:
 
-1) Edit this file by adding code to load the `OA_activitydat_20190302_BIOL3207.csv`. The `OA_activitydat_20190302_BIOL3207.csv` is a data set on ocean acidification effects on fish behaviour that was published in Nature in 2020. The detailed meta-data for each column are as follows:
+1) Edit this file by adding code to load the `OA_activitydat_20190302_BIOL3207.csv`. The `OA_activitydat_20190302_BIOL3207.csv` is a data set on ocean acidification effects on fish behaviour that was published in [Nature in 2020](https://www.nature.com/articles/s41586-019-1903-y). The detailed meta-data for each column are as follows:
 
 | Column Name	|	Description	  |
 | -------------	|	:-----------: |	
@@ -258,7 +257,7 @@ Commit and push the `.gitignore` file to your repo. What do you notice about the
 
 :::: {.organgebox data-latex=""}
 ::: {.center data-latex=""}
-<font size="18">**Task 6 & 7** should take ~30 minutes</font>
+<font size="18">**Task 6--8** should take ~30 minutes</font>
 :::
 ::::
 
@@ -276,7 +275,7 @@ Let's now invite a collaborator. Complete the following:
 6) Save the file. 
 7) Commit and push these changes up.
 
-# **Task 7**: Pulling down changes and creating an issue on *GitHub*
+# **Task 7**: Pulling down changes and adding some statisical tests
 
 Your partner has made some changes. You won't see these changes yet because they are on *GitHub* in the cloud!
 
@@ -284,10 +283,14 @@ Complete the following steps:
 
 1) Go to your *GitHub Desktop* application. Pull down changes to *your* repo that your partner sent to *GitHub*.
 2) Review these changes. Re-run their code to make sure that it works. If it doesn't work, create an issue on *GitHub* to notify them that it doesn't work. 
-3) If the code runs then add a statistical test to explore whether the control vs high CO^2 treatments differ for each of the five fish species. Think about how you might use a loop to run these tests.
+3) If the code runs then add a statistical test to explore whether the control vs high CO^2 treatments differ for each of the five fish species. 
+
+>**Stretch Task**: Those who want a challenge, think about how you might use a loop to run these tests across all 5 species.
 
 In the Rmarkdown header add the date these changes were finalised. Commit and push up these new changes.
 
+
+# **Task 8**: Creating an issue on *GitHub*
 Now that you have a collaborator it's a good idea to create a To Do list. One place to do this is though *GitHub* issues. Issues can be used to identify bugs in code or suggest enhancements / additions to code, to get collaborators to check data or even just create a to do list so everyone has tasks that they can keep track of. We'll use it to set up a set of tasks for the project. Assume the project will be for you and your collaborator to analyse a big biological dataset together. 
 
 Complete the following steps:
@@ -307,11 +310,11 @@ Complete the following steps:
 
 :::: {.organgebox data-latex=""}
 ::: {.center data-latex=""}
-<font size="18">**Task 8** should take ~20 minutes</font>
+<font size="18">**Task 9** should take ~20 minutes</font>
 :::
 ::::
 
-# **Task 8**: Resolving conflicts
+# **Task 9**: Resolving conflicts
 
 Conflicts are common. They occur when you and your collaborator are working on the same lines of the same file. If you are working on different parts of the same file Git will auto-merge these changes. It will do this seamlessly for you. However, it's more common than you think that you and your collaborator are editing the same place of a file. *Git* is powerful for resolving these conflicts (assuming you're working with .txt or .csv style files). 
 
@@ -342,20 +345,35 @@ Complete the following:
 
 :::: {.bluebox data-latex=""}
 ::: {.center data-latex=""}
-<font size="18">**Stretch Tasks**</font>
+<font size="18">**Stretch Tasks** Should take you ~20 minutes</font>
 :::
 **The next couple of tasks are bonus. Try these out if we have time. These tasks will allow you to better familiarise yourself with *GitHub* and show you some handy features to make your repo more visible/shareable.**
 ::::
 
 <br>
 
-# **Task 9**: Branching and merging
+# **Task 10**: Branching and merging
 
 If you're coding and want to do something experimental it's good practice to do this on a separate branch to make sure that your existing code doesn't break other parts of your project. This is very useful for analysis or building your own software. *GitHub* also makes use of certain branch names to create webpages that can be used to render and host your code and reports. *GitHub* generally designates this branch as `gh-pages`. More on that in the next task.
 
 Try creating a new branch in your repo. Call this branch `testing`. This will "duplicate" your main branch, but put you along a separate path to it. 
 
 
-# **Task 10**: GitHub Webpage 
+# **Task 11**: GitHub Webpage 
 
 *GitHub* is not only a great place for hosting your project, but it's also useful for hosting webpages! This can be really useful for providing a simple way for others to 'see' your results. You simply just send them the link.
+
+To setup a *GitHub Webpage* go to your *GitHub* repo in a browser window. Do the following:
+
+1) Click the 'settings' tab of the repo (note that this is not the settings for your profile!).
+2) On the left panel under "Code and automation" click "Pages".
+3) Under "Branch" choose the branch you want your webpage to be deployed from. In this case, choose 'main'
+4) GitHub pages will now look for a README.md or index.html to render as your "home page". After a short wile, under the 'GitHub Pages' you will see a link for your repo. It will be labelled: https://your_username.github.io/your_repo_name. You can visit this site and give it to anyone.
+5) Instead of the readme, which is boring, render your Rmarkdown HTML.
+6) Change the name of the html after it's rendered to `index.html`. 
+7) Remember, your `.gitignore` file is ignoring `html` files. However, in this case, we want to now push this file up so that our *GitHub* pages can create the 'website'. So, remove the `*.html` from your ignore file. 
+8) Now, commit your `index.html` and your updated `.gitignore` file, and push this to *GitHub*.
+9) Wait a little bit for GitHub pages to deplay the site (~5 min).
+10) Now, go visit your site and share it with your parter so they can see the analysis and code you created!
+
+
