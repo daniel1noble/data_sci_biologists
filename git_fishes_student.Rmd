@@ -2,17 +2,29 @@
 title: "Git, GitHub & Ocean Acidification"
 author: "<your name and u number>"
 date: "`r Sys.Date()`"
-output:
-  html_document: default
-  pdf_document: default
+output: 
+  bookdown::html_document2:
+    code_folding: show
+    number_sections: no
+    toc: yes
+    toc_depth: 6
+    toc_float: yes
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Data Setup and Description
+# Introduction
 
-This tutorial will draw on the skills you have already learnt on data visualisation, data wrangling and NHST to analyse a data set on ocean acidification effects on fish behaviour. 
+This tutorial will draw on the skills you have already learnt on data visualisation, data wrangling and NHST to analyse a data set on ocean acidification effects on fish behaviour. However, we'll do that in the context of some new workflows that adopt Git and GitHub. 
 
-We'll use this markdown file as your template to complete the tasks outlined within your note book. It will also provide some additional exercises as you explore the data with your collaborator and interface with Git and GitHub.
+Use this Rmarkdown file as your template to complete the tasks outlined within the instructions. There are questions asked in the instructions and here in the RMarkdown file. Answer these as best as you can to document your steps and thinking. There are also a series of coding exercises 
+
+# *Task 1*
+
+### Provide the link to your GitHub Repo 
+
+While the tasks are meant to get you familiar with how GitHub works you should try and make regular commits as you complete tasks. We want to see how often and well you're using GitHub. Below, withiin the `[]` brackets provide the link to your GitHub Repo. Just cut and paste it there. 
+
+(My GitHub Repository)[]
