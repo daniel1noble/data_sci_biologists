@@ -1,0 +1,18 @@
+---
+title: "Git, GitHub & Ocean Acidification"
+author: "<your name and u number>"
+date: "`r Sys.Date()`"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Data Setup and Description
+
+This tutorial will draw on the skills you have already learnt on data visualisation, data wrangling and NHST to analyse a data set on ocean acidification effects on fish behaviour. 
+
+We'll use this markdown file as your template to complete the tasks outlined within your note book. It will also provide some additional exercises as you explore the data with your collaborator and interface with Git and GitHub.
