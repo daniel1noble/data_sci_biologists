@@ -19,9 +19,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 This tutorial will draw on the skills you have already learnt on data visualisation, data wrangling and NHST to analyse a data set on ocean acidification effects on fish behaviour. However, we'll do that in the context of some new workflows that adopt Git and GitHub. 
 
-Use this Rmarkdown file as your template to complete the tasks outlined within the instructions. There are questions asked in the instructions and here in the RMarkdown file. Answer these as best as you can to document your steps and thinking. There are also a series of coding exercises 
+Use this Rmarkdown file as your template to complete the tasks outlined within the instructions. There are questions asked in the instructions and here in the RMarkdown file. Answer these as best as you can to document your steps and thinking. There are also a series of coding exercises. 
 
-We're going to make use of the `bookdown` package now to render your Rmarkdown because, well, it's quite elegant in many ways. Before you start the tasks install the following packages:
+Throughout we are also going to learn a bit more about how to format Rmarkdown documents. So, pay close attention to the formatting. We're also going to make use of the `bookdown` package now to render your Rmarkdown because, well, it's quite elegant in many ways. Before you start the tasks install the following packages:
 
 ```{r loadpacks, message=FALSE, results='hide'}
 # Install a load of packages that we'll use. I'll show you a shortcut that I love to use. Try using the p_load function in the "pacman" package. p_load will execute both the install.packages and library commands in one shot so they only need to be used once to install pacman itself.
@@ -32,7 +32,6 @@ library(pacman)
 p_load(bookdown, tidyverse, ggforce) # basically just list all the packages you want here
 
 ```
-
 
 # *Task 1*
 
@@ -48,15 +47,25 @@ By adding the link in the `[]` brackets it will hyperlink "My GitHub Repository"
 
 While GitHub is somewhat of a cloud storage system because it's keeping record of your commits, files and changes in the cloud it is **not** (note that placing `**` around a word will bold it whereas '*' around a word will italicise it) a backup of your files. This is important to recognise! 
 
-**Question**: Why should you not rely on *GitHub* as a backup?
+>**Question 1**: Why should you not rely on *GitHub* as a backup?
 
-```{r}
+```{r, answer1, echo=TRUE}
 # Answer the question above here. You may want to explore further and then come back to your reasons as you familiarise yourself
 
 # Use pound symbols to annotate your text.
 
 ```
 
-I'd usually suggest placing your repos in a cloud storage system like, *OneDrive*, *Dropbox*, or *GoogleDrive*. These will ensure that all your files are backed up and *GitHub* will provide a record of the detailed history. 
+I'd usually suggest placing your repo in a cloud storage system like, *OneDrive*, *Dropbox*, or *GoogleDrive*. These will ensure that all your files are backed up and *GitHub* will provide a record of the detailed history. 
 
 > Stop here and try rendering your Rmarkdown to an html document. Have a look at how the document looks in the html rendered version. 
+
+>**Question 2**: In the second code block called `answer1` try changing echo = TRUE to echo = FALSE. Re-render your document. What has changed? When you have answered this question in the code block below, change it back to echo = TRUE. 
+
+```{r answer2, echo=TRUE}
+## Write your answer here....remember to use '#" in front of your text.
+```
+
+
+
+
