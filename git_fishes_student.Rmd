@@ -45,6 +45,18 @@ By adding the link in the `[]` brackets it will hyperlink "My GitHub Repository"
 
 # *Task 2*
 
+This task involves cloning your repository on your computer. This is your new working directory from which your project will develop. This is a very good point to make sure that you understand coding using relative path names. 
+
+Your working directory can be considered the 'lowest' level of your project. The starting point, if you will. R needs to know where your files are that you want to load and many people might be familiar with using the `setwd()` function to tell R where your files are that you need to load. This is problematic because everyone's path to a given working directory is different and so your code if programming literal path names into your scripts will not work on others' computers. Even across your own computers!
+
+Lucky, RStudio project files take away the main issue by creating a project file that allows anyone to click on it to open the working directory to the same "spot". Having said that, if you start building structure and organisation in your working directory or repo than you need to understand how to navigate between folders to load and write files in the places that you want. 
+
+```{r}
+
+```
+
+
+# *Task 3*
 While GitHub is somewhat of a cloud storage system because it's keeping record of your commits, files and changes in the cloud it is **not** (note that placing `**` around a word will bold it whereas '*' around a word will italicise it) a backup of your files. This is important to recognise! 
 
 >**Question 1**: Why should you not rely on *GitHub* as a backup?
@@ -58,7 +70,7 @@ While GitHub is somewhat of a cloud storage system because it's keeping record o
 
 I'd usually suggest placing your repo in a cloud storage system like, *OneDrive*, *Dropbox*, or *GoogleDrive*. These will ensure that all your files are backed up and *GitHub* will provide a record of the detailed history. 
 
-> Stop here and try rendering your Rmarkdown to an html document. Have a look at how the document looks in the html rendered version. 
+**Stop here and try rendering your Rmarkdown to an html document. Have a look at how the document looks in the html rendered version.**
 
 >**Question 2**: In the second code block called `answer1` try changing echo = TRUE to echo = FALSE. Re-render your document. What has changed? When you have answered this question in the code block below, change it back to echo = TRUE. 
 
