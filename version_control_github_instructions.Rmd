@@ -185,7 +185,7 @@ Use the [*GitHub Desktop*](https://desktop.github.com/) application you download
 ::: {.center data-latex=""}
 <font size="18">**Relax!**</font>
 :::
-**When you get to this point, put your green post-it on your laptop (green tick on zoom), and, relax. See if you can help others in your group. We'll have two reps from a random group present their solutions soon.**
+**When you get to this point relax. See if you can help others in your group. We'll quickly overview the solutions or have reps from a random group present their solutions soon.**
 ::::
 
 <br>
@@ -206,7 +206,7 @@ Create:
 
 1) a new RStudio project file 
 2) download the `OA_activitydat_20190302_BIOL3207.csv` from Wattle and add this to a `data/` folder in your repo 
-3) add a new Rmarkdown file in this directory that has relevant yaml header with your name, date ect. Remember how we have been setting up our RMarkdown file structure. Make sure that you mimic that structure so that you can render the html version of it.
+3) Add the template Rmarkdown file, `git_fishes_student.Rmd` that was provided on wattle. You'll use this file to work through the tasks and answer questions. 
 
 Once added go back to your *GitHub Desktop* application. What has changed? Commit a message for each file about why you added these files and push this up to your *GitHub* repo. Take a look at your *GitHub* repo online. What has changed?
 
@@ -250,7 +250,7 @@ Commit and push the `.gitignore` file to your repo. What do you notice about the
 ::: {.center data-latex=""}
 <font size="18">**Relax!**</font>
 :::
-**When you get to this point, put your green post-it on your laptop (green tick on zoom), and, relax. See if you can help others in your group. We'll have two reps from a random group present their solutions soon.**
+**When you get to this point relax. See if you can help others in your group. We'll quickly overview the solutions or have reps from a random group present their solutions soon.**
 ::::
 
 <br>
@@ -303,7 +303,7 @@ Complete the following steps:
 ::: {.center data-latex=""}
 <font size="18">**Relax!**</font>
 :::
-**When you get to this point, put your green post-it on your laptop (green tick on zoom), and, relax. See if you can help others in your group. We'll have two reps from a random group present their solutions soon.**
+**When you get to this point relax. See if you can help others in your group. We'll quickly overview the solutions or have reps from a random group present their solutions soon.**
 ::::
 
 <br>
@@ -338,7 +338,7 @@ Complete the following:
 ::: {.center data-latex=""}
 <font size="18">**Relax!**</font>
 :::
-**When you get to this point, put your green post-it on your laptop (green tick on zoom), and, relax. See if you can help others in your group. We'll have two reps from a random group present their solutions soon.**
+**When you get to this point relax. See if you can help others in your group. We'll quickly overview the solutions or have reps from a random group present their solutions soon.**
 ::::
 
 <br>
