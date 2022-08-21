@@ -47,11 +47,19 @@ By adding the link in the `[]` brackets it will hyperlink "My GitHub Repository"
 
 This task involves cloning your repository on your computer. This is your new working directory from which your project will develop. This is a very good point to make sure that you understand coding using relative path names. 
 
-Your working directory can be considered the 'lowest' level of your project. The starting point, if you will. R needs to know where your files are that you want to load and many people might be familiar with using the `setwd()` function to tell R where your files are that you need to load. This is problematic because everyone's path to a given working directory is different and so your code if programming literal path names into your scripts will not work on others' computers. Even across your own computers!
+Your working directory can be considered the 'lowest' level of your project. The starting point, if you will. R needs to know where your files are that you want to load and many people might be familiar with using the `setwd()` function to tell R where your files are that you need to load. This is problematic because everyone's path to a given working directory is different and so your code  will not work on others' computers. Even across your own computers!
 
 Lucky, RStudio project files take away the main issue by creating a project file that allows anyone to click on it to open the working directory to the same "spot". Having said that, if you start building structure and organisation in your working directory or repo than you need to understand how to navigate between folders to load and write files in the places that you want. 
 
+Add a `data/` folder to your working directory that you just cloned down. You'll need this for your next task anyway. Think about how you would write some code to load in a data file that is within this folder. There are a few useful shortcuts you can use. For example, of you use '.' it signifies 'start from the current working directory'. That is the RStudio project file location if you click on a RStudio project. 
+
+Now that you have a data folder, how would you write the path name to load in the data? Write your anser in the code chunk below:
+
 ```{r}
+
+path <- "replace this text with your relative path to a file in the 'data/' folder"
+  
+data <- read_csv(path)
 
 ```
 
