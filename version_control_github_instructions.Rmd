@@ -204,7 +204,7 @@ Now that you have your *GitHub* repo cloned (i.e., downloaded) onto your compute
 
 Create: 
 
-1) a new RStudio project file 
+1) a new RStudio project file in your working directory
 2) download the `OA_activitydat_20190302_BIOL3207.csv` from Wattle and add this to a `data/` folder in your repo 
 3) Add the template Rmarkdown file, `git_fishes_student.Rmd` that was provided on wattle. You'll use this file to work through the tasks and answer questions. 
 
