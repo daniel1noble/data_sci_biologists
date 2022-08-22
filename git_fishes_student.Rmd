@@ -15,7 +15,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-# Introduction
+# **Introduction**
 
 This tutorial will draw on the skills you have already learnt on data visualisation, data wrangling and NHST to analyse a data set on ocean acidification effects on fish behaviour. However, we'll do that in the context of some new workflows that adopt Git and GitHub. 
 
@@ -33,7 +33,7 @@ p_load(bookdown, tidyverse, ggforce, flextable) # basically just list all the pa
 
 ```
 
-# *Task 1*
+# **Task 1**
 
 ### Provide the link to your GitHub Repo 
 
@@ -43,7 +43,7 @@ While the tasks are meant to get you familiar with how GitHub works you should t
 
 By adding the link in the `[]` brackets it will hyperlink "My GitHub Repository". This is how to hyperlink in Rmarkdown documents.
 
-# *Task 2*
+# **Task 2**
 
 This task involves cloning your repository on your computer. Where should we place this repository? While GitHub is somewhat of a cloud storage system because it's keeping record of your commits, files and changes in the cloud it is **not** a backup of your files (note that placing `**` around a word will bold it whereas '*' around a word will italicise it). This is important to recognise! 
 
@@ -68,7 +68,7 @@ Before moving on you might have noticed that the code block above has a name `an
 
 **Important**: Notice that `eval = FALSE` for many code chunks. When you complete the tasks. Make sure to change these to `TRUE` otherwise you will find your code does not run!
 
-# *Task 3*
+# **Task 3**
 
 Hopefully you have now successfully cloned down your *GitHub* repo. This is your new working directory from which your project will develop. 
 
@@ -112,7 +112,8 @@ write_csv(data, file = path)
 
 ```
 
-**Task 4**
+
+# **Task 4**
 
 We're ready for some coding! Lets do some coding and wrangling of the `OA_activitydat_20190302_BIOL3207.csv` data that we will use for the workshop. Note above, the `loaddata` code chunk should have already written the code to load the data file. At this point, we're assuming it's in your work space. If not, make sure you run the `loaddata` code chunk. 
 
@@ -137,5 +138,38 @@ Second, drop out irrelevant columns and check that there are no spelling issues 
 
 **STOP**: Before moving on, it's a good time to establish some good *GitHub* practices. You have just done an important step. It's time to save this file, stage it and commit it so that you have a record. Push these changes up using *GitHub Desktop*. It's important to do this frequently. It's probably not needed after every line of code, but it's good to do this when you have completed an important coding step. Of course, there's no harm in doing it more often. It will provide fine-scale tracking for you!
 
->**Question 5**: The new version of your Rmarkdown file should now be up on *GitHub*. In the browser window click on your most recent commit. Have a look at the file versioning system
+>**Question 5**: The new version of your Rmarkdown file should now be up on *GitHub*. In the browser window click on your most recent commit. Have a look at the file versioning system. You will notice two files side-by-side. Describe what you notice is being presented online. What do the red and green highlights mean?
+
+```{r answer5, echo=TRUE, eval=FALSE}
+## Write your answer here....remember to use '#" in front of your text.
+```
+
+# **Task 5**
+
+Ignoring figures can be important because they take up quite a lot of space in your *GitHub* repo. For example, huge data files, or figures can take up a tonne of space. We also might not need to save and track these because we can recreate them with our own code or re-download, process, save and track what we need. 
+
+`.gitignore` file are used to control what *Git* tracks and what it ignores. You should have created a new folder path: `output/figures/`. Write some code now to create a pretty figure using ggplot that shows the difference between control and acidification treatments for each of the fish species in the data set:
+
+```{r, prettyfig}
+# ggplot figure showing mean activity for each treatment (Control, OA) for each species.
+
+
+```
+
+**Stretch Task**: The Clark et al. 2020 paper plots some pretty pictures on their figures. You have access to a folder called "pics/". Add the pics of the difference species from the "pics/" folder to your new plot. 
+
+Use `ggsave` function to save the figure(s) to your new `output/figures/`:
+
+```{r, savefig}
+# Use ggsave to save the figure
+
+```
+
+Given that you have added `output/figures/` to your `.gitignore` file describe what you notice about what you see in *GitHub Desktop*. 
+
+>**Question 6**: If you have added the `pics/` folder to your working directory to plot pictures of each fish on your figure explain why you would want to continue tracking these files on GitHub despite them being .png files?
+
+```{r, answer6}
+## Write your answer here....remember to use '#" in front of your text.
+```
 
