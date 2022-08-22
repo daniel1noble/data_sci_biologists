@@ -212,9 +212,7 @@ Once added go back to your *GitHub Desktop* application. What has changed? Commi
 
 # **Task 4**: Editing file, saving, committing and pushing to GitHub
 
-Open up your new Rmarkdown file that you created and are now tracking in your repo. Complete the following:
-
-1) Edit this file by adding code to load the `OA_activitydat_20190302_BIOL3207.csv`. The `OA_activitydat_20190302_BIOL3207.csv` is a data set on ocean acidification effects on fish behaviour that was published in [Nature in 2020](https://www.nature.com/articles/s41586-019-1903-y). The detailed meta-data for each column are as follows:
+Now that you're tracking your Rmarkdown file your ready to start doing some coding. We're now going to do some data-wrangling ifd the `OA_activitydat_20190302_BIOL3207.csv` data. In the process we will save the files as we develop code, commit and track the file. The `OA_activitydat_20190302_BIOL3207.csv` is a data set on ocean acidification effects on fish behaviour that was published in [Nature in 2020](https://www.nature.com/articles/s41586-019-1903-y). The detailed meta-data for each column are as follows:
 
 | Column Name	|	Description	  |
 | -------------	|	:-----------: |	
@@ -227,10 +225,12 @@ size	|		Size grouping of the fish, separated at 15 mm standard length into 'big'
 activity	|	Number of seconds the fish was active per minute, averaged across the duration of the trial |
 comment		|	Comment with notes on the origin of the data | 
 
-2) Clean up the data. There are a bunch of extra columns and missing data in the dataset. Use your new found data wrangling skills to explicitly code a chunk to:
+Complete the following:
+
+Clean up the data. There are a bunch of extra columns and missing data in the dataset. Use your new found data wrangling skills to explicitly code a chunk to:
     a) Remove the missing data
-    b) Check that there are no spelling issues in `species` and `treatment` and create a table of summary data that includes 1) the mean, 2) the standard deviation and 3) the sample sizes of unique fish across ALL six fish species for each treatment.
-    c) Drop out columns that are not relevant (e.g, `comment` column and `loc` can probably go for now).
+    b) Drop out columns that are not relevant (e.g, `comment` column and `loc` can probably go for now).
+    c) Check that there are no spelling issues in `species` and `treatment` and create a table of summary data that includes 1) the mean, 2) the standard deviation and 3) the sample sizes of unique fish across ALL six fish species for each treatment.
 
 Once you have finished adding this code, save this file, commit and push it up to *GitHub*. Check again how your *GitHub* repo online looks. Click on the file and see what in the file has changed.
 
