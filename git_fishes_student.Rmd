@@ -29,7 +29,7 @@ install.packages("pacman", repos = "http://cran.us.r-project.org")
 library(pacman)
 
 # Install bookdown for rendering because we'll need this. While we're at it, lets also install /load the tidyverse
-p_load(bookdown, tidyverse, ggforce) # basically just list all the packages you want here
+p_load(bookdown, tidyverse, ggforce, flextable) # basically just list all the packages you want here
 
 ```
 
@@ -78,6 +78,8 @@ Hopefully you also created and/or downloaded the following files and added them 
 2) download the `OA_activitydat_20190302_BIOL3207.csv` from Wattle and add this to a `data/` folder in your repo 
 3) Add the template Rmarkdown file, `git_fishes_student.Rmd` that was provided on wattle. You'll use this file to work through the tasks and answer questions. 
 
+**STOP**: Before moving on, it's a good time to establish some good *GitHub* practices. You have just did an important step. It's time stage these files and commit them so that you have a record. Use *GitHub Desktop* to do this. 
+
 This is a very good point to make sure that you understand relative path names fo coding. Wait, "relative what?" 
 
 Your working directory can be considered the 'lowest' level of your project. The starting point, if you will. R needs to know where your files are that you want to load. Many people might be familiar with using the `setwd()` function to tell R where your files are that you need to load. This is problematic because everyone's path to a given working directory is different, and so, your code will not work on others' computers. Even across your own computers!
@@ -110,5 +112,30 @@ write_csv(data, file = path)
 
 ```
 
+**Task 4**
 
+We're ready for some coding! Lets do some coding and wrangling of the `OA_activitydat_20190302_BIOL3207.csv` data that we will use for the workshop. Note above, the `loaddata` code chunk should have already written the code to load the data file. At this point, we're assuming it's in your work space. If not, make sure you run the `loaddata` code chunk. 
+
+First, write some code below to remove missing data
+
+```{r, rmMiss}
+# Code to removing missing data from the `OA_activitydat_20190302_BIOL3207.csv` data frame. 
+
+```
+
+
+Second, drop out irrelevant columns and check that there are no spelling issues in `species` and `treatment` and create a table of summary data that includes 1) the mean, 2) the standard deviation and 3) the sample sizes of unique fish across ALL six fish species for each treatment. You can use the R package [`flextable`](https://ardata-fr.github.io/flextable-book/) to print out the results in a nice neat format!
+
+```{r summaryTab}
+# Drop irrelevant columns
+
+# Check spelling in species and treatment but also generate a summary table
+
+# Use flextable to render the summary table in a tidy format
+
+```
+
+**STOP**: Before moving on, it's a good time to establish some good *GitHub* practices. You have just done an important step. It's time to save this file, stage it and commit it so that you have a record. Push these changes up using *GitHub Desktop*. It's important to do this frequently. It's probably not needed after every line of code, but it's good to do this when you have completed an important coding step. Of course, there's no harm in doing it more often. It will provide fine-scale tracking for you!
+
+>**Question 5**: The new version of your Rmarkdown file should now be up on *GitHub*. In the browser window click on your most recent commit. Have a look at the file versioning system
 
