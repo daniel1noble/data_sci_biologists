@@ -238,9 +238,9 @@ Once you have finished adding this code, save this file, commit and push it up t
 
 Not all files in a repo need to be tracked by Git. For example, anything that you create using R code in your Rmarkdown files, such as figures or rendered htmls, need not necessarily be tracked. That's because, well, the code can re-create these figures. Complete the following:
 
-1) In RStudio, create a text file called `.gitignore` and save this file to the root of your repo. The "root" is the main directory folder that you cloned down. 2) Add `*.html` to your `.gitignore` file. Save this file. Now, knit your Rmarkdown document. What do you notice about your *GitHub Desktop* application when this file is created?
+1) In RStudio, create a text file called `.gitignore` and save this file to the root of your repo. The "root" is the main directory folder that you cloned down. 
 3) In your repo, add the following folders: `output/figures/`. In short, add a folder called `output/` in the main directory and then, **inside** the `output/` folder add a `figures/` folder. Add the path to the figures folder to your `.gitignore` file and save this file. 
-4) In your Rmarkdown file, use the data that you stored (i.e., `OA_activitydat_20190302_BIOL3207.csv`) to create a single figure, anything you want really, and save this figure to the `output/figures/` folder. Check your *GitHub Desktop*. What do you notice?
+4) In your Rmarkdown file, use the data that you stored (i.e., `OA_activitydat_20190302_BIOL3207.csv`) to create one or more figure(s) (see you Rmarkdown instructions), and save this figure(s) to the `output/figures/` folder. Check your *GitHub Desktop*. What do you notice?
 
 Commit and push the `.gitignore` file to your repo. What do you notice about the differences in file structure on *GitHub* compared to your local directory?
 
