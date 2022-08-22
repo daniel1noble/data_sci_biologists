@@ -175,9 +175,10 @@ Given that you have added `output/figures/` to your `.gitignore` file describe w
 
 
 # **Task 6**
-This task involves teaming up with a collaborator. Exchange *GitHub* username details and add each other to your repo. Clone each others' repo on to your computer. Re-run their code. Does it work? If not, correct it for them. Then, lets create a new figure in the code block below that simplifies the one produced in **Task 5**. Instead of all species, lets just plot three of the species: `
+This task involves teaming up with a collaborator. Exchange *GitHub* username details and add each other to your repo. Clone each others' repo on to your computer. Re-run their code. Does it work? If not, correct it for them. Then, lets create a new figure in the code block below that simplifies the one produced in **Task 5**. Instead of all species, lets just plot three of the species (chromis, lemon, and acantho): `
 
 ```{r, collabFig}
-# You want to make changes to your collaborators figure in Task 5. Maybe you want to create a figure that focuses only on three fish species instead of the 5
+# You want to make changes to your collaborators figure in Task 5. Maybe you want to create a figure that focuses only on three fish species instead of the 5. More specifically, chromis, lemon, and acantho
 ```
 
+# **Task 7**
