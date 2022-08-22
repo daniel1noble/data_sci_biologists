@@ -167,9 +167,11 @@ Use `ggsave` function to save the figure(s) to your new `output/figures/`:
 
 Given that you have added `output/figures/` to your `.gitignore` file describe what you notice about what you see in *GitHub Desktop*. 
 
->**Question 6**: If you have added the `pics/` folder to your working directory to plot pictures of each fish on your figure explain why you would want to continue tracking these files on GitHub despite them being .png files?
+>**Question 6**: Assume that you added the `pics/` folder to your working directory to plot pictures of each fish on your figure. Explain why you would want to continue tracking these files on GitHub despite them being .png files?
 
 ```{r, answer6}
 ## Write your answer here....remember to use '#" in front of your text.
 ```
 
+
+# **Task 6**
