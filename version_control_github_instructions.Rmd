@@ -271,7 +271,7 @@ Let's now invite a collaborator. Complete the following:
 2) Ask them for their GitHub username and add them to your *GitHub* repo. This is done on your *GitHub* repo through the browser by managing collaborators in the `settings` tab. You should also give **them** your username so they can do the same for you. 
 3) Once added to their repository, clone their repository onto your local computer. 
 4) Open up their Rmarkdown file. Re-run their code to check it all runs fine on your computer. It should!
-5) Add a new code chunk that creates a different figure than the one your collaborator made or edit the code on their existing figure.
+5) Add a new code chunk that creates a different figure than the one your collaborator made or edit the code on their existing figure. See the Rmarkdown for details.
 6) Save the file. 
 7) Commit and push these changes up.
 
