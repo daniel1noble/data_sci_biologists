@@ -282,12 +282,13 @@ Your partner has made some changes. You won't see these changes yet because they
 Complete the following steps:
 
 1) Go to your *GitHub Desktop* application. Pull down changes to *your* repo that your partner sent to *GitHub*.
-2) Review these changes. Re-run their code to make sure that it works. If it doesn't work, create an issue on *GitHub* to notify them that it doesn't work. 
-3) If the code runs then add a statistical test to explore whether the control vs high CO^2 treatments differ for each of the five fish species. 
+2) Review these changes. Re-run their code to make sure that it works. If it doesn't work try to work with your neighbor to determine why. 
+3) If the code runs then add a summary statistics and statistical results to explore whether the control vs high CO^2 treatments differ for each of the five fish species. See markdown for more details.
+4) Make a pretty table that summarise the results for each species.
 
->**Stretch Task**: Those who want a challenge, think about how you might use a loop to run these tests across all 5 species.
+>**Stretch Task**: Those who want a challenge, think about how you might use a loop or even some wrangling methods you have already learnt to run these tests across all 5 species in a single block of code.
 
-In the Rmarkdown header add the date these changes were finalised. Commit and push up these new changes.
+Once complete, stage, commit and push up these new changes up to *GitHub*.
 
 
 # **Task 8**: Creating an issue on *GitHub*
