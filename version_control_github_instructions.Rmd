@@ -296,7 +296,7 @@ Now that you have a collaborator it's a good idea to create a To Do list. One pl
 Complete the following steps:
 
 1) Create a new 'To Do List' issue on your *GitHub* project.
-2) Create a *To Do* 'tick' box that lists three different tasks that will be the next steps in setting up the project. These tasks could be anything. Adding data, updating the README or meta-data, running some exploratory analysis and adding plotting code. 
+2) Create a *To Do* 'tick' box that lists three different tasks that will be the next steps in setting up the project. These tasks could be anything. Adding more data, updating the README or meta-data, running some exploratory analysis and adding plotting code. 
 3) Use tags to identify who (you or your partner) is meant to do those tasks. 
 
 :::: {.greenbox data-latex=""}
@@ -354,9 +354,9 @@ Complete the following:
 
 # **Task 10**: Branching and merging
 
-If you're coding and want to do something experimental it's good practice to do this on a separate branch to make sure that your existing code doesn't break other parts of your project. This is very useful for analysis or building your own software. *GitHub* also makes use of certain branch names to create webpages that can be used to render and host your code and reports. *GitHub* generally designates this branch as `gh-pages`. More on that in the next task.
+If you're coding and want to do something experimental it's good practice to do this on a separate branch to make sure that your existing code doesn't break other parts of your project. This is very useful for analysis or building your own software. *GitHub* also makes use of certain branch names to create webpages that can be used to render and host your code and reports.
 
-Try creating a new branch in your repo. Call this branch `testing`. This will "duplicate" your main branch, but put you along a separate path to it. 
+Try creating a new branch in your repo. Call this branch `testing`. This will "duplicate" your main branch, but put you along a separate path. 
 
 
 # **Task 11**: GitHub Webpage 
