@@ -189,6 +189,8 @@ This task involves teaming up with a collaborator. Exchange *GitHub* username de
 # **Task 9**
 Here, run some statistical tests to determine, for each species, whether the control vs high CO^2 treatments differ significantly from each other and in what direction. Provide the difference in means, their 95% confidence intervals, t-statistic, df and p-value. 
 
+>**Stretch Task**: Those who want a challenge, think about how you might use a loop or even some wrangling methods you have already learnt from the tidyverse to run these tests across all 5 species in a single block of code. If you're familiar with functions, you can even think about writing your own function! All these strategies will avoid having to copy and paste large chunks of code. If you're repeating anything, writing functions and loops are good ways to simplify.
+
 ```{r, stats, echo=TRUE, eval=TRUE}
 # Add your code here
 ```
