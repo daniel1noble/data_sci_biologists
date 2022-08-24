@@ -76,19 +76,6 @@ If none of this works, ask your neighbour, use your red sticky note (or raised h
 
 <br>
 
-#### Remember it's a lab book {.tabset .tabset-fade .tabset-pills}
-
-Through this and every workshop, you should type as much descriptive text into your R Markdown document as someone (including but not limited to you) would need to understand what you're doing.
-
-**Remember**: This document is your lab book! The information in it must be sufficient to reproduce your research, allow others to understand your way of thinking, and allow you to use it in your later work (e.g. when writing assessments, thesis, blogs or papers). Imagine that you are writing a manual and a report at the same time.
-
-Please keep the level 1 headings we have given you above, so it's easy for us to come around and help you. Please use subheadings to divide up your work within each section, subheadings work like this:
-
-```
-## This is a level 2 subheading
-### This is a level 3 subheading
-```
-<br>
 
 # **Introduction**
 
@@ -170,7 +157,12 @@ Now that you have some familiarity with *GitHub* and *Git*, lets try to get ours
 
 # **Task 1**: Setting up a repository (repo)
 
-Create a new repository (repo) on your [*GitHub*](https://github.com/) account. Keep the repo name: 1) informative; 2) short; 3) and avoid 'spaces' in your repo name. For point 3, you can use '_' (i.e., 'snake case') or '.' between words. This makes it easier when you want to code path names to your project. 
+Create a new repository (repo) on your [*GitHub*](https://github.com/) account. Make sure the repo is public and initialize the repo with a 'README.md" file. It should ask you this during the setup. Keep the repo name: 
+
+1) Informative; 
+2) Short; 
+3) Avoid 'spaces' in your repo name. For point 3, you can use '_' (i.e., 'snake case') or '.' between words. This makes it easier when you want to code path names to your project. 
+
 
 # **Task 2**: Clone your repository
 
@@ -212,7 +204,7 @@ Once added go back to your *GitHub Desktop* application. What has changed? Commi
 
 # **Task 4**: Editing file, saving, committing and pushing to GitHub
 
-Now that you're tracking your Rmarkdown file your ready to start doing some coding. We're now going to do some data-wrangling ifd the `OA_activitydat_20190302_BIOL3207.csv` data. In the process we will save the files as we develop code, commit and track the file. The `OA_activitydat_20190302_BIOL3207.csv` is a data set on ocean acidification effects on fish behaviour that was published in [Nature in 2020](https://www.nature.com/articles/s41586-019-1903-y). The detailed meta-data for each column are as follows:
+Now that you're tracking your Rmarkdown file your ready to start doing some coding. We're now going to do some data-wrangling of the `OA_activitydat_20190302_BIOL3207.csv` data. In the process we will save the files as we develop code, commit and track the file. The `OA_activitydat_20190302_BIOL3207.csv` is a data set on ocean acidification effects on fish behaviour that was published in [Nature in 2020](https://www.nature.com/articles/s41586-019-1903-y). The detailed meta-data for each column are as follows:
 
 | Column Name	|	Description	  |
 | -------------	|	:-----------: |	
@@ -228,9 +220,13 @@ comment		|	Comment with notes on the origin of the data |
 Complete the following:
 
 Clean up the data. There are a bunch of extra columns and missing data in the dataset. Use your new found data wrangling skills to explicitly code a chunk to:
-    a) Remove the missing data
-    b) Drop out columns that are not relevant (e.g, `comment` column and `loc` can probably go for now).
-    c) Check that there are no spelling issues in `species` and `treatment` and create a table of summary data that includes 1) the mean, 2) the standard deviation and 3) the sample sizes of unique fish across ALL six fish species for each treatment.
+
+a) Remove the missing data
+b) Drop out columns that are not relevant (e.g, `comment` column and `loc` can probably go for now).
+c) Check that there are no spelling issues in `species` and `treatment` and create a table of summary data that includes:
++ the mean, 
++ the standard deviation 
++ the sample sizes of unique fish across **ALL** fish species for each treatment.
 
 Once you have finished adding this code, save this file, commit and push it up to *GitHub*. Check again how your *GitHub* repo online looks. Click on the file and see what in the file has changed.
 
@@ -269,8 +265,8 @@ Let's now invite a collaborator. Complete the following:
 
 1) Team up with the person beside you. For those online we'll organise you in breakout rooms!
 2) Ask them for their GitHub username and add them to your *GitHub* repo. This is done on your *GitHub* repo through the browser by managing collaborators in the `settings` tab. You should also give **them** your username so they can do the same for you. 
-3) Once added to their repository, clone their repository onto your local computer. 
-4) Open up their Rmarkdown file. Re-run their code to check it all runs fine on your computer. It should!
+3) Once added to their repository, clone **their** repository onto your local computer. 
+4) Open up **their** Rmarkdown file. Re-run their code to check it all runs fine on your computer. It should!
 5) Add a new code chunk that creates a different figure than the one your collaborator made or edit the code on their existing figure. See the Rmarkdown for details.
 6) Save the file. 
 7) Commit and push these changes up.
@@ -293,8 +289,6 @@ Complete the following:
 8) Resolve the conflict. Pick a change you like best, delete all other conflict markers and text.
 9) Commit and push up the changes to *GitHub*
 
-<br> 
-
 # **Task 8**: Creating an issue on *GitHub*
 Now that you have a collaborator it's a good idea to create a To Do list. One place to do this is though *GitHub* issues. Issues can be used to identify bugs in code or suggest enhancements / additions to code, to get collaborators to check data or even just create a to do list so everyone has tasks that they can keep track of. We'll use it to set up a set of tasks for the project. Assume the project will be for you and your collaborator to analyse a big biological dataset together. 
 
@@ -304,16 +298,11 @@ Complete the following steps:
 2) Create a *To Do* 'tick' box that lists three different tasks that will be the next steps in setting up the project. These tasks could be anything. Adding more data, updating the README or meta-data, running some exploratory analysis and adding plotting code. 
 3) Use tags to identify who (you or your partner) is meant to do those tasks. 
 
-:::: {.greenbox data-latex=""}
-::: {.center data-latex=""}
-<font size="18">**Relax!**</font>
-:::
-**When you get to this point relax. See if you can help others in your group. We'll quickly overview the solutions or have reps from a random group present their solutions soon.**
-::::
+<br>
 
 :::: {.organgebox data-latex=""}
 ::: {.center data-latex=""}
-<font size="18">**Task 9** should take ~20-30 minutes</font>
+<font size="18">**Task 9** should take ~30-40 minutes</font>
 :::
 ::::
 
@@ -331,16 +320,6 @@ Complete the following steps:
 >**Stretch Task**: Those who want a challenge, think about how you might use a loop or even some wrangling methods you have already learnt to run these tests across all 5 species in a single block of code.
 
 Once complete, stage, commit and push up these new changes up to *GitHub*.
-
-<br>
-
-
-:::: {.greenbox data-latex=""}
-::: {.center data-latex=""}
-<font size="18">**Relax!**</font>
-:::
-**When you get to this point relax. See if you can help others in your group. We'll quickly overview the solutions or have reps from a random group present their solutions soon.**
-::::
 
 <br>
 
