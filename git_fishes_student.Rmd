@@ -181,8 +181,12 @@ This task involves teaming up with a collaborator. Exchange *GitHub* username de
 # You want to make changes to your collaborators figure in Task 5. Maybe you want to create a figure that focuses only on three fish species instead of the 5. More specifically, chromis, lemon, and acantho. Add code here to revise their figure to do that.
 ```
 
+
 # **Task 7**
 
+# **Task 8**
+
+# **Task 9**
 Here, run some statistical tests to determine, for each species, whether the control vs high CO^2 treatments differ significantly from each other and in what direction. Provide the difference in means, their 95% confidence intervals, t-statistic, df and p-value. 
 
 ```{r, stats, echo=TRUE, eval=TRUE}
@@ -195,6 +199,3 @@ Here, run some statistical tests to determine, for each species, whether the con
 
 Now that you have a table, you can reference it within a document. For example, you can make a call to Table \@ref(tab:table1) by referring to the name of the code chunk. When you knit the html it will create a hyperlink to your table and insert a legend above the table for you. How cool is that!?
 
-# **Task 8**
-
-# **Task 9**
