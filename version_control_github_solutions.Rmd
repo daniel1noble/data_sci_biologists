@@ -80,11 +80,11 @@ Once you're in the folder, add a few files to the repo. We've done this before, 
 
 1) a new RStudio project file 
 2) The `OA_activitydat_20190302_BIOL3207.csv` from Wattle and add this to a `data/` folder in your repo 
-3) The Rmarkdown file you have created a bunch of times before in previous workshops. 
+3) The Rmarkdown file
 
 If you then navigate back to `GitHub Desktop` you will now notice that these files are identified by `Git` and you can see they are not yet tracked. 
 
-To track these, you need to stage/commit these. You can do that in the bottom left corner. Leave a message that details what you're doing and why so your future self, and any collaborators, know why something was done. Then click the `commit` button. You will notice that this moves the file to the staging area, but it's still not yet up on `GitHub`. You need to then push this up to the cloud by clicking the `push` button. See the video below for the full process.
+To track these, you need to stage/commit these. You can do that in the bottom left corner. Leave a message that details what you're doing and why so your future self, and any collaborators, know why something was done. Then click the `commit` button. You will notice that this moves the file to the staging area, but it's still not yet up on `GitHub`. You need to then push this up to the cloud by clicking the `push` button. See the video below for the full process when you have one file as an example.
 
 
 <br>
