@@ -353,7 +353,7 @@ To setup a *GitHub Webpage* go to your *GitHub* repo in a browser window. Do the
 6) Change the name of the html after it's rendered to `index.html`. 
 7) Remember, your `.gitignore` file is ignoring `html` files. However, in this case, we want to now push this file up so that our *GitHub* pages can create the 'website'. So, remove the `*.html` from your ignore file. 
 8) Now, commit your `index.html` and your updated `.gitignore` file, and push this to *GitHub*.
-9) Wait a little bit for GitHub pages to deplay the site (~5 min).
-10) Now, go visit your site and share it with your parter so they can see the analysis and code you created!
+9) Wait a little bit for GitHub pages to create the site (~5 min).
+10) Now, go visit your site and share it with your partner so they can see the analysis and code you created!
 
 
