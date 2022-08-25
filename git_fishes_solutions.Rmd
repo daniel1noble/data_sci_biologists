@@ -314,6 +314,11 @@ for(i in 1:length(unique(data_clean$species))){
 
 ```
 
+```{r, method2, eval=FALSE}
+
+```
+
+
 ```{r, table1, echo=TRUE, eval=TRUE, tab.cap = "Summary statistics and results of Weltch's Two Sample T-test comparing Control and Acidification treatments across six reef fish species"}
 # Using the resulting object created above, which should be a table with all the summary statistics, t, df and p-value for each species create a table. Note that there is a tab.cap argument in the chunk arguments. Write a caption here. 
 flextable(stats) %>% bold(part = "header") %>% align(part = "header", align = "center")
