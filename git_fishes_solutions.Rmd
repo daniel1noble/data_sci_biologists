@@ -287,29 +287,36 @@ Here, run some statistical tests to determine, for each species, whether the con
 >**Stretch Task**: Those who want a challenge, think about how you might use a loop or even some wrangling methods you have already learnt from the tidyverse to run these tests across all 5 species in a single block of code. If you're familiar with functions, you can even think about writing your own function! All these strategies will avoid having to copy and paste large chunks of code. If you're repeating anything, writing functions and loops are good ways to simplify.
 
 ```{r, stats, echo=TRUE, eval=TRUE}
-# lots of ways to do this
-
-my_stats <- function(x){
-  
-}
-
-
-stats <- data_clean %>% 
-          group_by(species) %>% 
-          mutate(mean_co2 = )
-
+# lots of ways to do this. Probably the easiest from an intuitive perspective is to just write a loop. I'd imagine a bunch of folks will want to do this one step at a time. That's ok, but they'll be copying a tonne of code!
 
 stats <- data.frame()
 
 for(i in 1:length(unique(data_clean$species))){
+  # Keep it simple. Lets just first filter the data for each species
+  spp_tmp <- data_clean %>% filter(species == unique(data_clean$species)[i])
+  
+  # Now that we have species lets do, say, a t-test. Store that data like we have in the past
+  t_test <- t.test(activity ~ treatment, data = spp_tmp)
+  
+  # Ok, lets now build our table. We could turn this into a function of course, but keep it here. 
+  stats[i,"Species"]      <- unique(data_clean$species)[i]
+  stats[i,"Mean C"]       <- t_test$estimate[2]
+  stats[i,"Mean OA"]      <- t_test$estimate[1]
+  stats[i,"Contrast"]     <- t_test$estimate[1]-t_test$estimate[2]
+  stats[i,"L95% CI"]      <- t_test$conf.int [1]
+  stats[i,"U95% CI"]      <- t_test$conf.int [2]
+  stats[i,"t-statistic"]  <- t_test$statistic
+  stats[i,"df"]           <- t_test$parameter
+  stats[i,"p-value"]      <- t_test$p.value
   
 }
 
 
 ```
 
-```{r, table1, echo=TRUE, eval=TRUE, tab.cap = "write a caption here"}
+```{r, table1, echo=TRUE, eval=TRUE, tab.cap = "Summary statistics and results of Weltch's Two Sample T-test comparing Control and Acidification treatments across six reef fish species"}
 # Using the resulting object created above, which should be a table with all the summary statistics, t, df and p-value for each species create a table. Note that there is a tab.cap argument in the chunk arguments. Write a caption here. 
+flextable(stats) %>% bold(part = "header") %>% align(part = "header", align = "center")
 ```
 
 Now that you have a table, you can reference it within a document. For example, you can make a call to Table \@ref(tab:table1) by referring to the name of the code chunk. When you knit the html it will create a hyperlink to your table and insert a legend above the table for you. How cool is that!?
