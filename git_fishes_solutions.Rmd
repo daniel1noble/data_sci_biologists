@@ -9,6 +9,8 @@ output:
     toc: yes
     toc_depth: 6
     toc_float: yes
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
@@ -29,7 +31,7 @@ Throughout we are also going to learn a bit more about how to format Rmarkdown d
 library(pacman)
 
 # Install bookdown for rendering because we'll need this. While we're at it, lets also install /load the tidyverse
-p_load(bookdown, tidyverse, ggforce, flextable, latex2exp) # basically just list all the packages you want here
+p_load(bookdown, tidyverse, ggforce, flextable, latex2exp, png, magick) # basically just list all the packages you want here
 
 ```
 
@@ -91,7 +93,7 @@ Now that you have already added a `data/` folder to your working directory that 
 
 Write your answer in the code chunk below:
 
-```{r, loaddata, eval = FALSE, echo=TRUE}
+```{r, loaddata, eval = TRUE, echo=TRUE}
 
 path <- "./data/OA_activitydat_20190302_BIOL3207.csv"
   
@@ -103,7 +105,7 @@ Let's say that you added a new data folder that was inside an output folder (i.e
 
 >**Question 4**: Using the `write_csv` function how would you write the path name to save this file to `output/data`?
 
-```{r, write, eval = FALSE, echo=TRUE}
+```{r, write, eval = FALSE, echo=TRUE, results='hide', message=FALSE}
 
 path <- "./output/data/"
 
@@ -156,6 +158,8 @@ flextable(summary_data) %>% bold(part = "header") %>% align(align = "center", pa
 
 ```{r answer5, echo=TRUE, eval=FALSE}
 ## Write your answer here....remember to use '#" in front of your text.
+
+# When you click on a commit it will show you how each file has changed from the the most recent past commit to the one that is most recent. Previous files are listed on the left of the scree and newest files on the right. Red highlights show text/code that was removed. Green highlights show text/code that was added to the file. 
 ```
 
 # **Task 5**
@@ -164,35 +168,98 @@ Ignoring figures can be important because they take up quite a lot of space in y
 
 `.gitignore` file are used to control what *Git* tracks and what it ignores. You should have created a new folder path: `output/figures/`. Write some code now to create a pretty figure using ggplot that shows the difference between control and acidification treatments for each of the fish species in the data set:
 
-```{r, prettyfig}
+```{r, prettyfig, fig.align='center', fig.cap="Mean activity for Control and OA treatments across reef fish"}
 # ggplot figure showing mean activity for each treatment (Control, OA) for each species.
 
+# Here is the most advanced example you might use based on the stretch task below. Variants of these are all fine
 
+## Make a cool plot of the data based on species and treatment
+
+# Load in some pictures that are provided first, in case you want to pretty it up! Stretch task!
+  chromas <- readPNG("./pics/chromis.png")
+whitedams <- readPNG("./pics/whitedams.png")
+    lemon <- readPNG("./pics/lemon.png")
+   humbug <- readPNG("./pics/humbug.png")
+  acantho <- readPNG("./pics/acantho.png")
+    ambon <- readPNG("./pics/ambon.png")
+
+# Now lets make a plot, boy this took me a while, and I'm still not happy with it, but it's looking cool!
+p1 <- ggplot(data_clean, aes(x =species, y = activity)) +
+  geom_violin(aes(fill = treatment, col = treatment), alpha = 0.8) +
+  geom_sina(data = . %>% filter(activity >= 25), aes(fill = treatment, col = treatment), colour = "black", alpha=0.2) + # Here's a COOL feature. You can wrangle data directly from data frame to highly something neat, like activities all above and below 25. The '.' is meant to represent the tibble data frame and just like we would manipulate there we can do the same here.
+  geom_sina(data = . %>% filter(activity <= 25), aes(fill = treatment, col = treatment), colour = "gray", alpha=0.2) +
+  labs(x = "Species", y = "Activity (s)", fill = "Treatment", col = "Treatment") +
+  ylim(0, 100) +  # Make axes large as we may want to add in pictures of the species
+  geom_errorbar(data = summary_data, aes(x = Species, y = `Mean Activity`, ymin = `Mean Activity`+2*`Standard Error`, ymax = `Mean Activity`-2*`Standard Error`), position=position_dodge2(width = 0.01, padding = 0.5), size = 0.5) +   # We've already created the means and se data so we can feed this new tibble in
+  geom_point(data = summary_data, aes(x = Species, y = `Mean Activity`, fill = Treatment, col = Treatment), position = position_dodge(width = 0.9), colour = "black") +
+  theme_classic() +
+  annotate("text", x = seq(from = 0.75, to = 6.5, by= 0.5), y = 63, label = paste0("n = ", summary_data$N)) +
+  scale_fill_manual(breaks = c("CO2", "control"),
+                    values=c("#fc9197", "#dde6d5")) +
+  scale_color_manual(breaks = c("CO2", "control"),
+                  values=c("#fc9197", "#dde6d5")) +
+  coord_flip() +
+  annotation_raster(chromas, xmin = 2.5, xmax = 3.5, ymin = 75, ymax = 100) +
+  annotation_raster(whitedams, xmin =5.5, xmax = 6.5, ymin = 75, ymax = 100) +
+  annotation_raster(lemon, xmin =4.5, xmax = 5.5, ymin = 75, ymax = 100) +
+  annotation_raster(humbug, xmin =3.5, xmax = 4.5, ymin = 75, ymax = 100) +
+  annotation_raster(acantho, xmin =0.5, xmax = 1.5, ymin = 75, ymax = 100) +
+  annotation_raster(ambon, xmin =1.6, xmax = 2.5, ymin = 75, ymax = 100)
+
+p1
 ```
 
-**Stretch Task**: The Clark et al. 2020 paper plots some pretty pictures on their figures. You have access to a folder called "pics/". Add the pics of the difference species from the "pics/" folder to your new plot. 
+**Stretch Task**: The Clark et al. 2020 paper plots some pretty pictures on their figures. You have access to a folder called "pics/". Add the pics of the difference species from the "pics/" folder to your new plot. Explore the function `annotation_raster()` which might help you achieve this goal.
 
-Use `ggsave` function to save the figure(s) to your new `output/figures/`:
+Note the code chunk used to make the figure. It has a `fig.cap` argument. That means Rmarkdown knows it's a figure and it will allow you to create a figure reference call in tell. In other words, we can refer to out Figure \@ref(fig:prettyfig) by referring to the label for the chunk. This will automatically make a legend for us too. The same concept applied to Tables but the legend goes above these.
+
+Now that you have the figure you may also want to write save it as a separate file. Use `ggsave` function to save the figure(s) to your new `output/figures/`:
 
 ```{r, savefig}
 # Use ggsave to save the figure
-
+ggsave(plot = p1, filename = "species_trt", dpi = 600, device = "png", path = "./output/figs")
 ```
 
 Given that you have added `output/figures/` to your `.gitignore` file describe what you notice about what you see in *GitHub Desktop*. 
 
->**Question 6**: Assume that you added the `pics/` folder to your working directory to plot pictures of each fish on your figure. Explain why you would want to continue tracking these files on GitHub despite them being .png files?
+>**Question 6**: Assume that you added the `pics/` folder to your working directory to plot pictures of each fish on your figure. Do you want to track the files in the pic/ folder on GitHub despite them being .png files? Explain your reasoning. 
 
 ```{r, answer6}
-## Write your answer here....remember to use '#" in front of your text.
+## Yes. Remember, if you want collaborators to reproduce your code, and your code requires loading in figures in the pics/ folder than you do in fact want to commit and track the .png files in the pics folder. Otherwise, the output cannot be generated when they pull down your changes. The .png figures that your code generates in the ./output/figs/ folder do not, however, need to be tracked because your code will re-generate these files. 
 ```
 
-
 # **Task 6**
-This task involves teaming up with a collaborator. Exchange *GitHub* username details and add each other to your repo. Clone each others' repo on to your computer. Re-run their code. Does it work? If not, correct it for them. Then, lets create a new figure in the code block below that simplifies the one produced in **Task 5**. Instead of all species, lets just plot three of the species (chromis, lemon, and acantho): `
+This task involves teaming up with a collaborator. Exchange *GitHub* username details and add each other to your repo. Clone each others' repo on to your computer. Re-run their code. Does it work? If not, correct it for them. Then, lets create a new figure in the code block below that simplifies the one produced in **Task 5**. Instead of all species, lets just plot three of the species (chromis, lemon, and acantho). This is a figure code chunk so make sure you add the necessary arguments `fig.cap` in so that you can refer to Figure \@ref(fig:collabFig).
 
-```{r, collabFig, echo=TRUE, eval=TRUE}
+```{r, collabFig, echo=TRUE, eval=TRUE, fig.align='center', fig.cap="Revised figure from collaborator"}
 # You want to make changes to your collaborators figure in Task 5. Maybe you want to create a figure that focuses only on three fish species instead of the 5. More specifically, chromis, lemon, and acantho. Add code here to revise their figure to do that.
+
+# First lets just sub-sample data and summary table
+data_clean_sub   <- data_clean %>% filter(species %in% c("chromis", "lemon","acantho"))
+summary_data_sub <- summary_data %>% filter(Species %in% c("chromis", "lemon","acantho"))
+
+p2 <- ggplot(data_clean_sub, aes(x =species, y = activity)) +
+  geom_violin(aes(fill = treatment, col = treatment), alpha = 0.8) +
+  geom_sina(data = . %>% filter(activity >= 25), aes(fill = treatment, col = treatment), colour = "black", alpha=0.2) + # Here's a COOL feature. You can wrangle data directly from data frame to highly something neat, like activities all above and below 25. The '.' is meant to represent the tibble data frame and just like we would manipulate there we can do the same here.
+  geom_sina(data = . %>% filter(activity <= 25), aes(fill = treatment, col = treatment), colour = "gray", alpha=0.2) +
+  labs(x = "Species", y = "Activity (s)", fill = "Treatment", col = "Treatment") +
+  ylim(0, 100) +  # Make axes large as we may want to add in pictures of the species
+  geom_errorbar(data = summary_data_sub %>% filter(Species %in% c("chromis", "lemon","acantho")), aes(x = Species, y = `Mean Activity`, ymin = `Mean Activity`+2*`Standard Error`, ymax = `Mean Activity`-2*`Standard Error`), position=position_dodge2(width = 0.01, padding = 0.5), size = 0.5) +   # We've already created the means and se data so we can feed this new tibble in
+  geom_point(data = summary_data_sub, aes(x = Species, y = `Mean Activity`, fill = Treatment, col = Treatment), position = position_dodge(width = 0.9), colour = "black") +
+  theme_classic() +
+  annotate("text", x = c(0.75, 1.25, 1.75, 2.25, 2.75, 3.25), y = 63, label = paste0("n = ", summary_data_sub$N)) +
+  scale_fill_manual(breaks = c("CO2", "control"),
+                    values=c("#fc9197", "#dde6d5")) +
+  scale_color_manual(breaks = c("CO2", "control"),
+                  values=c("#fc9197", "#dde6d5")) +
+  coord_flip() +
+  annotation_raster(chromas, xmin = 1.75, xmax = 2.25, ymin = 75, ymax = 100) +
+  annotation_raster(lemon, xmin =2.75, xmax = 3.25, ymin = 75, ymax = 100) +
+  annotation_raster(acantho, xmin =0.75, xmax = 1.25, ymin = 75, ymax = 100)
+
+p2
+
+
 ```
 
 
@@ -220,7 +287,25 @@ Here, run some statistical tests to determine, for each species, whether the con
 >**Stretch Task**: Those who want a challenge, think about how you might use a loop or even some wrangling methods you have already learnt from the tidyverse to run these tests across all 5 species in a single block of code. If you're familiar with functions, you can even think about writing your own function! All these strategies will avoid having to copy and paste large chunks of code. If you're repeating anything, writing functions and loops are good ways to simplify.
 
 ```{r, stats, echo=TRUE, eval=TRUE}
-# Add your code here
+# lots of ways to do this
+
+my_stats <- function(x){
+  
+}
+
+
+stats <- data_clean %>% 
+          group_by(species) %>% 
+          mutate(mean_co2 = )
+
+
+stats <- data.frame()
+
+for(i in 1:length(unique(data_clean$species))){
+  
+}
+
+
 ```
 
 ```{r, table1, echo=TRUE, eval=TRUE, tab.cap = "write a caption here"}
