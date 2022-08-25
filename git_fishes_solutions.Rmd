@@ -284,7 +284,7 @@ There's not too much to do in this task on the coding front! You just need to cr
 # **Task 9**
 Here, run some statistical tests to determine, for each species, whether the control vs high CO^2 treatments differ significantly from each other and in what direction. Provide the difference in means, their 95% confidence intervals, t-statistic, df and p-value. 
 
->**Stretch Task**: Those who want a challenge, think about how you might use a loop or even some wrangling methods you have already learnt from the tidyverse to run these tests across all 5 species in a single block of code. If you're familiar with functions, you can even think about writing your own function! All these strategies will avoid having to copy and paste large chunks of code. If you're repeating anything, writing functions and loops are good ways to simplify.
+>**Stretch Task**: Those who want a challenge, think about how you might use a loop or even some wrangling methods you have already learnt from the tidyverse to run these tests across all 6 species in a single block of code. If you're familiar with functions, you can even think about writing your own function! All these strategies will avoid having to copy and paste large chunks of code. If you're repeating anything, writing functions and loops are good ways to simplify.
 
 ```{r, stats, echo=TRUE, eval=TRUE}
 # lots of ways to do this. Probably the easiest from an intuitive perspective is to just write a loop. I'd imagine a bunch of folks will want to do this one step at a time. That's ok, but they'll be copying a tonne of code!
@@ -311,17 +311,34 @@ for(i in 1:length(unique(data_clean$species))){
   
 }
 
-
 ```
 
 ```{r, method2, eval=FALSE}
 
+# You could also mix with the tidyverse. Probably easier to write your own function. We haven't taught them much about this yet, but lets assume some advanced students might be able to do this.There's probably more elegant ways of doing this with the tidyverse
+
+my_stats <- function(data){
+  stats <- data.frame()
+   
+ t_test <-  t.test(activity ~ treatment, data = data)
+
+  stats[1,"Mean C"]       <- t_test$estimate[2]
+  stats[1,"Mean OA"]      <- t_test$estimate[1]
+  stats[1,"Contrast"]     <- t_test$estimate[1]-t_test$estimate[2]
+  stats[1,"L95% CI"]      <- t_test$conf.int [1]
+  stats[1,"U95% CI"]      <- t_test$conf.int [2]
+  stats[1,"t-statistic"]  <- t_test$statistic
+  stats[1,"df"]           <- t_test$parameter
+  stats[1,"p-value"]      <- t_test$p.value
+  
+  return(stats)
+}
 
 stats <- data_clean %>% 
          group_by(species) %>% 
          nest() %>% 
-         mutate(t_test = lapply(data, function(x) t.test(activity ~ treatment, data = x))) %>% 
-         select(species, t_test)
+         mutate(t_test = lapply(data, function(x) my_stats(x))) %>% 
+         select(species, t_test) %>% unnest(cols = 2)
 
 ```
 
