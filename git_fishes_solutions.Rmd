@@ -316,6 +316,13 @@ for(i in 1:length(unique(data_clean$species))){
 
 ```{r, method2, eval=FALSE}
 
+
+stats <- data_clean %>% 
+         group_by(species) %>% 
+         nest() %>% 
+         mutate(t_test = lapply(data, function(x) t.test(activity ~ treatment, data = x))) %>% 
+         select(species, t_test)
+
 ```
 
 
