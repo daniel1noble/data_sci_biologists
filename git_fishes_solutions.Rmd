@@ -25,11 +25,11 @@ Throughout we are also going to learn a bit more about how to format Rmarkdown d
 
 ```{r loadpacks, message=FALSE, results='hide'}
 # Install a load of packages that we'll use. I'll show you a shortcut that I love to use. Try using the p_load function in the "pacman" package. p_load will execute both the install.packages and library commands in one shot so they only need to be used once to install pacman itself.
-install.packages("pacman", repos = "http://cran.us.r-project.org")
+#install.packages("pacman", repos = "http://cran.us.r-project.org")
 library(pacman)
 
 # Install bookdown for rendering because we'll need this. While we're at it, lets also install /load the tidyverse
-p_load(bookdown, tidyverse, ggforce, flextable) # basically just list all the packages you want here
+p_load(bookdown, tidyverse, ggforce, flextable, latex2exp) # basically just list all the packages you want here
 
 ```
 
@@ -50,9 +50,8 @@ This task involves cloning your repository on your computer. Where should we pla
 >**Question 1**: Why should you not rely on *GitHub* as a backup?
 
 ```{r, answer1, echo=TRUE, eval = FALSE}
-# Answer the question above here. You may want to explore further and then come back to your reasons as you familiarise yourself
 
-# Use pound symbols to annotate your text.
+## We shouldn't rely on GitHub as a backup because if files are not tracked and/or pushed up into the cloud they are not backed up. This means that you can still lose work within a project directory. 
 
 ```
 
@@ -63,7 +62,7 @@ Before moving on you might have noticed that the code block above has a name `an
 >**Question 2**: In the second code block called `answer1` if we change echo = TRUE to echo = FALSE what will happen to the code block `answer1` when you render it?
 
 ```{r answer2, echo=TRUE, eval = FALSE}
-## Write your answer here....remember to use '#" in front of your text.
+# Changing echo = FALSE will hide the code block in the html.
 ```
 
 **Important**: Notice that `eval = FALSE` for many code chunks. When you complete the tasks. Make sure to change these to `TRUE` otherwise you will find your code does not run!
@@ -94,7 +93,7 @@ Write your answer in the code chunk below:
 
 ```{r, loaddata, eval = FALSE, echo=TRUE}
 
-path <- "replace this text with your relative path to a file in the 'data/' folder"
+path <- "./data/OA_activitydat_20190302_BIOL3207.csv"
   
 data <- read_csv(path)
 
@@ -106,7 +105,7 @@ Let's say that you added a new data folder that was inside an output folder (i.e
 
 ```{r, write, eval = FALSE, echo=TRUE}
 
-path <- "replace this text with your relative path"
+path <- "./output/data/"
 
 write_csv(data, file = path)
 
@@ -121,6 +120,7 @@ First, write some code below to remove missing data
 
 ```{r, rmMiss}
 # Code to removing missing data from the `OA_activitydat_20190302_BIOL3207.csv` data frame. 
+data_clean <- data %>% filter(!is.na(activity))
 
 ```
 
@@ -129,11 +129,25 @@ Second, drop out irrelevant columns and check that there are no spelling issues 
 
 ```{r summaryTab}
 # Drop irrelevant columns
+data_clean <- data_clean %>% 
+              select(-c("...1", "comment", "loc"))
 
 # Check spelling in species and treatment but also generate a summary table
+summary_data <- data_clean %>% 
+                group_by(species, treatment) %>% 
+                summarise(mean = mean(activity), 
+                          se=sd(activity) / sqrt(length(unique(animal_id))), 
+                          ids = length(unique(animal_id)), 
+                          n = n()) %>% 
+                rename("Species"       = species,
+                       "Treatment"     = treatment,
+                       "Mean Activity" = mean,
+                       "Standard Error" = se,
+                       "N_inds" = ids,
+                       "N" = n)
 
-# Use flextable to render the summary table in a tidy format
-
+# Use flextable to render the summary table in a tidy format. Bunch of additional formatting can be done to make it pretty. 
+flextable(summary_data) %>% bold(part = "header") %>% align(align = "center", part = "all")
 ```
 
 **STOP**: Before moving on, it's a good time to establish some good *GitHub* practices. You have just done an important step. It's time to save this file, stage it and commit it so that you have a record. Push these changes up using *GitHub Desktop*. It's important to do this frequently. It's probably not needed after every line of code, but it's good to do this when you have completed an important coding step. Of course, there's no harm in doing it more often. It will provide fine-scale tracking for you!
