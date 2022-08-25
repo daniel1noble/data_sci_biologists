@@ -223,9 +223,7 @@ Moving forward on that you can also add in an object and whatever that objects v
 
 This is all VERY cool because that means if your code or data change than you can update your entire report very fast. It's also 100% reproducible. We know exactly where every single value in your report comes from. This is all pretty helpful when you want to check your code and report side-by-side. Now that you have a bit more detail fill in the following:
 
-Mean activity for `r "species name here"` in the control group was `r "add code to place mean for control"` (95% CI: `r "code for lower CI"` to `r "code for upper CI"`) whereas mean activity in the acidification treatment was ` r "mean for acidificaton treatment"` (95% CI: `r "code for lower CI"` to `r "code for upper CI"`). 
-
-
+Mean activity for `r "species name here"` in the control group was `r "add code to place mean for control"` (s) compared to the OA treatment group, which was `r "mean for acidificaton treatment"`(s). The difference between control and OA treatment means was `r "code mean difference bw treatment"` (95% CI: `r "code for lower CI"` to `r "code for upper CI"`). We do not have enough evidence to reject the null hypothesis that there is no mean differences between Control and OA groups (t = `r "code for t statistic"`, df = `r "code for df`, p = `r "code for p-value"`). 
 
 >**Stretch Task**: If you didn't already use permutations to analyse these data, try doing that now for each species. Again, loops, functions or tidyverse (or even combinations might help). Do any of your results differ?
 
