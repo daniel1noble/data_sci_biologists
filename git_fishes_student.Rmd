@@ -183,8 +183,22 @@ This task involves teaming up with a collaborator. Exchange *GitHub* username de
 
 
 # **Task 7**
+This task involves creating and resolving conflicts. Conflicts in files are denoted with specific markers. They look like this when you open a file with conflicts.
+
+ <<<<<<<<< HEAD
+  
+  THIS IS YOUR CODE
+  
+ ==============
+  
+  THIS IS YOUR PARTNERS CODE
+  
+ !>>>>>>>>928731027301723
+
+Resolving is easy. Decide on what changes you think are the best to proceed with and remove conflict markers. 
 
 # **Task 8**
+There's not too much to do in this task on the coding front! You just need to create a *GitHub* issue and create a 'To Do' list on *GitHub* for you and your collaborator. 
 
 # **Task 9**
 Here, run some statistical tests to determine, for each species, whether the control vs high CO^2 treatments differ significantly from each other and in what direction. Provide the difference in means, their 95% confidence intervals, t-statistic, df and p-value. 
