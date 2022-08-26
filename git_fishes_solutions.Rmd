@@ -372,7 +372,7 @@ Moving forward on that you can also add in an object and whatever that objects v
 
 This is all VERY cool because that means if your code or data change than you can update your entire report very fast. It's also 100% reproducible. We know exactly where every single value in your report comes from. This is all pretty helpful when you want to check your code and report side-by-side. Now that you have a bit more detail fill in the following:
 
-**Mean activity for the `r stats$species[which(stats$species == "lemon")]` species in the control group was `r stats[which(stats$species == "lemon"), "Mean.C"]` (s) compared to the OA treatment group, which was `r stats[which(stats$species == "lemon"),"Mean.OA"]`(s). The difference between control and OA treatment means was `r stats[which(stats$species == "lemon"),"Contrast"]` (95% CI: `r stats[which(stats$species == "lemon"),"L95..CI"]` to `r stats[which(stats$species == "lemon"),"U95..CI"]`).**
+**Mean activity for the `r stats$species[which(stats$species == "lemon")]` species in the control group was `r stats[which(stats$species == "lemon"), "Mean.C"]` (s / min) compared to the OA treatment group, which was `r stats[which(stats$species == "lemon"),"Mean.OA"]` (s / min). The difference between control and OA treatment means was `r stats[which(stats$species == "lemon"),"Contrast"]` (s/min) (95% CI: `r stats[which(stats$species == "lemon"),"L95..CI"]` to `r stats[which(stats$species == "lemon"),"U95..CI"]`).**
 
 Now, using what you just learnt, describe what the null hypothesis being tested was and provide statistical evidence (t-statistic, df, and p-value) to support your conclusion about whether we can reject the null hypothesis. Again, make sure you use in-line code. Write you answer below:
 
@@ -434,7 +434,7 @@ Below. Add a few sentences for the species (or multiple species) you talked abou
 
 **Add your text and inline code chunks here**
 
-**There is very little difference between the permutation and t-test result for any of the species, as expected. Just to convince you see Table \@ref(tab:permT)**
+  **There is very little difference between the permutation and t-test result for any of the species, as expected. Just to convince you see Table \@ref(tab:permT)**
 
 ```{r, permT, tab.cap = "Comparison between t and permutations"}
 table <- cbind(data_spp_2, pt = stats$p.value)
@@ -445,8 +445,9 @@ flextable(table) %>% set_header_labels(name = "Species",
 
 ```
 
-# **Task 10 & 11**
+# **Task 10**
 
-These are stretch tasks on the use of *GitHub*. They will overview additional features that are very useful. If you finish the above tasks, then, have a crack at these and we can help you. 
+This is a stretch task on the use of *GitHub* and the challenges (or maybe lack of challenges) of reproducing others' work. If you finish the above tasks, then, have a crack at this one.
 
 **Solutions: Have a look at the video solutions**
+

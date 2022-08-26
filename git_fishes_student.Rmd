@@ -227,7 +227,7 @@ Moving forward on that you can also add in an object and whatever that objects v
 
 This is all VERY cool because that means if your code or data change than you can update your entire report very fast. It's also 100% reproducible. We know exactly where every single value in your report comes from. This is all pretty helpful when you want to check your code and report side-by-side. Now that you have a bit more detail fill in the following:
 
-Mean activity for `r "species name here"` in the control group was `r "add code to place mean for control"` (s) compared to the OA treatment group, which was `r "mean for acidificaton treatment"` (s). The difference between control and OA treatment means was `r "code mean difference bw treatment"` (95% CI: `r "code for lower CI"` to `r "code for upper CI"`). 
+Mean activity for `r "species name here"` in the control group was `r "add code to place mean for control"` (s / min) compared to the OA treatment group, which was `r "mean for acidificaton treatment"` (s / min). The difference between control and OA treatment means was `r "code mean difference bw treatment"` (s / min) (95% CI: `r "code for lower CI"` to `r "code for upper CI"`). 
 
 Now, using what you just learnt, describe what the null hypothesis being tested was and provide statistical evidence (t-statistic, df, and p-value) to support your conclusion about whether we can reject the null hypothesis. Again, make sure you use in-line code. Write you answer below:
 
@@ -246,6 +246,6 @@ Below. Add a few sentences for the species (or multiple species) you talked abou
 
 **Add your text and inline code chunks here**
 
-# **Task 10 & 11**
+# **Task 10**
 
-These are stretch tasks on the use of *GitHub*. They will overview additional features that are very useful. If you finish the above tasks, then, have a crack at these and we can help you. 
+This is a stretch task on the use of *GitHub* and the challenges (or maybe lack of challenges) of reproducing others' work. If you finish the above tasks, then, have a crack at this one. See the html for details.
