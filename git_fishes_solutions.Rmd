@@ -40,7 +40,7 @@ p_load(bookdown, tidyverse, ggforce, flextable, latex2exp, png, magick) # basica
 
 ### Provide the link to your GitHub Repo 
 
-While the tasks are meant to get you familiar with how GitHub works you should try and make regular commits as you work your way through. We want to see how often you're using Git. Below, within the `[]` brackets provide the link to your GitHub Repo. Just cut and paste it so we know what the repo name is and where it is. 
+While the tasks are meant to get you familiar with how *GitHub* works you should try and make regular commits as you work your way through. We want to see how often you're using *Git*. Below, within the `[]` brackets provide the link to your GitHub Repo. Just cut and paste it so we know what the repo name is and where it is. 
 
 (My GitHub Repository)[]
 
@@ -48,7 +48,7 @@ By adding the link in the `[]` brackets it will hyperlink "My GitHub Repository"
 
 # **Task 2**
 
-This task involves cloning your repository on your computer. Where should we place this repository? While GitHub is somewhat of a cloud storage system because it's keeping record of your commits, files and changes in the cloud it is **not** a backup of your files (note that placing `**` around a word will bold it whereas '*' around a word will italicise it). This is important to recognise! 
+This task involves cloning your repository on your computer. Where should we place this repository? While GitHub is somewhat of a cloud storage system because it's keeping record of your commits, files and changes in the cloud it is **not** a backup of your files (note that placing `**` around a word will bold it whereas `*` around a word will italicise it). The lack of *GitHub* being a file backup system is important to recognise! 
 
 >**Question 1**: Why should you not rely on *GitHub* as a backup?
 
@@ -80,15 +80,14 @@ Hopefully you also created and/or downloaded the following files and added them 
 2) download the `OA_activitydat_20190302_BIOL3207.csv` from Wattle and add this to a `data/` folder in your repo 
 3) Add the template Rmarkdown file, `git_fishes_student.Rmd` that was provided on wattle. You'll use this file to work through the tasks and answer questions. 
 
-**STOP**: Before moving on, it's a good time to establish some good *GitHub* practices. You have just did an important step. It's time stage these files and commit them so that you have a record. Use *GitHub Desktop* to do this. 
+**STOP**: Before moving on, it's a good time to establish some good *GitHub* practices. You have just did an important step -- you added a bunch of new files. It's time stage these files and commit them so that you have a record. Use *GitHub Desktop* to do this. 
 
-This is a very good point to make sure that you understand relative path names fo coding. Wait, "relative what?" 
-
+This is also a very good point to make sure that you understand relative path names fo coding. Wait, "relative what?" 
 Your working directory can be considered the 'lowest' level of your project. The starting point, if you will. R needs to know where your files are that you want to load. Many people might be familiar with using the `setwd()` function to tell R where your files are that you need to load. This is problematic because everyone's path to a given working directory is different, and so, your code will not work on others' computers. Even across your own computers!
 
 Lucky, RStudio project files take away the main issue by creating a project file that allows anyone to click on it to open the working directory to the same "spot". Having said that, if you start building structure (i.e., folders) in your working directory or repo than you need to understand how to navigate between folders to load and write files in the places that you want. 
 
-Now that you have already added a `data/` folder to your working directory that you just cloned down think about how you would write some code to load in a data file that is within this folder. There are a few useful shortcuts you can use. For example, if you use `.` it means 'start from the current working directory'. That is the RStudio project file location if you click on a RStudio project. If you use `..` it means "start from the directory or folder one step back from the existing working directory".
+Make sure you have added a `data/` folder to your working directory that you just cloned down. Think about how you would write some code to load in a data file that is within this folder. There are a few useful shortcuts you can use. For example, if you use `.` it means 'start from the current working directory'. That is the RStudio project file location if you click on a RStudio project. If you use `..` it means "start from the directory or folder one step back from the existing working directory".
 
 >**Question 3**: **How would you write the path name to load in a data file from the data folder?**
 
@@ -117,7 +116,7 @@ write_csv(data, file = path)
 
 # **Task 4**
 
-We're ready for some coding! Lets do some coding and wrangling of the `OA_activitydat_20190302_BIOL3207.csv` data that we will use for the workshop. Note above, the `loaddata` code chunk should have already written the code to load the data file. At this point, we're assuming it's in your work space. If not, make sure you run the `loaddata` code chunk. 
+We're ready for some coding! Lets do some coding and wrangling of the `OA_activitydat_20190302_BIOL3207.csv` data that we will use for the workshop. Note above, the `loaddata` code chunk should have already written the code to load the data file. At this point, we're assuming it's in your working space. If not, make sure you run the `loaddata` code chunk. 
 
 First, write some code below to remove missing data
 
@@ -128,7 +127,7 @@ data_clean <- data %>% filter(!is.na(activity))
 ```
 
 
-Second, drop out irrelevant columns and check that there are no spelling issues in `species` and `treatment` and create a table of summary data that includes 1) the mean, 2) the standard deviation and 3) the sample sizes of unique fish across ALL six fish species for each treatment. You can use the R package [`flextable`](https://ardata-fr.github.io/flextable-book/) to print out the results in a nice neat format!
+Second, drop out irrelevant columns and check that there are no spelling issues in `species` and `treatment`. YOu can create a table of summary data that includes 1) the mean, 2) the standard deviation and 3) the sample sizes of unique fish across ALL six fish species for each treatment. This will also help you detect any spelling errors. You can use the R package [`flextable`](https://ardata-fr.github.io/flextable-book/) to print out the results in a nice neat format! If you haven't heard about this spend 10 or so minutes having a look at it's functionality. It's incredible! You'll use this for tables throughout.
 
 ```{r summaryTab}
 # Drop irrelevant columns
@@ -165,9 +164,9 @@ flextable(summary_data) %>% bold(part = "header") %>% align(align = "center", pa
 
 # **Task 5**
 
-Ignoring figures can be important because they take up quite a lot of space in your *GitHub* repo. For example, huge data files, or figures can take up a tonne of space. We also might not need to save and track these because we can recreate them with our own code or re-download, process, save and track what we need. 
+Ignoring figures can be important because they take up quite a lot of space in your *GitHub* repo. For example, huge data files, or figures (e.g., png) can take up a tonne of space. We also might not need to save and track these because we can recreate them with our own code or re-download, process, save and track what we need. 
 
-`.gitignore` file are used to control what *Git* tracks and what it ignores. You should have created a new folder path: `output/figures/`. Write some code now to create a pretty figure using ggplot that shows the difference between control and acidification treatments for each of the fish species in the data set:
+`.gitignore` files are used to control what *Git* tracks and what it ignores. You should have created a new folder path: `output/figures/`. Write some code now to create a pretty figure using ggplot that shows the difference between control and acidification treatments for each of the fish species in the data set:
 
 ```{r, prettyfig, fig.align='center', fig.cap="Mean activity for Control and OA treatments across reef fish"}
 # ggplot figure showing mean activity for each treatment (Control, OA) for each species.
@@ -212,25 +211,33 @@ p1
 
 **Stretch Task**: The Clark et al. 2020 paper plots some pretty pictures on their figures. You have access to a folder called "pics/". Add the pics of the difference species from the "pics/" folder to your new plot. Explore the function `annotation_raster()` which might help you achieve this goal.
 
-Note the code chunk used to make the figure. It has a `fig.cap` argument. That means Rmarkdown knows it's a figure and it will allow you to create a figure reference call in tell. In other words, we can refer to out Figure \@ref(fig:prettyfig) by referring to the label for the chunk. This will automatically make a legend for us too. The same concept applied to Tables but the legend goes above these.
+Note the code chunk used to make the figure. It has a `fig.cap` argument. That means Rmarkdown knows it's a figure and it will allow you to create a figure reference call. In other words, we can refer to our Figure \@ref(fig:prettyfig) by referring to the label for the chunk. This will automatically make a legend for us too. The same concept applied to Tables but the legend goes above these.
 
-Now that you have the figure you may also want to write save it as a separate file. Use `ggsave` function to save the figure(s) to your new `output/figures/`:
+Now that you have the figure you may also want to write / save it as a separate file. Use `ggsave` function to save the figure(s) to your new `output/figures/`:
 
 ```{r, savefig}
 # Use ggsave to save the figure
 ggsave(plot = p1, filename = "species_trt", dpi = 600, device = "png", path = "./output/figs")
 ```
 
-Given that you have added `output/figures/` to your `.gitignore` file describe what you notice about what you see in *GitHub Desktop*. 
+>**Question 6**: Given that you have added `output/figures/` to your `.gitignore` file describe what you notice about what you see in *GitHub Desktop*. 
 
->**Question 6**: Assume that you added the `pics/` folder to your working directory to plot pictures of each fish on your figure. Do you want to track the files in the pic/ folder on GitHub despite them being .png files? Explain your reasoning. 
+```{r}
+## Write your answer here
+```
+
+Last question for this task. I promise! It's important to think very carefully about what you track and ignore.
+
+>**Question 7**: Assume that you added the `pics/` folder to your working directory to plot pictures of each fish on your figure. Do you want to track the files in the pic/ folder on GitHub despite them being .png files? Explain your reasoning. 
 
 ```{r, answer6}
 ## Yes. Remember, if you want collaborators to reproduce your code, and your code requires loading in figures in the pics/ folder than you do in fact want to commit and track the .png files in the pics folder. Otherwise, the output cannot be generated when they pull down your changes. The .png figures that your code generates in the ./output/figs/ folder do not, however, need to be tracked because your code will re-generate these files. 
 ```
 
 # **Task 6**
-This task involves teaming up with a collaborator. Exchange *GitHub* username details and add each other to your repo. Clone each others' repo on to your computer. Re-run their code. Does it work? If not, correct it for them. Then, lets create a new figure in the code block below that simplifies the one produced in **Task 5**. Instead of all species, lets just plot three of the species (chromis, lemon, and acantho). This is a figure code chunk so make sure you add the necessary arguments `fig.cap` in so that you can refer to Figure \@ref(fig:collabFig).
+This task involves teaming up with a collaborator. Exchange *GitHub* username details and add each other to your repo. Clone each others' repo on to your computer. Re-run their code. Does it work? If not, correct it for them. Explain to them WHY it didn't work. After all, they are right beside you! Think carefully about this. Will it still run on their computer if you have corrected it in a certain way?
+
+Now, lets create a new figure in the code block below that simplifies the one produced in **Task 5**. Instead of all species, lets just plot three of the species (chromis, lemon, and acantho). This is a figure code chunk so make sure you add the necessary arguments (e.g., `fig.cap`) in so that you can refer to Figure \@ref(fig:collabFig).
 
 ```{r, collabFig, echo=TRUE, eval=TRUE, fig.align='center', fig.cap="Revised figure from collaborator"}
 # You want to make changes to your collaborators figure in Task 5. Maybe you want to create a figure that focuses only on three fish species instead of the 5. More specifically, chromis, lemon, and acantho. Add code here to revise their figure to do that.
@@ -285,7 +292,7 @@ There's not too much to do in this task on the coding front! You just need to cr
 # **Task 9**
 Here, run some statistical tests to determine, for each species, whether the control vs high CO^2 treatments differ significantly from each other and in what direction. Provide the difference in means, their 95% confidence intervals, t-statistic, df and p-value. 
 
->**Stretch Task**: Those who want a challenge, think about how you might use a loop or even some wrangling methods you have already learnt from the tidyverse to run these tests across all 6 species in a single block of code. If you're familiar with functions, you can even think about writing your own function! All these strategies will avoid having to copy and paste large chunks of code. If you're repeating anything, writing functions and loops are good ways to simplify.
+>**Stretch Task**: You can of course do this for each species seperately, but those who want a challenge, think about how you might use a loop or even some wrangling methods you have already learnt from the tidyverse to run these tests across all 6 species in a single block of code. If you're familiar with functions, you can even think about writing your own function! All these strategies will avoid having to copy and paste large chunks of code. If you're repeating anything, writing functions and loops are good ways to simplify.
 
 ```{r, stats, echo=TRUE, eval=TRUE}
 # lots of ways to do this. Probably the easiest from an intuitive perspective is to just write a loop. I'd imagine a bunch of folks will want to do this one step at a time. That's ok, but they'll be copying a tonne of code!
@@ -316,7 +323,7 @@ for(i in 1:length(unique(data_clean$species))){
 
 ```{r, method2, eval=TRUE}
 
-# You could also mix with the tidyverse. Probably easier to write your own function. We haven't taught them much about this yet, but lets assume some advanced students might be able to do this.There's probably more elegant ways of doing this with the tidyverse
+# You could also mix with the tidyverse with some functions. Probably easier to write your own function. We haven't taught them much about this yet, but lets assume some advanced students might be able to do this.There's probably more elegant ways of doing this with the tidyverse
 
 my_stats <- function(data){
   stats <- data.frame()
@@ -357,11 +364,11 @@ flextable(stats) %>% bold(part = "header") %>% align(part = "all", align = "cent
 
 Now that you have a table, you can reference it within a document. For example, you can make a call to Table \@ref(tab:table1) by referring to the name of the code chunk. When you knit the html it will create a hyperlink to your table and insert a legend above the table for you. How cool is that!?
 
-> **Question 10**: Pick one of your favorite species and write about the results to a reader. Write in the markdown file below, what 1) the mean difference between control and acidification treatment is along with the 95% confidence intervals 
+> **Question 8**: Pick one of your favorite species and write about the results to a reader. Write in the Rmarkdown file below what 1) the means and mean differences between control and acidification treatment is along with 2) the 95% confidence intervals of the difference
 
-You can write your blurb below this. Before you do that, a few cool features of markdown. You can actually code in objects so that, when they are rendered they replace the inline code chunk with the result. To give you an example, an inline code chunk is written as follows: `r "add code here"`. When you render the document, whatever you place in the "add code here" section will be rendered. In this case, we are giving a string, so it simply just adds that in the place where the code is, render and see for yourself.  
+You can write your blurb below this. Before you do that, a few cool features of Rmarkdown. You can actually code in objects so that, when they are rendered they replace the inline code chunk with the result. To give you an example, an inline code chunk is written as follows: `r "add code here"`. When you render the document, whatever you place in the "add code here" section will be rendered. In this case, we are giving a string, so it simply just adds that in the place where the code is, render and see for yourself.  
 
-Moving forward on that you can also add in an object and whatever that objects value is will also be spit it. For example, consider the following: `r x = 10; x`. What will happen? Well, it will place in the value 10 when rendered. Again, if you don't believe me, check for yourself by rendering the document. 
+Moving forward on that you can also add in an object and whatever that objects value is will also be spit out. For example, consider the following: `r x = 10; x`. What will happen? Well, it will place in the value 10 when rendered. Again, if you don't believe me, check for yourself by rendering the document. 
 
 This is all VERY cool because that means if your code or data change than you can update your entire report very fast. It's also 100% reproducible. We know exactly where every single value in your report comes from. This is all pretty helpful when you want to check your code and report side-by-side. Now that you have a bit more detail fill in the following:
 
@@ -371,12 +378,11 @@ Now, using what you just learnt, describe what the null hypothesis being tested 
 
 **Write your answer here**
 
-
-We do not have enough evidence to reject the null hypothesis that there is no mean differences between Control and OA groups (t = `r stats[which(stats$species == "lemon"),"t.statistic"]`, df = `r stats[which(stats$species == "lemon"),"df"]`, p = `r stats[which(stats$species == "lemon"),"p.value"]`)**
+**We do not have enough evidence to reject the null hypothesis that there is no mean differences between Control and OA groups (t = `r stats[which(stats$species == "lemon"),"t.statistic"]`, df = `r stats[which(stats$species == "lemon"),"df"]`, p = `r stats[which(stats$species == "lemon"),"p.value"]`)**
 
 Re-analyse the data for a single species using permutations instead of a t-test. Do your results differ?
 
->**Stretch Task**:  If you really want a challeng try doing permutation tests for each species. Again, loops, functions or tidyverse (or even combinations might help). 
+>**Stretch Task**:  If you really want a challenge try doing permutation tests for each species. Again, loops, functions or tidyverse (or even combinations might help). 
 
 ```{r, stretch2, echo=TRUE, eval=FALSE}
 # Single species, lets pick lemon
@@ -395,12 +401,53 @@ for(i in 1:perms){
 }
 
 # Now lets calculate the p-value for lemon. Remember, this is the probability of observing the effect we actually observed under the null hypothesis of the means being equal. We have that t-statistic in the 'stats' table we crated above. 
-p_lemon <- table(abs(perm_dist) >= stats$t.statistic[which(stats$species == "lemon")])[2] / length(perm_dist)
+p_lemon <- sum(abs(perm_dist) >= stats$t.statistic[which(stats$species == "lemon")]) / length(perm_dist)
 ```
 
-Below. Add a few sentences for the species you talked about above to describe the permutation results:
+```{r, advancesolution, eval = TRUE}
+## Across species, probably easiest(?) (well, intuitively at least) to do following double loop! But beware, it takes a while to run. There are much faster ways to do this, but given what we know the students can do I expect most to kind of converge on this.
+
+      perms = 10000
+  perm_dist <- c()
+data_spp_2  <- data.frame()
+
+for(j in unique(data_clean$species)){
+  for(i in 1:perms){
+    # Sub to species  
+    data_spp <- data_clean %>% filter(species == j)
+  
+    # First, lets permutate the treatment column. In other words, randomise it!
+      data_spp_perm <- data_spp %>% mutate(treatment = sample(treatment, replace = FALSE))
+    
+    # Now we have one randomised dataset, lets do a t-test and grab the t-statistic. This is the t-statistic sampling distribution we would expect if there were NO differences between mean activity of the treatments. Remember, we created no differences by randomising the treatment labels.
+      perm_dist[i] <- t.test(activity ~ treatment, data = data_spp_perm)$statistic
+  }
+  
+    # Now lets calculate the p-value. Remember, this is the probability of observing the effect we actually observed under the null hypothesis of the means being equal. We have that t-statistic in the 'stats' table we crated above.
+                     pos <- which(unique(data_clean$species) == j)
+    data_spp_2[pos,"name"] <- j
+    data_spp_2[pos, "p"] <- sum(abs(perm_dist) >= abs(stats$t.statistic[which(stats$species == j)])) / length(perm_dist)
+}
+```
+
+Below. Add a few sentences for the species (or multiple species) you talked about above to describe the permutation results:
+
+**Add your text and inline code chunks here**
+
+**There is very little difference between the permutation and t-test result for any of the species, as expected. Just to convince you see Table \@ref(tab:permT)**
+
+```{r, permT, tab.cap = "Comparison between t and permutations"}
+table <- cbind(data_spp_2, pt = stats$p.value)
+
+flextable(table) %>% set_header_labels(name = "Species",
+                                       p    = "p permutation",
+                                       pt   = "p t-test")
+
+```
 
 
 # **Task 10 & 11**
 
 These are stretch tasks on the use of *GitHub*. They will overview additional features that are very useful. If you finish the above tasks, then, have a crack at these and we can help you. 
+
+**Solutions: Have a look at the video solutions**
