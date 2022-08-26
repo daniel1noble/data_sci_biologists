@@ -184,7 +184,7 @@ Use the [*GitHub Desktop*](https://desktop.github.com/) application you download
 
 :::: {.organgebox data-latex=""}
 ::: {.center data-latex=""}
-<font size="18">**Task 3--5** should take ~30 minutes</font>
+<font size="18">**Task 3--5** should take ~30-40 minutes</font>
 :::
 ::::
 
@@ -253,7 +253,7 @@ Commit and push the `.gitignore` file to your repo. What do you notice about the
 
 :::: {.organgebox data-latex=""}
 ::: {.center data-latex=""}
-<font size="18">**Task 6--8** should take ~30 minutes</font>
+<font size="18">**Task 6--8** should take ~30-40 minutes</font>
 :::
 ::::
 
@@ -273,7 +273,7 @@ Let's now invite a collaborator. Complete the following:
 
 # **Task 7**: Resolving conflicts
 
-Conflicts are common. They occur when you and your collaborator are working on the same lines of the same file. If you are working on different parts of the same file Git will auto-merge these changes. It will do this seamlessly for you. However, it's more common than you think that you and your collaborator are editing the same place of a file. *Git* is powerful for resolving these conflicts (assuming you're working with .txt or .csv style files). 
+Conflicts are common. They occur when you and your collaborator are working on the same lines of the same file. If you are working on different parts of the same file *Git* will auto-merge these changes. It will do this seamlessly for you. However, it's more common than you think that you and your collaborator are editing the same place of a file. *Git* is powerful for resolving these conflicts (assuming you're working with .txt or .csv style files). 
 
 Create a conflict yourself and learn how to recognize conflicts and resolve them when they happen. 
 
@@ -302,7 +302,7 @@ Complete the following steps:
 
 :::: {.organgebox data-latex=""}
 ::: {.center data-latex=""}
-<font size="18">**Task 9** should take ~30-40 minutes</font>
+<font size="18">**Task 9** should take ~40-60 minutes</font>
 :::
 ::::
 
@@ -325,35 +325,65 @@ Once complete, stage, commit and push up these new changes up to *GitHub*.
 
 :::: {.bluebox data-latex=""}
 ::: {.center data-latex=""}
-<font size="18">**Stretch Tasks** Should take you ~20 minutes</font>
+<font size="18">**Stretch Task**</font>
 :::
-**The next couple of tasks are bonus. Try these out if we have time. These tasks will allow you to better familiarise yourself with *GitHub* and show you some handy features to make your repo more visible/shareable.**
+**This task is bonus. Try it out if you have time. The task is designed to show you some handy features of *GitHub* to make your repo more visible/shareable and also demonstrate the challenges with reproducing others' work**
 ::::
 
 <br>
 
-# **Task 10**: Branching and merging
 
-If you're coding and want to do something experimental it's good practice to do this on a separate branch to make sure that your existing code doesn't break other parts of your project. This is very useful for analysis or building your own software. *GitHub* also makes use of certain branch names to create webpages that can be used to render and host your code and reports.
+# **Task 10**: Reproducibility and GitHub Webpages 
 
-Try creating a new branch in your repo. Call this branch `testing`. This will "duplicate" your main branch, but put you along a separate path. 
+*GitHub* is not only a great place for hosting your project, but it's also useful for hosting webpages! This can be really useful for providing a simple way for others to 'see' your results. You simply just send them the link. This in combination with *Git* and *Rmarkdown* can also be powerful for improving the reproducibility of your data science projects. 
 
+The Clark *et al.* (2020) paper provides all the data and code needed for reproducing their analyses and figures. This is great to see! It makes the paper reproducible. However, it could be better. Now that you know how to make analyses reproducible using Rmarkdown documents, lets try and reproduce *Fig.4* in their paper using `ggplot` and make the rendered Rmarkdown document more easily accessible through a GitHub Webpage. 
 
-# **Task 11**: GitHub Webpage 
+Here's what *Fig. 4* from Clark *et al.* (2020) looks like again:
 
-*GitHub* is not only a great place for hosting your project, but it's also useful for hosting webpages! This can be really useful for providing a simple way for others to 'see' your results. You simply just send them the link.
+![](./task10.png)
 
-To setup a *GitHub Webpage* go to your *GitHub* repo in a browser window. Do the following:
+### Write a reproducible Rmarkdown file that reproduces Fig.4
+
+You have already been using the data for this task (`OA_flumedat_20190302_BIOL3207.csv`) which was downloaded from Wattle. However, we've also put up the analysis code that the authors provide with their paper. The `OA activity analysis script_3207.R` was used to analyse these data. To make things a little more clear, we've also put up a `readme_3207.txt` file that describes the data and analysis script in a little more detail. 
+
+Metadata files are important in describing the dataset -- e.g., what the variable names are and how it connects with the script. The .R script also provides some code to make the plot, but in base R, not using `ggplot`. 
+
+Create a new Rmarkdown file, but this time, call it `index.Rmd`. It's not a very informative name, I know. However, by naming it `index.Rmd` when you push it up to *GitHub* after being rendered it will immediately recognise this file as being special and create the 'homepage' for your new reproducible webpage. 
+
+Have a close look at their code to understand a little better what they did. Add Question 9 below to your new `index.Rmd` and provide an answer:
+
+```{r, eval=FALSE}
+
+>**Question 9**: Think about some things that can be improved in their code. 
+List 3 things you think could be improved and provide a brief explanation for why.
+
+# 1)
+# 2) 
+# 3)
+```
+
+With your new `index.Rmd` Rmarkdown file write code to reproduce Fig. 4 using `ggplot`. To re-make this figure, you may want to look at some handy `ggplot` tools like the R package `patchwork` or `ggarrange`, which helps you arrange figures side-by-side and provide labels (e.g., a, b, c etc). Explore these packages. 
+
+After you're done, add this code to to your `index.html` and answer the question. 
+
+```{r, eval=FALSE}
+
+>**Question 10**: What are the challenges, if any, that you encounter in reproducing this figure?
+
+# Describe challenges
+```
+
+### Turn your Rendered Rmarkdown into a *GitHub* page
+
+Even with the data and code provided you might still find it hard to reproduce their figure. You would be surprised how common this can be. Even if you haven't managed to completely reproduce the figure you can still setup a *GitHub Webpage*. To do that go to your *GitHub* repo in a browser window. Do the following:
 
 1) Click the 'settings' tab of the repo (note that this is not the settings for your profile!).
 2) On the left panel under "Code and automation" click "Pages".
 3) Under "Branch" choose the branch you want your webpage to be deployed from. In this case, choose 'main'
 4) GitHub pages will now look for a README.md or index.html to render as your "home page". After a short wile, under the 'GitHub Pages' you will see a link for your repo. It will be labelled: https://your_username.github.io/your_repo_name. You can visit this site and give it to anyone.
-5) Instead of the readme, which is boring, render your Rmarkdown HTML.
-6) Change the name of the html after it's rendered to `index.html`. 
-7) Remember, your `.gitignore` file is ignoring `html` files. However, in this case, we want to now push this file up so that our *GitHub* pages can create the 'website'. So, remove the `*.html` from your ignore file. 
-8) Now, commit your `index.html` and your updated `.gitignore` file, and push this to *GitHub*.
-9) Wait a little bit for GitHub pages to create the site (~5 min).
-10) Now, go visit your site and share it with your partner so they can see the analysis and code you created!
-
+5) Render your `index.Rmd` Rmarkdown file to an HTML called `index.html`.
+6) Stage, commit and push `index.html` up to your *GitHub* repo. Remember, your `.gitignore` file maybe ignoring `html` files. However, in this case, we want to now push this file up so that our *GitHub* pages can create the 'website'. So, remove the `*.html` from your ignore file. 
+7) Wait a little bit for GitHub pages to create the site (~5 min).
+8) Now, go visit your site and share it with your partner so they can see the analysis and code you created!
 
