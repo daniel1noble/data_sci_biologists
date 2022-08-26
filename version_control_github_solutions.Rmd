@@ -34,9 +34,7 @@ klippy::klippy(
 )
 ```
 
-# Install Necessary Packages
-
-```{r, packages}
+```{r, packages, echo=FALSE}
 pacman::p_load(tidyverse, ggforce, magick, png)
 ```
 
@@ -96,43 +94,7 @@ embed_url("https://youtu.be/uCAoKFxe5cw") %>% use_align("center")
 
 # **Task 4**: Editing file, saving, committing and pushing to GitHub
 
-Right! Now that we have a bunch of files, we are ready to make changes to existing files. Just like in **Task 3** we need to keep track of the changes. To Start, we're going to edit the Rmarkdown file we created and add code chunks.
-
-
-First, lets load the data file (`OA_activitydat_20190302_BIOL3207.csv`). Everyone should now have the EXACT same repo structure. As such, the code should work if they remember about how to code using relative path names. 
-
-```{r, data, results='hide', message=FALSE}
-
-# Load data. Again, this code should work across ALL computers.
-data <- read_csv("./data/clark_et-al_2020/OA_activitydat_20190302_BIOL3207.csv")
-
-```
-
-The second step is to clean up the datafile to get it ready for analysis and plotting. Lots of ways to do this, but here's an example using tidyverse to remove missing data and select only relevant rows.
-
-```{r, tidy=TRUE}
-## Data wrangling; get rid of NA's and remove unnecessary 
-## columns like row names from file, comments and location
-data_clean <- data %>% filter(!is.na(activity)) %>% select(-c("...1", "comment", "loc"))
-head(data_clean)
-```
-
-Then, we can summarises data and check for any spelling errors in a single step that uses the tidyverse:
-
-```{r, tidy=TRUE}
-## Have a look for any spelling mistakes in species / treatment 
-## but also lets summarise the data: mean, se, number of fish / observations
-summary_data <- data_clean %>% 
-                group_by(species, treatment) %>% 
-                summarise(  x = mean(activity), 
-                           se = sd(activity) / sqrt(length(unique(animal_id))), 
-                          ids = length(unique(animal_id)), 
-                            n = n())
-summary_data
-```
-
-
-After you have made edits **save** your file normally. Navigate back to `GitHub Desktop`. You'll now notice that the RMarkdown file is identified as having changed. We can even see what what exactly has changed. The 'red' are the lines that were modified or removed and the `green` are the lines that were changed. 
+After you have made edits to a file **save** your file normally. Navigate back to `GitHub Desktop`. You'll now notice that the RMarkdown file is identified as having changed. We can even see what what exactly has changed. The 'red' are the lines that were modified or removed and the `green` are the lines that were changed. 
 
 Just like **Task 3** you need to stage / commit these changes and push them up. The video below shows you that process again. Remember to leave a detailed commit message!
 
@@ -173,8 +135,17 @@ embed_url("https://youtu.be/nkjs9fJS9RU") %>% use_align("center")
 
 # **Task 7**: Resolving conflicts
 
-Resolving conflicts can be somewhat complicated. This is only possible if files are NOT binary files (i.e., word, excel). Text-based files that you would use for code make it easy to identify and resolve conflicts so that you don't ever have to worry about what changes are most up-to-date. The video below shows you, from the both your perspective and that of your collaborators how conflicts are created and how you can resolve them.
+Resolving conflicts can be somewhat complicated. This is only possible if files are NOT binary files (i.e., word, excel). Text-based files that you would use for code make it easy to identify and resolve conflicts so that you don't ever have to worry about what changes are most up-to-date. The video below shows you, from the both your perspective and that of your collaborators, how conflicts are created and how you can resolve them.
 
 ```{r, echo=FALSE}
 embed_url("https://youtu.be/CIOJPuyk7ls") %>% use_align("center")
+```
+
+
+# **Task 10**: GitHub Pages
+
+It takes some time to sort out GitHub pages so you may want to scroll fast through the video.
+
+```{r, echo=FALSE}
+embed_url("https://youtu.be/BAon-6z3Vtk") %>% use_align("center")
 ```
