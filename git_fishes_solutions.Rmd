@@ -445,7 +445,6 @@ flextable(table) %>% set_header_labels(name = "Species",
 
 ```
 
-
 # **Task 10 & 11**
 
 These are stretch tasks on the use of *GitHub*. They will overview additional features that are very useful. If you finish the above tasks, then, have a crack at these and we can help you. 
