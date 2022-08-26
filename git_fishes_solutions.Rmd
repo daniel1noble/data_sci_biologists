@@ -15,6 +15,7 @@ editor_options:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, eval = TRUE)
+options(digits=2)
 ```
 
 # **Introduction**
@@ -313,7 +314,7 @@ for(i in 1:length(unique(data_clean$species))){
 
 ```
 
-```{r, method2, eval=FALSE}
+```{r, method2, eval=TRUE}
 
 # You could also mix with the tidyverse. Probably easier to write your own function. We haven't taught them much about this yet, but lets assume some advanced students might be able to do this.There's probably more elegant ways of doing this with the tidyverse
 
@@ -338,19 +339,25 @@ stats <- data_clean %>%
          group_by(species) %>% 
          nest() %>% 
          mutate(t_test = lapply(data, function(x) my_stats(x))) %>% 
-         select(species, t_test) %>% unnest(cols = 2)
+         select(species, t_test) %>% unnest(cols = 2) %>% data.frame()
 
 ```
 
 
 ```{r, table1, echo=TRUE, eval=TRUE, tab.cap = "Summary statistics and results of Weltch's Two Sample T-test comparing Control and Acidification treatments across six reef fish species"}
 # Using the resulting object created above, which should be a table with all the summary statistics, t, df and p-value for each species create a table. Note that there is a tab.cap argument in the chunk arguments. Write a caption here. 
-flextable(stats) %>% bold(part = "header") %>% align(part = "header", align = "center")
+flextable(stats) %>% bold(part = "header") %>% align(part = "all", align = "center") %>% 
+  set_header_labels(
+    species = "Species",
+    Mean.C = "Mean Activity (Control)", 
+    Mean.OA = "Mean Activity (OA)",
+    L95..CI = "Lower 95% CI",
+    U95..CI = "Upper 95% CI")
 ```
 
 Now that you have a table, you can reference it within a document. For example, you can make a call to Table \@ref(tab:table1) by referring to the name of the code chunk. When you knit the html it will create a hyperlink to your table and insert a legend above the table for you. How cool is that!?
 
-> **Question 10**: Pick one of your favorite species and write about the results to a reader. Write in the markdown file below, what 1) the mean difference between control and acidification treatment is along with the 95% confidence intervals, 
+> **Question 10**: Pick one of your favorite species and write about the results to a reader. Write in the markdown file below, what 1) the mean difference between control and acidification treatment is along with the 95% confidence intervals 
 
 You can write your blurb below this. Before you do that, a few cool features of markdown. You can actually code in objects so that, when they are rendered they replace the inline code chunk with the result. To give you an example, an inline code chunk is written as follows: `r "add code here"`. When you render the document, whatever you place in the "add code here" section will be rendered. In this case, we are giving a string, so it simply just adds that in the place where the code is, render and see for yourself.  
 
@@ -358,13 +365,37 @@ Moving forward on that you can also add in an object and whatever that objects v
 
 This is all VERY cool because that means if your code or data change than you can update your entire report very fast. It's also 100% reproducible. We know exactly where every single value in your report comes from. This is all pretty helpful when you want to check your code and report side-by-side. Now that you have a bit more detail fill in the following:
 
-Mean activity for `r stats$species[which(stats$species == "lemon")]` in the control group was `r stats[which(stats$species == "lemon"),"Mean C"]` (s) compared to the OA treatment group, which was `r stats[which(stats$species == "lemon"),"Mean OA"]`(s). The difference between control and OA treatment means was `r stats[which(stats$species == "lemon"),"Contrast"]` (95% CI: `r stats[which(stats$species == "lemon"),"L95% CI"]` to `r stats[which(stats$species == "lemon"),"U95% CI"]`). We do not have enough evidence to reject the null hypothesis that there is no mean differences between Control and OA groups (t = `r stats[which(stats$species == "lemon"),"t-statistic"]`, df = `r stats[which(stats$species == "lemon"),"df"]`, p = `r stats[which(stats$species == "lemon"),"p-value"]`) 
+**Mean activity for the `r stats$species[which(stats$species == "lemon")]` species in the control group was `r stats[which(stats$species == "lemon"), "Mean.C"]` (s) compared to the OA treatment group, which was `r stats[which(stats$species == "lemon"),"Mean.OA"]`(s). The difference between control and OA treatment means was `r stats[which(stats$species == "lemon"),"Contrast"]` (95% CI: `r stats[which(stats$species == "lemon"),"L95..CI"]` to `r stats[which(stats$species == "lemon"),"U95..CI"]`).**
+
+Now, using what you just learnt, describe what the null hypothesis being tested was and provide statistical evidence (t-statistic, df, and p-value) to support your conclusion about whether we can reject the null hypothesis. Again, make sure you use in-line code. Write you answer below:
+
+**Write your answer here**
 
 
->**Stretch Task**: If you didn't already use permutations to analyse these data, try doing that now for each species. Again, loops, functions or tidyverse (or even combinations might help). Do any of your results differ?
+We do not have enough evidence to reject the null hypothesis that there is no mean differences between Control and OA groups (t = `r stats[which(stats$species == "lemon"),"t.statistic"]`, df = `r stats[which(stats$species == "lemon"),"df"]`, p = `r stats[which(stats$species == "lemon"),"p.value"]`)**
+
+Re-analyse the data for a single species using permutations instead of a t-test. Do your results differ?
+
+>**Stretch Task**:  If you really want a challeng try doing permutation tests for each species. Again, loops, functions or tidyverse (or even combinations might help). 
 
 ```{r, stretch2, echo=TRUE, eval=FALSE}
-# Add your code here.
+# Single species, lets pick lemon
+
+data_lemon <- data_clean %>% filter(species == "lemon")
+
+perms = 10000
+perm_dist <- c()
+
+for(i in 1:perms){
+  # First, lets permutate the treatment column. In otherwords, randomise it!
+    data_lemon_iter <- data_lemon %>% mutate(treatment = sample(treatment, replace = FALSE))
+  
+  # Now we have one randomised dataset, lets do a t-test and grab the t-statistic. This is the t-statistic sampling distribution we would expect if there were NO differences between mean activity of the treatments. Remember, we created no differences by randomising the treatment labels.
+    perm_dist[i] <- t.test(activity ~ treatment, data = data_lemon_iter)$statistic
+}
+
+# Now lets calculate the p-value for lemon. Remember, this is the probability of observing the effect we actually observed under the null hypothesis of the means being equal. We have that t-statistic in the 'stats' table we crated above. 
+p_lemon <- table(abs(perm_dist) >= stats$t.statistic[which(stats$species == "lemon")])[2] / length(perm_dist)
 ```
 
 Below. Add a few sentences for the species you talked about above to describe the permutation results:
