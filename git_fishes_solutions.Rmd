@@ -1,6 +1,6 @@
 ---
 title: "Git, GitHub & Ocean Acidification"
-author: "<your name and u number>"
+author: "Daniel Noble"
 date: "`r Sys.Date()`"
 output: 
   bookdown::html_document2:
@@ -82,8 +82,7 @@ Hopefully you also created and/or downloaded the following files and added them 
 
 **STOP**: Before moving on, it's a good time to establish some good *GitHub* practices. You have just did an important step -- you added a bunch of new files. It's time stage these files and commit them so that you have a record. Use *GitHub Desktop* to do this. 
 
-This is also a very good point to make sure that you understand relative path names fo coding. Wait, "relative what?" 
-Your working directory can be considered the 'lowest' level of your project. The starting point, if you will. R needs to know where your files are that you want to load. Many people might be familiar with using the `setwd()` function to tell R where your files are that you need to load. This is problematic because everyone's path to a given working directory is different, and so, your code will not work on others' computers. Even across your own computers!
+This is also a very good point to make sure that you understand relative path names fo coding. Wait, "relative what?". Your working directory can be considered the 'lowest' level of your project. The starting point, if you will. R needs to know where your files are that you want to load. Many people might be familiar with using the `setwd()` function to tell R where your files are that you need to load. This is problematic because everyone's path to a given working directory is different, and so, your code will not work on others' computers. Even across your own computers!
 
 Lucky, RStudio project files take away the main issue by creating a project file that allows anyone to click on it to open the working directory to the same "spot". Having said that, if you start building structure (i.e., folders) in your working directory or repo than you need to understand how to navigate between folders to load and write files in the places that you want. 
 
@@ -127,7 +126,7 @@ data_clean <- data %>% filter(!is.na(activity))
 ```
 
 
-Second, drop out irrelevant columns and check that there are no spelling issues in `species` and `treatment`. YOu can create a table of summary data that includes 1) the mean, 2) the standard deviation and 3) the sample sizes of unique fish across ALL six fish species for each treatment. This will also help you detect any spelling errors. You can use the R package [`flextable`](https://ardata-fr.github.io/flextable-book/) to print out the results in a nice neat format! If you haven't heard about this spend 10 or so minutes having a look at it's functionality. It's incredible! You'll use this for tables throughout.
+Second, drop out irrelevant columns and check that there are no spelling issues in `species` and `treatment`. Create a table of summary data that includes: 1) the mean, 2) the standard error and 3) the sample sizes of unique fish across ALL six fish species for each treatment. This will also help you detect any spelling errors. You can use the R package [`flextable`](https://ardata-fr.github.io/flextable-book/) to print out the results in a nice neat format! If you haven't heard about `flextable` spend 10 or so minutes having a look at it's functionality. It's incredible! You'll use this for tables throughout.
 
 ```{r summaryTab}
 # Drop irrelevant columns
@@ -157,8 +156,6 @@ flextable(summary_data) %>% bold(part = "header") %>% align(align = "center", pa
 >**Question 5**: The new version of your Rmarkdown file should now be up on *GitHub*. In the browser window click on your most recent commit. Have a look at the file versioning system. You will notice two files side-by-side. Describe what you notice is being presented online. What do the red and green highlights mean?
 
 ```{r answer5, echo=TRUE, eval=FALSE}
-## Write your answer here....remember to use '#" in front of your text.
-
 # When you click on a commit it will show you how each file has changed from the the most recent past commit to the one that is most recent. Previous files are listed on the left of the scree and newest files on the right. Red highlights show text/code that was removed. Green highlights show text/code that was added to the file. 
 ```
 
@@ -211,7 +208,7 @@ p1
 
 **Stretch Task**: The Clark et al. 2020 paper plots some pretty pictures on their figures. You have access to a folder called "pics/". Add the pics of the difference species from the "pics/" folder to your new plot. Explore the function `annotation_raster()` which might help you achieve this goal.
 
-Note the code chunk used to make the figure. It has a `fig.cap` argument. That means Rmarkdown knows it's a figure and it will allow you to create a figure reference call. In other words, we can refer to our Figure \@ref(fig:prettyfig) by referring to the label for the chunk. This will automatically make a legend for us too. The same concept applied to Tables but the legend goes above these.
+Note the code chunk used to make the figure. It has a `fig.cap` argument. That means Rmarkdown knows it's a figure and it will allow you to create a figure reference call. In other words, we can refer to our Figure \@ref(fig:prettyfig) by referring to the label for the chunk. This will automatically make a legend for us too (assuming you add one in). The same concept applied to Tables but the legend goes above these.
 
 Now that you have the figure you may also want to write / save it as a separate file. Use `ggsave` function to save the figure(s) to your new `output/figures/`:
 
@@ -223,7 +220,7 @@ ggsave(plot = p1, filename = "species_trt", dpi = 600, device = "png", path = ".
 >**Question 6**: Given that you have added `output/figures/` to your `.gitignore` file describe what you notice about what you see in *GitHub Desktop*. 
 
 ```{r}
-## Write your answer here
+## The saved figure is not identified as being tracked in your GitHub Desktop. That's because it is ignored now because our .gitignore file has the path ouput/figures, which means that everything in this folder is not tracked.
 ```
 
 Last question for this task. I promise! It's important to think very carefully about what you track and ignore.
@@ -237,7 +234,7 @@ Last question for this task. I promise! It's important to think very carefully a
 # **Task 6**
 This task involves teaming up with a collaborator. Exchange *GitHub* username details and add each other to your repo. Clone each others' repo on to your computer. Re-run their code. Does it work? If not, correct it for them. Explain to them WHY it didn't work. After all, they are right beside you! Think carefully about this. Will it still run on their computer if you have corrected it in a certain way?
 
-Now, lets create a new figure in the code block below that simplifies the one produced in **Task 5**. Instead of all species, lets just plot three of the species (chromis, lemon, and acantho). This is a figure code chunk so make sure you add the necessary arguments (e.g., `fig.cap`) in so that you can refer to Figure \@ref(fig:collabFig).
+Now, lets create a new figure in the code block below that simplifies the one produced in **Task 5**. Instead of all species, lets just plot three of the species (chromis, lemon, and acantho). In the figure code chunk make sure you add the necessary arguments (e.g., `fig.cap`) so that you can refer to Figure \@ref(fig:collabFig).
 
 ```{r, collabFig, echo=TRUE, eval=TRUE, fig.align='center', fig.cap="Revised figure from collaborator"}
 # You want to make changes to your collaborators figure in Task 5. Maybe you want to create a figure that focuses only on three fish species instead of the 5. More specifically, chromis, lemon, and acantho. Add code here to revise their figure to do that.
@@ -286,11 +283,13 @@ This task involves creating and resolving conflicts. Conflicts in files are deno
 
 Resolving is easy. Decide on what changes you think are the best to proceed with and remove conflict markers. 
 
+>**Stretch Task**: Try creating another conflict in the `collabFig` code chunk of the Rmarkdown file. Resolve the conflict again. More practice doing this is always good!
+
 # **Task 8**
 There's not too much to do in this task on the coding front! You just need to create a *GitHub* issue and create a 'To Do' list on *GitHub* for you and your collaborator. 
 
 # **Task 9**
-Here, run some statistical tests to determine, for each species, whether the control vs high CO^2 treatments differ significantly from each other and in what direction. Provide the difference in means, their 95% confidence intervals, t-statistic, df and p-value. 
+Here, run some statistical tests to determine, for each species, whether the control vs high $CO^2$ treatments differ significantly from each other and in what direction. Provide the difference in means, their 95% confidence intervals, t-statistic, df and p-value. 
 
 >**Stretch Task**: You can of course do this for each species seperately, but those who want a challenge, think about how you might use a loop or even some wrangling methods you have already learnt from the tidyverse to run these tests across all 6 species in a single block of code. If you're familiar with functions, you can even think about writing your own function! All these strategies will avoid having to copy and paste large chunks of code. If you're repeating anything, writing functions and loops are good ways to simplify.
 
@@ -370,15 +369,13 @@ You can write your blurb below this. Before you do that, a few cool features of 
 
 Moving forward on that you can also add in an object and whatever that objects value is will also be spit out. For example, consider the following: `r x = 10; x`. What will happen? Well, it will place in the value 10 when rendered. Again, if you don't believe me, check for yourself by rendering the document. 
 
-This is all VERY cool because that means if your code or data change than you can update your entire report very fast. It's also 100% reproducible. We know exactly where every single value in your report comes from. This is all pretty helpful when you want to check your code and report side-by-side. Now that you have a bit more detail fill in the following:
+This is all **VERY** cool because that means if your code or data change than you can update your entire report very fast. It's also 100% reproducible. We know exactly where every single value in your report comes from. This is all pretty helpful when you want to check your code and report side-by-side. Now that you have a bit more detail fill in the following:
 
 **Mean activity for the `r stats$species[which(stats$species == "lemon")]` species in the control group was `r stats[which(stats$species == "lemon"), "Mean.C"]` (s / min) compared to the OA treatment group, which was `r stats[which(stats$species == "lemon"),"Mean.OA"]` (s / min). The difference between control and OA treatment means was `r stats[which(stats$species == "lemon"),"Contrast"]` (s/min) (95% CI: `r stats[which(stats$species == "lemon"),"L95..CI"]` to `r stats[which(stats$species == "lemon"),"U95..CI"]`).**
 
 Now, using what you just learnt, describe what the null hypothesis being tested was and provide statistical evidence (t-statistic, df, and p-value) to support your conclusion about whether we can reject the null hypothesis. Again, make sure you use in-line code. Write you answer below:
 
-**Write your answer here**
-
-**We do not have enough evidence to reject the null hypothesis that there is no mean differences between Control and OA groups (t = `r stats[which(stats$species == "lemon"),"t.statistic"]`, df = `r stats[which(stats$species == "lemon"),"df"]`, p = `r stats[which(stats$species == "lemon"),"p.value"]`)**
+**We are testing the null hypothesis that there is no differences in the means of the control and OA treatments (i.e., $H_{0}$ : $\mu_{control}$ = $\mu_{OA}$). We do not have enough evidence to reject the null hypothesis that there is no mean differences between Control and OA groups (t = `r stats[which(stats$species == "lemon"),"t.statistic"]`, df = `r stats[which(stats$species == "lemon"),"df"]`, p = `r stats[which(stats$species == "lemon"),"p.value"]`)**
 
 Re-analyse the data for a single species using permutations instead of a t-test. Do your results differ?
 
@@ -431,8 +428,6 @@ for(j in unique(data_clean$species)){
 ```
 
 Below. Add a few sentences for the species (or multiple species) you talked about above to describe the permutation results:
-
-**Add your text and inline code chunks here**
 
   **There is very little difference between the permutation and t-test result for any of the species, as expected. Just to convince you see Table \@ref(tab:permT)**
 
