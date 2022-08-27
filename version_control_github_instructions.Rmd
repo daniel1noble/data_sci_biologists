@@ -162,6 +162,7 @@ Create a new repository (repo) on your [*GitHub*](https://github.com/) account. 
 2) Short; 
 3) Avoid 'spaces' in your repo name. For point 3, you can use '_' (i.e., 'snake case') or '.' between words. This makes it easier when you want to code path names to your project. 
 
+When you are done, copy the url to your repo. In your `git_fishes_student.Rmd` file add in the link to your repo.
 
 # **Task 2**: Clone your repository
 
@@ -169,6 +170,8 @@ Great! You have a repo. Now what? It's currently up in the cloud. That's not as 
 For your next task, clone down your repository to your computer. Cloning makes a 'copy' of your new repo -- creating a new folder on your computer. This folder is somewhat special though because it retains 'lines of communication' with the folder on *GitHub*. 
 
 Use the [*GitHub Desktop*](https://desktop.github.com/) application you downloaded on your computer to clone your new repository. 
+
+When you are done, answer a few questions in the `git_fishes_student.Rmd` file.
 
 <br>
 
@@ -223,9 +226,9 @@ Clean up the data. There are a bunch of extra columns and missing data in the da
 a) Remove the missing data
 b) Drop out columns that are not relevant (e.g, `comment` column and `loc` can probably go for now).
 c) Check that there are no spelling issues in `species` and `treatment` and create a table of summary data that includes:
-+ the mean, 
-+ the standard deviation 
-+ the sample sizes of unique fish across **ALL** fish species for each treatment.
+  + the mean 
+  + the standard error 
+  + the sample sizes of unique fish across **ALL** fish species for each treatment.
 
 Once you have finished adding this code, save this file, commit and push it up to *GitHub*. Check again how your *GitHub* repo online looks. Click on the file and see what in the file has changed.
 
@@ -313,7 +316,7 @@ Complete the following steps:
 
 1) Go to your *GitHub Desktop* application. Pull down changes to *your* repo that your partner sent to *GitHub*.
 2) Review these changes. Re-run their code to make sure that it works. If it doesn't work try to work with your neighbor to determine why. 
-3) If the code runs then add a summary statistics and statistical results to explore whether the control vs high CO^2 treatments differ for each of the five fish species. See markdown for more details.
+3) If the code runs then add a summary statistics and statistical results to explore whether the control vs high $CO^2$ treatments differ for each of the five fish species. See markdown for more details.
 4) Make a pretty table that summarise the results for each species.
 
 Once complete, stage, commit and push up these new changes up to *GitHub*.
