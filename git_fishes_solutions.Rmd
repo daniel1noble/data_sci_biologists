@@ -449,5 +449,5 @@ flextable(table) %>% set_header_labels(name = "Species",
 
 This is a stretch task on the use of *GitHub* and the challenges (or maybe lack of challenges) of reproducing others' work. If you finish the above tasks, then, have a crack at this one.
 
-**Solutions: Have a look at the video solutions**
+**Solutions: Have a look at the video solutions for creating the webpage. This will be variable and there will be challenges for students to reproduce the same figure. Looking at the script from the paper it's missing imported objects or is at least unclear when or where they are generated to make the figure. There is also lots to improve o in the code. 1) setwd() is used; 2) lots of redundant and repeated code -- write some functions would be better or even looping to reduce the amount of code etc. What I want the students to get experience with is the challenges with reproducing other peoples code. If they see these challenges they are more likely to correct them in their own work**
 
