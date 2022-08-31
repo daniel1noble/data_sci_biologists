@@ -285,6 +285,13 @@ Resolving is easy. Decide on what changes you think are the best to proceed with
 
 >**Stretch Task**: Try creating another conflict in the `collabFig` code chunk of the Rmarkdown file. Resolve the conflict again. More practice doing this is always good!
 
+**Task 7 Part 2**
+
+Here the students are mean to fill in the readme file with mode detail. What we want to see here is that the students direct users to the files that are important for reproducing their work. (i.e, To reproduce the workflow first open "git_fishes_student.Rmd"). Then, they should identify the file that is needed. (e.g., To process and clean the data start with "OA_activitydat_20190302_BIOL3207.csv". Clean this code up by first running code chunks XX to XX. If you want to start from the clean code use the cleaned up data called "XX.csv" located in the output/data folder.)
+
+They should also provide the column names that they ended up including along with a description of what they mean. This is already provided so they could just cut and paste this or re-word themselves. 
+
+
 # **Task 8**
 There's not too much to do in this task on the coding front! You just need to create a *GitHub* issue and create a 'To Do' list on *GitHub* for you and your collaborator. 
 
