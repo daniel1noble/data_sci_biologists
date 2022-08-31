@@ -291,6 +291,8 @@ Complete the following:
 8) Resolve the conflict. Pick a change you like best, delete all other conflict markers and text.
 9) Commit and push up the changes to *GitHub*
 
+Once complete, update the README file with more details about how to reproduce the project. Describe the workflow, which files are the most relevant and include meta-data that describes the data columns and what they mean. 
+
 # **Task 8**: Creating an issue on *GitHub*
 Now that you have a collaborator it's a good idea to create a To Do list. One place to do this is though *GitHub* issues. Issues can be used to identify bugs in code or suggest enhancements / additions to code, to get collaborators to check data or even just create a to do list so everyone has tasks that they can keep track of. We'll use it to set up a set of tasks for the project. Assume the project will be for you and your collaborator to analyse a big biological dataset together. 
 
