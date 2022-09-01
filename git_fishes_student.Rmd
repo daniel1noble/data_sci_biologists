@@ -38,11 +38,12 @@ p_load(bookdown, tidyverse, ggforce, flextable, latex2exp, png, magick) # basica
 
 ### Provide the link to your GitHub Repo 
 
-While the tasks are meant to get you familiar with how GitHub works you should try and make regular commits as you work your way through. We want to see how often you're using Git. Below, within the `[]` brackets provide the link to your GitHub Repo. Just cut and paste it so we know what the repo name is and where it is. 
+While the tasks are meant to get you familiar with how *GitHub* works you should try and make regular commits as you work your way through. We want to see how often you're using *Git*. Below, within the `()` brackets provide the link to your GitHub Repo. Just cut and paste it so we know what the repo name is and where it is. 
 
-(My GitHub Repository)[]
+[My GitHub Repository]()
 
-By adding the link in the `[]` brackets it will hyperlink "My GitHub Repository". This is how to hyperlink in Rmarkdown documents.
+By adding the link in the `()` brackets it will hyperlink "My GitHub Repository". This is how to hyperlink in Rmarkdown documents.
+
 
 # **Task 2**
 
