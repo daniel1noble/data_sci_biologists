@@ -162,12 +162,13 @@ Create a new repository (repo) on your [*GitHub*](https://github.com/) account. 
 2) Short; 
 3) Avoid 'spaces' in your repo name. For point 3, you can use '_' (i.e., 'snake case') or '.' between words. This makes it easier when you want to code path names to your project. 
 
-When you are done, copy the url to your repo. In your `git_fishes_student.Rmd` file add in the link to your repo.
+When you are done, copy the URL to your repo. In your `git_fishes_student.Rmd` file add in the link to your repo.
 
 # **Task 2**: Clone your repository
 
 Great! You have a repo. Now what? It's currently up in the cloud. That's not as useful as having it on your computer. 
-For your next task, clone down your repository to your computer. Cloning makes a 'copy' of your new repo -- creating a new folder on your computer. This folder is somewhat special though because it retains 'lines of communication' with the folder on *GitHub*. 
+
+For your next task, clone (copy) down your repository to your computer. Cloning makes a 'copy' of your new repo -- creating a new folder on your computer. This folder is somewhat special though because it retains 'lines of communication' with the folder on *GitHub*. 
 
 Use the [*GitHub Desktop*](https://desktop.github.com/) application you downloaded on your computer to clone your new repository. 
 
@@ -192,17 +193,19 @@ When you are done, answer a few questions in the `git_fishes_student.Rmd` file.
 
 # **Task 3**: Adding files, commiting (staging) and pushing to GitHub
 
-Now that you have your *GitHub* repo cloned (i.e., downloaded) onto your computer navigate to this folder. 
+Now that you have your *GitHub* repo cloned (i.e., downloaded) onto your computer **go** to this folder. 
 
 >**Hint**: `GitHub Desktop` has a handy feature on the repo's front page for you to click on and take you directly to the folder)
 
-Create: 
+**Move** the files you downloaded from Wattle to your newly cloned git repository (i.e., working directory). Be sure to make sure you don't have duplicate files because this will result in your getting confused. Hence, **DO NOT** copy the files, move them from their existing location to your git repo folder.
+
+Do the following: 
 
 1) a new RStudio project file in your working directory
-2) download the `OA_activitydat_20190302_BIOL3207.csv` from Wattle and add this to a `data/` folder in your repo 
-3) Add the template Rmarkdown file, `git_fishes_student.Rmd` that was provided on wattle. You'll use this file to work through the tasks and answer questions. 
-
-Once added go back to your *GitHub Desktop* application. What has changed? Commit a message for each file about why you added these files and push this up to your *GitHub* repo. Take a look at your *GitHub* repo online. What has changed?
+2) add the `OA_activitydat_20190302_BIOL3207.csv` from Wattle to a `data/` folder in your repo 
+3) add the template Rmarkdown file, `git_fishes_student.Rmd` that was provided on wattle.  To avoid confusion in later tasks, rename the file with your uID#. In other words, your file should now be named: `git_fishes_student_u#######.Rmd`. Replace `u#######` with your uID.
+4) Once added go back to your *GitHub Desktop* application. What has changed? 
+5) Commit a message for each file about why you added these files and push this up to your *GitHub* repo. Take a look at your *GitHub* repo online. What has changed?
 
 # **Task 4**: Editing file, saving, committing and pushing to GitHub
 
@@ -261,6 +264,8 @@ Commit and push the `.gitignore` file to your repo. What do you notice about the
 
 # **Task 6**: Adding collaborators to your repo
 
+>**BEFORE YOU START THIS TASK**: Make sure that you have saved all your files, commited them, and pushed these up to *GitHub* online. You need to remember to do this or your partner will have a divergent file set than you.
+
 You now have a repo that's ready to share with the world. You've made this repo public, so everyone can see it, which is very transparent! Others can always join in on the fun. Great work. 
 
 Let's now invite a collaborator. Complete the following:
@@ -274,6 +279,8 @@ Let's now invite a collaborator. Complete the following:
 7) Commit and push these changes up.
 
 # **Task 7**: Resolving conflicts
+
+>**BEFORE YOU START THIS TASK**: Make sure that you have saved your partners Rmarkdown file, commited them, and pushed these up to their *GitHub* repo online. You need to remember to do this or your partner will have a divergent file set than you.
 
 Conflicts are common. They occur when you and your collaborator are working on the same lines of the same file. If you are working on different parts of the same file *Git* will auto-merge these changes. It will do this seamlessly for you. However, it's more common than you think that you and your collaborator are editing the same place of a file. *Git* is powerful for resolving these conflicts (assuming you're working with .txt or .csv style files). 
 
