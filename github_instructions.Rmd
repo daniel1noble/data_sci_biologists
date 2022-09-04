@@ -76,7 +76,6 @@ If none of this works, ask your neighbour, use your red sticky note (or raised h
 
 <br>
 
-
 # **Introduction**
 
 Fundamental to project organisation is maintaining a consistent, uniform and simple set of working files that can be understood by your future self, collaborators and interested folks wanting to reproduce your analyses or re-use code or your data. We also want to keep a history of how such files change in case we find some new code we write results in older code no longer running. 
@@ -86,6 +85,7 @@ For complex projects with many collaborators maintaining tidiness and keeping tr
 This often leads to a build up “too afraid to delete” files that no one, including yourself, knows what to do with, but you're too afraid to delete in case you ruin something. A little bit of organising can keep chaos from compounding and maintain reproducibility (for both you and others) through the development of data science projects.
 
 Ideally, it would be nice to easily see the current (and hopefully best) set of files, but to be able to see who has changed them and what specific parts of the files have been modified. We also want a workflow that allows us to go back in time -- a history that has documented the evolution of files -- in case something has changed that breaks your code. Keeping a record of how files for a particular project has changed is also important to be able to quickly solve problems when (not if) they arise. 
+
 
 ### **Version Control to the Rescue!**
 
