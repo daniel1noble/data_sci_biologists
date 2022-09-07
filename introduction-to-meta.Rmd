@@ -32,28 +32,87 @@ pacman::p_load(metafor, flextable, tidyverse, orchaRd, pander, mathjaxr, equatag
 
 ## **What is meta-analysis and why do we do it?**
 
-Meta-analysis is a way to synthesise effect sizes using a special type of mixed effects model that accounts for our sampling uncertainty in each effect estimate. In other words, meta-analyses are:
-
 > Statistical methods and techniques for aggregating, summarizing, and drawing inferences from collections of studies
 
-Meta-analysis is the gold-standard for research synthesis across all disciplines. We synthesise studies to gain broader insights into the efficacy of treatment effects and / or relationships between variables. In biology, we are also dealing with many different populations and species. As such, we're not just interested in understanding 'what the overall effect' actually is (in fact, we may not even care in many cases), but we are mainly focused on attempting to understand what factors (e.g., biological, methodological) explain variation in effects [@Noble2022; @Lag2010; @Gurevitch2018]. In fact, reporting upon measures of variability, or what is referred to as 'heterogeneity' in meta-analysis, is essential to meta-analysis reporting and placing effects within context [@ODea2021; @NakagawaSantos2012; @Borenstein2019; @Nakagawa2017; @Gurevitch2018]. 
+Meta-analysis is the gold-standard for research synthesis across all disciplines. We synthesise studies to gain broader insights into the efficacy of treatment effects and / or relationships between variables. In biology, we are also dealing with many different populations and species. As such, we're not just interested in understanding 'what the overall effect' actually is (in fact, we may not even care in many cases), but we are mainly focused on attempting to understand what factors (e.g., biological, methodological) explain variation in effects [@Noble2022; @Lag2010; @Gurevitch2018]. A key part of meta-analysis is quantifying variability in effects across studies, or what is referred to as 'heterogeneity' in meta-analysis [@ODea2021; @NakagawaSantos2012; @Borenstein2019; @Nakagawa2017; @Gurevitch2018]. 
 
-Think about it this way, meta-analysts want to understand why one experiment done on, say a certain species/population, gives a different effect size (e.g., Cohen's d) than the same experiment done on a different species/population. Remember back to the start of the semester where each student is expected to get a different result because of sampling variability, meta-analysis is trying to aggregate these separate 'studies', much like you took the 
+Think about it this way, in a meta-analysis we want to know what the average effect is across studies to tell us what the mean effect in the population is likely to be. We also want to understand why one experiment gives a different effect size (e.g., Cohen's d) than the same experiment done on a different population. 
 
-## **What is meta-analysis?**
+## **Meta-analysis aggregates / pools effect sizes**
 
-Meta-analysis quantitatively aggregates effect size data collected from existing research. The effect size one uses for a study question needs to be chosen carefully. Each make certain assumptions about the underlying data. It's important to be weary of these assumptions and identify when something might have gone wrong. 
+Meta-analysis is a way to synthesise effect size statistics (i.e., a statistic such as Cohen's *d*) using a special type of mixed effects model that accounts for our sampling uncertainty in each effect estimate. Effect size statistics are the data we use to fit models. 
 
-The effect size chosen must satisfy two important features. First, the effect size must be comparable across studies. This means that they must be placed on the same scale so that they can be aggregated. Some effect size estimates can be inter-converted to each other (e.g., Zr, Hedges' g), but this isn't the case for all of them. Second, we must be able to derive or approximate the sampling variance for a given effect size. As [already indicated](https://daniel1noble.github.io/meta-workshop/introduction-to-meta), the sampling variance is very important if one wishes to use meta-analytic models that account for sampling variance and is needed to report certain measures of [heterogeneity](https://daniel1noble.github.io/meta-workshop/het). 
+Effect size statistics can vary but they all have a few key things in common. First, the effect size must be comparable across studies. This means that they must be placed on the same scale so that they can be aggregated. Second, we must be able to estimate the sampling variance for a given effect size. As you're well aware the statistic (effect size) we want to synthesise has uncertainty associated with it because of sampling variability -- the standard error around a mean, for example, is sampling error. In meta-analysis we use this sampling error to decrease the uncertainty in our mean effect size. There are lots of different effect sizes out there, some familiar one are in Table \@ref(tab:tablea). 
 
-Meta-analyses in comparative physiology, and indeed, ecology and evolution more generally, often use highly heterogeneous data [@Noble2022; @Senior2016]. This poses other challenges in aggregating effect size data that make their comparability questionable. We'll discuss some of these issues in later [tutorials](https://daniel1noble.github.io/meta-workshop/nuis-het) and identify some ways in which some of this heterogeneity can be dealt with when deriving the effect size itself. 
+```{r tablea, echo = FALSE, tab.cap = "**Common effect sizes used throughout meta-analyses and their associated sampling variances. Examples on when they might be used are also provided**. M: mean; SD: standard deviation; N: sample size"}
+FitFlextableToPage <- function(ft, pgwidth = 6){
+
+  ft_out <- ft %>% flextable::autofit()
+
+  ft_out <- flextable::width(ft_out, width = dim(ft_out)$widths*pgwidth /(flextable::flextable_dim(ft_out)$widths))
+  return(ft_out)
+} 
+
+# I'm just listing a bunch here, but we should think about what we want to include. Here's an example of how we can make a table with all equations. Fun! Really useful website here: https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference. Something wrong with character coding when rendering word document. Has to do with the log odds ratio equation. Renders fine in html, but just stops when word
+names <- c("Mean",
+           "Log Response Ratio, lnRR",
+           # leave this for now??? - we introduce this later
+           "Standardised Mean Difference, SMD",
+           "Zr (Fisher Transformation of \n Correlation Coefficient, r)")
+           #"Log Odds Ratio",
+           #"")
+
+# the index i is not really applied consistently so I am adding it more (to do)
+# we shoudl discuss what kinds of notations we want to use consistely
+           
+eqns_yi <- c("M",
+             # Senior will have a better version but this is good for now
+             "\\ln \\left( \\frac{M_{1}}{M_{2}}\\right)",
+             "\\frac{\\left( M_{2} - M_{1}\\right)}{SD_{p}}J",
+             # we need to spell out SD_p somewhere
+             "\\frac{1}{2}log \\left( \\frac{1+r}{1-r}\\right)")
+             #"log\\left(\\frac{y_{i2}+0.5}{n_{i2}-y_{i2}+0.5}\\right) ",
+             #"- log\\left(\\frac{y_{i1}+0.5}{n_{i1}-y_{i1}+0.5}\\right)")
+             
+# Just placeholders for now
+eqns_vi <- c("\\frac{SD^2}{N}",
+             "\\frac{SD_{1}^2} {M^2_{1}N_{1}} + \\frac{SD_{2}^2} {M^2_{2}N_{2}}",
+             "\\frac{N_{1} + N_{2}}{N_{1}N_{2}} + \\frac{SMD^2}{2(N_{1} + N_{2})}",
+             # see my commenst
+             "\\frac{1}{N - 3}")
+             #"\\frac{s_{i}^2}{n_{i}}",
+             #"")
+
+# Maybe add some examples for each effect size in a new column. SHould help
+eg <- c("CTmin, CTmax, LC50, LT50, Metabolic Rate (MR)",
+        "Ratio between pollutant exposed treatment (e.g., BPA-exposed group) and control (no pollutant)",
+        "Difference in immune response between males and females, performance difference in the presence of stressor compared to absence of stressor",
+        "Relationship between sex hormones and immune responses or metabolic rate and behaviour")
+
+table_fin <- data.frame(names, eqns_yi, eqns_vi, eg)
+
+footnotes <- c("Notes: J = 1 - \\frac{3}{4\\left(N_{1} + N_{2} - 2\\right) - 1}",
+               "SD_{p} = \\sqrt \\frac{\\left( N_{1}-1 \\right)SD_{1}^2 + \\left( N_{2}-1 \\right)SD_{2}^2}{N_{1} + N_{2} - 2}")
+
+# Note: It is esssential that you be clear that the function 'compose' is exported from the flextable package. That's because purr also has the same function, so it gets messy.
+tablea <- flextable(table_fin)                                                                                %>% 
+          flextable::compose(j = 1:4, part = "header", value = as_paragraph(as_b(c("Effect Measure", "Definition", "Sampling Variance", "Examples")))) %>% 
+          flextable::compose(j = 2:3, value = as_paragraph(as_equation(c( eqns_yi, eqns_vi))))             %>%
+          flextable::compose(j = 4, value = as_paragraph(eg))             %>%
+          flextable::width(j = 1, 3)                                                                          %>% 
+          flextable::width(j = 2, 2) %>% 
+          flextable::width(j = 4, 5) %>% 
+          flextable::footnote(i = 4, j = 1, value = as_paragraph(as_equation(footnotes)),
+               ref_symbols = c("a"),
+               part = "body", inline = TRUE) %>% 
+          flextable::font(part = "all", fontname = "Times New Roman")
+          
+FitFlextableToPage(tablea, pgwidth = 8)
+```
 
 ## **How does meta-analysis work?**
 
-
-
-<br>
-Why would we want to account for a given study's sampling variance? We want to do this because studies vary greatly in their sample size, and thus their power, to detect effects. As meta-analysts we want to weight effect sizes from studies with higher power more in an analysis. These studies are more likely to be 'correct' and their estimates less biased as a result of sampling variance.
+Meta-analysis quantitatively aggregates effect size data collected from existing research and 'controls' for the sampling variability in the process. Why would we want to account for a given study's sampling variance? We want to do this because studies vary greatly in their sample size, and thus their power, to detect effects. As meta-analysts we want to weight effect sizes from studies with higher power more in an analysis. These studies are more likely to be 'correct' and their estimates less biased as a result of sampling variance.
 
 [Marc Lajeunesse](http://lajeunesse.myweb.usf.edu) does a brilliant job explaining the goals and types of models that meta-analysts use. In the following video he describes why weighting in meta-analysis is so important. 
 
@@ -61,13 +120,11 @@ Why would we want to account for a given study's sampling variance? We want to d
 embed_url("https://www.youtube.com/watch?app=desktop&v=3XkC_jetn-U") %>% use_align("center")
 ```
 
-We can effectively think of a meta-analysis as a weighted regression model with the weights being the inverse sampling variance for each effect size. Weights are calculated differently depending on the meta-analytic model in question (more on that in later tutorials). 
-
-Throughout this workshop we will highlight the various features of meta-analysis that we discuss above. We'll try to focus on dissecting how meta-analytic models are working and focus on important aspects of effect sizes and modelling that users should be aware of when meta-analysing a body of work for their specific question of interest. An important aspect to doing meta-analysis well (which can be hard) is being critical of the data and assumptions inherent to both effect sizes and statistical models. Meta-analysis also has some unique sources of non-independence [@Noble2017; @Gurevitch1999; @NakagawaSantos2012; @GleserOlkin2009] that isn't always apparent. We'll try and cover these and discuss some ways in which you can protect yourself from their impacts on inferences. 
+We can effectively think of a meta-analysis as a weighted regression model with the weights being the inverse sampling variance for each effect size. Weights are calculated differently depending on the meta-analytic model in question.
 
 ## **Meta-analysis with `metafor`!**
 
-Throughout our workshop we will make use of the `metafor` package [@Viechtbauer2010]. It has substantial capabilities. If you're not familiar with `metafor` we would suggest having a look at Wolfgang's fantastic `UseR` talk below. Having said that, we will go over the variaous functions as we move through tutorials.
+We will make use of the `metafor` package [@Viechtbauer2010] for conducting our meta-analyses. It has substantial capabilities. If you're not familiar with `metafor` have a look at Wolfgang's fantastic `UseR` talk below. Having said that, we'll explain in the Rmarkdown document for the workshop what the code is doing and why.
 
 ```{r, echo=FALSE}
 vembedr::embed_url("https://www.youtube.com/watch?v=IkduL5iRdqo") %>% vembedr::use_align("center")
@@ -78,13 +135,4 @@ vembedr::embed_url("https://www.youtube.com/watch?v=IkduL5iRdqo") %>% vembedr::u
 <div id="refs"></div>
 
 <br>
-
-## **Session Information**
-
-```{r sessioninfo, echo = FALSE}
-pander(sessionInfo(), locale = FALSE)
-```
-
-## [Back to Table of Contents](https://daniel1noble.github.io/meta-workshop/) {.hide}
-
 <div class="tocify-extend-page" data-unique="tocify-extend-page" style="height: 0;"></div>
