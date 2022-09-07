@@ -1,0 +1,90 @@
+---
+title: "Introduction to Meta-analysis"
+author: Daniel W.A. Noble
+date: '`r Sys.Date()`'
+bibliography: ./bib/refs.bib
+csl: ./bib/the-journal-of-experimental-biology.csl
+output:
+  bookdown::html_document2:
+    css: style.css
+    code_folding: show
+    number_sections: no
+    toc: yes
+    toc_depth: 6
+    toc_float: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, cache = FALSE, tidy = TRUE)
+options(digits=2)
+```
+
+```{r klippy, echo=FALSE, include=TRUE, message=FALSE, warning=FALSE}
+#install.packages("devtools")
+remotes::install_github("rlesur/klippy")
+klippy::klippy(tooltip_message = 'Click to Copy Code', tooltip_success = 'Done', position = 'right', color = "red")
+
+# Load packages
+pacman::p_load(metafor, flextable, tidyverse, orchaRd, pander, mathjaxr, equatags, vembedr)
+
+# To use mathjaxr you need to run equatags::mathjax_install()
+```
+
+## **What is meta-analysis and why do we do it?**
+
+Meta-analysis is a way to synthesise effect sizes using a special type of mixed effects model that accounts for our sampling uncertainty in each effect estimate. In other words, meta-analyses are:
+
+> Statistical methods and techniques for aggregating, summarizing, and drawing inferences from collections of studies
+
+Meta-analysis is the gold-standard for research synthesis across all disciplines. We synthesise studies to gain broader insights into the efficacy of treatment effects and / or relationships between variables. In biology, we are also dealing with many different populations and species. As such, we're not just interested in understanding 'what the overall effect' actually is (in fact, we may not even care in many cases), but we are mainly focused on attempting to understand what factors (e.g., biological, methodological) explain variation in effects [@Noble2022; @Lag2010; @Gurevitch2018]. In fact, reporting upon measures of variability, or what is referred to as 'heterogeneity' in meta-analysis, is essential to meta-analysis reporting and placing effects within context [@ODea2021; @NakagawaSantos2012; @Borenstein2019; @Nakagawa2017; @Gurevitch2018]. 
+
+Think about it this way, meta-analysts want to understand why one experiment done on, say a certain species/population, gives a different effect size (e.g., Cohen's d) than the same experiment done on a different species/population. Remember back to the start of the semester where each student is expected to get a different result because of sampling variability, meta-analysis is trying to aggregate these separate 'studies', much like you took the 
+
+## **What is meta-analysis?**
+
+Meta-analysis quantitatively aggregates effect size data collected from existing research. The effect size one uses for a study question needs to be chosen carefully. Each make certain assumptions about the underlying data. It's important to be weary of these assumptions and identify when something might have gone wrong. 
+
+The effect size chosen must satisfy two important features. First, the effect size must be comparable across studies. This means that they must be placed on the same scale so that they can be aggregated. Some effect size estimates can be inter-converted to each other (e.g., Zr, Hedges' g), but this isn't the case for all of them. Second, we must be able to derive or approximate the sampling variance for a given effect size. As [already indicated](https://daniel1noble.github.io/meta-workshop/introduction-to-meta), the sampling variance is very important if one wishes to use meta-analytic models that account for sampling variance and is needed to report certain measures of [heterogeneity](https://daniel1noble.github.io/meta-workshop/het). 
+
+Meta-analyses in comparative physiology, and indeed, ecology and evolution more generally, often use highly heterogeneous data [@Noble2022; @Senior2016]. This poses other challenges in aggregating effect size data that make their comparability questionable. We'll discuss some of these issues in later [tutorials](https://daniel1noble.github.io/meta-workshop/nuis-het) and identify some ways in which some of this heterogeneity can be dealt with when deriving the effect size itself. 
+
+## **How does meta-analysis work?**
+
+
+
+<br>
+Why would we want to account for a given study's sampling variance? We want to do this because studies vary greatly in their sample size, and thus their power, to detect effects. As meta-analysts we want to weight effect sizes from studies with higher power more in an analysis. These studies are more likely to be 'correct' and their estimates less biased as a result of sampling variance.
+
+[Marc Lajeunesse](http://lajeunesse.myweb.usf.edu) does a brilliant job explaining the goals and types of models that meta-analysts use. In the following video he describes why weighting in meta-analysis is so important. 
+
+```{r, echo=FALSE}
+embed_url("https://www.youtube.com/watch?app=desktop&v=3XkC_jetn-U") %>% use_align("center")
+```
+
+We can effectively think of a meta-analysis as a weighted regression model with the weights being the inverse sampling variance for each effect size. Weights are calculated differently depending on the meta-analytic model in question (more on that in later tutorials). 
+
+Throughout this workshop we will highlight the various features of meta-analysis that we discuss above. We'll try to focus on dissecting how meta-analytic models are working and focus on important aspects of effect sizes and modelling that users should be aware of when meta-analysing a body of work for their specific question of interest. An important aspect to doing meta-analysis well (which can be hard) is being critical of the data and assumptions inherent to both effect sizes and statistical models. Meta-analysis also has some unique sources of non-independence [@Noble2017; @Gurevitch1999; @NakagawaSantos2012; @GleserOlkin2009] that isn't always apparent. We'll try and cover these and discuss some ways in which you can protect yourself from their impacts on inferences. 
+
+## **Meta-analysis with `metafor`!**
+
+Throughout our workshop we will make use of the `metafor` package [@Viechtbauer2010]. It has substantial capabilities. If you're not familiar with `metafor` we would suggest having a look at Wolfgang's fantastic `UseR` talk below. Having said that, we will go over the variaous functions as we move through tutorials.
+
+```{r, echo=FALSE}
+vembedr::embed_url("https://www.youtube.com/watch?v=IkduL5iRdqo") %>% vembedr::use_align("center")
+```
+
+## **References**
+
+<div id="refs"></div>
+
+<br>
+
+## **Session Information**
+
+```{r sessioninfo, echo = FALSE}
+pander(sessionInfo(), locale = FALSE)
+```
+
+## [Back to Table of Contents](https://daniel1noble.github.io/meta-workshop/) {.hide}
+
+<div class="tocify-extend-page" data-unique="tocify-extend-page" style="height: 0;"></div>
