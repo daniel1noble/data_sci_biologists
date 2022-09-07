@@ -142,16 +142,64 @@ ggplot2::ggplot(tibble(means), aes(x = means)) +
   geom_vline(xintercept = mean(means), col = "blue", linetype = 2) # Add the mean of the means
 ```
 
-Great. We can see that our mean of the sampling distribution matches are true mean, just like we expect. Now how do we calculate the sampling error. From Table \@ref(tab:tablea) we can see that the sampling variance is calculated as $\frac{SD^2}{N}$. We know that the sd is approximately 0.988 and we have a sample size of 20 so that means our sampling variance is expected to be approximately `r 0.988^2 / 20` (`0.988^2 / 20`). 
+Great. We can see that our mean of the sampling distribution matches are true mean, just like we expect. Now how do we calculate the sampling error. From Table \@ref(tab:tablea) we can see that the sampling variance is calculated as $\frac{SD^2}{N}$. We know that the sd is approximately 0.988 and we have a sample size of `n` so that means our sampling variance is expected to be approximately `r 0.988^2 / n` (`0.988^2 / n`). 
 
 Remember, we are estimating the sampling variance for the mean effect statistic. Given that we have the sampling distribution for the mean estimate we can calculate this directly from the sampling distribution by simply calculating the variance of the distribution. Let's do that:
 
 ```{r}
 # Calculate the mean sampling variance
-var(means)
+
+tab1 <- data.frame(Approach = c("Analytical", "Simulation"), `Sampling Variance` = c(0.988^2 / n, var(means)), check.names = FALSE)
+flextable(tab1)
+
 ```
 
-There you have it. When you see the sampling variance equations in Table \@ref(tab:tablea) all you need to remember is that these are shortcuts to doing the simulations we have just done above. 
+There you have it. When you see the sampling variance equations in Table \@ref(tab:tablea) all you need to remember is that these are shortcuts to doing the simulations we have just done above. If you don't belive me, lets do this again with a more complicated effect size statistic, log response ratio. 
+
+```{r, meansimlnrr, class.source='klippy'}
+# First lets set up some parameters. We'll take 20 samples from a population with a mean of 10.8 and a sd of 0.988
+   nsim = 10000
+      n = 20
+  mean1 = 10.8
+    sd1 = 0.988
+  mean2 = 5.5
+    sd2 = 1.2
+
+# Now, lets create an empty vector to store our sample mean. We'll then loop, sampling 20 from the population described above but we'll take 10000 samples so we can get a fairly accurate estimate of the 'true' mean and it's sampling error
+  lnrr <- c()
+
+   for (i in 1:nsim){
+       sample1 <- rnorm(n, mean = mean1, sd = sd1)
+       sample2 <- rnorm(n, mean = mean2, sd = sd2)
+         lnrr <- c(lnrr, log(mean(sample1)/ mean(sample2)))
+    }
+
+```
+
+
+```{r sampldistlnrr}
+# Now lets plot the sampling distribution. We'll show the real, true mean, 10.8, and the actual mean of the sampling distribution.
+ggplot2::ggplot(tibble(lnrr), aes(x = lnrr)) + 
+  geom_histogram(binwidth = 0.01) +
+  geom_vline(xintercept = log(10.8 / 5.5), col = "red") +                     # Add the true mean in red
+  geom_vline(xintercept = mean(lnrr), col = "blue", linetype = 2) + # Add the mean of the means
+  labs(x = "log Response Ratio (lnRR)")
+```
+
+Table \@ref(tab:tablea) above tells us what the sampling variance should be for this situation. We can calculate it ourselves from the equation and see if it matches the variance of the distribution:
+
+```{r}
+# We know the 'true' values so we can use them to calculate what the sampling variance for this specific situation should be. 
+     sv_lnrr <- (sd1^2 / (mean1^2*n)) + (sd2^2 / (mean2^2*n))
+
+# We just did a simple simulation of the situation where we only calculate the effect size statistic, now lets see what the sampling variance is of the lnRR sampling distribution that we calculated.
+samp_dist_lnRR <- var(lnrr)
+
+# Create a table to contrast these a little more clearly
+tab <- data.frame(Approach = c("Analytical", "Simulation"), `Sampling Variance` = c(sv_lnrr,samp_dist_lnRR), check.names = FALSE)
+flextable(tab)
+```
+
 
 ## **How does meta-analysis work?**
 
