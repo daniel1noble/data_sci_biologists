@@ -113,10 +113,19 @@ FitFlextableToPage(tablea, pgwidth = 8)
 ```
 
 
-To give you a better understanding about how these equations relate to the effect statistics and their sampling error, lets look at the mean in Table \@ref(tab:tablea). We could of course analyse the mean, but it would have to have the same units and meaning across studies. Many studies in ecology and evolution do in fact meta-analyse the mean, but more commonly standardised effect size statistics are used like the log response ratio (big in Ecology), the standardised mean difference (i.e., Cohen's d, Hedges' g -- you already were exposed to Cohen's d in Eric's workshops!), and correlation coefficients.
+Many studies in ecology and evolution meta-analyse the mean, but more commonly standardised effect size statistics are used like the log response ratio (big in Ecology), the standardised mean difference (i.e., Cohen's d, Hedges' g -- you already were exposed to Cohen's d in Eric's workshops!), and correlation coefficients. In the next section we're going to dwell on the effect size statistics, and more specifically their sampling variances, a little more to make sure we understand exactly what these equations are saying.
 
 ## **Understanding Sampling Variances**
-Let's return to what we learnt at the beginning the semester about sampling distributions. Lets create a loop to calculate the mean of the sample. 
+
+But wait, what do we really mean when we say sampling variance of an effect size statistic? It's all fine that we have equations in Table \@ref(tab:tablea) to calculate this for various statistics, but they also look scary, and I don't actually know what they are really telling me about the statistic in question! 
+
+If that's what your thinking that is totally normal. Don't fret! We're going to try to  breakdown exactly what we mean by sampling variance and show that these equations are nothing more then simple little shortcuts for us to estimate the sampling uncertainty of effect size statistic. 
+
+Let's return to what we learnt at the beginning the semester about sampling distributions. In order to understand sampling variance we need to do a thought experiment. When we collect sample sizes and statistics from a paper to calculate an effect size statistic and it's sampling variance we really need to remember that this is a statistic that is provided from a single sampling event. It's estimated with uncertainty -- potentially lots of uncertainty of the sample sizes are small. 
+
+Now, let's assume that we take that study and turn it into a simple simulation so that we can endlessly repeat the experiment to create a sampling distribution of the statistic -- the variance in that sampling distribution is in fact that sampling variance for the effect statistic. 
+
+Lets apply this thinking to estimating a very simple statistic and it's sampling variance described in Table \@ref(tab:tablea), the mean. To do this, we need to imagine ourselves going out and sampling from a population many, many times; taking the same size of sample each time. Again, we know the population has a 'true' mean, but we are trying to estimate that from a small sample so we know it will be off each time we sample. Enough talking, lets code this scenario. For ease of understanding it's good to apply a loop here just to wrap your head about what's going on.
 
 ```{r, meansim, class.source='klippy'}
 # First lets set up some parameters. We'll take 20 samples from a population with a mean of 10.8 and a sd of 0.988
@@ -135,7 +144,7 @@ Let's return to what we learnt at the beginning the semester about sampling dist
 
 ```
 
-Let's now have a look at our sampling distribution of means....
+Let's now have a look at our sampling distribution of means that we calculated for each of our 10000 samples:
 
 ```{r sampldist}
 # Now lets plot the sampling distribution. We'll show the real, true mean, 10.8, and the actual mean of the sampling distribution.
@@ -145,7 +154,9 @@ ggplot2::ggplot(tibble(means), aes(x = means)) +
   geom_vline(xintercept = mean(means), col = "blue", linetype = 2) # Add the mean of the means
 ```
 
-Great. We can see that our mean of the sampling distribution matches are true mean, just like we expect. Now how do we calculate the sampling error. From Table \@ref(tab:tablea) we can see that the sampling variance is calculated as $\frac{SD^2}{N}$. We know that the sd is approximately 0.988 and we have a sample size of `n` so that means our sampling variance is expected to be approximately `r 0.988^2 / n` (`0.988^2 / n`). 
+Great. We can see that our mean of the sampling distribution matches our true mean, just like we expect. 
+
+Now, how do we calculate the sampling error? From Table \@ref(tab:tablea) we can see that the sampling variance is calculated as $\frac{SD^2}{N}$. We know that the sd is approximately 0.988 and we have a sample size of `n` so that means our sampling variance is expected to be approximately `r 0.988^2 / n` (`0.988^2 / n`). 
 
 Remember, we are estimating the sampling variance for the mean effect statistic in our simulation. Given that we have the sampling distribution for the mean estimate we can calculate this directly from the sampling distribution by simply calculating the variance of the distribution. Let's do that:
 
@@ -162,7 +173,7 @@ There you have it. When you see the sampling variance equations in Table \@ref(t
 I'm going to assume here that you're super critical and you don't believe me (good!) so lets do this again with a more complicated effect size statistic, the log response ratio. 
 
 ```{r, meansimlnrr, class.source='klippy'}
-# First lets set up some parameters. We'll take 20 samples from a population with a mean of 10.8 and a sd of 0.988
+# First, lets set up some parameters. We'll take 20 samples from two populations that we are interested in contrasting (say a control and treatment group). The control group has a true mean of 10.8 and a sd of 0.988, whereas the treatment group has a true mean of 5.5 with a sd of 1.2. What that means is, effectively, the log response ratio is: log(10.8/5.5), or 0.67, because we are interesting in contrasting the two groups
    nsim = 10000
       n = 20
   mean1 = 10.8
@@ -170,7 +181,7 @@ I'm going to assume here that you're super critical and you don't believe me (go
   mean2 = 5.5
     sd2 = 1.2
 
-# Now, lets create an empty vector to store our sample mean. We'll then loop, sampling 20 from the population described above but we'll take 10000 samples so we can get a fairly accurate estimate of the 'true' mean and it's sampling error
+# Now, lets create an empty vector to store our log response ratio effect size statistic that we calculate from our samples. We'll then loop, sampling 20 from both groups and calculating the log response ratio, and we'll do this 10000 samples so we can get a fairly accurate estimate of the log response ratio statistic.
   lnrr <- c()
 
    for (i in 1:nsim){
@@ -183,9 +194,9 @@ I'm going to assume here that you're super critical and you don't believe me (go
 
 
 ```{r sampldistlnrr}
-# Now lets plot the sampling distribution. We'll show the real, true mean, 10.8, and the actual mean of the sampling distribution.
+# Now lets plot the sampling distribution. We'll show the real, true mean, 0.67, and the actual mean of the sampling distribution.
 ggplot2::ggplot(tibble(lnrr), aes(x = lnrr)) + 
-  geom_histogram(binwidth = 0.01) +
+  geom_histogram(binwidth = 0.02) +
   geom_vline(xintercept = log(10.8 / 5.5), col = "red") +                     # Add the true mean in red
   geom_vline(xintercept = mean(lnrr), col = "blue", linetype = 2) + # Add the mean of the means
   labs(x = "log Response Ratio (lnRR)")
@@ -235,7 +246,7 @@ covMatrix = matrix(c(1, r, r, 1), nrow = 2, ncol = 2)
 ```{r sampldistZr}
 # Now lets plot the sampling distribution. 
 ggplot2::ggplot(tibble(Zr), aes(x = Zr)) + 
-  geom_histogram(binwidth = 0.01) +
+  geom_histogram(binwidth = 0.02) +
   geom_vline(xintercept = 0.5*log((1 + r) / (1 - r)), col = "red") +                     # Add the true mean in red
   geom_vline(xintercept = mean(Zr), col = "blue", linetype = 2) + # Add the mean of the means
   labs(x = "Z-transformed Correlation Coefficient (Zr)")
