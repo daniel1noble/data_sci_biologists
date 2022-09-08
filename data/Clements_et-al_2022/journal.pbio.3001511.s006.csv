@@ -1,0 +1,819 @@
+﻿obs,study,authors,year.print,year.online,if.at.pub,2017.if,if.group,avg.n,species,climate,cue,cue.type,life.stage,ctrl.n,ctrl.mean,ctrl.sd,oa.n,oa.mean,oa.sd
+1,a1,Munday et al,2009,2010,9.432,9.504,J,27,Amphiprion percula,Trop,Yes,Habitat,Larvae,26,94.129,2.9931,46,72.789,13.273
+2,a1,Munday et al,2009,2010,9.432,9.504,J,,Amphiprion percula,Trop,Yes,Habitat,Larvae,20,0.783,3.5017,46,83.562,10.6211
+3,a1,Munday et al,2009,2010,9.432,9.504,J,,Amphiprion percula,Trop,Yes,Habitat,Larvae,20,46.38,14.0023,46,71.429,13.273
+4,a1,Munday et al,2009,2010,9.432,9.504,J,,Amphiprion percula,Trop,Yes,Habitat,Larvae,10,98.826,1.8563,16,88.258,7.044
+5,a1,Munday et al,2009,2010,9.432,9.504,J,,Amphiprion percula,Trop,Yes,Kin,Larvae,30,0.912,2.996,20,99.818,0.0045
+6,a1,Munday et al,2009,2010,9.432,9.504,J,,Amphiprion percula,Trop,Yes,Kin,Larvae,30,90.876,3.9984,20,99.818,0.0045
+7,a1,Munday et al,2009,2010,9.432,9.504,J,,Amphiprion percula,Trop,Yes,Kin,Larvae,30,96.35,3.9984,20,49.635,2.4463
+8,a2,Dixson et al,2010,2010,10.318,9.137,K,15,Amphiprion percula,Trop,Yes,Predator,Larvae,45,9.647,10.6459,45,7.937,7.0973
+9,a2,Dixson et al,2010,2010,10.318,9.137,K,,Amphiprion percula,Trop,Yes,Predator,Larvae,45,10.064,0.0067,45,10.582,7.0973
+10,a2,Dixson et al,2010,2010,10.318,9.137,K,,Amphiprion percula,Trop,Yes,Predator,Larvae,45,14.054,3.6291,45,14.516,3.609
+11,a2,Dixson et al,2010,2010,10.318,9.137,K,,Amphiprion percula,Trop,Yes,Predator,Larvae,45,12.973,10.8807,45,1.613,0.0007
+12,a2,Dixson et al,2010,2010,10.318,9.137,K,,Amphiprion percula,Trop,Yes,Predator,Larvae,45,11.111,7.0973,45,11.111,0.0067
+13,a2,Dixson et al,2010,2010,10.318,9.137,K,,Amphiprion percula,Trop,Yes,Predator,Larvae,45,10.582,0.0007,45,8.993,7.0973
+14,a2,Dixson et al,2010,2010,10.318,9.137,K,,Amphiprion percula,Trop,Yes,Predator,Larvae,45,0.0001,0.0007,45,99.9999,0.0007
+15,a2,Dixson et al,2010,2010,10.318,9.137,K,,Amphiprion percula,Trop,Yes,Predator,Larvae,45,0.0001,0.0007,45,99.9999,0.0007
+16,a2,Dixson et al,2010,2010,10.318,9.137,K,,Amphiprion percula,Trop,Yes,Predator,Larvae,45,50.27,0.0007,45,99.9999,0.0007
+17,a2,Dixson et al,2010,2010,10.318,9.137,K,,Amphiprion percula,Trop,Yes,Predator,Larvae,45,50.811,0.0007,45,99.9999,0.0007
+18,a2,Dixson et al,2010,2010,10.318,9.137,K,,Amphiprion percula,Trop,Yes,Predator,Larvae,45,0.0001,0.0007,45,49.206,3.5486
+19,a2,Dixson et al,2010,2010,10.318,9.137,K,,Amphiprion percula,Trop,Yes,Predator,Larvae,45,0.0001,0.0007,45,49.206,0.0007
+20,a3,Munday et al,2010,2010,9.771,9.504,J,18,Amphiprion percula,Trop,Yes,Predator,Larvae,22,11.899,2.025,22,9.873,1.772
+21,a3,Munday et al,2010,2010,9.771,9.504,J,,Amphiprion percula,Trop,Yes,Predator,Larvae,22,11.899,2.025,22,14.177,2.785
+22,a3,Munday et al,2010,2010,9.771,9.504,J,,Amphiprion percula,Trop,Yes,Predator,Larvae,22,11.899,2.025,22,18.481,1.772
+23,a3,Munday et al,2010,2010,9.771,9.504,J,,Amphiprion percula,Trop,Yes,Predator,Larvae,22,11.646,2.532,22,12.658,4.304
+24,a3,Munday et al,2010,2010,9.771,9.504,J,,Amphiprion percula,Trop,Yes,Predator,Larvae,22,11.646,2.532,22,15.443,4.304
+25,a3,Munday et al,2010,2010,9.771,9.504,J,,Amphiprion percula,Trop,Yes,Predator,Larvae,22,11.646,2.532,22,82.785,1.772
+26,a3,Munday et al,2010,2010,9.771,9.504,J,,Amphiprion percula,Trop,Yes,Predator,Larvae,22,11.392,2.278,22,12.152,2.532
+27,a3,Munday et al,2010,2010,9.771,9.504,J,,Amphiprion percula,Trop,Yes,Predator,Larvae,22,11.392,2.278,22,22.025,4.304
+28,a3,Munday et al,2010,2010,9.771,9.504,J,,Amphiprion percula,Trop,Yes,Predator,Larvae,22,11.392,2.278,22,83.038,4.81
+29,a3,Munday et al,2010,2010,9.771,9.504,J,,Amphiprion percula,Trop,Yes,Predator,Larvae,20,9.62,3.038,20,11.646,2.278
+30,a3,Munday et al,2010,2010,9.771,9.504,J,,Amphiprion percula,Trop,Yes,Predator,Larvae,20,9.62,3.038,20,44.051,32.658
+31,a3,Munday et al,2010,2010,9.771,9.504,J,,Amphiprion percula,Trop,Yes,Predator,Larvae,20,9.62,3.038,20,87.848,3.291
+32,a3,Munday et al,2010,2010,9.771,9.504,J,,Amphiprion percula,Trop,Yes,Predator,Larvae,20,11.899,3.038,20,11.139,2.785
+33,a3,Munday et al,2010,2010,9.771,9.504,J,,Amphiprion percula,Trop,Yes,Predator,Larvae,20,11.899,3.038,20,30.633,28.101
+34,a3,Munday et al,2010,2010,9.771,9.504,J,,Amphiprion percula,Trop,Yes,Predator,Larvae,20,11.899,3.038,20,87.595,3.038
+35,a3,Munday et al,2010,2010,9.771,9.504,J,,Amphiprion percula,Trop,Yes,Predator,Larvae,22,9.62,2.278,22,8.861,3.797
+36,a3,Munday et al,2010,2010,9.771,9.504,J,,Amphiprion percula,Trop,Yes,Predator,Larvae,22,9.62,2.278,22,41.519,35.949
+37,a3,Munday et al,2010,2010,9.771,9.504,J,,Amphiprion percula,Trop,Yes,Predator,Larvae,22,9.62,2.278,22,87.089,4.051
+38,a3,Munday et al,2010,2010,9.771,9.504,J,,Amphiprion percula,Trop,Yes,Predator,Larvae,18,0.0001,0.0001,22,0.0001,0.0001
+39,a3,Munday et al,2010,2010,9.771,9.504,J,,Amphiprion percula,Trop,Yes,Predator,Larvae,18,0.0001,0.0001,22,43.544,42.532
+40,a3,Munday et al,2010,2010,9.771,9.504,J,,Amphiprion percula,Trop,Yes,Predator,Larvae,18,0.0001,0.0001,22,98.481,2.532
+41,a3,Munday et al,2010,2010,9.771,9.504,J,,Amphiprion percula,Trop,Yes,Predator,Larvae,25,0.0001,0.0001,25,0.0001,0.0001
+42,a3,Munday et al,2010,2010,9.771,9.504,J,,Amphiprion percula,Trop,Yes,Predator,Larvae,25,0.0001,0.0001,25,44.337,42.892
+43,a3,Munday et al,2010,2010,9.771,9.504,J,,Amphiprion percula,Trop,Yes,Predator,Larvae,25,0.0001,0.0001,25,93.735,4.337
+44,a3,Munday et al,2010,2010,9.771,9.504,J,,Amphiprion percula,Trop,Yes,Predator,Larvae,10,0.0001,0.0001,10,0.0001,0.0001
+45,a3,Munday et al,2010,2010,9.771,9.504,J,,Amphiprion percula,Trop,Yes,Predator,Larvae,10,0.0001,0.0001,10,0.0001,0.0001
+46,a3,Munday et al,2010,2010,9.771,9.504,J,,Amphiprion percula,Trop,Yes,Predator,Larvae,10,0.0001,0.0001,10,0.563,0.563
+47,a3,Munday et al,2010,2010,9.771,9.504,J,,Amphiprion percula,Trop,Yes,Predator,Larvae,10,0.0001,0.0001,10,0.0001,0.0001
+48,a3,Munday et al,2010,2010,9.771,9.504,J,,Amphiprion percula,Trop,Yes,Predator,Larvae,10,0.0001,0.0001,10,7.324,20.563
+49,a3,Munday et al,2010,2010,9.771,9.504,J,,Amphiprion percula,Trop,Yes,Predator,Larvae,10,0.0001,0.0001,10,79.437,7.042
+50,a3,Munday et al,2010,2010,9.771,9.504,J,,Amphiprion percula,Trop,Yes,Predator,Larvae,10,0.0001,0.0001,10,0.0001,0.0001
+51,a3,Munday et al,2010,2010,9.771,9.504,J,,Amphiprion percula,Trop,Yes,Predator,Larvae,10,0.0001,0.0001,10,12.394,16.338
+52,a3,Munday et al,2010,2010,9.771,9.504,J,,Amphiprion percula,Trop,Yes,Predator,Larvae,10,0.0001,0.0001,10,86.479,5.07
+53,a3,Munday et al,2010,2010,9.771,9.504,J,,Amphiprion percula,Trop,Yes,Predator,Larvae,10,0.0001,0.0001,10,0.0001,0.0001
+54,a3,Munday et al,2010,2010,9.771,9.504,J,,Amphiprion percula,Trop,Yes,Predator,Larvae,10,0.0001,0.0001,10,48.187,40.933
+55,a3,Munday et al,2010,2010,9.771,9.504,J,,Amphiprion percula,Trop,Yes,Predator,Larvae,10,0.0001,0.0001,10,89.119,2.073
+56,a3,Munday et al,2010,2010,9.771,9.504,J,,Pomacentrus wardi,Trop,Yes,Predator,Larvae,10,1.972,3.662,10,3.944,3.169
+57,a3,Munday et al,2010,2010,9.771,9.504,J,,Pomacentrus wardi,Trop,Yes,Predator,Larvae,10,1.972,3.662,10,2.817,2.254
+58,a3,Munday et al,2010,2010,9.771,9.504,J,,Pomacentrus wardi,Trop,Yes,Predator,Larvae,10,1.972,3.662,10,1.69,8.451
+59,a3,Munday et al,2010,2010,9.771,9.504,J,,Pomacentrus wardi,Trop,Yes,Predator,Larvae,10,3.099,3.944,10,5.07,5.07
+60,a3,Munday et al,2010,2010,9.771,9.504,J,,Pomacentrus wardi,Trop,Yes,Predator,Larvae,10,3.099,3.944,10,5.07,39.437
+61,a3,Munday et al,2010,2010,9.771,9.504,J,,Pomacentrus wardi,Trop,Yes,Predator,Larvae,10,3.099,3.944,10,85.634,16.056
+62,a3,Munday et al,2010,2010,9.771,9.504,J,,Pomacentrus wardi,Trop,Yes,Predator,Larvae,17,1.972,1.69,10,6.479,3.944
+63,a3,Munday et al,2010,2010,9.771,9.504,J,,Pomacentrus wardi,Trop,Yes,Predator,Larvae,17,1.972,1.69,10,63.099,42.254
+64,a3,Munday et al,2010,2010,9.771,9.504,J,,Pomacentrus wardi,Trop,Yes,Predator,Larvae,17,1.972,1.69,17,91.831,14.085
+65,a3,Munday et al,2010,2010,9.771,9.504,J,,Pomacentrus wardi,Trop,Yes,Predator,Larvae,20,1.69,1.127,10,4.167,2.604
+66,a3,Munday et al,2010,2010,9.771,9.504,J,,Pomacentrus wardi,Trop,Yes,Predator,Larvae,20,1.69,1.127,109,48.438,45.312
+67,a3,Munday et al,2010,2010,9.771,9.504,J,,Pomacentrus wardi,Trop,Yes,Predator,Larvae,20,1.69,1.127,20,93.229,5.208
+68,a4,Cripps et al,2011,2011,4.092,2.766,E,9,Pseudochromis fuscus,Trop,Yes,Predator,Adult,10,0.59,0.098,10,0.398,0.1202
+69,a4,Cripps et al,2011,2011,4.092,2.766,E,,Pseudochromis fuscus,Trop,Yes,Predator,Adult,10,0.59,0.098,14,0.412,0.1422
+70,a4,Cripps et al,2011,2011,4.092,2.766,E,,Pseudochromis fuscus,Trop,No,-,Adult,10,140,43.1936,8,143.415,117.4449
+71,a4,Cripps et al,2011,2011,4.092,2.766,E,,Pseudochromis fuscus,Trop,No,-,Adult,10,140,43.1936,7,269.756,154.5283
+72,a4,Cripps et al,2011,2011,4.092,2.766,E,,Pseudochromis fuscus,Trop,No,-,Adult,9,71.078,73.6305,7,172.794,97.271
+73,a4,Cripps et al,2011,2011,4.092,2.766,E,,Pseudochromis fuscus,Trop,No,-,Adult,9,71.078,73.6305,7,115.196,100.5121
+74,a4,Cripps et al,2011,2011,4.092,2.766,E,,Pseudochromis fuscus,Trop,No,-,Adult,10,228.571,127.9964,8,290.476,289.7733
+75,a4,Cripps et al,2011,2011,4.092,2.766,E,,Pseudochromis fuscus,Trop,No,-,Adult,10,228.571,127.9964,7,378.571,208.7662
+76,a4,Cripps et al,2011,2011,4.092,2.766,E,,Pseudochromis fuscus,Trop,No,-,Adult,9,21.238,12.9685,7,8.168,7.4663
+77,a4,Cripps et al,2011,2011,4.092,2.766,E,,Pseudochromis fuscus,Trop,No,-,Adult,9,21.238,12.6807,7,21.535,15.3242
+78,a5,Ferrari et al,2011,2011,17.557,9.137,K,18,Pomacentrus moluccensis,Trop,Yes,Prey,Adult,18,19.296,31.981,14,25.025,32.7171
+79,a5,Ferrari et al,2011,2011,17.557,9.137,K,,Pomacentrus amboinensis,Trop,Yes,Prey,Adult,18,33.467,37.0977,14,25.93,27.0746
+80,a5,Ferrari et al,2011,2011,17.557,9.137,K,,Pomacentrus nagasakiensis,Trop,Yes,Prey,Adult,18,18.392,34.5393,14,28.04,28.2046
+81,a5,Ferrari et al,2011,2011,17.557,9.137,K,,Pomacentrus chrysurus,Trop,Yes,Prey,Adult,18,28.643,44.7726,14,21.106,24.8184
+82,a5,Ferrari et al,2011,2011,17.557,9.137,K,,Pomacentrus moluccensis,Trop,Yes,Prey,Adult,20,7.692,17.8885,20,41.615,59.1708
+83,a5,Ferrari et al,2011,2011,17.557,9.137,K,,Pomacentrus amboinensis,Trop,Yes,Prey,Adult,20,18.231,31.6493,20,31.154,55.043
+84,a5,Ferrari et al,2011,2011,17.557,9.137,K,,Pomacentrus nagasakiensis,Trop,Yes,Prey,Adult,20,37.923,50.9153,20,10.846,32.906
+85,a5,Ferrari et al,2011,2011,17.557,9.137,K,,Pomacentrus chrysurus,Trop,Yes,Prey,Adult,20,36.077,49.5378,20,14.538,35.7771
+86,a6,Ferrari et al ,2011,2011,6.862,8.997,I,20,Pomacentrus nagasakiensis,Trop,Yes,Predator,Juvenile,20,0.511,0.1386,20,0.355,0.2504
+87,a6,Ferrari et al ,2011,2011,6.862,8.997,I,,Pomacentrus nagasakiensis,Trop,Yes,Predator,Juvenile,20,0.511,0.1386,20,0.294,0.2415
+88,a6,Ferrari et al ,2011,2011,6.862,8.997,I,,Pomacentrus moluccensis,Trop,Yes,Predator,Juvenile,20,0.408,0.1476,20,0.182,0.3086
+89,a6,Ferrari et al ,2011,2011,6.862,8.997,I,,Pomacentrus moluccensis,Trop,Yes,Predator,Juvenile,20,0.408,0.1476,20,-0.015,0.2504
+90,a6,Ferrari et al ,2011,2011,6.862,8.997,I,,Pomacentrus chrysurus,Trop,Yes,Predator,Juvenile,20,0.501,0.0805,20,0.222,0.3801
+91,a6,Ferrari et al ,2011,2011,6.862,8.997,I,,Pomacentrus chrysurus,Trop,Yes,Predator,Juvenile,20,0.501,0.0447,20,-0.092,0.2057
+92,a6,Ferrari et al ,2011,2011,6.862,8.997,I,,Pomacentrus amboinensis,Trop,Yes,Predator,Juvenile,20,0.426,0.2147,20,0.018,0.3399
+93,a6,Ferrari et al ,2011,2011,6.862,8.997,I,,Pomacentrus amboinensis,Trop,Yes,Predator,Juvenile,20,0.426,0.2147,20,-0.081,0.2191
+94,a7,Simpson et al,2011,2011,3.762,3.345,D,26,Amphiprion percula,Trop,Yes,Auditory,Juvenile,30,0.276,0.2848,13,0.586,0.3786
+95,a7,Simpson et al,2011,2011,3.762,3.345,D,,Amphiprion percula,Trop,Yes,Auditory,Juvenile,30,0.276,0.2848,21,0.645,0.3483
+96,a7,Simpson et al,2011,2011,3.762,3.345,D,,Amphiprion percula,Trop,Yes,Auditory,Juvenile,30,0.276,0.2848,30,0.602,0.3396
+97,a8,Devine et al,2012,2011,3.412,3.127,D,25,Cheilodipterus quinquelineatus,Trop,Yes,Habitat,Adult,27,63.881,3.7758,23,38.507,8.5893
+98,a8,Devine et al,2012,2011,3.412,3.127,D,,Cheilodipterus quinquelineatus,Trop,Yes,Habitat,Adult,27,63.881,3.7758,22,38.507,7.1388
+99,a8,Devine et al,2012,2011,3.412,3.127,D,,Cheilodipterus quinquelineatus,Trop,Yes,Habitat,Adult,27,63.881,6.2042,22,43.284,1.4024
+100,a9,Devine et al,2012,2011,3.878,3.095,D,15,Pomacentrus moluccensis,Trop,Yes,Habitat,Larvae,15,74.39,0.0237,15,62.195,14.3011
+101,a9,Devine et al,2012,2011,3.878,3.095,D,,Pomacentrus moluccensis,Trop,Yes,Habitat,Larvae,15,74.39,12.6734,15,61.943,8.5788
+102,a9,Devine et al,2012,2011,3.878,3.095,D,,Pomacentrus moluccensis,Trop,Yes,Habitat,Larvae,15,65.854,49.6341,15,58.537,49.6341
+103,a9,Devine et al,2012,2011,3.878,3.095,D,,Pomacentrus moluccensis,Trop,Yes,Habitat,Larvae,15,65.854,49.6341,15,62.805,39.704
+104,a9,Devine et al,2012,2011,3.878,3.095,D,,Pomacentrus moluccensis,Trop,Yes,Habitat,Larvae,15,48.171,39.704,15,59.146,29.774
+105,a9,Devine et al,2012,2011,3.878,3.095,D,,Pomacentrus moluccensis,Trop,Yes,Habitat,Larvae,15,48.171,39.704,15,73.78,29.774
+106,a9,Devine et al,2012,2011,3.878,3.095,D,,Pomacentrus amboinensis,Trop,Yes,Habitat,Larvae,15,64.375,50.8713,15,61.25,40.6971
+107,a9,Devine et al,2012,2011,3.878,3.095,D,,Pomacentrus amboinensis,Trop,Yes,Habitat,Larvae,15,64.375,50.8713,15,56.25,30.5228
+108,a9,Devine et al,2012,2011,3.878,3.095,D,,Pomacentrus amboinensis,Trop,Yes,Habitat,Larvae,15,62.5,50.8713,15,58.125,40.6971
+109,a9,Devine et al,2012,2011,3.878,3.095,D,,Pomacentrus amboinensis,Trop,Yes,Habitat,Larvae,15,62.5,50.8713,15,49.375,61.0456
+110,a9,Devine et al,2012,2011,3.878,3.095,D,,Pomacentrus amboinensis,Trop,Yes,Habitat,Larvae,15,61.25,50.8713,15,46.875,40.6971
+111,a9,Devine et al,2012,2011,3.878,3.095,D,,Pomacentrus amboinensis,Trop,Yes,Habitat,Larvae,15,61.25,50.8713,15,56.875,40.6971
+112,a9,Devine et al,2012,2011,3.878,3.095,D,,Pomacentrus chrysurus,Trop,Yes,Habitat,Larvae,15,43.114,58.4898,15,39.521,48.7388
+113,a9,Devine et al,2012,2011,3.878,3.095,D,,Pomacentrus chrysurus,Trop,Yes,Habitat,Larvae,15,43.114,58.4898,15,36.527,38.9878
+114,a9,Devine et al,2012,2011,3.878,3.095,D,,Pomacentrus chrysurus,Trop,Yes,Habitat,Larvae,15,37.126,48.7388,15,41.317,48.7388
+115,a9,Devine et al,2012,2011,3.878,3.095,D,,Pomacentrus chrysurus,Trop,Yes,Habitat,Larvae,15,37.126,48.7388,15,67.066,29.2368
+116,a9,Devine et al,2012,2011,3.878,3.095,D,,Pomacentrus chrysurus,Trop,Yes,Habitat,Larvae,15,44.311,38.9878,15,46.707,48.7388
+117,a9,Devine et al,2012,2011,3.878,3.095,D,,Pomacentrus chrysurus,Trop,Yes,Habitat,Larvae,15,44.311,38.9878,15,58.683,48.7388
+118,a10,Domenici et al,2012,2011,3.762,3.345,D,69,Neopomacentrus azysron,Trop,No,-,Larvae,70,46.829,30.6134,68,29.122,24.1367
+119,a11,Ferrari et al ,2012,2012,3.73,2.766,D,17,Pomacentrus amboinensis,Trop,No,-,Juvenile,16,-7.622,14.44,16,-0.401,9.628
+120,a11,Ferrari et al ,2012,2012,3.73,2.766,D,,Pomacentrus amboinensis,Trop,Yes,Predator,Juvenile,16,-8.625,13.64,16,-2.006,14.44
+121,a11,Ferrari et al ,2012,2012,3.73,2.766,D,,Pomacentrus amboinensis,Trop,No,-,Juvenile,16,3.009,13.64,16,-4.613,12.036
+122,a11,Ferrari et al ,2012,2012,3.73,2.766,D,,Pomacentrus amboinensis,Trop,Yes,Predator,Juvenile,16,-61.576,14.44,16,-2.206,21.66
+123,a11,Ferrari et al ,2012,2012,3.73,2.766,D,,Pomacentrus amboinensis,Trop,No,-,Juvenile,16,-0.528,10.556,16,-3.519,11.26
+124,a11,Ferrari et al ,2012,2012,3.73,2.766,D,,Pomacentrus amboinensis,Trop,Yes,Predator,Juvenile,16,-6.334,9.852,16,-1.584,8.444
+125,a11,Ferrari et al ,2012,2012,3.73,2.766,D,,Pomacentrus amboinensis,Trop,No,-,Juvenile,16,-4.927,11.26,16,-2.815,8.444
+126,a11,Ferrari et al ,2012,2012,3.73,2.766,D,,Pomacentrus amboinensis,Trop,Yes,Predator,Juvenile,16,-45.044,19.004,16,-1.232,19.708
+127,a11,Ferrari et al ,2012,2012,3.73,2.766,D,,Pomacentrus amboinensis,Trop,No,-,Juvenile,16,0.179,1.156,16,-0.138,0.716
+128,a11,Ferrari et al ,2012,2012,3.73,2.766,D,,Pomacentrus amboinensis,Trop,Yes,Predator,Juvenile,16,-0.441,1.708,16,0.262,0.44
+129,a11,Ferrari et al ,2012,2012,3.73,2.766,D,,Pomacentrus amboinensis,Trop,No,-,Juvenile,16,-0.069,0.828,16,0.179,0.384
+130,a11,Ferrari et al ,2012,2012,3.73,2.766,D,,Pomacentrus amboinensis,Trop,Yes,Predator,Juvenile,16,-2.687,1.212,16,0.193,0.828
+131,a11,Ferrari et al ,2012,2012,3.73,2.766,D,,Pomacentrus amboinensis,Trop,No,-,Juvenile,17,-2.281,10.1263,17,-4.211,15.1895
+132,a11,Ferrari et al ,2012,2012,3.73,2.766,D,,Pomacentrus amboinensis,Trop,Yes,Predator,Juvenile,17,-0.877,8.6791,17,-10.351,18.0839
+133,a11,Ferrari et al ,2012,2012,3.73,2.766,D,,Pomacentrus amboinensis,Trop,No,-,Juvenile,17,-0.877,5.7888,17,-1.404,8.6791
+134,a11,Ferrari et al ,2012,2012,3.73,2.766,D,,Pomacentrus amboinensis,Trop,Yes,Predator,Juvenile,17,-45.965,21.6999,17,-4.912,12.2951
+135,a11,Ferrari et al ,2012,2012,3.73,2.766,D,,Pomacentrus amboinensis,Trop,No,-,Juvenile,17,-6,13.9155,17,-7,16.4924
+136,a11,Ferrari et al ,2012,2012,3.73,2.766,D,,Pomacentrus amboinensis,Trop,Yes,Predator,Juvenile,17,-4.875,9.7924,17,-9,15.977
+137,a11,Ferrari et al ,2012,2012,3.73,2.766,D,,Pomacentrus amboinensis,Trop,No,-,Juvenile,17,-2.25,4.6385,17,1.75,12.8847
+138,a11,Ferrari et al ,2012,2012,3.73,2.766,D,,Pomacentrus amboinensis,Trop,Yes,Predator,Juvenile,17,-29.75,17.5232,17,-1.5,12.8847
+139,a11,Ferrari et al ,2012,2012,3.73,2.766,D,,Pomacentrus amboinensis,Trop,No,-,Juvenile,17,-0.126,0.7092,17,-0.252,1.1339
+140,a11,Ferrari et al ,2012,2012,3.73,2.766,D,,Pomacentrus amboinensis,Trop,Yes,Predator,Juvenile,17,-0.057,0.4247,17,-0.436,0.9937
+141,a11,Ferrari et al ,2012,2012,3.73,2.766,D,,Pomacentrus amboinensis,Trop,No,-,Juvenile,17,0.195,0.569,17,-0.057,0.6638
+142,a11,Ferrari et al ,2012,2012,3.73,2.766,D,,Pomacentrus amboinensis,Trop,Yes,Predator,Juvenile,17,-1.995,1.039,17,0.195,0.8988
+143,a11,Ferrari et al ,2012,2012,3.73,2.766,D,,Pomacentrus amboinensis,Trop,No,-,Juvenile,23,-2.609,8.8243,23,-2.899,9.7307
+144,a11,Ferrari et al ,2012,2012,3.73,2.766,D,,Pomacentrus amboinensis,Trop,Yes,Predator,Juvenile,23,-31.449,17.3753,23,-8.986,20.1569
+145,a11,Ferrari et al ,2012,2012,3.73,2.766,D,,Pomacentrus amboinensis,Trop,No,-,Juvenile,23,1.523,6.695,23,2.411,10.9537
+146,a11,Ferrari et al ,2012,2012,3.73,2.766,D,,Pomacentrus amboinensis,Trop,Yes,Predator,Juvenile,23,-19.924,14.6081,23,-9.264,22.5164
+147,a11,Ferrari et al ,2012,2012,3.73,2.766,D,,Pomacentrus amboinensis,Trop,No,-,Juvenile,23,0.359,0.8057,23,0.287,0.8632
+148,a11,Ferrari et al ,2012,2012,3.73,2.766,D,,Pomacentrus amboinensis,Trop,Yes,Predator,Juvenile,23,-1.581,1.2613,23,-0.156,1.4915
+149,a11,Ferrari et al ,2012,2012,3.73,2.766,D,,Pomacentrus amboinensis,Trop,No,-,Juvenile,15,-4.932,10.5035,15,-6.904,16.2355
+150,a11,Ferrari et al ,2012,2012,3.73,2.766,D,,Pomacentrus amboinensis,Trop,Yes,Predator,Juvenile,15,-69.781,30.5578,15,-13.068,16.2355
+151,a11,Ferrari et al ,2012,2012,3.73,2.766,D,,Pomacentrus amboinensis,Trop,Yes,Predator,Juvenile,15,-55.726,24.8297,15,-59.671,21.9637
+152,a11,Ferrari et al ,2012,2012,3.73,2.766,D,,Pomacentrus amboinensis,Trop,No,-,Juvenile,15,-1.94,13.296,15,-5.075,20.8095
+153,a11,Ferrari et al ,2012,2012,3.73,2.766,D,,Pomacentrus amboinensis,Trop,Yes,Predator,Juvenile,15,-37.313,21.3866,15,-13.284,12.7189
+154,a11,Ferrari et al ,2012,2012,3.73,2.766,D,,Pomacentrus amboinensis,Trop,Yes,Predator,Juvenile,15,-39.403,16.1852,15,-28.657,19.6554
+155,a11,Ferrari et al ,2012,2012,3.73,2.766,D,,Pomacentrus amboinensis,Trop,No,-,Juvenile,15,-0.076,0.7707,15,0.092,0.9489
+156,a11,Ferrari et al ,2012,2012,3.73,2.766,D,,Pomacentrus amboinensis,Trop,Yes,Predator,Juvenile,15,-2.751,1.6576,15,-0.596,1.3633
+157,a11,Ferrari et al ,2012,2012,3.73,2.766,D,,Pomacentrus amboinensis,Trop,Yes,Predator,Juvenile,15,-2.583,2.1921,15,-1.498,1.0651
+158,a12,Ferrari et al ,2012,2012,4.861,5.491,E,25,Pomacentrus amboinensis,Trop,Yes,Food,Juvenile,25,0.651,0.1689,25,0.662,0.1876
+159,a12,Ferrari et al ,2012,2012,4.861,5.491,E,,Pomacentrus amboinensis,Trop,Yes,Food,Juvenile,25,0.651,0.1689,25,0.622,0.2064
+160,a12,Ferrari et al ,2012,2012,4.861,5.491,E,,Pomacentrus amboinensis,Trop,Yes,Food,Juvenile,25,0.651,0.1689,25,0.389,0.3752
+161,a12,Ferrari et al ,2012,2012,4.861,5.491,E,,Pomacentrus amboinensis,Trop,Yes,Food,Juvenile,25,0.548,0.3424,25,0.599,0.3189
+162,a12,Ferrari et al ,2012,2012,4.861,5.491,E,,Pomacentrus amboinensis,Trop,Yes,Food,Juvenile,25,0.548,0.3424,25,0.449,0.4034
+163,a12,Ferrari et al ,2012,2012,4.861,5.491,E,,Pomacentrus amboinensis,Trop,Yes,Food,Juvenile,25,0.548,0.3424,25,0.001,0.7411
+164,a12,Ferrari et al ,2012,2012,4.861,5.491,E,,Pomacentrus amboinensis,Trop,Yes,Food,Juvenile,25,0.31,0.2674,25,0.312,0.3143
+165,a12,Ferrari et al ,2012,2012,4.861,5.491,E,,Pomacentrus amboinensis,Trop,Yes,Food,Juvenile,25,0.31,0.2674,25,0.337,0.2674
+166,a12,Ferrari et al ,2012,2012,4.861,5.491,E,,Pomacentrus amboinensis,Trop,Yes,Food,Juvenile,25,0.31,0.2674,25,0.061,0.4128
+167,a12,Ferrari et al ,2012,2012,4.861,5.491,E,,Pomacentrus amboinensis,Trop,Yes,Food,Juvenile,25,19.338,4.5122,25,16.88,5.0094
+168,a12,Ferrari et al ,2012,2012,4.861,5.491,E,,Pomacentrus amboinensis,Trop,Yes,Food,Juvenile,25,19.338,4.5122,25,18.91,3.5084
+169,a12,Ferrari et al ,2012,2012,4.861,5.491,E,,Pomacentrus amboinensis,Trop,Yes,Food,Juvenile,25,19.338,4.5122,25,14.744,4.5122
+170,a13,Hurst et al,2012,2012,2.546,2.276,C,30,Theragra chalcogramma,Temp,No,-,Juvenile,30,0.02,0.001,30,0.019,0.001
+171,a13,Hurst et al,2012,2012,2.546,2.276,C,,Theragra chalcogramma,Temp,No,-,Juvenile,30,0.02,0.001,30,0.018,0.001
+172,a13,Hurst et al,2012,2012,2.546,2.276,C,,Theragra chalcogramma,Temp,No,-,Juvenile,30,0.02,0.001,30,0.018,0.001
+173,a13,Hurst et al,2012,2012,2.546,2.276,C,,Theragra chalcogramma,Temp,No,-,Juvenile,30,0.081,0.006,30,0.086,0.005
+174,a13,Hurst et al,2012,2012,2.546,2.276,C,,Theragra chalcogramma,Temp,No,-,Juvenile,30,0.081,0.006,30,0.085,0.011
+175,a13,Hurst et al,2012,2012,2.546,2.276,C,,Theragra chalcogramma,Temp,No,-,Juvenile,30,0.081,0.006,30,0.085,0.006
+176,a14,Nilsson et al,2012,2012,14.472,19.181,K,14,Amphiprion percula,Trop,Yes,Predator,Larvae,9,1.053,1.578,14,91.538,3.8389
+177,a14,Nilsson et al,2012,2012,14.472,19.181,K,,Amphiprion percula,Trop,Yes,Predator,Larvae,14,7.348,4.7818,16,53.994,5.112
+178,a14,Nilsson et al,2012,2012,14.472,19.181,K,,Neopomacentrus azysron,Trop,No,-,Larvae,15,38.607,30.2054,15,29.053,24.1674
+179,a15,Nowicki et al,2012,2012,2.263,1.99,C,30,Amphiprion melanopus,Trop,No,-,Juvenile,30,26.437,12.8529,30,38.218,25.7014
+180,a15,Nowicki et al,2012,2012,2.263,1.99,C,,Amphiprion melanopus,Trop,No,-,Juvenile,30,26.437,12.8529,30,35.057,21.8464
+181,a15,Nowicki et al,2012,2012,2.263,1.99,C,,Amphiprion melanopus,Trop,Yes,Food,Juvenile,30,99.259,33.1251,30,93.333,39.7528
+182,a15,Nowicki et al,2012,2012,2.263,1.99,C,,Amphiprion melanopus,Trop,Yes,Food,Juvenile,30,99.259,33.1251,30,82.963,26.5019
+183,a15,Nowicki et al,2012,2012,2.263,1.99,C,,Amphiprion melanopus,Trop,Yes,Food,Juvenile,30,33.957,17.9377,30,35.561,20.3259
+184,a15,Nowicki et al,2012,2012,2.263,1.99,C,,Amphiprion melanopus,Trop,Yes,Food,Juvenile,30,33.957,17.9377,30,32.086,20.3259
+185,a16,Sundin et al,2012,2012,1.947,1.697,B,20,Syngnathus typhle,Temp,Yes,Mate,Adult,22,935.933,188.1373,18,812.256,198.5429
+186,a17,Allan et al ,2013,2013,3.534,2.766,D,18,Pomacentrus amboinensis,Trop,Yes,Predator,Larvae,19,0.06,0.033,19,0.043,0.028
+187,a17,Allan et al ,2013,2013,3.534,2.766,D,,Pomacentrus amboinensis,Trop,Yes,Predator,Larvae,17,5.49,2.7295,16,6,3.2753
+188,a17,Allan et al ,2013,2013,3.534,2.766,D,,Pomacentrus amboinensis,Trop,Yes,Predator,Larvae,17,0.091,0.3923,18,0.051,0.0349
+189,a17,Allan et al ,2013,2013,3.534,2.766,D,,Pseudochromis fuscus,Trop,Yes,Prey,Larvae,21,0.142,0.2383,21,0.216,0.3116
+190,a17,Allan et al ,2013,2013,3.534,2.766,D,,Pseudochromis fuscus,Trop,Yes,Prey,Larvae,17,0.07,0.0289,16,0.079,0.032
+191,a18,Bignami et al,2013,2012,6.91,8.997,G,60,Rachycentron canadum,Subtrop,No,-,Larvae,60,42.27,34.2372,60,39.27,16.8862
+192,a18,Bignami et al,2013,2012,6.91,8.997,G,,Rachycentron canadum,Subtrop,No,-,Larvae,60,42.27,34.2372,60,40.15,24.3998
+193,a18,Bignami et al,2013,2012,6.91,8.997,G,,Rachycentron canadum,Subtrop,No,-,Larvae,60,0.35,0.3098,60,0.327,0.1549
+194,a18,Bignami et al,2013,2012,6.91,8.997,G,,Rachycentron canadum,Subtrop,No,-,Larvae,60,0.35,0.3098,60,0.34,0.2324
+195,a18,Bignami et al,2013,2012,6.91,8.997,G,,Rachycentron canadum,Subtrop,No,-,Larvae,60,3.79,3.4082,60,3.39,1.3943
+196,a18,Bignami et al,2013,2012,6.91,8.997,G,,Rachycentron canadum,Subtrop,No,-,Larvae,60,3.79,3.4082,60,3.7,1.2394
+197,a18,Bignami et al,2013,2012,6.91,8.997,G,,Rachycentron canadum,Subtrop,Yes,Food,Larvae,60,41.35,7.9009,60,39.31,16.0342
+198,a18,Bignami et al,2013,2012,6.91,8.997,G,,Rachycentron canadum,Subtrop,Yes,Food,Larvae,60,41.35,7.9009,60,34.94,27.1109
+199,a18,Bignami et al,2013,2012,6.91,8.997,G,,Rachycentron canadum,Subtrop,Yes,Food,Larvae,60,0.35,0.0775,60,0.328,0.1549
+200,a18,Bignami et al,2013,2012,6.91,8.997,G,,Rachycentron canadum,Subtrop,Yes,Food,Larvae,60,0.35,0.0775,60,0.29,0.2324
+201,a18,Bignami et al,2013,2012,6.91,8.997,G,,Rachycentron canadum,Subtrop,Yes,Food,Larvae,60,4,1.859,60,3.47,2.6336
+202,a18,Bignami et al,2013,2012,6.91,8.997,G,,Rachycentron canadum,Subtrop,Yes,Food,Larvae,60,4,1.859,60,3.43,4.4927
+203,a19,Forsgen et al,2013,2013,1.658,2.34,B,10,Gobiusculus flavescens,Temp,Yes,Light,Larvae,14,35.665,22.9064,11,62.281,22.951
+204,a19,Forsgen et al,2013,2013,1.658,2.34,B,,Gobiusculus flavescens,Temp,Yes,Light,Larvae,7,64.115,22.6,7,39.479,13.2288
+205,a20,Jutfelt & Hedgarde,2013,2013,2.304,3.627,C,16,Gadus morhua,Temp,Yes,Physical Seawater,Juvenile,19,89.974,15.1515,12,85.768,18.2039
+206,a20,Jutfelt & Hedgarde,2013,2013,2.304,3.627,C,,Gadus morhua,Temp,Yes,Predator,Juvenile,19,63.433,18.2158,12,64.254,9.8242
+207,a21,Jutfelt et al,2013,2013,3.534,2.766,D,21,Gasterosteus aculeatus,Subtrop,No,-,Adult,20,41.667,21.6228,20,21.502,21.1666
+208,a21,Jutfelt et al,2013,2013,3.534,2.766,D,,Gasterosteus aculeatus,Subtrop,No,-,Adult,25,42.901,18.4028,25,12.346,13.3449
+209,a21,Jutfelt et al,2013,2013,3.534,2.766,D,,Gasterosteus aculeatus,Subtrop,Yes,Novel object,Adult,20,68.605,35.3612,20,13.953,15.5988
+210,a21,Jutfelt et al,2013,2013,3.534,2.766,D,,Gasterosteus aculeatus,Subtrop,Yes,Shelter,Adult,20,27.261,54.891,20,36.047,55.4679
+211,a21,Jutfelt et al,2013,2013,3.534,2.766,D,,Gasterosteus aculeatus,Subtrop,Yes,Shelter,Adult,20,5.556,3.4659,20,32.946,41.0229
+212,a22,Lönnstedt et al,2013,2013,1.658,2.34,B,28,Pomacentrus amboinensis,Trop,Yes,Predator,Larvae,29,18.121,16.9417,29,2.181,8.8101
+213,a22,Lönnstedt et al,2013,2013,1.658,2.34,B,,Pomacentrus amboinensis,Trop,Yes,Predator,Larvae,29,2.181,9.0363,29,0.671,7.2269
+214,a22,Lönnstedt et al,2013,2013,1.658,2.34,B,,Pomacentrus amboinensis,Trop,No,-,Larvae,29,1.846,8.1316,29,1.342,9.0363
+215,a22,Lönnstedt et al,2013,2013,1.658,2.34,B,,Pomacentrus amboinensis,Trop,Yes,Predator,Larvae,29,13.652,17.5233,29,0.957,13.3983
+216,a22,Lönnstedt et al,2013,2013,1.658,2.34,B,,Pomacentrus amboinensis,Trop,Yes,Predator,Larvae,29,2.552,13.7429,29,0.893,10.9911
+217,a22,Lönnstedt et al,2013,2013,1.658,2.34,B,,Pomacentrus amboinensis,Trop,No,-,Larvae,29,1.148,8.2447,29,1.021,10.9911
+218,a22,Lönnstedt et al,2013,2013,1.658,2.34,B,,Pomacentrus amboinensis,Trop,Yes,Predator,Larvae,29,11.211,43.4691,29,0.897,9.661
+219,a22,Lönnstedt et al,2013,2013,1.658,2.34,B,,Pomacentrus amboinensis,Trop,Yes,Predator,Larvae,29,0.747,4.0227,29,1.644,8.8532
+220,a22,Lönnstedt et al,2013,2013,1.658,2.34,B,,Pomacentrus amboinensis,Trop,No,-,Larvae,29,1.644,8.8532,29,0.0001,6.4407
+221,a22,Lönnstedt et al,2013,2013,1.658,2.34,B,,Pomacentrus amboinensis,Trop,Yes,Predator,Larvae,29,38.071,17.4264,29,32.487,13.6675
+222,a22,Lönnstedt et al,2013,2013,1.658,2.34,B,,Pomacentrus amboinensis,Trop,Yes,Kin,Larvae,29,5.584,12.2997,29,0.508,10.9319
+223,a22,Lönnstedt et al,2013,2013,1.658,2.34,B,,Pomacentrus amboinensis,Trop,No,-,Larvae,29,1.005,8.1208,29,-0.503,5.4121
+224,a22,Lönnstedt et al,2013,2013,1.658,2.34,B,,Pomacentrus amboinensis,Trop,Yes,Predator,Larvae,29,41.371,30.0708,29,35.279,27.3351
+225,a22,Lönnstedt et al,2013,2013,1.658,2.34,B,,Pomacentrus amboinensis,Trop,Yes,Kin,Larvae,29,4.315,16.4032,29,1.523,12.2997
+226,a22,Lönnstedt et al,2013,2013,1.658,2.34,B,,Pomacentrus amboinensis,Trop,No,-,Larvae,29,4.315,9.5694,29,5.838,5.4659
+227,a22,Lönnstedt et al,2013,2013,1.658,2.34,B,,Pomacentrus amboinensis,Trop,Yes,Predator,Larvae,29,81.678,102.4312,29,31.888,54.2286
+228,a22,Lönnstedt et al,2013,2013,1.658,2.34,B,,Pomacentrus amboinensis,Trop,Yes,Kin,Larvae,29,-2.797,18.078,29,5.594,21.0883
+229,a22,Lönnstedt et al,2013,2013,1.658,2.34,B,,Pomacentrus amboinensis,Trop,No,-,Larvae,29,-1.119,6.026,29,1.678,12.052
+230,a22,Lönnstedt et al,2013,2013,1.658,2.34,B,,Pomacentrus amboinensis,Trop,Yes,Predator,Larvae,29,18.27,16.4032,29,2.132,11.4812
+231,a22,Lönnstedt et al,2013,2013,1.658,2.34,B,,Pomacentrus amboinensis,Trop,Yes,Predator,Larvae,29,37.766,19.6828,29,32.589,16.4032
+232,a22,Lönnstedt et al,2013,2013,1.658,2.34,B,,Pomacentrus amboinensis,Trop,Yes,Predator,Larvae,29,48.774,20.846,29,34.839,10.4203
+233,a22,Lönnstedt et al,2013,2013,1.658,2.34,B,,Pomacentrus amboinensis,Trop,Yes,Predator,Larvae,29,13.434,17.1356,29,1.061,13.3283
+234,a22,Lönnstedt et al,2013,2013,1.658,2.34,B,,Pomacentrus amboinensis,Trop,Yes,Predator,Larvae,29,41.364,28.5575,29,35,24.7502
+235,a22,Lönnstedt et al,2013,2013,1.658,2.34,B,,Pomacentrus amboinensis,Trop,Yes,Predator,Larvae,29,54.645,31.6163,29,35.667,34.0504
+236,a22,Lönnstedt et al,2013,2013,1.658,2.34,B,,Pomacentrus amboinensis,Trop,Yes,Predator,Larvae,29,11.474,45.3162,29,0.765,8.2393
+237,a22,Lönnstedt et al,2013,2013,1.658,2.34,B,,Pomacentrus amboinensis,Trop,Yes,Predator,Larvae,29,81.858,102.9967,29,31.366,49.4358
+238,a22,Lönnstedt et al,2013,2013,1.658,2.34,B,,Pomacentrus amboinensis,Trop,Yes,Predator,Larvae,29,103.521,84.951,29,41.408,53.0923
+239,a22,Lönnstedt et al,2013,2013,1.658,2.34,B,,Pomacentrus amboinensis,Trop,Yes,Predator,Larvae,15,0.459,0.488,15,0.0001,0.0004
+240,a22,Lönnstedt et al,2013,2013,1.658,2.34,B,,Pomacentrus amboinensis,Trop,Yes,Predator,Larvae,15,0.963,0.1433,15,0.079,0.1433
+241,a22,Lönnstedt et al,2013,2013,1.658,2.34,B,,Pomacentrus amboinensis,Trop,Yes,Predator,Larvae,15,1,0.0004,15,0.144,0.1782
+242,a23,McCormick et al,2013,2013,5.078,4.122,F,42,Pomacentrus moluccensis,Trop,Yes,Shelter,Larvae,29,4.366,4.222,29,3.801,4.6044
+243,a23,McCormick et al,2013,2013,5.078,4.122,F,,Pomacentrus amboinensis,Trop,Yes,Shelter,Larvae,29,2.258,4.222,29,8.43,4.7982
+244,a23,McCormick et al,2013,2013,5.078,4.122,F,,Pomacentrus moluccensis,Trop,Yes,Shelter,Larvae,55,0.747,0.2744,55,0.592,0.2596
+245,a23,McCormick et al,2013,2013,5.078,4.122,F,,Pomacentrus amboinensis,Trop,Yes,Shelter,Larvae,55,0.164,0.267,55,0.267,0.267
+246,a24,Munday et al,2013,2012,2.468,2.215,C,13,Plectropomus leopardus,Trop,Yes,Predator,Juvenile,20,6.23,4.262,20,10.164,4.262
+247,a24,Munday et al,2013,2012,2.468,2.215,C,,Plectropomus leopardus,Trop,Yes,Predator,Juvenile,20,6.23,4.262,20,46.885,40.657
+248,a24,Munday et al,2013,2012,2.468,2.215,C,,Plectropomus leopardus,Trop,Yes,Predator,Juvenile,20,6.23,4.262,20,91.148,4.918
+249,a24,Munday et al,2013,2012,2.468,2.215,C,,Plectropomus leopardus,Trop,Yes,Predator,Juvenile,20,9.18,3.607,20,10.82,3.934
+250,a24,Munday et al,2013,2012,2.468,2.215,C,,Plectropomus leopardus,Trop,Yes,Predator,Juvenile,20,9.18,3.607,20,47.213,40.656
+251,a24,Munday et al,2013,2012,2.468,2.215,C,,Plectropomus leopardus,Trop,Yes,Predator,Juvenile,20,9.18,3.607,20,90.82,4.918
+252,a24,Munday et al,2013,2012,2.468,2.215,C,,Plectropomus leopardus,Trop,Yes,Shelter,Juvenile,10,79.31,9.655,10,74.483,4.828
+253,a24,Munday et al,2013,2012,2.468,2.215,C,,Plectropomus leopardus,Trop,Yes,Shelter,Juvenile,10,79.31,9.655,10,39.31,8.276
+254,a24,Munday et al,2013,2012,2.468,2.215,C,,Plectropomus leopardus,Trop,Yes,Shelter,Juvenile,10,79.31,9.655,10,8.966,2.069
+255,a24,Munday et al,2013,2012,2.468,2.215,C,,Plectropomus leopardus,Trop,Yes,Shelter,Juvenile,10,4.969,0.0001,10,9.938,0.001
+256,a24,Munday et al,2013,2012,2.468,2.215,C,,Plectropomus leopardus,Trop,Yes,Shelter,Juvenile,10,4.969,0.0001,10,44.72,12.422
+257,a24,Munday et al,2013,2012,2.468,2.215,C,,Plectropomus leopardus,Trop,Yes,Shelter,Juvenile,10,4.969,0.0001,10,320.469,37.267
+258,a24,Munday et al,2013,2012,2.468,2.215,C,,Plectropomus leopardus,Trop,Yes,Shelter,Juvenile,10,6.316,3.308,10,13.835,2.707
+259,a24,Munday et al,2013,2012,2.468,2.215,C,,Plectropomus leopardus,Trop,Yes,Shelter,Juvenile,10,6.316,3.308,10,30.075,2.406
+260,a24,Munday et al,2013,2012,2.468,2.215,C,,Plectropomus leopardus,Trop,Yes,Shelter,Juvenile,10,6.316,3.308,10,36.391,0.0001
+261,a24,Munday et al,2013,2012,2.468,2.215,C,,Plectropomus leopardus,Trop,Yes,Shelter,Juvenile,10,536.986,38.356,10,575.342,14.384
+262,a24,Munday et al,2013,2012,2.468,2.215,C,,Plectropomus leopardus,Trop,Yes,Shelter,Juvenile,10,536.986,38.356,10,383.562,33.562
+263,a24,Munday et al,2013,2012,2.468,2.215,C,,Plectropomus leopardus,Trop,Yes,Shelter,Juvenile,10,536.986,38.356,10,100.685,23.973
+264,a25,Allan et al,2014,2014,5.051,4.847,F,42,Amphiprion melanopus,Trop,Yes,Mimicked threat,Juvenile,45,20.833,7.9828,43,15.179,12.4919
+265,a25,Allan et al,2014,2014,5.051,4.847,F,,Amphiprion melanopus,Trop,Yes,Mimicked threat,Juvenile,45,20.833,7.9828,37,18.75,7.7738
+266,a25,Allan et al,2014,2014,5.051,4.847,F,,Amphiprion melanopus,Trop,Yes,Mimicked threat,Juvenile,45,0.265,0.1275,43,0.195,0.1246
+267,a25,Allan et al,2014,2014,5.051,4.847,F,,Amphiprion melanopus,Trop,Yes,Mimicked threat,Juvenile,45,0.265,0.1275,37,0.242,0.1034
+268,a25,Allan et al,2014,2014,5.051,4.847,F,,Amphiprion melanopus,Trop,Yes,Mimicked threat,Juvenile,45,0.923,0.2214,43,0.681,0.2885
+269,a25,Allan et al,2014,2014,5.051,4.847,F,,Amphiprion melanopus,Trop,Yes,Mimicked threat,Juvenile,45,0.923,0.2214,37,0.864,0.2372
+270,a25,Allan et al,2014,2014,5.051,4.847,F,,Amphiprion melanopus,Trop,Yes,Mimicked threat,Juvenile,45,0.477,0.2281,43,0.307,0.2557
+271,a25,Allan et al,2014,2014,5.051,4.847,F,,Amphiprion melanopus,Trop,Yes,Mimicked threat,Juvenile,45,0.477,0.2281,37,0.383,0.1642
+272,a25,Allan et al,2014,2014,5.051,4.847,F,,Amphiprion melanopus,Trop,Yes,Mimicked threat,Juvenile,46,18.75,8.1524,34,19.231,8.4082
+273,a25,Allan et al,2014,2014,5.051,4.847,F,,Amphiprion melanopus,Trop,Yes,Mimicked threat,Juvenile,46,18.75,8.1524,34,17.335,8.3558
+274,a26,Bignami et al,2014,2014,2.619,2.276,C,60,Coryphaena hippurus,Subtrop,No,-,Larvae,60,6.35,0.538,60,5.448,0.538
+275,a26,Bignami et al,2014,2014,2.619,2.276,C,,Coryphaena hippurus,Subtrop,No,-,Larvae,60,6.35,0.538,60,4.911,0.288
+276,a26,Bignami et al,2014,2014,2.619,2.276,C,,Coryphaena hippurus,Subtrop,No,-,Larvae,60,0.563,0.06,60,0.482,0.066
+277,a26,Bignami et al,2014,2014,2.619,2.276,C,,Coryphaena hippurus,Subtrop,No,-,Larvae,60,0.563,0.06,60,0.445,0.072
+278,a27,Chivers et al,2014,2013,8.224,8.997,I,14,Pomacentrus amboinensis,Trop,No,-,Juvenile,14,-0.033,0.2881,14,0.036,0.2993
+279,a27,Chivers et al,2014,2013,8.224,8.997,I,,Pomacentrus amboinensis,Trop,No,-,Juvenile,14,0.054,0.1796,14,-0.051,0.202
+280,a27,Chivers et al,2014,2013,8.224,8.997,I,,Pomacentrus amboinensis,Trop,Yes,Predator,Juvenile,14,0.382,0.2133,14,0.095,0.2582
+281,a27,Chivers et al,2014,2013,8.224,8.997,I,,Pomacentrus amboinensis,Trop,Yes,Predator,Juvenile,14,0.463,0.2507,14,0.082,0.4939
+282,a27,Chivers et al,2014,2013,8.224,8.997,I,,Pomacentrus amboinensis,Trop,No,-,Juvenile,14,0.061,0.2058,14,-0.075,0.1684
+283,a27,Chivers et al,2014,2013,8.224,8.997,I,,Pomacentrus amboinensis,Trop,No,-,Juvenile,14,0.043,0.1871,14,0.021,0.1983
+284,a27,Chivers et al,2014,2013,8.224,8.997,I,,Pomacentrus amboinensis,Trop,Yes,Predator,Juvenile,14,0.454,0.2582,14,0.064,0.1833
+285,a27,Chivers et al,2014,2013,8.224,8.997,I,,Pomacentrus amboinensis,Trop,Yes,Predator,Juvenile,14,0.573,0.126,14,0.021,0.2487
+286,a28,Domenici et al,2014,2014,3.234,2.766,C,50,Pomacentrus wardi,Trop,No,-,Larvae,58,31.896,24.5304,42,28.104,24.912
+287,a29,Green & Jutfelt,2014,2014,3.248,3.345,D,7,Scyliorhinus canicula,Subtrop,No,-,Adult,7,14.459,10.1491,10,30.098,19.5397
+288,a29,Green & Jutfelt,2014,2014,3.248,3.345,D,,Scyliorhinus canicula,Subtrop,No,-,Adult,6,11.659,2.8659,5,5.582,2.0125
+289,a30,Hamilton et al,2014,2013,5.292,4.847,F,11,Sebastes diploproa,Deep,Yes,Shelter,Juvenile,15,457.613,370.811,15,750.617,204.0094
+290,a30,Hamilton et al,2014,2013,5.292,4.847,F,,Sebastes diploproa,Deep,Yes,Shelter,Juvenile,7,176.471,186.2926,8,298.529,232.9295
+291,a31,Munday et al,2014,2014,14.547,19.181,K,11,Dascyllus aruanus,Trop,Yes,Predator,Juvenile,10,0.0001,0.0003,10,97.758,5.6731
+292,a31,Munday et al,2014,2014,14.547,19.181,K,,Pomacentrus moluccensis,Trop,Yes,Predator,Juvenile,20,0.0001,0.0004,20,90.583,4.0115
+293,a31,Munday et al,2014,2014,14.547,19.181,K,,Apogon cyanosoma,Trop,Yes,Predator,Juvenile,10,0.0001,0.0003,10,94.619,7.0898
+294,a31,Munday et al,2014,2014,14.547,19.181,K,,Cheilodipterus quinquelineatus,Trop,Yes,Predator,Juvenile,10,0.0001,0.0003,10,98.655,1.4167
+295,a31,Munday et al,2014,2014,14.547,19.181,K,,Dascyllus aruanus,Trop,Yes,Physical Seawater,Juvenile,10,94.681,4.4841,10,48.936,3.3647
+296,a31,Munday et al,2014,2014,14.547,19.181,K,,Pomacentrus moluccensis,Trop,Yes,Physical Seawater,Juvenile,20,93.618,5.0133,20,50.355,4.7584
+297,a31,Munday et al,2014,2014,14.547,19.181,K,,Apogon cyanosoma,Trop,Yes,Physical Seawater,Juvenile,10,91.489,2.2421,10,49.291,2.2421
+298,a31,Munday et al,2014,2014,14.547,19.181,K,,Cheilodipterus quinquelineatus,Trop,Yes,Physical Seawater,Juvenile,10,91.489,3.3647,10,50.709,3.3647
+299,a31,Munday et al,2014,2014,14.547,19.181,K,,Dascyllus aruanus,Trop,Yes,Habitat,Juvenile,10,93.798,3.6777,10,50,3.6777
+300,a31,Munday et al,2014,2014,14.547,19.181,K,,Pomacentrus moluccensis,Trop,Yes,Habitat,Juvenile,20,93.023,6.9318,20,50.388,3.4659
+301,a31,Munday et al,2014,2014,14.547,19.181,K,,Apogon cyanosoma,Trop,Yes,Habitat,Juvenile,10,90.698,2.4508,10,51.163,2.4508
+302,a31,Munday et al,2014,2014,14.547,19.181,K,,Cheilodipterus quinquelineatus,Trop,Yes,Habitat,Juvenile,10,91.473,3.6777,10,50,1.227
+303,a31,Munday et al,2014,2014,14.547,19.181,K,,Dascyllus aruanus,Trop,Yes,Shelter,Juvenile,10,89.362,6.7293,10,8.511,13.4555
+304,a31,Munday et al,2014,2014,14.547,19.181,K,,Pomacentrus moluccensis,Trop,Yes,Shelter,Juvenile,10,88.652,11.2134,10,6.383,11.2134
+305,a31,Munday et al,2014,2014,14.547,19.181,K,,Apogon cyanosoma,Trop,Yes,Shelter,Juvenile,10,84.397,11.2134,10,0.0001,0.0003
+306,a31,Munday et al,2014,2014,14.547,19.181,K,,Cheilodipterus quinquelineatus,Trop,Yes,Shelter,Juvenile,10,80.142,17.9428,10,0.0001,0.0003
+307,a31,Munday et al,2014,2014,14.547,19.181,K,,Dascyllus aruanus,Trop,Yes,Shelter,Juvenile,10,67.273,57.4965,10,20.909,28.7483
+308,a31,Munday et al,2014,2014,14.547,19.181,K,,Pomacentrus moluccensis,Trop,Yes,Shelter,Juvenile,10,63.636,63.2456,10,13.636,17.2502
+309,a31,Munday et al,2014,2014,14.547,19.181,K,,Apogon cyanosoma,Trop,Yes,Shelter,Juvenile,10,15.455,20.1247,10,146.364,20.1247
+310,a31,Munday et al,2014,2014,14.547,19.181,K,,Cheilodipterus quinquelineatus,Trop,Yes,Shelter,Juvenile,10,32.747,28.7483,10,168.182,22.9992
+311,a31,Munday et al,2014,2014,14.547,19.181,K,,Dascyllus aruanus,Trop,Yes,Shelter,Juvenile,10,7.421,7.1531,10,16.561,1.7171
+312,a31,Munday et al,2014,2014,14.547,19.181,K,,Pomacentrus moluccensis,Trop,Yes,Shelter,Juvenile,10,7.421,7.1531,10,15.475,1.4293
+313,a31,Munday et al,2014,2014,14.547,19.181,K,,Apogon cyanosoma,Trop,Yes,Shelter,Juvenile,10,7.149,1.4293,10,18,0.0003
+314,a31,Munday et al,2014,2014,14.547,19.181,K,,Cheilodipterus quinquelineatus,Trop,Yes,Shelter,Juvenile,10,5.701,2.2895,10,18,0.0003
+315,a31,Munday et al,2014,2014,14.547,19.181,K,,Dascyllus aruanus,Trop,Yes,Shelter,Juvenile,10,6.216,1.423,10,1.396,1.1384
+316,a31,Munday et al,2014,2014,14.547,19.181,K,,Pomacentrus moluccensis,Trop,Yes,Shelter,Juvenile,10,6.081,1.1384,10,1.216,0.9961
+317,a31,Munday et al,2014,2014,14.547,19.181,K,,Apogon cyanosoma,Trop,Yes,Shelter,Juvenile,10,7.613,1.7108,10,1.441,1.2807
+318,a31,Munday et al,2014,2014,14.547,19.181,K,,Cheilodipterus quinquelineatus,Trop,Yes,Shelter,Juvenile,10,7.658,0.8538,10,0.901,1.423
+319,a32,Pimentel et al,2014,2014,2.391,2.215,C,10,Coryphaena hippurus,Subtrop,No,-,Larvae,10,1.094,0.248,10,0.553,0.135
+320,a32,Pimentel et al,2014,2014,2.391,2.215,C,,Coryphaena hippurus,Subtrop,No,-,Larvae,10,1.809,0.408,10,0.922,0.23
+321,a32,Pimentel et al,2014,2014,2.391,2.215,C,,Coryphaena hippurus,Subtrop,No,-,Larvae,10,0.8,0.633,10,0.299,0.49
+322,a33,Welch et al,2014,2014,14.547,19.181,K,156,Acanthochromis polyacanthus,Trop,Yes,Predator,Juvenile,148,10.811,10.9611,132,54.561,27.1718
+323,a33,Welch et al,2014,2014,14.547,19.181,K,,Acanthochromis polyacanthus,Trop,Yes,Predator,Juvenile,148,10.811,10.9611,145,77.027,24.4083
+324,a33,Welch et al,2014,2014,14.547,19.181,K,,Acanthochromis polyacanthus,Trop,Yes,Predator,Juvenile,160,10.811,11.3968,155,52.477,28.0372
+325,a33,Welch et al,2014,2014,14.547,19.181,K,,Acanthochromis polyacanthus,Trop,Yes,Predator,Juvenile,160,10.811,11.3968,161,72.523,25.7197
+326,a33,Welch et al,2014,2014,14.547,19.181,K,,Acanthochromis polyacanthus,Trop,Yes,Predator,Juvenile,62,10.811,7.0945,60,49.775,33.145
+327,a33,Welch et al,2014,2014,14.547,19.181,K,,Acanthochromis polyacanthus,Trop,Yes,Predator,Juvenile,62,10.811,7.0945,62,72.523,26.5984
+328,a33,Welch et al,2014,2014,14.547,19.181,K,,Acanthochromis polyacanthus,Trop,No,-,Juvenile,225,60.492,21.48,212,37.092,20.8502
+329,a33,Welch et al,2014,2014,14.547,19.181,K,,Acanthochromis polyacanthus,Trop,No,-,Juvenile,225,60.492,21.48,222,31.499,18.6693
+330,a33,Welch et al,2014,2014,14.547,19.181,K,,Acanthochromis polyacanthus,Trop,No,-,Juvenile,245,60.492,22.4143,250,37.584,22.6419
+331,a33,Welch et al,2014,2014,14.547,19.181,K,,Acanthochromis polyacanthus,Trop,No,-,Juvenile,245,60.492,22.4143,249,34.362,19.772
+332,a33,Welch et al,2014,2014,14.547,19.181,K,,Acanthochromis polyacanthus,Trop,No,-,Juvenile,105,60.492,14.6736,105,42.595,23.8447
+333,a33,Welch et al,2014,2014,14.547,19.181,K,,Acanthochromis polyacanthus,Trop,No,-,Juvenile,105,60.492,14.6736,105,39.553,22.0105
+334,a34,Bender et al,2015,2015,3.057,2.766,D,5,Pomacentrus wardi,Trop,Yes,Food,Adult,5,7.811,11.6432,5,8.047,8.9979
+335,a34,Bender et al,2015,2015,3.057,2.766,D,,Pomacentrus wardi,Trop,Yes,Food,Adult,5,9.467,17.4659,5,16.094,9.5256
+336,a34,Bender et al,2015,2015,3.057,2.766,D,,Pomacentrus wardi,Trop,Yes,Food,Adult,5,-1.183,10.0556,5,-1.183,12.1732
+337,a34,Bender et al,2015,2015,3.057,2.766,D,,Pomacentrus wardi,Trop,Yes,Food,Adult,5,-4.497,3.1752,5,-2.13,4.7628
+338,a34,Bender et al,2015,2015,3.057,2.766,D,,Pomacentrus wardi,Trop,Yes,Food,Adult,5,-1.765,1.5876,5,0.706,1.5876
+339,a34,Bender et al,2015,2015,3.057,2.766,D,,Pomacentrus wardi,Trop,Yes,Food,Adult,5,-0.706,1.5876,5,1.765,3.1752
+340,a34,Bender et al,2015,2015,3.057,2.766,D,,Pomacentrus wardi,Trop,Yes,Food,Adult,5,0.706,3.1752,5,-0.947,3.7052
+341,a34,Bender et al,2015,2015,3.057,2.766,D,,Pomacentrus wardi,Trop,Yes,Food,Adult,5,10.177,21.6988,5,8.757,10.0556
+342,a34,Bender et al,2015,2015,3.057,2.766,D,,Pomacentrus wardi,Trop,Yes,Food,Adult,5,1.765,7.938,5,0.706,4.7628
+343,a34,Bender et al,2015,2015,3.057,2.766,D,,Pomacentrus wardi,Trop,Yes,Food,Adult,5,19.881,15.3484,5,14.201,20.1112
+344,a34,Bender et al,2015,2015,3.057,2.766,D,,Pomacentrus wardi,Trop,Yes,Food,Adult,5,-6.39,4.7628,5,-18.225,28.0492
+345,a34,Bender et al,2015,2015,3.057,2.766,D,,Pomacentrus wardi,Trop,Yes,Food,Adult,5,-18.935,29.6368,5,-3.787,11.6432
+346,a34,Bender et al,2015,2015,3.057,2.766,D,,Pomacentrus wardi,Trop,Yes,Food,Adult,5,0.71,3.1752,5,0.71,1.5876
+347,a34,Bender et al,2015,2015,3.057,2.766,D,,Pomacentrus wardi,Trop,Yes,Food,Adult,5,-2.13,4.7628,5,-0.947,3.7052
+348,a34,Bender et al,2015,2015,3.057,2.766,D,,Pomacentrus wardi,Trop,Yes,Food,Adult,5,-5.449,3.7052,5,-11.361,17.4659
+349,a34,Bender et al,2015,2015,3.057,2.766,D,,Pomacentrus wardi,Trop,Yes,Food,Adult,5,-11.124,14.2885,5,-6.154,10.5855
+350,a34,Bender et al,2015,2015,3.057,2.766,D,,Pomacentrus wardi,Trop,Yes,Food,Adult,5,-2.13,4.7628,5,-9.467,16.936
+351,a34,Bender et al,2015,2015,3.057,2.766,D,,Pomacentrus wardi,Trop,Yes,Food,Adult,5,1.183,2.6453,5,2.367,2.6453
+352,a35,Dixson et al,2015,2014,8.044,8.997,I,8,Mustelus canis,Subtrop,Yes,Food,Adult,8,64.8,18.1019,8,65.6,20.3647
+353,a35,Dixson et al,2015,2014,8.044,8.997,I,,Mustelus canis,Subtrop,Yes,Food,Adult,8,64.8,18.1019,8,13.6,13.5765
+354,a35,Dixson et al,2015,2014,8.044,8.997,I,,Mustelus canis,Subtrop,Yes,Food,Adult,8,17.362,10.9121,8,23.425,4.6782
+355,a35,Dixson et al,2015,2014,8.044,8.997,I,,Mustelus canis,Subtrop,Yes,Food,Adult,8,17.362,10.9121,8,17.913,8.573
+356,a35,Dixson et al,2015,2014,8.044,8.997,I,,Mustelus canis,Subtrop,Yes,Food,Adult,8,23.212,13.336,8,20.674,6.1547
+357,a35,Dixson et al,2015,2014,8.044,8.997,I,,Mustelus canis,Subtrop,Yes,Food,Adult,8,23.212,13.336,8,15.233,13.3473
+358,a35,Dixson et al,2015,2014,8.044,8.997,I,,Mustelus canis,Subtrop,No,-,Adult,8,24.301,6.6694,8,28.835,10.2587
+359,a35,Dixson et al,2015,2014,8.044,8.997,I,,Mustelus canis,Subtrop,No,-,Adult,8,24.301,6.6694,8,24.301,6.7458
+360,a35,Dixson et al,2015,2014,8.044,8.997,I,,Mustelus canis,Subtrop,Yes,Food,Adult,8,34.884,37.273,8,13.566,19.7339
+361,a35,Dixson et al,2015,2014,8.044,8.997,I,,Mustelus canis,Subtrop,Yes,Food,Adult,8,34.884,37.273,8,1.938,5.4815
+362,a35,Dixson et al,2015,2014,8.044,8.997,I,,Mustelus canis,Subtrop,Yes,Food,Adult,8,28.571,21.646,8,9.694,9.3791
+363,a35,Dixson et al,2015,2014,8.044,8.997,I,,Mustelus canis,Subtrop,Yes,Food,Adult,8,28.571,21.646,8,5.867,17.3156
+364,a35,Dixson et al,2015,2014,8.044,8.997,I,,Mustelus canis,Subtrop,Yes,Food,Adult,8,8.093,8.9463,8,0.372,1.0522
+365,a35,Dixson et al,2015,2014,8.044,8.997,I,,Mustelus canis,Subtrop,Yes,Food,Adult,8,8.093,8.9463,8,0.093,0.263
+366,a35,Dixson et al,2015,2014,8.044,8.997,I,,Mustelus canis,Subtrop,Yes,Food,Adult,8,4.738,3.4818,8,0.369,0.5233
+367,a35,Dixson et al,2015,2014,8.044,8.997,I,,Mustelus canis,Subtrop,Yes,Food,Adult,8,4.738,3.4818,8,0.431,1.0437
+368,a35,Dixson et al,2015,2014,8.044,8.997,I,,Mustelus canis,Subtrop,Yes,Food,Adult,8,62.766,24.0727,8,60.638,28.2843
+369,a35,Dixson et al,2015,2014,8.044,8.997,I,,Mustelus canis,Subtrop,Yes,Food,Adult,8,62.766,24.0727,8,24.255,19.2588
+370,a35,Dixson et al,2015,2014,8.044,8.997,I,,Mustelus canis,Subtrop,Yes,Food,Adult,8,75.975,15.6469,8,61.277,37.3098
+371,a35,Dixson et al,2015,2014,8.044,8.997,I,,Mustelus canis,Subtrop,Yes,Food,Adult,8,75.975,15.6469,8,7.021,9.628
+372,a36,Faliero et al,2015,2015,-,3.46,-,6,Hippocampus guttulatus ,Temp,Yes,Food,Adult,6,30.446,11.139,6,7.55,1.733
+373,a36,Faliero et al,2015,2015,-,3.46,-,,Hippocampus guttulatus ,Temp,No,-,Adult,6,65.278,15.972,6,85.417,13.194
+374,a36,Faliero et al,2015,2015,-,3.46,-,,Hippocampus guttulatus ,Temp,No,-,Adult,6,34.722,18.75,6,31.944,31.944
+375,a36,Faliero et al,2015,2015,-,3.46,-,,Hippocampus guttulatus ,Temp,No,-,Adult,6,30.556,13.194,6,52.083,28.472
+376,a36,Faliero et al,2015,2015,-,3.46,-,,Hippocampus guttulatus ,Temp,No,-,Adult,6,34.772,15.972,6,14.583,13.194
+377,a36,Faliero et al,2015,2015,-,3.46,-,,Hippocampus guttulatus ,Temp,No,-,Adult,6,26.389,12.5,6,6.25,6.944
+378,a36,Faliero et al,2015,2015,-,3.46,-,,Hippocampus guttulatus ,Temp,No,-,Adult,6,9.082,15.278,6,8.333,7.639
+379,a37,Ferrari et al ,2015,2014,8.044,8.997,I,17,Pseudochromis fuscus,Trop,Yes,Prey,Juvenile,18,0.325,0.2721,18,0.325,0.2426
+380,a37,Ferrari et al ,2015,2014,8.044,8.997,I,,Pseudochromis fuscus,Trop,Yes,Prey,Juvenile,16,0.676,0.3486,16,0.273,0.3021
+381,a37,Ferrari et al ,2015,2014,8.044,8.997,I,,Pseudochromis fuscus,Trop,Yes,Prey,Juvenile,16,0.321,0.3331,16,0.732,0.3021
+382,a38,Heinrich et al,2016,2015,2.626,2.906,C,11,Hemiscyllium ocellatum,Trop,Yes,Habitat,Adult,11,221.0818,208.0178,11,297.2818,314.5768
+383,a38,Heinrich et al,2016,2015,2.626,2.906,C,,Hemiscyllium ocellatum,Trop,Yes,Habitat,Adult,11,221.0818,208.0178,11,202.9909,225.4187
+384,a38,Heinrich et al,2016,2015,2.626,2.906,C,,Hemiscyllium ocellatum,Trop,Yes,Habitat,Adult,11,134.1909,42.1573,11,143.8636,105.2402
+385,a38,Heinrich et al,2016,2015,2.626,2.906,C,,Hemiscyllium ocellatum,Trop,Yes,Habitat,Adult,11,134.1909,42.1573,11,219.9182,205.0103
+386,a38,Heinrich et al,2016,2015,2.626,2.906,C,,Hemiscyllium ocellatum,Trop,Yes,Habitat,Adult,11,24.1545,27.8562,11,22.7364,18.3898
+387,a38,Heinrich et al,2016,2015,2.626,2.906,C,,Hemiscyllium ocellatum,Trop,Yes,Habitat,Adult,11,22.7364,27.8562,11,18.4818,17.9587
+388,a38,Heinrich et al,2016,2015,2.626,2.906,C,,Hemiscyllium ocellatum,Trop,Yes,Habitat,Adult,10,169.9455,151.0642,10,227.5091,184.7208
+389,a38,Heinrich et al,2016,2015,2.626,2.906,C,,Hemiscyllium ocellatum,Trop,Yes,Habitat,Adult,10,169.9455,184.7208,10,193.4727,258.7406
+390,a38,Heinrich et al,2016,2015,2.626,2.906,C,,Hemiscyllium ocellatum,Trop,Yes,Habitat,Adult,10,55.2,258.7406,12,54.75,35.4891
+391,a38,Heinrich et al,2016,2015,2.626,2.906,C,,Hemiscyllium ocellatum,Trop,Yes,Habitat,Adult,10,55.2,40.4469,11,54.2727,30.2162
+392,a38,Heinrich et al,2016,2015,2.626,2.906,C,,Hemiscyllium ocellatum,Trop,Yes,Habitat,Adult,10,0.6519,0.2918,12,0.6331,0.4259
+393,a38,Heinrich et al,2016,2015,2.626,2.906,C,,Hemiscyllium ocellatum,Trop,Yes,Habitat,Adult,10,0.6519,0.2918,11,0.5494,0.24
+394,a39,Jutfelt & Hedgarde,2015,2015,3.042,3.627,D,21,Gadus morhua,Temp,No,-,Juvenile,22,23.556,8.0159,23,29.427,12.6293
+395,a39,Jutfelt & Hedgarde,2015,2015,3.042,3.627,D,,Gadus morhua,Temp,Yes,Shelter,Juvenile,22,161.017,190.7967,20,142.373,140.2283
+396,a39,Jutfelt & Hedgarde,2015,2015,3.042,3.627,D,,Gadus morhua,Temp,No,-,Juvenile,21,48.553,31.7023,17,39.497,24.8953
+397,a40,Lai et al,2015,2015,-,3.46,-,12,Gasterosteus aculeatus,Subtrop,No,-,Adult,12,33.333,25.6499,13,14.228,16.856
+398,a40,Lai et al,2015,2015,-,"3,46",-,,Gasterosteus aculeatus,Subtrop,No,-,Adult,11,36.478,17.4279,12,16.667,13.6174
+399,a41,Maneja et al,2015,2015,1.796,1.99,B,25,Clupea harengus,Temp,No,-,Larvae,19,0.247,0.239,19,0.247,0.2106
+400,a41,Maneja et al,2015,2015,1.796,1.99,B,,Clupea harengus,Temp,No,-,Larvae,19,0.247,0.1509,19,0.247,0.239
+401,a41,Maneja et al,2015,2015,1.796,1.99,B,,Clupea harengus,Temp,No,-,Larvae,20,4.6107,5.2086,20,3.8617,4.696
+402,a41,Maneja et al,2015,2015,1.796,1.99,B,,Clupea harengus,Temp,No,-,Larvae,20,4.6107,5.2086,20,4.4383,5.5074
+403,a41,Maneja et al,2015,2015,1.796,1.99,B,,Clupea harengus,Temp,No,-,Larvae,43,16.064,9.8402,43,14.7193,8.6738
+404,a41,Maneja et al,2015,2015,1.796,1.99,B,,Clupea harengus,Temp,No,-,Larvae,43,16.064,9.8402,43,15.9657,8.5281
+405,a41,Maneja et al,2015,2015,1.796,1.99,B,,Clupea harengus,Temp,No,-,Larvae,19,0.118,0.1185,19,0.158,0.1481
+406,a41,Maneja et al,2015,2015,1.796,1.99,B,,Clupea harengus,Temp,No,-,Larvae,19,0.118,0.1185,19,0.118,0.0889
+407,a41,Maneja et al,2015,2015,1.796,1.99,B,,Clupea harengus,Temp,No,-,Larvae,25,0.1457,0.1017,25,0.1277,0.1128
+408,a41,Maneja et al,2015,2015,1.796,1.99,B,,Clupea harengus,Temp,No,-,Larvae,25,0.1457,0.1017,25,0.184,0.058
+409,a42,Naslund et al,2015,2015,1.583,1.674,B,14,Gasterosteus aculeatus,Subtrop,Yes,Mimicked predator,Adult,15,3.344,7.2895,15,4.033,5.7344
+410,a42,Naslund et al,2015,2015,1.583,1.674,B,,Gasterosteus aculeatus,Subtrop,Yes,Mimicked predator,Adult,15,3.229,4.0172,15,6.618,8.2716
+411,a42,Naslund et al,2015,2015,1.583,1.674,B,,Gasterosteus aculeatus,Subtrop,Yes,Mimicked predator,Adult,14,7.328,9.7646,13,2.656,2.4429
+412,a42,Naslund et al,2015,2015,1.583,1.674,B,,Gasterosteus aculeatus,Subtrop,Yes,Mimicked predator,Adult,14,4.465,7.2313,13,2.352,3.8134
+413,a42,Naslund et al,2015,2015,1.583,1.674,B,,Gasterosteus aculeatus,Subtrop,No,-,Adult,14,69.905,22.117,13,14.929,16.7267
+414,a42,Naslund et al,2015,2015,1.583,1.674,B,,Gasterosteus aculeatus,Subtrop,No,-,Adult,15,9.9,13.4369,15,6.2,11.3621
+415,a42,Naslund et al,2015,2015,1.583,1.674,B,,Gasterosteus aculeatus,Subtrop,Yes,Mimicked predator,Adult,15,26.6,31.6162,15,36.1,33.8886
+416,a42,Naslund et al,2015,2015,1.583,1.674,B,,Gasterosteus aculeatus,Subtrop,No,-,Adult,15,60.7,20.5505,15,58.3,20.7481
+417,a42,Naslund et al,2015,2015,1.583,1.674,B,,Gasterosteus aculeatus,Subtrop,Yes,Mimicked predator,Adult,15,53.2,29.3438,15,40.7,28.9486
+418,a42,Naslund et al,2015,2015,1.583,1.674,B,,Gasterosteus aculeatus,Subtrop,No,-,Adult,15,7.8,9.2873,15,4.8,7.7064
+419,a42,Naslund et al,2015,2015,1.583,1.674,B,,Gasterosteus aculeatus,Subtrop,Yes,Mimicked predator,Adult,15,4.4,12.5477,15,10,16.2033
+420,a42,Naslund et al,2015,2015,1.583,1.674,B,,Gasterosteus aculeatus,Subtrop,No,-,Adult,15,21.7,16.2033,15,30.8,18.0805
+421,a42,Naslund et al,2015,2015,1.583,1.674,B,,Gasterosteus aculeatus,Subtrop,Yes,Mimicked predator,Adult,15,15.8,19.5625,15,13.2,18.3769
+422,a42,Naslund et al,2015,2015,1.583,1.674,B,,Gasterosteus aculeatus,Subtrop,No,-,Adult,14,2,20.14,13,7.4,21.247
+423,a42,Naslund et al,2015,2015,1.583,1.674,B,,Gasterosteus aculeatus,Subtrop,Yes,Mimicked predator,Adult,14,21.6,29.5896,13,25.5,29.9849
+424,a42,Naslund et al,2015,2015,1.583,1.674,B,,Gasterosteus aculeatus,Subtrop,No,-,Adult,14,78.7,25.008,13,64.6,28.5133
+425,a42,Naslund et al,2015,2015,1.583,1.674,B,,Gasterosteus aculeatus,Subtrop,Yes,Mimicked predator,Adult,14,52.5,25.008,13,43.4,30.8127
+426,a42,Naslund et al,2015,2015,1.583,1.674,B,,Gasterosteus aculeatus,Subtrop,No,-,Adult,14,3.5,14.8903,13,6.6,17.108
+427,a42,Naslund et al,2015,2015,1.583,1.674,B,,Gasterosteus aculeatus,Subtrop,Yes,Mimicked predator,Adult,14,4.6,8.7814,13,12.1,12.601
+428,a42,Naslund et al,2015,2015,1.583,1.674,B,,Gasterosteus aculeatus,Subtrop,No,-,Adult,14,15.8,16.2266,13,21.4,17.9358
+429,a42,Naslund et al,2015,2015,1.583,1.674,B,,Gasterosteus aculeatus,Subtrop,Yes,Mimicked predator,Adult,14,21.3,20.14,13,21.9,20.3272
+430,a43,Pistevos et al,2015,2015,5.228,4.122,F,6,Heterodontus portusjacksoni,Subtrop,Yes,Prey,Adult,4,0.719,0.72,4,0.826,0.9123
+431,a43,Pistevos et al,2015,2015,5.228,4.122,F,,Heterodontus portusjacksoni,Subtrop,Yes,Prey,Adult,7,169.091,487.8698,7,834.545,561.0518
+432,a44,Rossi et al,2015,2015,4.823,4.847,E,35,Lates calcarifer,Trop,Yes,Auditory,Larvae,36,48.18,40.416,36,48.766,42.174
+433,a44,Rossi et al,2015,2015,4.823,4.847,E,,Lates calcarifer,Trop,Yes,Auditory,Larvae,36,59.163,25.482,36,32.083,24.498
+434,a44,Rossi et al,2015,2015,4.823,4.847,E,,Lates calcarifer,Trop,Yes,Auditory,Larvae,36,48.619,24.6,36,52.062,25.374
+435,a44,Rossi et al,2015,2015,4.823,4.847,E,,Lates calcarifer,Trop,Yes,Auditory,Larvae,36,46.13,12.3,36,44.333,13.152
+436,a44,Rossi et al,2015,2015,4.823,4.847,E,,Lates calcarifer,Trop,Yes,Auditory,Larvae,36,47.74,25.482,36,53.375,26.25
+437,a44,Rossi et al,2015,2015,4.823,4.847,E,,Lates calcarifer,Trop,Yes,Auditory,Larvae,36,0.939,0.906,36,0.731,0.624
+438,a44,Rossi et al,2015,2015,4.823,4.847,E,,Lates calcarifer,Trop,Yes,Auditory,Larvae,36,2.004,1.314,36,1.561,1.032
+439,a44,Rossi et al,2015,2015,4.823,4.847,E,,Lates calcarifer,Trop,Yes,Auditory,Larvae,36,1.675,0.906,36,1.524,0.78
+440,a44,Rossi et al,2015,2015,4.823,4.847,E,,Lates calcarifer,Trop,Yes,Auditory,Larvae,36,1.942,0.846,36,1.618,0.624
+441,a44,Rossi et al,2015,2015,4.823,4.847,E,,Lates calcarifer,Trop,Yes,Auditory,Larvae,36,1.472,0.906,36,1.414,0.906
+442,a44,Rossi et al,2015,2015,4.823,4.847,E,,Lates calcarifer,Trop,Yes,Shelter,Larvae,28,69.207,25.8119,28,89.634,14.5199
+443,a44,Rossi et al,2015,2015,4.823,4.847,E,,Lates calcarifer,Trop,Yes,Shelter,Larvae,28,34.826,42.8135,28,122.145,130.8694
+444,a45,Duteil et al,2016,2016,2.243,2.504,C,90,Dicentrarchus labrax,Subtrop,Yes,Shelter,Adult,90,0.574,0.3926,90,0.495,0.3215
+445,a46,Heuer et al,2016,2016,4.259,4.122,E,20,Acanthochromis polyacanthus,Trop,Yes,Predator,Adult,20,15.258,13.649,20,53.052,25.196
+446,a47,Lopes et al,2016,2016,2.136,2.215,C,15,Atherina presbyter,Subtrop,Yes,Kin,Larvae,12,2.766,0.7101,12,3.689,1.3475
+447,a47,Lopes et al,2016,2016,2.136,2.215,C,,Atherina presbyter,Subtrop,Yes,Kin,Larvae,12,3.832,1.4896,12,3.934,1.6316
+448,a47,Lopes et al,2016,2016,2.136,2.215,C,,Atherina presbyter,Subtrop,Yes,Kin,Larvae,12,1.469,0.1905,12,2.018,0.1905
+449,a47,Lopes et al,2016,2016,2.136,2.215,C,,Atherina presbyter,Subtrop,Yes,Kin,Larvae,12,1.393,0.1524,12,1.283,0.1143
+450,a47,Lopes et al,2016,2016,2.136,2.215,C,,Atherina presbyter,Subtrop,Yes,Kin,Larvae,12,0.768,0.1074,12,1.079,0.1074
+451,a47,Lopes et al,2016,2016,2.136,2.215,C,,Atherina presbyter,Subtrop,Yes,Kin,Larvae,12,0.778,0.0727,12,0.82,0.0346
+452,a47,Lopes et al,2016,2016,2.136,2.215,C,,Atherina presbyter,Subtrop,No,-,Larvae,31,45.63,22.4604,31,24.958,19.6486
+453,a47,Lopes et al,2016,2016,2.136,2.215,C,,Atherina presbyter,Subtrop,No,-,Larvae,15,40.336,31.2434,29,27.731,25.7949
+454,a47,Lopes et al,2016,2016,2.136,2.215,C,,Atherina presbyter,Subtrop,No,-,Larvae,15,40.755,16.8087,16,31.509,17.36
+455,a47,Lopes et al,2016,2016,2.136,2.215,C,,Atherina presbyter,Subtrop,No,-,Larvae,7,40,11.98,14,24.34,14.121
+456,a48,Milazzo et al,2016,2016,4.94,4.847,E,13,Symphodus ocellatus,Subtrop,Yes,Mate,Adult,14,21.122,13.0403,18,15.816,8.2998
+457,a48,Milazzo et al,2016,2016,4.94,4.847,E,,Symphodus ocellatus,Subtrop,Yes,Mate,Adult,7,16.554,12.4284,12,12.584,14.392
+458,a49,Munday et al,2016,2016,2.177,2.118,C,24,Amphiprion percula,Trop,Yes,Predator,Larvae,16,8.969,8.968,16,80.269,23.32
+459,a49,Munday et al,2016,2016,2.177,2.118,C,,Pomacentrus amboinensis,Trop,Yes,Predator,Larvae,26,0.016,0.0051,26,0.027,0.0357
+460,a49,Munday et al,2016,2016,2.177,2.118,C,,Pomacentrus amboinensis,Trop,Yes,Predator,Larvae,26,0.65,0.0969,26,0.568,0.1734
+461,a49,Munday et al,2016,2016,2.177,2.118,C,,Pomacentrus amboinensis,Trop,Yes,Predator,Larvae,26,0.02,0.0051,26,0.018,0.0051
+462,a49,Munday et al,2016,2016,2.177,2.118,C,,Pomacentrus amboinensis,Trop,Yes,Predator,Larvae,26,1.189,0.2142,26,1.034,0.255
+463,a50,Munday et al,2016,2015,2.626,2.906,C,30,Seriola lalandi,Subtrop,No,-,Larvae,30,100,42.7224,30,80,53.6768
+464,a50,Munday et al,2016,2015,2.626,2.906,C,,Seriola lalandi,Subtrop,No,-,Larvae,30,100,42.7224,30,116,70.1085
+465,a51,Nadler et al,2016,2016,2.323,3.46,C,15,Chromis viridis,Subtrop,Yes,Kin,Not provided,18,0.622,0.2249,18,0.462,0.1994
+466,a51,Nadler et al,2016,2016,2.323,3.46,C,,Chromis viridis,Subtrop,Yes,Kin,Not provided,18,0.622,0.2249,18,0.504,0.3267
+467,a51,Nadler et al,2016,2016,2.323,3.46,C,,Chromis viridis,Subtrop,Yes,Kin,Not provided,18,0.377,0.2291,18,0.537,0.2079
+468,a51,Nadler et al,2016,2016,2.323,3.46,C,,Chromis viridis,Subtrop,Yes,Kin,Not provided,18,0.377,0.2291,18,0.496,0.3012
+469,a51,Nadler et al,2016,2016,2.323,3.46,C,,Chromis viridis,Subtrop,Yes,Kin,Not provided,18,45.441,20.5895,18,46.324,26.2025
+470,a51,Nadler et al,2016,2016,2.323,3.46,C,,Chromis viridis,Subtrop,Yes,Kin,Not provided,18,45.441,20.5895,18,41.912,35.5618
+471,a51,Nadler et al,2016,2016,2.323,3.46,C,,Chromis viridis,Subtrop,Yes,Kin,Not provided,10,5.106,4.2027,10,11.402,8.9967
+472,a51,Nadler et al,2016,2016,2.323,3.46,C,,Chromis viridis,Subtrop,Yes,Kin,Not provided,10,5.106,4.2027,10,10.842,8.4781
+473,a51,Nadler et al,2016,2016,2.323,3.46,C,,Chromis viridis,Subtrop,Yes,Kin,Not provided,10,10.959,16.662,10,10.376,7.2985
+474,a51,Nadler et al,2016,2016,2.323,3.46,C,,Chromis viridis,Subtrop,Yes,Kin,Not provided,10,10.95,16.662,10,8.674,6.1949
+475,a52,Nagelkerken et al,2016,2015,17.184,19.181,K,89,Gobius bucchichi,Subtrop,Yes,Mimicked threat,Not provided,73,29.381,15.0887,73,27.454,15.0887
+476,a52,Nagelkerken et al,2016,2015,17.184,19.181,K,,Gobius bucchichi,Subtrop,Yes,Mimicked threat,Not provided,73,29.702,15.0887,73,24.243,19.2069
+477,a52,Nagelkerken et al,2016,2015,17.184,19.181,K,,Gobius bucchichi,Subtrop,Yes,Mimicked threat,Not provided,73,7.808,4.5625,73,6.904,4.9128
+478,a52,Nagelkerken et al,2016,2015,17.184,19.181,K,,Gobius bucchichi,Subtrop,Yes,Mimicked threat,Not provided,73,6.288,4.9128,73,5.671,5.2631
+479,a52,Nagelkerken et al,2016,2015,17.184,19.181,K,,Gobius bucchichi,Subtrop,Yes,Mimicked threat,Not provided,73,2.595,3.2211,73,1.228,1.9053
+480,a52,Nagelkerken et al,2016,2015,17.184,19.181,K,,Gobius bucchichi,Subtrop,Yes,Mimicked threat,Not provided,73,1.619,1.6661,73,0.74,1.0765
+481,a52,Nagelkerken et al,2016,2015,17.184,19.181,K,,Forsterygion lapillum,Temp,Yes,Mimicked threat,Not provided,107,42.805,30.2771,102,32.561,27.097
+482,a52,Nagelkerken et al,2016,2015,17.184,19.181,K,,Forsterygion lapillum,Temp,Yes,Mimicked threat,Not provided,107,46.463,37.849,102,27.683,17.2399
+483,a52,Nagelkerken et al,2016,2015,17.184,19.181,K,,Forsterygion lapillum,Temp,Yes,Mimicked threat,Not provided,107,11.548,8.6787,102,11.419,8.4735
+484,a52,Nagelkerken et al,2016,2015,17.184,19.181,K,,Forsterygion lapillum,Temp,Yes,Mimicked threat,Not provided,107,11.097,10.0131,102,9.29,6.5142
+485,a52,Nagelkerken et al,2016,2015,17.184,19.181,K,,Forsterygion lapillum,Temp,Yes,Mimicked threat,Not provided,107,4.171,3.3411,102,2.558,1.626
+486,a52,Nagelkerken et al,2016,2015,17.184,19.181,K,,Forsterygion lapillum,Temp,Yes,Mimicked threat,Not provided,107,2.696,2.3791,102,2.373,2.3229
+487,a53,Nasuchon et al,2016,2016,0.839,0.794,A,14,Engraulis japonicus,Temp,Yes,Mimicked threat,Adult,15,6.3,4,12,7.3,2.6
+488,a53,Nasuchon et al,2016,2016,0.839,0.794,A,,Engraulis japonicus,Temp,Yes,Mimicked threat,Adult,15,22.1,5.4,12,24.8,10.6
+489,a53,Nasuchon et al,2016,2016,0.839,0.794,A,,Engraulis japonicus,Temp,Yes,Mimicked threat,Adult,15,21.7,3.4,12,21.4,4.1
+490,a53,Nasuchon et al,2016,2016,0.839,0.794,A,,Engraulis japonicus,Temp,Yes,Mimicked threat,Adult,15,2.143,0.586,12,1.703,1.263
+491,a53,Nasuchon et al,2016,2016,0.839,0.794,A,,Engraulis japonicus,Temp,Yes,Mimicked threat,Adult,15,0.05,0.01,12,0.047,0.023
+492,a53,Nasuchon et al,2016,2016,0.839,0.794,A,,Engraulis japonicus,Temp,Yes,Mimicked threat,Adult,15,1.412,0.612,12,1.55,0.562
+493,a53,Nasuchon et al,2016,2016,0.839,0.794,A,,Engraulis japonicus,Temp,Yes,Mimicked threat,Adult,15,76.203,44.118,12,116.31,85.561
+494,a54,Pimentel et al,2016,2016,3.496,3.537,D,12,Sparus aurata,Subtrop,Yes,Food,Larvae,12,47.423,6.4294,12,32.474,6.0726
+495,a54,Pimentel et al,2016,2016,3.496,3.537,D,,Argyrosomus regius,Subtrop,Yes,Food,Larvae,12,39.793,6.0864,12,30.207,6.4432
+496,a54,Pimentel et al,2016,2016,3.496,3.537,D,,Sparus aurata,Subtrop,Yes,Food,Larvae,12,5.295,2.8475,12,1.557,1.015
+497,a54,Pimentel et al,2016,2016,3.496,3.537,D,,Argyrosomus regius,Subtrop,Yes,Food,Larvae,12,4.208,0.0003,12,3.492,0.0003
+498,a54,Pimentel et al,2016,2016,3.496,3.537,D,,Sparus aurata,Subtrop,Yes,Food,Larvae,12,4.364,1.8879,12,1.031,0.0003
+499,a54,Pimentel et al,2016,2016,3.496,3.537,D,,Argyrosomus regius,Subtrop,Yes,Food,Larvae,12,4.697,2.7297,12,2.061,0.0003
+500,a54,Pimentel et al,2016,2016,3.496,3.537,D,,Sparus aurata,Subtrop,Yes,Food,Larvae,12,0.0001,0.0003,12,0.0001,0.0003
+501,a54,Pimentel et al,2016,2016,3.496,3.537,D,,Argyrosomus regius,Subtrop,Yes,Food,Larvae,12,0.0001,0.0003,12,0.0001,0.0003
+502,a55,Rossi et al,2016,2016,3.089,3.345,D,64,Argyrosomus japonicus,Trop,Yes,Auditory,Larvae,64,65.586,43.888,64,37.761,50
+503,a55,Rossi et al,2016,2016,3.089,3.345,D,,Argyrosomus japonicus,Trop,Yes,Auditory,Larvae,64,50.781,47.92,64,44.389,51.872
+504,a55,Rossi et al,2016,2016,3.089,3.345,D,,Argyrosomus japonicus,Trop,Yes,Auditory,Larvae,64,65.586,43.888,64,44.389,51.872
+505,a56,Sampaio et al,2016,2016,2.136,2.215,C,30,Solea senegalensis,Trop,No,-,Juvenile,30,22.031,14.8248,30,26.094,15.8114
+506,a56,Sampaio et al,2016,2016,2.136,2.215,C,,Solea senegalensis,Trop,Yes,Habitat,Juvenile,30,166.188,41.9282,30,125.04,106.5759
+507,a57,Silva et al,2016,2016,4.9,4.61,E,40,Atherina presbyter,Subtrop,No,-,Larvae,40,154936.875,25490.4463,40,145751.875,36812.374
+508,a57,Silva et al,2016,2016,4.9,4.61,E,,Atherina presbyter,Subtrop,No,-,Larvae,40,154936.875,25490.4463,40,157061.25,25560.3603
+509,a58,Sundin & Jutfelt,2016,2015,2.626,2.906,C,17,Ctenolabrus rupestris,Temp,No,-,Juvenile,24,30,24.3168,24,39.1666,23.2036
+510,a58,Sundin & Jutfelt,2016,2015,2.626,2.906,C,,Ctenolabrus rupestris,Temp,No,-,Juvenile,23,29.5652,31.8346,17,16.4706,23.7016
+511,a58,Sundin & Jutfelt,2016,2015,2.626,2.906,C,,Ctenolabrus rupestris,Temp,No,-,Juvenile,18,33.39,6.949,17,29.492,7.288
+512,a58,Sundin & Jutfelt,2016,2015,2.626,2.906,C,,Ctenolabrus rupestris,Temp,No,-,Juvenile,16,0.943,0.031,11,0.9282,0.0213
+513,a58,Sundin & Jutfelt,2016,2015,2.626,2.906,C,,Ctenolabrus rupestris,Temp,No,-,Juvenile,16,1.594,0.177,11,2.043,0.1739
+514,a58,Sundin & Jutfelt,2016,2015,2.626,2.906,C,,Ctenolabrus rupestris,Temp,Yes,Prey,Juvenile,16,42.3463,11.7622,15,50.635,3.9943
+515,a58,Sundin & Jutfelt,2016,2015,2.626,2.906,C,,Ctenolabrus rupestris,Temp,Yes,Predator,Juvenile,16,36.1494,8.0602,15,36.0725,1.169
+516,a59,Allan et al,2017,2017,4.847,4.847,E,18,Pomacentrus wardi,Trop,Yes,Predator,Larvae,17,1.277,0.8782,18,3.191,6.3173
+517,a59,Allan et al,2017,2017,4.847,4.847,E,,Pomacentrus wardi,Trop,Yes,Predator,Larvae,17,0.299,0.1484,18,0.307,0.1527
+518,a59,Allan et al,2017,2017,4.847,4.847,E,,Pomacentrus wardi,Trop,Yes,Predator,Larvae,17,0.416,0.1855,18,0.331,0.1909
+519,a59,Allan et al,2017,2017,4.847,4.847,E,,Pomacentrus wardi,Trop,Yes,Predator,Larvae,17,0.082,0.0618,18,0.076,0.0679
+520,a59,Allan et al,2017,2017,4.847,4.847,E,,Pseudochromis fuscus,Trop,Yes,Prey,Larvae,17,1.576,0.2226,18,2.12,2.5371
+521,a59,Allan et al,2017,2017,4.847,4.847,E,,Pseudochromis fuscus,Trop,Yes,Prey,Larvae,17,0.007,0.033,18,0.106,0.2546
+522,a60,Castro et al,2017,2017,2.766,2.766,C,29,Pomatoschistus pictus,Temp,Yes,Auditory,Larvae,30,80.216,27.5833,28,28.058,26.648
+523,a60,Castro et al,2017,2017,2.766,2.766,C,,Pomatoschistus pictus,Temp,Yes,Auditory,Larvae,30,66.346,26.3345,28,38.462,32.2253
+524,a60,Castro et al,2017,2017,2.766,2.766,C,,Pomatoschistus pictus,Temp,Yes,Auditory,Larvae,29,58.213,31.0401,27,56.772,35.9366
+525,a61,Cattano et al,2017,2017,3.159,3.159,D,15,Symphodus ocellatus,Subtrop,Yes,Predator,Larvae,19,25.166,17.2089,15,32.009,17.7081
+526,a61,Cattano et al,2017,2017,3.159,3.159,D,,Symphodus ocellatus,Subtrop,Yes,Predator,Larvae,17,0.2856,0.2389,10,0.2822,0.5787
+527,a62,Ferrari et al ,2017,2017,2.751,2.751,C,25,Pomacentrus amboinensis,Trop,Yes,Prey,Juvenile,25,37.527,24,25,46.909,24
+528,a62,Ferrari et al ,2017,2017,2.751,2.751,C,,Pomacentrus amboinensis,Trop,Yes,Prey+ Predator,Juvenile,25,38.837,21.4915,25,33.6,17.3968
+529,a62,Ferrari et al ,2017,2017,2.751,2.751,C,,Pomacentrus amboinensis,Trop,Yes,Prey,Juvenile,25,6.145,4,25,8.291,6.545
+530,a62,Ferrari et al ,2017,2017,2.751,2.751,C,,Pomacentrus amboinensis,Trop,Yes,Prey+ Predator,Juvenile,25,3.318,2.3874,25,2.601,2.045
+531,a62,Ferrari et al ,2017,2017,2.751,2.751,C,,Pomacentrus amboinensis,Trop,Yes,Prey,Juvenile,25,2.546,0.275,25,2.378,0.49
+532,a62,Ferrari et al ,2017,2017,2.751,2.751,C,,Pomacentrus amboinensis,Trop,Yes,Prey+ Predator,Juvenile,25,1.462,0.666,25,1.68,0.666
+533,a63,Goldenberg et al,2017,2017,8.997,8.997,I,21,Favonigobius lateralis,Temp,Yes,Prey,Adult,21,1.84,1.8055,21,1.347,1.2052
+534,a63,Goldenberg et al,2017,2017,8.997,8.997,I,,Favonigobius lateralis,Temp,Yes,Prey,Adult,21,5.62,3.4644,21,2.366,3.0108
+535,a63,Goldenberg et al,2017,2017,8.997,8.997,I,,Favonigobius lateralis,Temp,Yes,Prey,Adult,21,0.733,0.1507,21,0.82,0.2234
+536,a64,Jarrold et al,2017,2017,4.122,4.122,E,40,Acanthochromis polyacanthus,Trop,No,-,Juvenile,60,38.118,28.3333,60,20.471,28.3333
+537,a64,Jarrold et al,2017,2017,4.122,4.122,E,,Acanthochromis polyacanthus,Trop,No,-,Juvenile,60,38.118,28.3333,60,28.941,28.3333
+538,a64,Jarrold et al,2017,2017,4.122,4.122,E,,Acanthochromis polyacanthus,Trop,No,-,Juvenile,60,38.118,28.3333,60,34.588,28.7037
+539,a64,Jarrold et al,2017,2017,4.122,4.122,E,,Amphiprion percula,Trop,Yes,Predator,Juvenile,16,4.941,5.5556,16,57.176,11.6667
+540,a64,Jarrold et al,2017,2017,4.122,4.122,E,,Amphiprion percula,Trop,Yes,Predator,Juvenile,16,4.941,5.5556,16,26.824,35
+541,a64,Jarrold et al,2017,2017,4.122,4.122,E,,Amphiprion percula,Trop,Yes,Predator,Juvenile,16,4.941,5.5556,16,29.647,31.6667
+542,a64,Jarrold et al,2017,2017,4.122,4.122,E,,Acanthochromis polyacanthus,Trop,No,-,Juvenile,60,45.349,13.8889,60,27.907,14.4444
+543,a64,Jarrold et al,2017,2017,4.122,4.122,E,,Acanthochromis polyacanthus,Trop,No,-,Juvenile,60,45.349,13.8889,60,41.163,28.8889
+544,a64,Jarrold et al,2017,2017,4.122,4.122,E,,Acanthochromis polyacanthus,Trop,No,-,Juvenile,60,45.349,13.8889,60,27.209,14.4444
+545,a64,Jarrold et al,2017,2017,4.122,4.122,E,,Acanthochromis polyacanthus,Trop,No,-,Juvenile,60,45.349,13.8889,60,28.605,14.4444
+546,a64,Jarrold et al,2017,2017,4.122,4.122,E,,Amphiprion percula,Trop,Yes,Predator,Juvenile,24,14.161,29.2615,24,26.832,36.3993
+547,a64,Jarrold et al,2017,2017,4.122,4.122,E,,Amphiprion percula,Trop,Yes,Predator,Juvenile,24,14.161,29.2615,24,19.379,32.5741
+548,a64,Jarrold et al,2017,2017,4.122,4.122,E,,Amphiprion percula,Trop,Yes,Predator,Juvenile,24,14.161,29.2615,24,45.466,27.6052
+549,a64,Jarrold et al,2017,2017,4.122,4.122,E,,Amphiprion percula,Trop,Yes,Predator,Juvenile,24,14.161,29.2615,24,29.814,36.4393
+550,a65,Kwan et al,2017,2017,2.504,2.504,C,9,Chromis punctipinnis,Subtrop,Yes,Light,Juvenile,15,624.3671,153.0121,16,675.7971,134.8369
+551,a65,Kwan et al,2017,2017,2.504,2.504,C,,Chromis punctipinnis,Subtrop,Yes,Light,Juvenile,15,624.3671,153.0121,16,629.9806,110.6711
+552,a65,Kwan et al,2017,2017,2.504,2.504,C,,Chromis punctipinnis,Subtrop,Yes,Light,Juvenile,17,488.2816,90.9296,17,469.1755,173.5717
+553,a65,Kwan et al,2017,2017,2.504,2.504,C,,Chromis punctipinnis,Subtrop,Yes,Light,Juvenile,17,488.2816,90.9296,17,491.9363,138.8337
+554,a65,Kwan et al,2017,2017,2.504,2.504,C,,Chromis punctipinnis,Subtrop,Yes,Kin,Juvenile,6,284.8175,113.02,6,342.1451,95.3249
+555,a65,Kwan et al,2017,2017,2.504,2.504,C,,Chromis punctipinnis,Subtrop,Yes,Kin,Juvenile,6,284.8175,113.02,6,290.9086,82.9104
+556,a65,Kwan et al,2017,2017,2.504,2.504,C,,Chromis punctipinnis,Subtrop,Yes,Kin,Juvenile,6,9.2013,1.1573,6,9.1007,1.3421
+557,a65,Kwan et al,2017,2017,2.504,2.504,C,,Chromis punctipinnis,Subtrop,Yes,Kin,Juvenile,6,9.2013,1.1573,6,8.5998,0.7613
+558,a65,Kwan et al,2017,2017,2.504,2.504,C,,Chromis punctipinnis,Subtrop,Yes,Novel object + kin,Juvenile,6,10.4701,1.3886,6,10.2966,1.3014
+559,a65,Kwan et al,2017,2017,2.504,2.504,C,,Chromis punctipinnis,Subtrop,Yes,Novel object + kin,Juvenile,6,10.4701,1.3886,6,9.8667,1.3939
+560,a65,Kwan et al,2017,2017,2.504,2.504,C,,Chromis punctipinnis,Subtrop,Yes,Kin,Juvenile,6,157.4899,49.237,6,142.0498,58.6802
+561,a65,Kwan et al,2017,2017,2.504,2.504,C,,Chromis punctipinnis,Subtrop,Yes,Kin,Juvenile,6,157.4899,49.237,6,166.9176,109.5705
+562,a66,Pistevos et al,2017,2016,3.13,3.127,D,20,Lates calcarifer,Trop,Yes,Physical Seawater,Larvae,11,51.163,1.4023,14,63.935,0.9322
+563,a66,Pistevos et al,2017,2016,3.13,3.127,D,,Lates calcarifer,Trop,Yes,Physical Seawater,Larvae,10,34.078,1.59,12,57.542,1.6128
+564,a66,Pistevos et al,2017,2016,3.13,3.127,D,,Lates calcarifer,Trop,Yes,Physical Seawater,Larvae,36,55,0.5208,37,72.5,0.411
+565,a67,Pistevos et al,2017,2016,4.03,3.709,E,17,Heterodontus portusjacksoni,Subtrop,Yes,Prey,Larvae,20,28.718,1.2041,20,41.641,1.4852
+566,a67,Pistevos et al,2017,2016,4.03,3.709,E,,Heterodontus portusjacksoni,Subtrop,Yes,Prey,Larvae,20,1577.465,47.7658,20,1741.784,73.4857
+567,a67,Pistevos et al,2017,2016,4.03,3.709,E,,Heterodontus portusjacksoni,Subtrop,Yes,Prey,Larvae,14,42.106,38.1799,6,17.651,22.1532
+568,a68,Schmidt et al,2017,2017,2.276,2.276,C,12,Boreogadus saida,Polar,No,-,Juvenile,12,15.781,2.8903,12,13.704,2.0998
+569,a68,Schmidt et al,2017,2017,2.276,2.276,C,,Boreogadus saida,Polar,No,-,Juvenile,12,36.163,26.0825,12,27.492,18.0566
+570,a68,Schmidt et al,2017,2017,2.276,2.276,C,,Gadus morhua,Polar,No,-,Juvenile,12,10.465,3.9402,12,10.714,7.4392
+571,a68,Schmidt et al,2017,2017,2.276,2.276,C,,Gadus morhua,Polar,No,-,Juvenile,12,36.994,17.5127,11,31.234,17.6312
+572,a69,Sundin et al,2017,2017,3.347,3.347,D,16,Gasterosteus aculeatus,Subtrop,Yes,Mate + habitat,Adult,18,85.3333,48.4428,18,65.1111,52.3359
+573,a69,Sundin et al,2017,2017,3.347,3.347,D,,Gasterosteus aculeatus,Subtrop,Yes,Mate + habitat,Adult,18,57.2778,57.6213,18,69.5,59.3625
+574,a69,Sundin et al,2017,2017,3.347,3.347,D,,Gasterosteus aculeatus,Subtrop,Yes,Mate + habitat,Adult,18,15.3889,12.7378,18,14,12.8062
+575,a69,Sundin et al,2017,2017,3.347,3.347,D,,Gasterosteus aculeatus,Subtrop,Yes,Mate + habitat,Adult,18,3.7222,3.3921,18,3.2778,2.5923
+576,a69,Sundin et al,2017,2017,3.347,3.347,D,,Gasterosteus aculeatus,Subtrop,Yes,Habitat,Adult,18,63,140.8687,18,8.5556,10.7003
+577,a69,Sundin et al,2017,2017,3.347,3.347,D,,Gasterosteus aculeatus,Subtrop,Yes,Habitat,Adult,18,18.4444,23.0504,18,62.1111,142.4656
+578,a69,Sundin et al,2017,2017,3.347,3.347,D,,Gasterosteus aculeatus,Subtrop,Yes,Habitat,Adult,18,5.2222,5.0591,18,8.5556,10.7003
+579,a69,Sundin et al,2017,2017,3.347,3.347,D,,Gasterosteus aculeatus,Subtrop,Yes,Habitat,Adult,18,1.2778,1.8726,18,1.6667,2.5668
+580,a69,Sundin et al,2017,2017,3.347,3.347,D,,Gasterosteus aculeatus,Subtrop,Yes,Mate,Adult,17,126.1176,118.9364,18,200.3333,201.4819
+581,a69,Sundin et al,2017,2017,3.347,3.347,D,,Gasterosteus aculeatus,Subtrop,Yes,Mate,Adult,17,180.8235,261.818,16,203.4375,217.6796
+582,a69,Sundin et al,2017,2017,3.347,3.347,D,,Gasterosteus aculeatus,Subtrop,Yes,Mate,Adult,17,47.7059,15.3247,16,51.4375,38.8037
+583,a69,Sundin et al,2017,2017,3.347,3.347,D,,Gasterosteus aculeatus,Subtrop,Yes,Mate,Adult,18,17.1111,37.5639,18,10.2778,17.4754
+584,a69,Sundin et al,2017,2017,3.347,3.347,D,,Gasterosteus aculeatus,Subtrop,Yes,Mate,Adult,17,1.1765,0.5286,18,2.9444,7.7571
+585,a69,Sundin et al,2017,2017,3.347,3.347,D,,Gasterosteus aculeatus,Subtrop,Yes,Offspring (kin),Adult,9,11.4103,5.8281,13,13.1819,7.9332
+586,a69,Sundin et al,2017,2017,3.347,3.347,D,,Gasterosteus aculeatus,Subtrop,Yes,Offspring (kin),Adult,9,17.0536,6.0323,13,17.0142,6.5342
+587,a69,Sundin et al,2017,2017,3.347,3.347,D,,Gasterosteus aculeatus,Subtrop,Yes,Offspring (kin),Adult,14,20.6732,9.2153,14,20.274,8.46
+588,a69,Sundin et al,2017,2017,3.347,3.347,D,,Gasterosteus aculeatus,Subtrop,Yes,Offspring (kin),Adult,14,22.6695,8.0176,15,24.6101,14.0243
+589,a69,Sundin et al,2017,2017,3.347,3.347,D,,Gasterosteus aculeatus,Subtrop,Yes,Offspring (kin),Adult,13,27.3648,6.3153,14,24.0847,8.9174
+590,a69,Sundin et al,2017,2017,3.347,3.347,D,,Gasterosteus aculeatus,Subtrop,Yes,Offspring (kin),Adult,13,30.7754,9.3305,14,23.7673,7.6959
+591,a69,Sundin et al,2017,2017,3.347,3.347,D,,Gasterosteus aculeatus,Subtrop,Yes,Offspring (kin),Adult,8,19.475,5.9053,12,23.5843,7.4197
+592,a70,Sundin et al,2017,2017,2.473,2.473,C,24,Acanthochromis polyacanthus,Trop,No,-,Juvenile,35,21.336,6.3775,37,19.504,8.522
+593,a70,Sundin et al,2017,2017,2.473,2.473,C,,Acanthochromis polyacanthus,Trop,No,-,Juvenile,35,560.804,196.2127,37,533.668,238.42
+594,a70,Sundin et al,2017,2017,2.473,2.473,C,,Acanthochromis polyacanthus,Trop,No,-,Juvenile,16,0.464,4.772,16,-0.331,4.64
+595,a70,Sundin et al,2017,2017,2.473,2.473,C,,Acanthochromis polyacanthus,Trop,No,-,Juvenile,16,29.63,177.776,16,-4.938,172.912
+596,a70,Sundin et al,2017,2017,2.473,2.473,C,,Acanthochromis polyacanthus,Trop,Yes,Predator,Juvenile,19,2.95,5.2612,21,3.453,6.4523
+597,a70,Sundin et al,2017,2017,2.473,2.473,C,,Acanthochromis polyacanthus,Trop,Yes,Predator,Juvenile,19,74.534,194.93,21,109.317,222.012
+598,a71,Welch & Munday,2017,2017,4.694,4.694,E,568,Acanthochromis polyacanthus,Trop,Yes,Predator,Larvae,752,21.4063,12.4527,755,43.8681,21.5517
+599,a71,Welch & Munday,2017,2017,4.694,4.694,E,,Acanthochromis polyacanthus,Trop,Yes,Predator,Larvae,752,21.4063,12.4527,751,54.947,10.0686
+600,a71,Welch & Munday,2017,2017,4.694,4.694,E,,Acanthochromis polyacanthus,Trop,Yes,Predator,Larvae,200,19.3229,4.5942,200,43.2917,11.6073
+601,a72,Davis et al,2018,2018,3.46,3.46,C,24,Sebastes spp.,Trop,Yes,-,Juvenile,24,26.052,9.6902,24,32.176,9.6902
+602,a72,Davis et al,2018,2018,3.46,3.46,C,,Sebastes spp.,Trop,Yes,-,Juvenile,24,27.59,14.5402,24,22.374,13.6584
+603,a72,Davis et al,2018,2018,3.46,3.46,C,,Sebastes spp.,Trop,Yes,-,Juvenile,24,108.766,34.9934,24,123.052,42.9445
+604,a72,Davis et al,2018,2018,3.46,3.46,C,,Sebastes spp.,Trop,Yes,-,Juvenile,24,97.89,38.1728,24,94.644,62.0309
+605,a72,Davis et al,2018,2018,3.46,3.46,C,,Sebastes spp.,Trop,Yes,Predator,Juvenile,24,26.052,13.1391,24,23.691,11.0374
+606,a72,Davis et al,2018,2018,3.46,3.46,C,,Sebastes spp.,Trop,Yes,Predator,Juvenile,24,24.227,12.6149,24,20.043,12.6149
+607,a72,Davis et al,2018,2018,3.46,3.46,C,,Sebastes spp.,Trop,Yes,Predator,Juvenile,24,122.938,51.1355,24,110.567,45.4527
+608,a72,Davis et al,2018,2018,3.46,3.46,C,,Sebastes spp.,Trop,Yes,Predator,Juvenile,24,98.582,30.3051,24,98.398,54.9225
+609,a73,Davis et al,2018,2017,8.997,8.997,I,10,Trematomus bernacchii,Polar,Yes,Light,Juvenile,8,52.927,16.5604,8,54.098,18.546
+610,a73,Davis et al,2018,2017,8.997,8.997,I,,Trematomus bernacchii,Polar,Yes,Light,Juvenile,8,52.927,16.5604,6,45.667,5.7367
+611,a73,Davis et al,2018,2017,8.997,8.997,I,,Trematomus bernacchii,Polar,Yes,Novel object,Juvenile,10,576,65.2919,10,524.308,76.7556
+612,a73,Davis et al,2018,2017,8.997,8.997,I,,Trematomus bernacchii,Polar,Yes,Novel object,Juvenile,10,576,65.2919,10,588.923,33.2185
+613,a73,Davis et al,2018,2017,8.997,8.997,I,,Trematomus bernacchii,Polar,Yes,Novel object,Juvenile,10,504.923,66.4378,10,534.462,146.6207
+614,a73,Davis et al,2018,2017,8.997,8.997,I,,Trematomus bernacchii,Polar,Yes,Novel object,Juvenile,10,504.923,66.4378,10,469.846,108.82
+615,a73,Davis et al,2018,2017,8.997,8.997,I,,Trematomus bernacchii,Polar,Yes,Novel object,Juvenile,10,141.892,159.1593,10,120.27,55.0548
+616,a73,Davis et al,2018,2017,8.997,8.997,I,,Trematomus bernacchii,Polar,Yes,Novel object,Juvenile,10,141.892,159.1593,10,102.703,88.0881
+617,a73,Davis et al,2018,2017,8.997,8.997,I,,Trematomus bernacchii,Polar,Yes,Novel object,Juvenile,10,125.676,81.0807,10,118.919,75.0748
+618,a73,Davis et al,2018,2017,8.997,8.997,I,,Trematomus bernacchii,Polar,Yes,Novel object,Juvenile,10,125.676,81.0807,10,67.568,30.0304
+619,a73,Davis et al,2018,2017,8.997,8.997,I,,Trematomus bernacchii,Polar,Yes,Novel object,Juvenile,10,33.148,23.7835,10,22.563,14.0943
+620,a73,Davis et al,2018,2017,8.997,8.997,I,,Trematomus bernacchii,Polar,Yes,Novel object,Juvenile,10,33.148,23.7835,10,25.627,21.1398
+621,a73,Davis et al,2018,2017,8.997,8.997,I,,Trematomus bernacchii,Polar,Yes,Novel object,Juvenile,10,22.284,14.9734,10,26.741,19.3784
+622,a73,Davis et al,2018,2017,8.997,8.997,I,,Trematomus bernacchii,Polar,Yes,Novel object,Juvenile,10,22.284,14.9734,10,13.649,6.1664
+623,a73,Davis et al,2018,2017,8.997,8.997,I,,Trematomus bernacchii,Polar,Yes,Novel object,Juvenile,10,45.682,21.1398,10,49.582,15.8557
+624,a73,Davis et al,2018,2017,8.997,8.997,I,,Trematomus bernacchii,Polar,Yes,Novel object,Juvenile,10,45.682,21.1398,10,49.304,21.1398
+625,a73,Davis et al,2018,2017,8.997,8.997,I,,Trematomus bernacchii,Polar,Yes,Novel object,Juvenile,10,53.203,14.0943,10,55.432,14.0943
+626,a73,Davis et al,2018,2017,8.997,8.997,I,,Trematomus bernacchii,Polar,Yes,Novel object,Juvenile,10,53.203,14.0943,10,66.574,6.1664
+627,a73,Davis et al,2018,2017,8.997,8.997,I,,Trematomus bernacchii,Polar,Yes,Novel object,Juvenile,10,20.613,18.4993,10,26.741,18.4993
+628,a73,Davis et al,2018,2017,8.997,8.997,I,,Trematomus bernacchii,Polar,Yes,Novel object,Juvenile,10,20.613,18.4993,10,24.513,21.1398
+629,a73,Davis et al,2018,2017,8.997,8.997,I,,Trematomus bernacchii,Polar,Yes,Novel object,Juvenile,10,23.955,24.6626,10,16.713,11.4506
+630,a73,Davis et al,2018,2017,8.997,8.997,I,,Trematomus bernacchii,Polar,Yes,Novel object,Juvenile,10,23.955,24.6626,10,19.499,17.617
+631,a74,Goldenberg et al,2018,2018,19.181,19.181,K,105,Not provided,Not provided,Yes,Prey,Not provided,165,50.795,83.1986,165,30.341,74.4381
+632,a74,Goldenberg et al,2018,2018,19.181,19.181,K,,Not provided,Not provided,Yes,Prey,Not provided,165,48.75,83.1986,165,31.364,65.6905
+633,a74,Goldenberg et al,2018,2018,19.181,19.181,K,,Not provided,Not provided,Yes,Prey,Not provided,165,49.576,91.4452,165,56.695,32.6526
+634,a74,Goldenberg et al,2018,2018,19.181,19.181,K,,Not provided,Not provided,Yes,Prey,Not provided,53,95.043,72.408,62,117.876,80.5747
+635,a74,Goldenberg et al,2018,2018,19.181,19.181,K,,Not provided,Not provided,Yes,Prey,Not provided,165,0.44,0.4239,165,0.39,0.8863
+636,a74,Goldenberg et al,2018,2018,19.181,19.181,K,,Not provided,Not provided,No,-,Not provided,9,0.8731,2.5645,8,0.8064,1.1658
+637,a74,Goldenberg et al,2018,2018,19.181,19.181,K,,Not provided,Not provided,Yes,Predator,Not provided,9,0.1592,0.2355,8,0.2674,0.2812
+638,a75,Laubenstein et al,2018,2018,-,-,-,34,Seriola lalandi,Subtrop,No,-,Larvae,29,1395.2334,904.1051,38,1542.2421,1075.0644
+639,a75,Laubenstein et al,2018,2018,-,-,-,,Seriola lalandi,Subtrop,No,-,Larvae,29,2.6755,0.9309,38,2.6514,0.9966
+640,a75,Laubenstein et al,2018,2018,-,-,-,,Seriola lalandi,Subtrop,No,-,Larvae,29,132.4138,108.8234,38,102.6807,84.2935
+641,a75,Laubenstein et al,2018,2018,-,-,-,,Seriola lalandi,Subtrop,No,-,Larvae,29,466.2759,176.7407,38,498.2247,184.3398
+642,a76,Maulvault et al,2018,2018,4.61,4.61,E,10,Argyrosomus regius,Subtrop,Yes,Kin,Juvenile,9,77.778,29.739,10,89.216,22.876
+643,a76,Maulvault et al,2018,2018,4.61,4.61,E,,Argyrosomus regius,Subtrop,Yes,Kin,Juvenile,9,37.013,1.299,10,16.234,2.597
+644,a76,Maulvault et al,2018,2018,4.61,4.61,E,,Argyrosomus regius,Subtrop,Yes,Kin,Juvenile,9,4.908,2.454,10,5.215,2.761
+645,a76,Maulvault et al,2018,2018,4.61,4.61,E,,Argyrosomus regius,Subtrop,Yes,Kin,Juvenile,9,54.054,5.405,10,50.676,1.351
+646,a76,Maulvault et al,2018,2018,4.61,4.61,E,,Argyrosomus regius,Subtrop,Yes,Kin,Juvenile,9,64.052,15.033,10,44.444,9.804
+647,a76,Maulvault et al,2018,2018,4.61,4.61,E,,Argyrosomus regius,Subtrop,No,-,Juvenile,10,63.83,19.149,10,33.617,26.809
+648,a77,McCormick et al,2018,2018,4.847,4.847,E,19,Pseudochromis fuscus,Trop,Yes,Prey,Adult,19,0.049,0.0654,19,0.187,0.4359
+649,a77,McCormick et al,2018,2018,4.847,4.847,E,,Pseudochromis fuscus,Trop,Yes,Prey,Adult,19,118.981,43.0049,19,84.665,46.7448
+650,a77,McCormick et al,2018,2018,4.847,4.847,E,,Pseudochromis fuscus,Trop,Yes,Prey,Adult,19,333.056,184.0545,19,180.107,188.1475
+651,a77,McCormick et al,2018,2018,4.847,4.847,E,,Pseudochromis fuscus,Trop,Yes,Prey,Adult,19,0.63,0.6364,19,0.182,0.7018
+652,a78,McMahon et al,2018,2018,2.276,2.276,C,85,Amphiprion percula,Trop,Yes,Food,Juvenile,137,22.891,7.0111,141,23.435,7.7539
+653,a78,McMahon et al,2018,2018,2.276,2.276,C,,Amphiprion percula,Trop,Yes,Food,Juvenile,144,26.156,7.836,134,24.633,7.559
+654,a78,McMahon et al,2018,2018,2.276,2.276,C,,Amphiprion percula,Trop,Yes,Food,Juvenile,118,22.891,6.5068,117,26.211,6.4792
+655,a78,McMahon et al,2018,2018,2.276,2.276,C,,Amphiprion percula,Trop,Yes,Food,Juvenile,118,26.156,7.0934,115,26.537,7.0026
+656,a78,McMahon et al,2018,2018,2.276,2.276,C,,Amphiprion percula,Trop,Yes,Food,Juvenile,66,9.52,1.7873,71,10.17,2.5278
+657,a78,McMahon et al,2018,2018,2.276,2.276,C,,Amphiprion percula,Trop,Yes,Food,Juvenile,70,9.78,1.8407,65,10.3,2.0962
+658,a78,McMahon et al,2018,2018,2.276,2.276,C,,Amphiprion percula,Trop,Yes,Food,Juvenile,58,9.52,1.6755,56,10.3,2.6192
+659,a78,McMahon et al,2018,2018,2.276,2.276,C,,Amphiprion percula,Trop,Yes,Food,Juvenile,59,9.78,1.6899,55,10.52,1.6316
+660,a78,McMahon et al,2018,2018,2.276,2.276,C,,Amphiprion percula,Trop,Yes,Food,Juvenile,71,2.43,1.0954,70,9.78,1.8407
+661,a78,McMahon et al,2018,2018,2.276,2.276,C,,Amphiprion percula,Trop,Yes,Food,Juvenile,74,3.25,1.4624,69,9.91,2.1597
+662,a78,McMahon et al,2018,2018,2.276,2.276,C,,Amphiprion percula,Trop,Yes,Food,Juvenile,60,2.43,1.007,61,9.44,1.3277
+663,a78,McMahon et al,2018,2018,2.276,2.276,C,,Amphiprion percula,Trop,Yes,Food,Juvenile,59,3.25,1.3058,60,9.74,2.014
+664,a79,Porteus et al,2018,2018,19.181,19.181,K,13,Dicentrarchus labrax,Subtrop,No,-,Juvenile,13,45.1077,95.6378,13,42.0462,97.4158
+665,a79,Porteus et al,2018,2018,19.181,19.181,K,,Dicentrarchus labrax,Subtrop,No,-,Juvenile,14,50.8286,72.3095,14,36.0143,77.4984
+666,a79,Porteus et al,2018,2018,19.181,19.181,K,,Dicentrarchus labrax,Subtrop,No,-,Juvenile,13,52.3692,59.9273,14,30.9286,81.7807
+667,a79,Porteus et al,2018,2018,19.181,19.181,K,,Dicentrarchus labrax,Subtrop,No,-,Juvenile,13,20.7692,94.4943,13,13.4615,79.2349
+668,a79,Porteus et al,2018,2018,19.181,19.181,K,,Dicentrarchus labrax,Subtrop,No,-,Juvenile,13,2.5385,24.3036,13,7,48.9081
+669,a79,Porteus et al,2018,2018,19.181,19.181,K,,Dicentrarchus labrax,Subtrop,No,-,Juvenile,13,2.4154,25.6078,14,9.5214,59.6023
+670,a79,Porteus et al,2018,2018,19.181,19.181,K,,Dicentrarchus labrax,Subtrop,Yes,Predator,Juvenile,13,23.9231,86.238,13,18.0385,97.6179
+671,a79,Porteus et al,2018,2018,19.181,19.181,K,,Dicentrarchus labrax,Subtrop,Yes,Predator,Juvenile,13,5.8,29.5098,13,12.1308,66.0668
+672,a79,Porteus et al,2018,2018,19.181,19.181,K,,Dicentrarchus labrax,Subtrop,Yes,Predator,Juvenile,13,6.8846,39.0876,14,20.5929,70.238
+673,a80,Raby et al,2018,2018,1.702,1.702,B,11,Cephalopholis cyanostigma,Trop,Yes,Habitat,Adult,10,0.0001,0.4533,11,0.0001,0.7104
+674,a80,Raby et al,2018,2018,1.702,1.702,B,,Cephalopholis cyanostigma,Trop,Yes,Habitat,Adult,10,8.592,2.4067,11,8.169,4.3615
+675,a80,Raby et al,2018,2018,1.702,1.702,B,,Cephalopholis cyanostigma,Trop,Yes,Habitat,Adult,10,20,5.5652,11,14.085,6.4674
+676,a80,Raby et al,2018,2018,1.702,1.702,B,,Cephalopholis cyanostigma,Trop,Yes,Habitat,Adult,10,88.136,2.2222,11,91.186,7.863
+677,a80,Raby et al,2018,2018,1.702,1.702,B,,Cephalopholis cyanostigma,Trop,Yes,Habitat,Adult,10,20,2.0933,11,20.156,3.3815
+678,a80,Raby et al,2018,2018,1.702,1.702,B,,Cephalopholis cyanostigma,Trop,Yes,Habitat,Adult,10,2.794,0.5104,11,2.941,0.6615
+679,a81,Rodriguez-Dominguez et al,2018,2018,3.241,3.241,D,4,Vincentia badia,Temp,Yes,Shelter,Juvenile,5,2.518,4.8254,4,0.719,0.72
+680,a81,Rodriguez-Dominguez et al,2018,2018,3.241,3.241,D,,Vincentia badia,Temp,Yes,Shelter,Juvenile,5,24.46,32.1725,4,11.511,20.864
+681,a81,Rodriguez-Dominguez et al,2018,2018,3.241,3.241,D,,Vincentia badia,Temp,Yes,Shelter,Juvenile,4,0.0001,0.0002,2,2.518,3.561
+682,a81,Rodriguez-Dominguez et al,2018,2018,3.241,3.241,D,,Vincentia badia,Temp,Yes,Shelter,Juvenile,5,72.695,42.0247,4,95.035,3.546
+683,a81,Rodriguez-Dominguez et al,2018,2018,3.241,3.241,D,,Vincentia badia,Temp,Yes,Shelter,Juvenile,5,52.837,36.4747,4,47.518,28.368
+684,a81,Rodriguez-Dominguez et al,2018,2018,3.241,3.241,D,,Vincentia badia,Temp,Yes,Shelter,Juvenile,4,53.546,43.972,2,97.518,3.5101
+685,a81,Rodriguez-Dominguez et al,2018,2018,3.241,3.241,D,,Vincentia badia,Temp,Yes,Shelter,Juvenile,5,24.468,42.0247,4,3.915,3.558
+686,a81,Rodriguez-Dominguez et al,2018,2018,3.241,3.241,D,,Vincentia badia,Temp,Yes,Shelter,Juvenile,5,20.922,8.7229,4,39.858,24.912
+687,a81,Rodriguez-Dominguez et al,2018,2018,3.241,3.241,D,,Vincentia badia,Temp,Yes,Shelter,Juvenile,4,46.099,43.262,2,0.0001,0.0001
+688,a81,Rodriguez-Dominguez et al,2018,2018,3.241,3.241,D,,Vincentia badia,Temp,Yes,Shelter,Juvenile,5,2.518,4.8254,5,7.194,6.4354
+689,a81,Rodriguez-Dominguez et al,2018,2018,3.241,3.241,D,,Vincentia badia,Temp,Yes,Shelter,Juvenile,5,24.46,32.1725,5,28.058,39.4129
+690,a81,Rodriguez-Dominguez et al,2018,2018,3.241,3.241,D,,Vincentia badia,Temp,Yes,Shelter,Juvenile,4,0.0001,0.0002,3,15.827,27.4132
+691,a81,Rodriguez-Dominguez et al,2018,2018,3.241,3.241,D,,Vincentia badia,Temp,Yes,Shelter,Juvenile,5,72.695,42.0247,5,66.312,38.8539
+692,a81,Rodriguez-Dominguez et al,2018,2018,3.241,3.241,D,,Vincentia badia,Temp,Yes,Shelter,Juvenile,5,52.837,36.4747,5,39.716,34.8894
+693,a81,Rodriguez-Dominguez et al,2018,2018,3.241,3.241,D,,Vincentia badia,Temp,Yes,Shelter,Juvenile,4,53.546,43.972,3,15.957,7.9848
+694,a81,Rodriguez-Dominguez et al,2018,2018,3.241,3.241,D,,Vincentia badia,Temp,Yes,Shelter,Juvenile,5,24.468,42.0247,5,25.177,42.0247
+695,a81,Rodriguez-Dominguez et al,2018,2018,3.241,3.241,D,,Vincentia badia,Temp,Yes,Shelter,Juvenile,5,20.922,8.7229,5,31.206,42.0247
+696,a81,Rodriguez-Dominguez et al,2018,2018,3.241,3.241,D,,Vincentia badia,Temp,Yes,Shelter,Juvenile,4,46.099,43.262,3,67.376,31.939
+697,a82,Rossi et al,2018,2018,4.122,4.122,E,12,Lates calcarifer,Trop,Yes,Auditory,Larvae,10,63.922,19.8433,10,27.059,17.3609
+698,a82,Rossi et al,2018,2018,4.122,4.122,E,,Lates calcarifer,Trop,Yes,Auditory,Larvae,10,54.51,17.3609,10,37.255,16.1213
+699,a82,Rossi et al,2018,2018,4.122,4.122,E,,Lates calcarifer,Trop,Yes,Auditory,Larvae,10,44.706,33.4822,10,53.333,33.4822
+700,a82,Rossi et al,2018,2018,4.122,4.122,E,,Lates calcarifer,Trop,Yes,Auditory,Larvae,10,46.667,22.3225,10,49.084,21.0829
+701,a82,Rossi et al,2018,2018,4.122,4.122,E,,Lates calcarifer,Trop,Yes,Auditory,Larvae,10,52.647,17.6708,10,54.706,18.6005
+702,a82,Rossi et al,2018,2018,4.122,4.122,E,,Lates calcarifer,Trop,Yes,Auditory,Larvae,16,52.35,15.1568,16,59.724,17.4874
+703,a82,Rossi et al,2018,2018,4.122,4.122,E,,Lates calcarifer,Trop,Yes,Auditory,Larvae,16,47.558,10.4924,16,47.558,11.6593
+704,a82,Rossi et al,2018,2018,4.122,4.122,E,,Lates calcarifer,Trop,Yes,Auditory,Larvae,16,53.825,8.1618,16,50.876,9.3256
+705,a82,Rossi et al,2018,2018,4.122,4.122,E,,Lates calcarifer,Trop,Yes,Auditory,Larvae,16,49.032,13.9899,16,51.613,9.3256
+706,a82,Rossi et al,2018,2018,4.122,4.122,E,,Lates calcarifer,Trop,Yes,Auditory,Larvae,16,45.714,10.4924,16,49.401,6.995
+707,a82,Rossi et al,2018,2018,4.122,4.122,E,,Lates calcarifer,Trop,Yes,Auditory,Larvae,16,52.042,7.8772,16,49.828,7.8772
+708,a82,Rossi et al,2018,2018,4.122,4.122,E,,Lates calcarifer,Trop,Yes,Auditory,Larvae,10,33.032,41.6282,10,70.194,28.5617
+709,a82,Rossi et al,2018,2018,4.122,4.122,E,,Lates calcarifer,Trop,Yes,Auditory,Larvae,10,55.484,31.8283,10,41.032,33.4601
+710,a82,Rossi et al,2018,2018,4.122,4.122,E,,Lates calcarifer,Trop,Yes,Auditory,Larvae,10,49.549,39.987,10,43.097,28.5617
+711,a82,Rossi et al,2018,2018,4.122,4.122,E,,Lates calcarifer,Trop,Yes,Auditory,Larvae,10,49.032,21.2189,10,41.548,24.4824
+712,a82,Rossi et al,2018,2018,4.122,4.122,E,,Lates calcarifer,Trop,Yes,Auditory,Larvae,10,55.484,19.5871,10,48,13.057
+713,a82,Rossi et al,2018,2018,4.122,4.122,E,,Lates calcarifer,Trop,Yes,Auditory,Larvae,10,55.226,26.9426,10,64,17.1364
+714,a82,Rossi et al,2018,2018,4.122,4.122,E,,Lates calcarifer,Trop,Yes,Auditory,Larvae,10,50.065,25.2982,10,42.323,14.6888
+715,a82,Rossi et al,2018,2018,4.122,4.122,E,,Lates calcarifer,Trop,Yes,Auditory,Larvae,10,48.258,21.2189,10,66.839,17.1364
+716,a83,Sswat et al,2018,2018,2.766,2.766,C,9,Clupea harengus,Temp,No,-,Larvae,6,7288.3971,8116.3356,6,7667.7496,4864.1553
+717,a83,Sswat et al,2018,2018,2.766,2.766,C,,Clupea harengus,Temp,No,-,Larvae,12,10164.3102,9856.4,12,13197.1275,8667.4157
+718,a84,Sundin & Jutfelt,2018,2018,2.504,2.504,C,21,Gobiusculus flavescens,Temp,No,-,Adult,30,32.317,22.5497,24,32.317,24.201
+719,a84,Sundin & Jutfelt,2018,2018,2.504,2.504,C,,Gobiusculus flavescens,Temp,No,-,Adult,11,31.492,32.7683,19,32.521,35.4378
+720,a84,Sundin & Jutfelt,2018,2018,2.504,2.504,C,,Gobiusculus flavescens,Temp,No,-,Adult,16,31.492,19.76,22,42.093,27.9971
+721,a84,Sundin & Jutfelt,2018,2018,2.504,2.504,C,,Gobiusculus flavescens,Temp,No,-,Adult,23,31.389,27.1444,25,40.034,33.45
+722,a85,Watson et al,2018,2018,8.997,8.997,I,41,Seriola lalandi,Subtrop,Yes,Mimicked threat,Juvenile,41,4.272,1.444,41,4.501,1.972
+723,a85,Watson et al,2018,2018,8.997,8.997,I,,Seriola lalandi,Subtrop,Yes,Mimicked threat,Juvenile,41,0.451,0.222,41,0.471,0.231
+724,a85,Watson et al,2018,2018,8.997,8.997,I,,Seriola lalandi,Subtrop,Yes,Mimicked threat,Juvenile,41,0.572,0.303,41,0.668,0.244
+725,a86,Steckbauer et al,2018,2018,-,-,-,6,Dicentrachus labrax,Temp,Yes,Predator,Juvenile,6,0.1238,0.1408,6,0.0298,0.1585
+726,a87,Andrade et al,2018,2018,1.729,1.729,B,36,Citharichthys stigmaeus,Subtrop,No,-,Juvenile,36,0.204,0.492,36,0.179,0.474
+727,a87,Andrade et al,2018,2018,1.729,1.729,B,,Citharichthys stigmaeus,Subtrop,No,-,Juvenile,36,0.204,0.492,36,0.341,0.516
+728,a87,Andrade et al,2018,2018,1.729,1.729,B,,Citharichthys stigmaeus,Subtrop,Yes,Predator,Juvenile,36,0.274,0.516,36,0.235,0.588
+729,a87,Andrade et al,2018,2018,1.729,1.729,B,,Citharichthys stigmaeus,Subtrop,Yes,Predator,Juvenile,36,0.274,0.516,36,0.321,0.516
+730,a87,Andrade et al,2018,2018,1.729,1.729,B,,Citharichthys stigmaeus,Subtrop,Yes,Food,Juvenile,36,0.76,0.918,36,0.984,0.942
+731,a87,Andrade et al,2018,2018,1.729,1.729,B,,Citharichthys stigmaeus,Subtrop,Yes,Food,Juvenile,36,0.76,0.918,36,0.984,0.822
+732,a87,Andrade et al,2018,2018,1.729,1.729,B,,Citharichthys stigmaeus,Subtrop,No,-,Juvenile,36,1.027,0.99,36,1.034,0.966
+733,a87,Andrade et al,2018,2018,1.729,1.729,B,,Citharichthys stigmaeus,Subtrop,No,-,Juvenile,36,1.027,0.99,36,1.285,0.894
+734,a87,Andrade et al,2018,2018,1.729,1.729,B,,Citharichthys stigmaeus,Subtrop,No,-,Juvenile,36,0.889,1.176,36,0.517,0.846
+735,a87,Andrade et al,2018,2018,1.729,1.729,B,,Citharichthys stigmaeus,Subtrop,No,-,Juvenile,36,0.889,1.176,36,0.803,1.032
+736,a87,Andrade et al,2018,2018,1.729,1.729,B,,Citharichthys stigmaeus,Subtrop,Yes,Predator,Juvenile,36,0.905,1.104,36,0.611,0.918
+737,a87,Andrade et al,2018,2018,1.729,1.729,B,,Citharichthys stigmaeus,Subtrop,Yes,Predator,Juvenile,36,0.905,1.104,36,0.862,1.2
+738,a87,Andrade et al,2018,2018,1.729,1.729,B,,Citharichthys stigmaeus,Subtrop,Yes,Food,Juvenile,36,1.716,0.942,36,1.524,0.918
+739,a87,Andrade et al,2018,2018,1.729,1.729,B,,Citharichthys stigmaeus,Subtrop,Yes,Food,Juvenile,36,1.716,0.942,36,1.791,0.75
+740,a87,Andrade et al,2018,2018,1.729,1.729,B,,Citharichthys stigmaeus,Subtrop,No,-,Juvenile,36,1.689,1.08,36,1.418,0.918
+741,a87,Andrade et al,2018,2018,1.729,1.729,B,,Citharichthys stigmaeus,Subtrop,No,-,Juvenile,36,1.689,1.08,36,1.893,0.846
+742,a87,Andrade et al,2018,2018,1.729,1.729,B,,Citharichthys stigmaeus,Subtrop,No,-,Juvenile,36,1.371,1.272,36,1.195,0.87
+743,a87,Andrade et al,2018,2018,1.729,1.729,B,,Citharichthys stigmaeus,Subtrop,No,-,Juvenile,36,1.371,1.272,36,1.324,0.918
+744,a87,Andrade et al,2018,2018,1.729,1.729,B,,Citharichthys stigmaeus,Subtrop,Yes,Predator,Juvenile,36,1.799,1.224,36,1.422,1.008
+745,a87,Andrade et al,2018,2018,1.729,1.729,B,,Citharichthys stigmaeus,Subtrop,Yes,Predator,Juvenile,36,1.799,1.224,36,1.673,0.918
+746,a87,Andrade et al,2018,2018,1.729,1.729,B,,Citharichthys stigmaeus,Subtrop,Yes,Food,Juvenile,36,2.241,0.894,36,2.022,0.942
+747,a87,Andrade et al,2018,2018,1.729,1.729,B,,Citharichthys stigmaeus,Subtrop,Yes,Food,Juvenile,36,2.241,0.894,36,2.241,0.726
+748,a87,Andrade et al,2018,2018,1.729,1.729,B,,Citharichthys stigmaeus,Subtrop,No,-,Juvenile,36,1.763,1.08,36,1.548,0.99
+749,a87,Andrade et al,2018,2018,1.729,1.729,B,,Citharichthys stigmaeus,Subtrop,No,-,Juvenile,36,1.763,1.08,36,1.834,0.75
+750,a87,Andrade et al,2018,2018,1.729,1.729,B,,Citharichthys stigmaeus,Subtrop,No,-,Juvenile,36,1.207,1.248,36,0.889,1.104
+751,a87,Andrade et al,2018,2018,1.729,1.729,B,,Citharichthys stigmaeus,Subtrop,No,-,Juvenile,36,1.207,1.248,36,1.285,1.08
+752,a87,Andrade et al,2018,2018,1.729,1.729,B,,Citharichthys stigmaeus,Subtrop,Yes,Predator,Juvenile,36,1.14,1.224,36,0.788,1.2
+753,a87,Andrade et al,2018,2018,1.729,1.729,B,,Citharichthys stigmaeus,Subtrop,Yes,Predator,Juvenile,36,1.14,1.224,36,1.234,1.032
+754,a87,Andrade et al,2018,2018,1.729,1.729,B,,Citharichthys stigmaeus,Subtrop,Yes,Food,Juvenile,36,2.089,1.248,36,1.838,1.08
+755,a87,Andrade et al,2018,2018,1.729,1.729,B,,Citharichthys stigmaeus,Subtrop,Yes,Food,Juvenile,36,2.089,1.248,36,1.955,0.894
+756,a87,Andrade et al,2018,2018,1.729,1.729,B,,Citharichthys stigmaeus,Subtrop,No,-,Juvenile,36,1.791,1.176,36,1.701,1.056
+757,a87,Andrade et al,2018,2018,1.729,1.729,B,,Citharichthys stigmaeus,Subtrop,No,-,Juvenile,36,1.791,1.176,36,1.771,0.942
+758,a87,Andrade et al,2018,2018,1.729,1.729,B,,Citharichthys stigmaeus,Subtrop,Yes,Food,Juvenile,36,1.807,2.976,36,1.999,3.072
+759,a87,Andrade et al,2018,2018,1.729,1.729,B,,Citharichthys stigmaeus,Subtrop,Yes,Food,Juvenile,36,1.807,2.976,36,1.663,3.264
+760,a87,Andrade et al,2018,2018,1.729,1.729,B,,Citharichthys stigmaeus,Subtrop,Yes,Food,Juvenile,36,5.133,3.936,36,4.27,4.896
+761,a87,Andrade et al,2018,2018,1.729,1.729,B,,Citharichthys stigmaeus,Subtrop,Yes,Food,Juvenile,36,5.133,3.936,36,4.829,3.84
+762,a87,Andrade et al,2018,2018,1.729,1.729,B,,Citharichthys stigmaeus,Subtrop,Yes,Predator + food,Juvenile,36,5.293,3.936,36,5.261,4.128
+763,a87,Andrade et al,2018,2018,1.729,1.729,B,,Citharichthys stigmaeus,Subtrop,Yes,Predator + food,Juvenile,36,5.293,3.936,36,5.485,3.36
+764,a87,Andrade et al,2018,2018,1.729,1.729,B,,Citharichthys stigmaeus,Subtrop,Yes,Food,Juvenile,36,7.868,5.28,36,6.604,5.658
+765,a87,Andrade et al,2018,2018,1.729,1.729,B,,Citharichthys stigmaeus,Subtrop,Yes,Food,Juvenile,36,7.868,5.28,36,6.205,4.512
+766,a88,Jiahuan et al,2018,2018,-,-,-,15,Acanthopagrus schlegelii,Subtrop,Yes,Food,Larvae,15,0.247,0.0116,15,0.195,0.0465
+767,a88,Jiahuan et al,2018,2018,-,-,-,,Acanthopagrus schlegelii,Subtrop,Yes,Food,Larvae,15,0.247,0.0116,15,0.16,0.0155
+768,a88,Jiahuan et al,2018,2018,-,-,-,,Acanthopagrus schlegelii,Subtrop,Yes,Food,Larvae,15,6.029,2.5252,15,12.043,3.0868
+769,a88,Jiahuan et al,2018,2018,-,-,-,,Acanthopagrus schlegelii,Subtrop,Yes,Food,Larvae,15,6.029,2.5252,15,14,9.8219
+770,a88,Jiahuan et al,2018,2018,-,-,-,,Acanthopagrus schlegelii,Subtrop,Yes,Food,Larvae,15,0.854,0.1433,15,0.726,0.1898
+771,a88,Jiahuan et al,2018,2018,-,-,-,,Acanthopagrus schlegelii,Subtrop,Yes,Food,Larvae,15,0.854,0.1433,15,0.52,0.1317
+772,a88,Jiahuan et al,2018,2018,-,-,-,,Acanthopagrus schlegelii,Subtrop,Yes,Food,Larvae,15,1.144,0.2556,15,1.377,0.3021
+773,a88,Jiahuan et al,2018,2018,-,-,-,,Acanthopagrus schlegelii,Subtrop,Yes,Food,Larvae,15,1.144,0.2556,15,1.946,0.6739
+774,a88,Jiahuan et al,2018,2018,-,-,-,,Acanthopagrus schlegelii,Subtrop,Yes,Food,Larvae,15,0.471,0.4996,15,0.657,0.3331
+775,a88,Jiahuan et al,2018,2018,-,-,-,,Acanthopagrus schlegelii,Subtrop,Yes,Food,Larvae,15,0.471,0.4996,15,2.171,1.6034
+776,a89,Borges et al. ,2019,2019,3.345,3.345,D,8,Anguilla anguilla,Temp,Yes,Habitat,Larvae,8,0.2059,0.0882,8,0.228,0.1596
+777,a89,Borges et al. ,2019,2019,3.345,3.345,D,,Anguilla anguilla,Temp,Yes,Habitat,Larvae,8,1.625,0.9169,8,1.125,1.3562
+778,a89,Borges et al. ,2019,2019,3.345,3.345,D,,Anguilla anguilla,Temp,Yes,Habitat,Larvae,8,0.3514,0.125,8,0.3742,0.1495
+779,a89,Borges et al. ,2019,2019,3.345,3.345,D,,Anguilla anguilla,Temp,Yes,Habitat,Larvae,8,3.75,2.121,8,3.125,2.1671
+780,a90,Hurst et al,2019,2019,3.159,3.159,D,66,Gadus macrocephalus,Boreal,Yes,Light,Larvae,66,4.038,1.4786,66,3.646,1.3648
+781,a90,Hurst et al,2019,2019,3.159,3.159,D,,Gadus macrocephalus,Boreal,Yes,Light,Larvae,66,5.83,2.6159,66,6.544,1.706
+782,a90,Hurst et al,2019,2019,3.159,3.159,D,,Gadus macrocephalus,Boreal,Yes,Light,Larvae,66,6.047,2.7297,66,7.188,1.3648
+783,a90,Hurst et al,2019,2019,3.159,3.159,D,,Gadus macrocephalus,Boreal,Yes,Light,Larvae,66,6.254,3.2984,66,7.216,1.3648
+784,a90,Hurst et al,2019,2019,3.159,3.159,D,,Gadus macrocephalus,Boreal,Yes,Light,Larvae,66,6.609,3.7533,66,7.16,1.3648
+785,a90,Hurst et al,2019,2019,3.159,3.159,D,,Gadus macrocephalus,Boreal,Yes,Light,Larvae,66,4.686,2.161,66,3.492,1.4786
+786,a90,Hurst et al,2019,2019,3.159,3.159,D,,Gadus macrocephalus,Boreal,Yes,Light,Larvae,66,3.646,2.6159,66,2.498,1.5923
+787,a90,Hurst et al,2019,2019,3.159,3.159,D,,Gadus macrocephalus,Boreal,Yes,Light,Larvae,66,3.114,2.9571,66,2.232,1.5923
+788,a90,Hurst et al,2019,2019,3.159,3.159,D,,Gadus macrocephalus,Boreal,Yes,Light,Larvae,66,2.75,3.1846,66,2.078,1.706
+789,a90,Hurst et al,2019,2019,3.159,3.159,D,,Gadus macrocephalus,Boreal,Yes,Light,Larvae,66,4.038,1.4786,66,3.646,1.3648
+790,a90,Hurst et al,2019,2019,3.159,3.159,D,,Gadus macrocephalus,Boreal,Yes,Light,Larvae,66,5.83,2.6159,66,6.334,1.3648
+791,a90,Hurst et al,2019,2019,3.159,3.159,D,,Gadus macrocephalus,Boreal,Yes,Light,Larvae,66,6.047,2.7297,66,6.747,1.706
+792,a90,Hurst et al,2019,2019,3.159,3.159,D,,Gadus macrocephalus,Boreal,Yes,Light,Larvae,66,6.254,3.2984,66,6.999,1.5923
+793,a90,Hurst et al,2019,2019,3.159,3.159,D,,Gadus macrocephalus,Boreal,Yes,Light,Larvae,66,6.609,3.7533,66,7.055,1.3648
+794,a90,Hurst et al,2019,2019,3.159,3.159,D,,Gadus macrocephalus,Boreal,Yes,Light,Larvae,66,4.686,2.161,66,4.112,1.4786
+795,a90,Hurst et al,2019,2019,3.159,3.159,D,,Gadus macrocephalus,Boreal,Yes,Light,Larvae,66,3.646,2.6159,66,2.908,1.706
+796,a90,Hurst et al,2019,2019,3.159,3.159,D,,Gadus macrocephalus,Boreal,Yes,Light,Larvae,66,3.114,2.9571,66,2.542,1.706
+797,a90,Hurst et al,2019,2019,3.159,3.159,D,,Gadus macrocephalus,Boreal,Yes,Light,Larvae,66,2.75,3.1846,66,2.149,1.706
+798,a90,Hurst et al,2019,2019,3.159,3.159,D,,Gadus macrocephalus,Boreal,Yes,Light,Larvae,66,4.03,1.8198,66,3.82,1.8198
+799,a90,Hurst et al,2019,2019,3.159,3.159,D,,Gadus macrocephalus,Boreal,Yes,Light,Larvae,66,5.896,1.8198,66,6.19,1.8198
+800,a90,Hurst et al,2019,2019,3.159,3.159,D,,Gadus macrocephalus,Boreal,Yes,Light,Larvae,66,6.155,1.706,66,6.317,1.4786
+801,a90,Hurst et al,2019,2019,3.159,3.159,D,,Gadus macrocephalus,Boreal,Yes,Light,Larvae,66,6.299,1.9335,66,6.618,1.4786
+802,a90,Hurst et al,2019,2019,3.159,3.159,D,,Gadus macrocephalus,Boreal,Yes,Light,Larvae,66,6.273,1.706,66,6.517,1.706
+803,a90,Hurst et al,2019,2019,3.159,3.159,D,,Gadus macrocephalus,Boreal,Yes,Light,Larvae,66,4.352,2.3966,66,4.432,2.3966
+804,a90,Hurst et al,2019,2019,3.159,3.159,D,,Gadus macrocephalus,Boreal,Yes,Light,Larvae,66,3.413,1.9335,66,3.586,2.3966
+805,a90,Hurst et al,2019,2019,3.159,3.159,D,,Gadus macrocephalus,Boreal,Yes,Light,Larvae,66,3.189,2.0554,66,3.219,2.2829
+806,a90,Hurst et al,2019,2019,3.159,3.159,D,,Gadus macrocephalus,Boreal,Yes,Light,Larvae,66,3.062,2.2829,66,3.007,2.3966
+807,a90,Hurst et al,2019,2019,3.159,3.159,D,,Gadus macrocephalus,Boreal,Yes,Light,Larvae,66,4.03,1.8198,66,3.665,2.3966
+808,a90,Hurst et al,2019,2019,3.159,3.159,D,,Gadus macrocephalus,Boreal,Yes,Light,Larvae,66,5.896,1.8198,66,5.737,2.8515
+809,a90,Hurst et al,2019,2019,3.159,3.159,D,,Gadus macrocephalus,Boreal,Yes,Light,Larvae,66,6.155,1.706,66,6.017,1.3648
+810,a90,Hurst et al,2019,2019,3.159,3.159,D,,Gadus macrocephalus,Boreal,Yes,Light,Larvae,66,6.299,1.9335,66,6.398,1.8198
+811,a90,Hurst et al,2019,2019,3.159,3.159,D,,Gadus macrocephalus,Boreal,Yes,Light,Larvae,66,6.273,1.706,66,6.3,1.5923
+812,a90,Hurst et al,2019,2019,3.159,3.159,D,,Gadus macrocephalus,Boreal,Yes,Light,Larvae,66,4.352,2.3966,66,4.394,2.2829
+813,a90,Hurst et al,2019,2019,3.159,3.159,D,,Gadus macrocephalus,Boreal,Yes,Light,Larvae,66,3.413,1.9335,66,3.567,2.2829
+814,a90,Hurst et al,2019,2019,3.159,3.159,D,,Gadus macrocephalus,Boreal,Yes,Light,Larvae,66,3.189,2.0554,66,3.104,2.8515
+815,a90,Hurst et al,2019,2019,3.159,3.159,D,,Gadus macrocephalus,Boreal,Yes,Light,Larvae,66,3.062,2.2829,66,3.104,2.6241
+816,a91,Laubenstein et al,2019,2019,4.122,4.122,E,45,Acanthochromis polyacanthus,Trop,No,-,Juvenile,40,153.15,45.3412,47,136,49.8746
+817,a91,Laubenstein et al,2019,2019,4.122,4.122,E,,Acanthochromis polyacanthus,Trop,Yes,Food,Juvenile,41,86.175,51.9975,48,100.5957,48.9141
+818,a91,Laubenstein et al,2019,2019,4.122,4.122,E,,Acanthochromis polyacanthus,Trop,Yes,Food,Juvenile,42,-46.2275,24.5174,49,-25.5135,22.7384
