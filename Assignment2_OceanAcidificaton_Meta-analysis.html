@@ -11,7 +11,7 @@
 
 <meta name="author" content />
 
-<meta name="date" content="2022-09-12" />
+<meta name="date" content="2022-09-13" />
 
 <title>Assignment #2: Meta-analysis of Ocean Acidification Effects on Behaviour</title>
 
@@ -1568,52 +1568,69 @@ border-radius: 0px;
 
 <h1 class="title toc-ignore">Assignment #2: Meta-analysis of Ocean Acidification Effects on Behaviour</h1>
 <h4 class="author"><your name and u number></h4>
-<h4 class="date">2022-09-12</h4>
+<h4 class="date">2022-09-13</h4>
 
 </div>
 
 
 <div id="introduction" class="section level1">
 <h1><strong>Introduction</strong></h1>
-<div id="assignment-task" class="section level3 tabset tabset-fade tabset-pills">
-<h3>Assignment Task</h3>
-<p>The goal of this assignment is to conduct a meta-analysis on ocean acidification effects on behaviour. Recall the paper by <a href="https://www.nature.com/articles/s41586-019-1903-y">Clark <em>et al.</em> (2020)</a> that we worked on in week 6. This study was an experimental study across 5-6 different reef fish that looked at comparing the effect of elevated <span class="math inline">\(CO^2\)</span> (in ppm) relative to some control on fish behaviour. That study, you might recall, did not find strong evidence that increased acidification had effects on activity.</p>
-<p>But, this was just a single study (albeit done on 6 species). In this assignment we want to use meta-analysis to understand: 1) to estimate th overall effect and determine if these effects are general across studies conducting similar experiments; 2) how variable the effect size is within the literature and 3) what factors (biological, methodological, publication practices) explain variation in effect size.</p>
-</div>
-<div id="assessment" class="section level3 tabset tabset-fade tabset-pills">
-<h3>Assessment</h3>
-<p>The assessment is worth <strong>40%</strong> of your final mark. You will be assessed on three major areas: 1) Statistical Analysis and Interpretation; 2) Reproducibility and 3) Coding and Writing Structure &amp; Presentation. Below we detail in each section what we are looking for:</p>
+<details>
+<summary>
+<strong>Assignment Task</strong>
+</summary>
+<p><br>
+The goal of this assignment is to conduct a meta-analysis on ocean acidification effects on behaviour. Recall the paper by <a href="https://www.nature.com/articles/s41586-019-1903-y">Clark <em>et al.</em> (2020)</a> that we worked on in week 6. This study was an experimental study across 5-6 different reef fish that looked at comparing the effect of elevated <span class="math inline">\(CO^2\)</span> (in ppm) relative to some control on fish behaviour. That study, you might recall, did not find strong evidence that increased acidification had effects on activity.</p>
+<p>But, this was just a single study (albeit done on 6 species). In this assignment we want to use meta-analysis to:</p>
+<ol style="list-style-type: decimal">
+<li>estimate the overall effect of ocean acidification on behaviour and determine if these effects are general across studies conducting similar experiments;</li>
+<li>understand how variable the effect size is within the literature</li>
+<li>what factors (biological, methodological, publication practices) explain variation in effect size.</li>
+</ol>
+</details>
+<details>
+<summary>
+<strong>Assessment</strong>
+</summary>
+<p><br>
+<strong>The assessment is worth 40% of your final mark</strong>. You will be assessed on three major areas: 1) Statistical Analysis and Interpretation; 2) Reproducibility and 3) Coding, Writing Structure &amp; Presentation. Below we detail in each section what we are looking for:</p>
 <ol style="list-style-type: decimal">
 <li><strong>Statistical Analysis and Interpretation (50%)</strong></li>
 </ol>
 <ul>
-<li>Correct analysis of <a href="https://www.nature.com/articles/s41586-019-1903-y">Clark <em>et al.</em> (2020)</a> data to generate the summary statistics (means, SD, N) for each of the fish species’ average activity.</li>
+<li>Correct analysis of <a href="https://www.nature.com/articles/s41586-019-1903-y">Clark <em>et al.</em> (2020)</a> data to generate the summary statistics (means, SD, N) for each of the fish species’ average activity.
+<ul>
 <li>Correctly merge summary statistics from <a href="https://www.nature.com/articles/s41586-019-1903-y">Clark <em>et al.</em> (2020)</a> into the larger dataset.</li>
 <li>Correctly calculate the log response ratio (lnRR) effect size for every row of the dataframe</li>
 <li>Correct meta-analytic model fitted to the data that uses sampling variance of lnRR as weights and that includes additional random effects.</li>
 <li></li>
+</ul></li>
 </ul>
 <ol start="2" style="list-style-type: decimal">
 <li><strong>Reproducibility (30%)</strong>:</li>
 </ol>
 <ul>
-<li>Code, analysis and data is setup in a <strong>public</strong> <em>GitHub</em> Repository</li>
+<li>Code, analysis and data is setup in a <strong>public</strong> <em>GitHub</em> Repository
+<ul>
 <li>Workflow, meta-data and file structure is clearly documented (using a README file) as is the history of changes for each file.</li>
 <li>Rmarkdown documents follow reproducibility principles:
 <ul>
-<li>They render as an html!</li>
+<li>Rmarkdown document renders as an html!</li>
 <li>Use Figure and Table code chunks that are referenced in text.</li>
 <li>Writing of findings is done using inline code chunks with reference to specific object values.</li>
 </ul></li>
+</ul></li>
 </ul>
 <ol start="3" style="list-style-type: decimal">
-<li><strong>Coding and Writing Structure &amp; Presentation (20%)</strong>:</li>
+<li><strong>Coding, Writing Structure &amp; Presentation (20%)</strong>:</li>
 </ol>
 <ul>
-<li>Code is clearly annotated and only what is needed is presented</li>
+<li>Code is clearly annotated and only what is needed is presented
+<ul>
 <li>Figure and Tables have clear and well labelled captions and that are informative</li>
+</ul></li>
 </ul>
-</div>
+</details>
 </div>
 
 
