@@ -16,10 +16,9 @@ knitr::opts_chunk$set(echo = TRUE, cache = FALSE, tidy = TRUE)
 options(digits=2)
 ```
 
-# **Introduction**
+# **Instructions - READ CAREFULLY** {.tabset .tabset-fade .tabset-pills}
 
-<details>
-  <summary><font size="5">**Assignment Task**</font></summary>
+## **Assignment Task** {.tabset .tabset-fade .tabset-pills}
 
 <br> 
 The goal of this assignment is to conduct a meta-analysis on ocean acidification effects on behaviour. Recall the paper by [Clark *et al.* (2020)](https://www.nature.com/articles/s41586-019-1903-y) that we worked on in week 6. This study was an experimental study across 5-6 different reef fish that looked at comparing the effect of elevated $CO^2$ (in ppm) relative to some control on fish behaviour. That study, you might recall, did not find strong evidence that increased acidification had effects on activity. 
@@ -30,10 +29,7 @@ But, this was just a single study (albeit done on 6 species). In this assignment
   2) understand how variable the effect size is within the literature 
   3) what factors (biological, methodological, publication practices) explain variation in effect size. 
 
-</details>
-
-<details>
-  <summary><font size="5">**Assessment**</font></summary>
+## **Assessment** {.tabset .tabset-fade .tabset-pills}
 
 <br>
 **The assessment is worth 40% of your final mark**. You will be assessed on three major areas: 1) Statistical Analysis and Interpretation; 2) Reproducibility and 3) Coding, Writing Structure & Presentation. Below we detail in each section what we are looking for: 
@@ -61,5 +57,4 @@ But, this was just a single study (albeit done on 6 species). In this assignment
 + Code is clearly annotated, clean, and only what is needed is presented
 + Figure and Tables have clear and well labelled captions that are informative and correctly referenced within the document. 
   
-</details>
   
