@@ -19,7 +19,7 @@ options(digits=2)
 # **Introduction**
 
 <details>
-  <summary>**Assignment Task**</summary>
+  <summary><font size="5">**Assignment Task**</font></summary>
 
 <br> 
 The goal of this assignment is to conduct a meta-analysis on ocean acidification effects on behaviour. Recall the paper by [Clark *et al.* (2020)](https://www.nature.com/articles/s41586-019-1903-y) that we worked on in week 6. This study was an experimental study across 5-6 different reef fish that looked at comparing the effect of elevated $CO^2$ (in ppm) relative to some control on fish behaviour. That study, you might recall, did not find strong evidence that increased acidification had effects on activity. 
@@ -33,7 +33,7 @@ But, this was just a single study (albeit done on 6 species). In this assignment
 </details>
 
 <details>
-  <summary>**Assessment**</summary>
+  <summary><font size="5">**Assessment**</font></summary>
 
 <br>
 **The assessment is worth 40% of your final mark**. You will be assessed on three major areas: 1) Statistical Analysis and Interpretation; 2) Reproducibility and 3) Coding, Writing Structure & Presentation. Below we detail in each section what we are looking for: 
