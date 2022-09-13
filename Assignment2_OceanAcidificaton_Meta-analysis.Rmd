@@ -39,23 +39,26 @@ But, this was just a single study (albeit done on 6 species). In this assignment
 **The assessment is worth 40% of your final mark**. You will be assessed on three major areas: 1) Statistical Analysis and Interpretation; 2) Reproducibility and 3) Coding, Writing Structure & Presentation. Below we detail in each section what we are looking for: 
 
 1) **Statistical Analysis and Interpretation (50%)**
-  + Correct analysis of [Clark *et al.* (2020)](https://www.nature.com/articles/s41586-019-1903-y) data to generate the summary statistics (means, SD, N) for each of the fish species' average activity. 
-  + Correctly merge summary statistics from [Clark *et al.* (2020)](https://www.nature.com/articles/s41586-019-1903-y) into the larger dataset. 
-  + Correctly calculate the log response ratio (lnRR) effect size for every row of the dataframe
-  + Correct meta-analytic model fitted to the data that uses sampling variance of lnRR as weights and that includes additional random effects.
-  + 
++ Correct analysis of [Clark *et al.* (2020)](https://www.nature.com/articles/s41586-019-1903-y) data to generate the summary statistics (means, SD, N) for each of the fish species' average activity. This summary data is merged with additional data columns in the meta-analysis data file. 
++ Correctly merge summary statistics from [Clark *et al.* (2020)](https://www.nature.com/articles/s41586-019-1903-y) into the larger dataset meta-analysis dataset. 
++ Correctly calculate the log response ratio (lnRR) effect size for every row of the dataframe using metafor's `escalc()` function.
++ Correct meta-analytic model fitted to the data that uses sampling variance of lnRR and that includes additional random effects.
++ Funnel plot for visually assessing the possibility of publication bias.
++ Time-lag plot assessing how effect sizes may or may not have changed through time.
++ Formal meta-regression model that includes year as a moderator (fixed effect) to test for time-lag bias
++ Formal meta-regression model that includes inverse sampling variance to test for file-drawer biases
   
 2) **Reproducibility (30%)**:
-  + Code, analysis and data is setup in a **public** *GitHub* Repository
-  + Workflow, meta-data and file structure is clearly documented (using a README file) as is the history of changes for each file.
-  + Rmarkdown documents follow reproducibility principles:
-    + Rmarkdown document renders as an html!
-    + Use Figure and Table code chunks that are referenced in text.
-    + Writing of findings is done using inline code chunks with reference to specific object values.
++ Code, analysis and data is setup in a **public** *GitHub* Repository
++ Workflow, meta-data and file structure is clearly documented (using a README file) as is the history of changes for each file.
++ Rmarkdown documents follow reproducibility principles:
+  + Rmarkdown document renders as an html!
+  + Use Figure and Table code chunks that are referenced in text.
+  + Writing of findings is done using inline code chunks with reference to specific object values.
 
 3) **Coding, Writing Structure & Presentation (20%)**: 
-  + Code is clearly annotated and only what is needed is presented
-  + Figure and Tables have clear and well labelled captions and that are informative
+  + Code is clearly annotated, clean, and only what is needed is presented
+  + Figure and Tables have clear and well labelled captions that are informative
   
 </details>
   

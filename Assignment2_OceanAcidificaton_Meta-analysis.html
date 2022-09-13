@@ -1598,20 +1598,20 @@ The goal of this assignment is to conduct a meta-analysis on ocean acidification
 <li><strong>Statistical Analysis and Interpretation (50%)</strong></li>
 </ol>
 <ul>
-<li>Correct analysis of <a href="https://www.nature.com/articles/s41586-019-1903-y">Clark <em>et al.</em> (2020)</a> data to generate the summary statistics (means, SD, N) for each of the fish species’ average activity.
-<ul>
-<li>Correctly merge summary statistics from <a href="https://www.nature.com/articles/s41586-019-1903-y">Clark <em>et al.</em> (2020)</a> into the larger dataset.</li>
-<li>Correctly calculate the log response ratio (lnRR) effect size for every row of the dataframe</li>
-<li>Correct meta-analytic model fitted to the data that uses sampling variance of lnRR as weights and that includes additional random effects.</li>
-<li></li>
-</ul></li>
+<li>Correct analysis of <a href="https://www.nature.com/articles/s41586-019-1903-y">Clark <em>et al.</em> (2020)</a> data to generate the summary statistics (means, SD, N) for each of the fish species’ average activity. This summary data is merged with additional data columns in the meta-analysis data file.</li>
+<li>Correctly merge summary statistics from <a href="https://www.nature.com/articles/s41586-019-1903-y">Clark <em>et al.</em> (2020)</a> into the larger dataset meta-analysis dataset.</li>
+<li>Correctly calculate the log response ratio (lnRR) effect size for every row of the dataframe using metafor’s <code>escalc()</code> function.</li>
+<li>Correct meta-analytic model fitted to the data that uses sampling variance of lnRR and that includes additional random effects.</li>
+<li>Funnel plot for visually assessing the possibility of publication bias.</li>
+<li>Time-lag plot assessing how effect sizes may or may not have changed through time.</li>
+<li>Formal meta-regression model that includes year as a moderator (fixed effect) to test for time-lag bias</li>
+<li>Formal meta-regression model that includes inverse sampling variance to test for file-drawer biases</li>
 </ul>
 <ol start="2" style="list-style-type: decimal">
 <li><strong>Reproducibility (30%)</strong>:</li>
 </ol>
 <ul>
-<li>Code, analysis and data is setup in a <strong>public</strong> <em>GitHub</em> Repository
-<ul>
+<li>Code, analysis and data is setup in a <strong>public</strong> <em>GitHub</em> Repository</li>
 <li>Workflow, meta-data and file structure is clearly documented (using a README file) as is the history of changes for each file.</li>
 <li>Rmarkdown documents follow reproducibility principles:
 <ul>
@@ -1619,15 +1619,14 @@ The goal of this assignment is to conduct a meta-analysis on ocean acidification
 <li>Use Figure and Table code chunks that are referenced in text.</li>
 <li>Writing of findings is done using inline code chunks with reference to specific object values.</li>
 </ul></li>
-</ul></li>
 </ul>
 <ol start="3" style="list-style-type: decimal">
 <li><strong>Coding, Writing Structure &amp; Presentation (20%)</strong>:</li>
 </ol>
 <ul>
-<li>Code is clearly annotated and only what is needed is presented
+<li>Code is clearly annotated, clean, and only what is needed is presented
 <ul>
-<li>Figure and Tables have clear and well labelled captions and that are informative</li>
+<li>Figure and Tables have clear and well labelled captions that are informative</li>
 </ul></li>
 </ul>
 </details>
