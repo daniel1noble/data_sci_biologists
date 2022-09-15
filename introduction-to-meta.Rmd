@@ -279,7 +279,7 @@ embed_url("https://www.youtube.com/watch?app=desktop&v=3XkC_jetn-U") %>% use_ali
 
 ## **Getting Ready for Friday's Workshop: Meta-analysis with `metafor`**
 
-During Friday's workshop we will make use of the `metafor` package [@Viechtbauer2010]. It is the most widely used meta-analytic package in biology. It can calculate effect size statistics for you, fit an incredibly diversity of meta-analytic models, explore and correct for publication biases and a whole lot more.  While we went over If you're not familiar with `metafor` have a look at Wolfgang's `UseR` talk below, which will help you get a sense of how it works.
+During Friday's workshop we will make use of the `metafor` package [@Viechtbauer2010]. It is the most widely used meta-analytic package in biology. It can calculate effect size statistics for you, fit an incredible diversity of meta-analytic models, explore and 'correct' (as best as one can anyway) for publication biases and a whole lot more. To get familiar with `metafor` have a look at Wolfgang's `UseR` talk below, which will help you get a sense of how it works.
 
 ```{r, echo=FALSE}
 vembedr::embed_url("https://www.youtube.com/watch?v=IkduL5iRdqo") %>% vembedr::use_align("center")
