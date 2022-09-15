@@ -11,7 +11,7 @@
 
 <meta name="author" content />
 
-<meta name="date" content="2022-09-14" />
+<meta name="date" content="2022-09-16" />
 
 <title>Assignment #2: Meta-analysis of Ocean Acidification Effects on Behaviour</title>
 
@@ -433,7 +433,7 @@ display: none;
 
 <h1 class="title toc-ignore">Assignment #2: Meta-analysis of Ocean Acidification Effects on Behaviour</h1>
 <h4 class="author"><your name and u number></h4>
-<h4 class="date">2022-09-14</h4>
+<h4 class="date">2022-09-16</h4>
 
 </div>
 
@@ -444,8 +444,8 @@ display: none;
 <div id="assignment-task" class="section level2 tabset tabset-fade tabset-pills">
 <h2><strong>Assignment Task</strong></h2>
 <p><br>
-The goal of this assignment is to conduct a meta-analysis on ocean acidification effects on behaviour. Recall the paper by <a href="https://www.nature.com/articles/s41586-019-1903-y">Clark <em>et al.</em> (2020)</a> that we worked on in week 6. This study was an experimental study across 5-6 different reef fish that looked at comparing the effect of elevated <span class="math inline">\(CO^2\)</span> (in ppm) relative to some control on fish behaviour. That study, you might recall, did not find strong evidence that increased acidification had effects on behaviour</p>
-<p>But, this was just a single study (albeit done on 6 species). In this assignment we want to use meta-analysis to:</p>
+The goal of this assignment is to conduct a meta-analysis on ocean acidification effects on behaviour. Recall the paper by <a href="https://www.nature.com/articles/s41586-019-1903-y">Clark <em>et al.</em> (2020)</a> that we worked on in week 6. This study was an experimental study across 5-6 different reef fish that looked at comparing the effect of elevated <span class="math inline">\(CO^2\)</span> (in ppm) relative to some control on fish behaviour. That study, you might recall, did not find strong evidence that increased acidification had effects on behaviour.</p>
+<p>Nonetheless, this was just a single study (albeit done on 6 species). In this assignment we want to use meta-analysis to:</p>
 <ol style="list-style-type: decimal">
 <li>estimate the overall effect of ocean acidification on behaviour and determine if these effects are general across studies conducting similar experiments;</li>
 <li>understand how variable the effect size is within the literature</li>
@@ -466,11 +466,11 @@ The goal of this assignment is to conduct a meta-analysis on ocean acidification
 <ol style="list-style-type: lower-roman">
 <li><strong>Statistical Analysis and Interpretation (50%)</strong>
 <ol style="list-style-type: decimal">
-<li>Correct analysis of <a href="https://www.nature.com/articles/s41586-019-1903-y">Clark <em>et al.</em> (2020)</a> data (i.e., <code>OA_activitydat_20190302_BIOL3207.csv</code>) to generate the summary statistics (means, SD, N) for each of the fish species’ average activity.</li>
+<li>Correct analysis of <a href="https://www.nature.com/articles/s41586-019-1903-y">Clark <em>et al.</em> (2020)</a> data (i.e., <code>OA_activitydat_20190302_BIOL3207.csv</code>) to generate the summary statistics (means, SD, N) for each of the fish species’ average activity for each treatment.</li>
 <li>Through coding, merge the summary statistics generated from 1) with the metadata (i.e., <code>clark_paper_data.csv</code>) from <a href="https://www.nature.com/articles/s41586-019-1903-y">Clark <em>et al.</em> (2020)</a>.</li>
 <li>Through coding, correctly merge the combined summary statistics and metadata from <a href="https://www.nature.com/articles/s41586-019-1903-y">Clark <em>et al.</em> (2020)</a> (output from 1 &amp; 2) into the larger meta-analysis dataset (i.e., <code>ocean_meta_data.csv</code>).</li>
 <li>Correctly calculate the log response ratio (lnRR) effect size for every row of the dataframe using metafor’s <code>escalc()</code> function.</li>
-<li>Correct meta-analytic model fitted to the data that uses sampling variance of lnRR. The model should include a random effect of study and observation.</li>
+<li>Correct meta-analytic model fitted to the data that controls for the sampling variance of lnRR. The model should include a random effect of study and observation. Use metafor’s <code>rma.mv()</code> function.</li>
 <li>Written paragraph of the findings and what they mean which is supported with a figure. The paragraph should include:
 <ul>
 <li>Correct presentation and interpretation of overall meta-analytic mean and measures of uncertainty around the mean estimate (e.g., 95% confidence intervals).</li>
@@ -479,8 +479,8 @@ The goal of this assignment is to conduct a meta-analysis on ocean acidification
 </ul></li>
 <li>Funnel plot for visually assessing the possibility of publication bias.</li>
 <li>Time-lag plot assessing how effect sizes may or may not have changed through time.</li>
-<li>Formal meta-regression model that includes year as a moderator (fixed effect) to test for time-lag bias</li>
-<li>Formal meta-regression model that includes inverse sampling variance to test for file-drawer biases</li>
+<li>Formal meta-regression model that includes <strong>year</strong> as a moderator (fixed effect) to test for time-lag bias</li>
+<li>Formal meta-regression model that includes <strong>inverse sampling variance</strong> (i.e., <span class="math inline">\(\frac{1}{v_{lnRR}}\)</span>) to test for file-drawer biases</li>
 <li>A written paragraph that discusses the potential for publication bias based on the meta-regression results. What type of publication bias, if any, appears to be present in the data? If publication bias is present, what does it mean and what might be contributing to such bias?</li>
 <li>Identify any studies contributing to publication bias. How do your updated meta-analysis results compare with a meta-analysis by <a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3001511&amp;fbclid=IwAR0RN6uUAu-7ISkFJKe61zN_NSeEcoA6PftgeyEcbFYzqiTfVP9qbtvoG_8">Clement <em>et. al.</em> (2022)</a>? Are there any concerns about these studies? If so, describe using references to existing papers what concerns have been raised?</li>
 </ol></li>

@@ -23,9 +23,9 @@ options(digits=2)
 ## **Assignment Task** {.tabset .tabset-fade .tabset-pills}
 
 <br> 
-The goal of this assignment is to conduct a meta-analysis on ocean acidification effects on behaviour. Recall the paper by [Clark *et al.* (2020)](https://www.nature.com/articles/s41586-019-1903-y) that we worked on in week 6. This study was an experimental study across 5-6 different reef fish that looked at comparing the effect of elevated $CO^2$ (in ppm) relative to some control on fish behaviour. That study, you might recall, did not find strong evidence that increased acidification had effects on behaviour 
+The goal of this assignment is to conduct a meta-analysis on ocean acidification effects on behaviour. Recall the paper by [Clark *et al.* (2020)](https://www.nature.com/articles/s41586-019-1903-y) that we worked on in week 6. This study was an experimental study across 5-6 different reef fish that looked at comparing the effect of elevated $CO^2$ (in ppm) relative to some control on fish behaviour. That study, you might recall, did not find strong evidence that increased acidification had effects on behaviour. 
 
-But, this was just a single study (albeit done on 6 species). In this assignment we want to use meta-analysis to: 
+Nonetheless, this was just a single study (albeit done on 6 species). In this assignment we want to use meta-analysis to: 
   
   1) estimate the overall effect of ocean acidification on behaviour and determine if these effects are general across studies conducting similar experiments; 
   2) understand how variable the effect size is within the literature 
@@ -45,19 +45,19 @@ Using the skills that you have already learnt in the class you will be required 
 **The assessment is worth 40% of your final mark. You are to work independently on your reports.** You will be assessed on three major areas: i) Statistical Analysis and Interpretation; ii) Reproducibility and iii) Coding, Writing Structure & Presentation. Below we detail in each section what we are looking for: 
 
 i) **Statistical Analysis and Interpretation (50%)**
-    1) Correct analysis of [Clark *et al.* (2020)](https://www.nature.com/articles/s41586-019-1903-y) data (i.e., `OA_activitydat_20190302_BIOL3207.csv`) to generate the summary statistics (means, SD, N) for each of the fish species' average activity. 
+    1) Correct analysis of [Clark *et al.* (2020)](https://www.nature.com/articles/s41586-019-1903-y) data (i.e., `OA_activitydat_20190302_BIOL3207.csv`) to generate the summary statistics (means, SD, N) for each of the fish species' average activity for each treatment. 
     2) Through coding, merge the summary statistics generated from 1) with the metadata (i.e., `clark_paper_data.csv`) from [Clark *et al.* (2020)](https://www.nature.com/articles/s41586-019-1903-y).
     3) Through coding, correctly merge the combined summary statistics and metadata from [Clark *et al.* (2020)](https://www.nature.com/articles/s41586-019-1903-y) (output from 1 & 2) into the larger meta-analysis dataset (i.e., `ocean_meta_data.csv`). 
     4) Correctly calculate the log response ratio (lnRR) effect size for every row of the dataframe using metafor's `escalc()` function.
-    5) Correct meta-analytic model fitted to the data that uses sampling variance of lnRR. The model should include a random effect of study and observation.
+    5) Correct meta-analytic model fitted to the data that controls for the sampling variance of lnRR. The model should include a random effect of study and observation. Use metafor's `rma.mv()` function.
     6) Written paragraph of the findings and what they mean which is supported with a figure. The paragraph should include:
         + Correct presentation and interpretation of overall meta-analytic mean and measures of uncertainty around the mean estimate (e.g., 95% confidence intervals). 
         + Measures of heterogeneity in effect size estimates across studies (i.e., $I^2$ and/or prediction intervals - see `predict()` function in `metafor`)
         + Forest plot showing the mean estimate, 95% confidence interval, and prediction interval with clearly labelled axes, number of samples and studies plotted on figure
     7) Funnel plot for visually assessing the possibility of publication bias.
     8) Time-lag plot assessing how effect sizes may or may not have changed through time.
-    9) Formal meta-regression model that includes year as a moderator (fixed effect) to test for time-lag bias
-    10) Formal meta-regression model that includes inverse sampling variance to test for file-drawer biases
+    9) Formal meta-regression model that includes **year** as a moderator (fixed effect) to test for time-lag bias
+    10) Formal meta-regression model that includes **inverse sampling variance** (i.e., $\frac{1}{v_{lnRR}}$) to test for file-drawer biases
     11) A written paragraph that discusses the potential for publication bias based on the meta-regression results. What type of publication bias, if any, appears to be present in the data? If publication bias is present, what does it mean and what might be contributing to such bias?
     12) Identify any studies contributing to publication bias. How do your updated meta-analysis results compare with a meta-analysis by [Clement *et. al.* (2022)](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3001511&fbclid=IwAR0RN6uUAu-7ISkFJKe61zN_NSeEcoA6PftgeyEcbFYzqiTfVP9qbtvoG_8)? Are there any concerns about these studies? If so, describe using references to existing papers what concerns have been raised?
 
