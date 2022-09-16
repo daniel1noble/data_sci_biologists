@@ -22,42 +22,52 @@ options(digits=2)
 
 ## **Assignment Task** {.tabset .tabset-fade .tabset-pills}
 
+BIOL6207 and BIOL3207 HPO students are expected to undertake an additional assessment task for the course. This task will involve you choosing a scientific paper of your choice on any topic in biology. 
 
-**You will be required to hand in an `html` rendered Rmarkdown report through Wattle by October 28th, 2022**. 
+The paper **must** provide data that can be re-analysed so that you can present your re-analysis through a poster presentation. The goal of the poster is to briefly articulate the objectives of the paper, provide your own re-analysis and visual presentation of the data, and an interpretation of your re-analysis in relation to the papers main question. 
+
+There are a host of resources for you to learn about how to make good quality scientific posters. You may want to look [here](https://guides.nyu.edu/posters), [here](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://students.unimelb.edu.au/__data/assets/pdf_file/0007/470059/Academic_posters_Update_051112.pdf), [here](https://www.science.org/content/article/how-prepare-scientific-poster) and [here](https://www.animateyour.science/post/how-to-design-an-award-winning-conference-poster) as starting places.
+
+**You will be required to provide a pdf version of your poster through Wattle by October 25th, 2022**. We will organise printing of the poster for you for Friday's (October 28th, 2022) workshop. At the workshop you will be required to stand by your poster and answer any questions that other students, demonstrators, Eric or Dan have about your paper and re-analysis of their data. 
+
+The poster conference is meant to be fun! We will provide pizza and drinks and it will be a great way to end the semester. 
 
 ## **Assessment** {.tabset .tabset-fade .tabset-pills}
 
 <br>
-**This assessment is specifically designed for BIOL6207 students, or BIOL3207 students who want an HPO on their transcript. For BIOL6207 students the assessment is worth 20% of your final mark. You are to work independently on analysing data and constructing your posters.** You will be assessed on three major areas: i) Statistical Analysis and Interpretation; ii) Reproducibility and iii) Coding, Writing Structure & Presentation. Below we detail in each section what we are looking for: 
+**This assessment is specifically designed for BIOL6207 students, or BIOL3207 students who want an HPO on their transcript. For BIOL6207 students the assessment is worth 20% of your final mark. You are to work independently on analysing data and constructing your posters.** 
+<br>
 
-i) **Statistical Analysis and Interpretation (50%)**
-    1) Correct analysis of [Clark *et al.* (2020)](https://www.nature.com/articles/s41586-019-1903-y) data (i.e., `OA_activitydat_20190302_BIOL3207.csv`) to generate the summary statistics (means, SD, N) for each of the fish species' average activity for each treatment. 
-    2) Through coding, merge the summary statistics generated from 1) with the metadata (i.e., `clark_paper_data.csv`) from [Clark *et al.* (2020)](https://www.nature.com/articles/s41586-019-1903-y).
-    3) Through coding, correctly merge the combined summary statistics and metadata from [Clark *et al.* (2020)](https://www.nature.com/articles/s41586-019-1903-y) (output from 1 & 2) into the larger meta-analysis dataset (i.e., `ocean_meta_data.csv`). 
-    4) Correctly calculate the log response ratio (lnRR) effect size for every row of the dataframe using metafor's `escalc()` function.
-    5) Correct meta-analytic model fitted to the data that controls for the sampling variance of lnRR. The model should include a random effect of study and observation. Use metafor's `rma.mv()` function.
-    6) Written paragraph of the findings and what they mean which is supported with a figure. The paragraph should include:
-        + Correct presentation and interpretation of overall meta-analytic mean and measures of uncertainty around the mean estimate (e.g., 95% confidence intervals). 
-        + Measures of heterogeneity in effect size estimates across studies (i.e., $I^2$ and/or prediction intervals - see `predict()` function in `metafor`)
-        + Forest plot showing the mean estimate, 95% confidence interval, and prediction interval with clearly labelled axes, number of samples and studies plotted on figure
-    7) Funnel plot for visually assessing the possibility of publication bias.
-    8) Time-lag plot assessing how effect sizes may or may not have changed through time.
-    9) Formal meta-regression model that includes **year** as a moderator (fixed effect) to test for time-lag bias
-    10) Formal meta-regression model that includes **inverse sampling variance** (i.e., $\frac{1}{v_{lnRR}}$) to test for file-drawer biases
-    11) A written paragraph that discusses the potential for publication bias based on the meta-regression results. What type of publication bias, if any, appears to be present in the data? If publication bias is present, what does it mean and what might be contributing to such bias?
-    12) Identify any studies contributing to publication bias. How do your updated meta-analysis results compare with a meta-analysis by [Clement *et. al.* (2022)](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3001511&fbclid=IwAR0RN6uUAu-7ISkFJKe61zN_NSeEcoA6PftgeyEcbFYzqiTfVP9qbtvoG_8)? Are there any concerns about these studies? If so, describe using references to existing papers what concerns have been raised?
+You will be assessed on five major areas: 
 
-ii) **Reproducibility (30%)**:
-    1) Code, analysis and data is setup in a **public** *GitHub* Repository
-    2) Workflow, meta-data and file structure is clearly documented (using a README file) as is the history of changes for each file.
-    3) Rmarkdown documents follow reproducibility principles:
-        + Rmarkdown document rendered as an html!
-        + Use Figure and Table code chunks that are referenced in text.
-        + Writing of findings is done using inline code chunks with reference to specific object values.
+i) **Introduction to the paper (10%)** 
+    + Based on your reading, provide a brief summary of the paper in your own words 
+    + Identify the knowledge gaps identified by the paper
+    
+ii) **Clear articulation of the problem / question / aims of the paper (10%)** 
+    + Provide a clear statement of the major aims, questions, hypotheses of the paper
 
-iii) **Coding, Writing Structure & Presentation (20%)**: 
-      1) Code is clearly annotated, clean, and only what is needed is presented
-      2) Figure and Tables have clear and well labelled captions that are informative and correctly referenced within the document.
-      3) Sentences are clear and understandable. 
-  
-  
+iii) **A brief summary describing how the data was collected (15%)**
+        + Provide a summary of how the data was collected
+        + If sensible, use a figure to provide an overview of the experimental design
+        + Clearly identify the key variables that are relevant to the question
+        + Provide a brief few statements of the statistical approaches you used to analyse the data and why
+    
+iv) **Statistical analysis and interpretation of results in relation to the question (20%)** 
+      + Statistical analysis is appropriate for the question and variables
+      + Results are correctly and accurate presented and described
+      + Meaning and interpretation of the results in relation to the question(s) are correct
+
+v) **Quality and appeal of figures and their relevance to the question / aims / objectives (25%)** 
+      + Figures are labelled correctly
+      + Information rich, but without too much detail
+      + Figures are clearly described by legends
+      + Colour schemes chosen are appropriate
+      + Figures contain useful visualisation of the results in relation to the main aims / questions / objectives
+        
+vi) **Overall presentation, layout and aesthetics of poster (20%)**
+      + Layout of the poster is visually appealing
+      + Poster does not contain too much text
+      + Figures are appropriately placed and organised
+      + Knowledgeable about the poster, and answers questions about the analysis and paper sufficiently well
+        
