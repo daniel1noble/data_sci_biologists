@@ -222,51 +222,6 @@ flextable(tab)
 What I recommend doing now is to play around with `n`. Change it and rerun the code. How does the sampling variance change?
 
 
-Let's now try Zr!
-
-```{r}
-
-# Lets set up the simulated experiment. We'll again conduct 10000 simulations, or experiments, where we sample 20 individuals from a population and measure 2 traits on those individuals that have a correlation of 0.70. 
-     nsim = 10000
-        n = 20
-        r = 0.70
-covMatrix = matrix(c(1, r, r, 1), nrow = 2, ncol = 2)
-
-# Create an empty vector to store our simulated Zr values.
-  Zr <- c()
-
-# Run our simulation
- for(i in 1:nsim){
-    sim_r <- MASS::mvrnorm(n = n, mu = c(0,0), Sigma = covMatrix)
-      cor <- cor(sim_r)[1,2]
-      Zr_tmp <- 0.5*log((1 + cor) / (1 - cor))
-      Zr <- c(Zr, Zr_tmp)
-  }
-
-```
-
-
-```{r sampldistZr}
-# Now lets plot the sampling distribution. 
-ggplot2::ggplot(tibble(Zr), aes(x = Zr)) + 
-  geom_histogram(binwidth = 0.02) +
-  geom_vline(xintercept = 0.5*log((1 + r) / (1 - r)), col = "red") +                     # Add the true mean in red
-  geom_vline(xintercept = mean(Zr), col = "blue", linetype = 2) + # Add the mean of the means
-  labs(x = "Z-transformed Correlation Coefficient (Zr)")
-```
-
-```{r}
-# We know the 'true' values so we can use them to calculate what the sampling variance for this specific situation should be. 
-     sv_Zr <- 1 / (n - 3)
-
-# We just did a simple simulation of the situation where we only calculate the effect size statistic, now lets see what the sampling variance is of the Zr sampling distribution that we calculated.
-samp_dist_Zr <- var(Zr)
-
-# Again, let's create a table to contrast these a little more clearly
-tab <- data.frame(Approach = c("Analytical", "Simulation"), `Sampling Variance` = c(sv_Zr,samp_dist_Zr), check.names = FALSE)
-flextable(tab)
-```
-
 ## **How does meta-analysis work?**
 
 Meta-analysis quantitatively aggregates effect size data collected from existing research and 'controls' for the sampling variability in the process. Why would we want to account for a given study's sampling variance? We want to do this because studies vary greatly in their sample size, and thus their power, to detect effects. As meta-analysts we want to weight effect sizes from studies with higher power more in an analysis. These studies are more likely to be 'correct'.
