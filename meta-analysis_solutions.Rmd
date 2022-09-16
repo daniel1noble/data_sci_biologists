@@ -24,8 +24,71 @@ options(digits=2)
 library(pacman)
 
 # Install bookdown for rendering because we'll need this. While we're at it, lets also install /load the tidyverse
-p_load(bookdown, tidyverse, ggforce, flextable, latex2exp, png, magick, metafor) # basically just list all the packages you want here
+p_load(bookdown, tidyverse, ggforce, flextable, latex2exp, png, magick, metafor, MASS) # basically just list all the packages you want here
 
 ```
 
 
+## **Task 1: Understanding Sampling Variance for Zr**
+
+In your readings for the week you would have been introduced to various types of effect size estimates (see Table 1). There we showed you what the sampling variance actually means and how the formulas are shortcuts to estimating sampling variance. Before embarking on the meta-analysis using Zr, your first task is to understand why the formula for Zr sampling variance does in fact estimate it's sampling variance correctly. 
+
+Recall the formula for calculating correlation-based effect size estimates:
+
+$$
+Zr = \frac{1}{2}log \left( \frac{1+r}{1-r}\right)
+$$
+Here, r, is the correlation coefficient. The reason why we z-transform the correlation coefficient is because correlations range from -1 to 1. Since they are bounded, they are not normally distributed. Z-transformation will make the distribution of correlations normal to satisfy the assumptions of meta-analytic models. recall that the associated sampling variance calculation for Zr can be calculated as:
+
+$$
+v_{Zr} = \frac{1}{N - 3}
+$$
+
+Here, you will conduct a simple simulation to show the $v_{Zr}$ indeed is a good estimate of sampling error. Below we have provided code-chunks for you. Where it says "ADD YOUR CODE HERE" you should provide the 
+
+```{r}
+
+# Lets set up the simulated experiment. We'll again conduct 10000 simulations, or experiments, where we sample 20 individuals from a population and measure 2 traits on those individuals that have a correlation of 0.70. 
+     nsim = 10000
+        n = 20
+        r = 0.70
+covMatrix = matrix(c(1, r, r, 1), nrow = 2, ncol = 2)
+
+# Create an empty vector to store our simulated Zr values.
+  Zr <- c()
+
+# Run our simulation. Here, we need to estimate the correlation between two randomly drawn traits, convert this to Zr and store it.
+ for(i in 1:nsim){
+    sim_r <- MASS::mvrnorm(n = n, mu = c(0,0), Sigma = covMatrix)
+      cor <- cor(sim_r)[1,2] #"ADD YOUR CODE HERE"
+      Zr_tmp <- 0.5*log((1 + cor) / (1 - cor)) # "ADD YOUR CODE HERE"
+      Zr <- c(Zr, Zr_tmp)
+  }
+
+```
+
+
+In the code chunk below. Plot the sampling distribution of Zr values. Add the true mean and the sample mean to the plot as was done in the readings
+
+```{r sampldistZr}
+
+#"ADD YOUR CODE HERE"
+# Now lets plot the sampling distribution. 
+ggplot2::ggplot(tibble(Zr), aes(x = Zr)) + 
+  geom_histogram(binwidth = 0.02) +
+  geom_vline(xintercept = 0.5*log((1 + r) / (1 - r)), col = "red") +                     # Add the true mean in red
+  geom_vline(xintercept = mean(Zr), col = "blue", linetype = 2) + # Add the mean of the means
+  labs(x = "Z-transformed Correlation Coefficient (Zr)")
+```
+
+```{r}
+# We know the 'true' values so we can use them to calculate what the sampling variance for this specific situation should be. 
+     sv_Zr <- 1 / (n - 3) #"ADD YOUR CODE HERE"
+
+# We just did a simple simulation of the situation where we only calculate the effect size statistic, now lets see what the sampling variance is of the Zr sampling distribution that we calculated.
+samp_dist_Zr <- var(Zr) #"ADD YOUR CODE HERE"
+
+# Again, let's create a table to contrast these a little more clearly
+tab <- data.frame(Approach = c("Analytical", "Simulation"), `Sampling Variance` = c(sv_Zr,samp_dist_Zr), check.names = FALSE)
+flextable(tab)
+```
