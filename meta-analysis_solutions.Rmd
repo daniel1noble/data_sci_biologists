@@ -9,6 +9,8 @@ output:
     toc: yes
     toc_depth: 6
     toc_float: yes
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
@@ -24,10 +26,17 @@ options(digits=2)
 library(pacman)
 
 # Install bookdown for rendering because we'll need this. While we're at it, lets also install /load the tidyverse
-p_load(bookdown, tidyverse, ggforce, flextable, latex2exp, png, magick, metafor, MASS) # basically just list all the packages you want here
+p_load(bookdown, tidyverse, ggforce, GGally, flextable, latex2exp, png, magick, metafor, MASS) # basically just list all the packages you want here
 
 ```
 
+
+
+## **Setting the scene: Meta-analysis of studies estimating the correlation between physiology and movement patterns**
+
+Physiology is expected to drive movement, including short-term activity, exploration of unfamiliar environments, and larger scale dispersal which can influence species distributions in an environmentally sensitive manner. To test whether there is a relationship between physiology and movement pattern (separated as activity, exploration, and dispersal), [Wu & Seebacher 2022](https://doi.org/10.1038/s42003-022-03055-y) extracted correlations from the literature between common physiological traits (e.g., metabolic rate, hormone levels, body condition) and either activity, exploration, and dispersal at the individual level. 
+
+Here, we will conduct a meta-analysis of correlations taken from the literature using the Zr effect size (see below and your readings). Throughout, there will be coding tasks for you to do so that you engage with key concepts and functions that will be useful for your assignment. 
 
 ## **Task 1: Understanding Sampling Variance for Zr**
 
@@ -44,7 +53,7 @@ $$
 v_{Zr} = \frac{1}{N - 3}
 $$
 
-Here, you will conduct a simple simulation to show the $v_{Zr}$ indeed is a good estimate of sampling error. Below we have provided code-chunks for you. Where it says "ADD YOUR CODE HERE" you should provide the 
+Here, you will conduct a simple simulation to show the $v_{Zr}$ indeed is a good estimate of sampling error. Below we have provided code-chunks for you. Where it says "ADD YOUR CODE HERE" you should provide the necessary code to complete the task.
 
 ```{r}
 
@@ -92,3 +101,51 @@ samp_dist_Zr <- var(Zr) #"ADD YOUR CODE HERE"
 tab <- data.frame(Approach = c("Analytical", "Simulation"), `Sampling Variance` = c(sv_Zr,samp_dist_Zr), check.names = FALSE)
 flextable(tab)
 ```
+
+
+## **Task 2: Downloading and calculating Zr from the raw meta-analytic data**
+
+Now that you understand Zr and it's sampling variance better, download the data using the code chunk below. The following code illustrates how to calculate the Fisher z-transformed effect size (Zr) and sampling variance (V_Zr).
+
+```{r datadownload, message=FALSE}
+# Download and clean data
+zr_data <- read.csv("https://raw.githubusercontent.com/daniel1noble/meta-workshop/gh-pages/data/ind_disp_raw_data.csv") %>%
+  dplyr::select(study_ID, taxa, species, trait, response, response_unit, disp_trait, disp_unit, corr_coeff, sample_size) # remove irrelevant columns for this tutorial
+```
+
+Now that you have downloaded the data have a look at it, explore the data a little. The `corr_coeff` column is the correlation coefficient and the `sample_size` is the size of the sample used to estimate the correlation. The correlation coefficient itself is a unit less measure that captures both the strength and direction of relationship between two variables. The raw correlation coefficient ranges from -1 to 1. If a correlation is positive it indicates that, as the value of one variable increases so to does the value of the second variable. The magnitude of the value indicates how strong they co-vary. For example, a correlation of 1 indicates that variable 1 perfectly co-varies with variable 2. 
+
+Other important variables in the dataset are `study_ID`, which is the identifier for the study the effect size (i.e., correlation) was extracted, and `species` which identifies the species the effect size was extracted for. 
+
+
+```{r, exploredata}
+# There's a bunch of free stuff they can do here. 
+#Studies / taxa
+std_taxa <- zr_data %>% group_by(taxa) %>% summarise(stdy = length(unique(study_ID)),
+                                                     effects = n())
+std_taxa %>% ggplot(aes(x = taxa, y = stdy)) + 
+             geom_point(size = 6, aes(colour = effects)) + 
+             labs(y = "Number of Studies", x = "Taxonomic Group", colour = "# Effects") + 
+             theme_bw()
+
+ggpairs(zr_data, columns = c(2,9:10), aes(colour=disp_trait), columnLabels = c("Taxa", "Correlation (r)", "Sample size (n)"))
+```
+
+We now want to convert the correlation (`corr_coeff`) to Zr instead of using the correlation (r) itself because Zr will satisfy assumptions of normality that are inherent to meta-analytic models. We can use the `escalc` function in the R package `metafor` to do that for us. Explore the help file for `escalc` and write some code to calculate Zr, and it's associated sampling variance, and add it to the data frame. Use the `var.names` argument to rename the effect size and sampling variance to "Zr" and "V_Zr". In other words, set the argument to `var.names = c("Zr", "V_Zr")`.
+
+```{r, Zrcalc}
+# Calculate Fisher's r-to-z transformed correlation coefficient (ZCOR) as yi = effect size and vi = sampling variances, where ri = raw correlation coefficients, and ni = sample size.
+zr_data <- metafor::escalc(measure = "ZCOR", ri = corr_coeff, ni = sample_size, data = zr_data, var.names = c("Zr", "V_Zr"))
+
+zr_data %>% slice_head(n = 5)
+```
+
+It's improtant to note that we can, however, convert back to the original correlation coefficient quite easily as follows:
+
+```{r}
+# We can easily convert back to r as follows
+zr_data$r <- tanh(zr_data$Zr)
+
+zr_data %>% dplyr::select(corr_coeff, r) %>% slice_head(n = 5)
+```
+
