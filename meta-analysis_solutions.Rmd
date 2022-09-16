@@ -30,8 +30,6 @@ p_load(bookdown, tidyverse, ggforce, GGally, flextable, latex2exp, png, magick, 
 
 ```
 
-
-
 ## **Setting the scene: Meta-analysis of studies estimating the correlation between physiology and movement patterns**
 
 Physiology is expected to drive movement, including short-term activity, exploration of unfamiliar environments, and larger scale dispersal which can influence species distributions in an environmentally sensitive manner. To test whether there is a relationship between physiology and movement pattern (separated as activity, exploration, and dispersal), [Wu & Seebacher 2022](https://doi.org/10.1038/s42003-022-03055-y) extracted correlations from the literature between common physiological traits (e.g., metabolic rate, hormone levels, body condition) and either activity, exploration, and dispersal at the individual level. 
@@ -110,7 +108,8 @@ Now that you understand Zr and it's sampling variance better, download the data 
 ```{r datadownload, message=FALSE}
 # Download and clean data
 zr_data <- read.csv("https://raw.githubusercontent.com/daniel1noble/meta-workshop/gh-pages/data/ind_disp_raw_data.csv") %>%
-  dplyr::select(study_ID, taxa, species, trait, response, response_unit, disp_trait, disp_unit, corr_coeff, sample_size) # remove irrelevant columns for this tutorial
+  dplyr::select(study_ID, taxa, species, trait, response, response_unit, disp_trait, disp_unit, corr_coeff, sample_size) %>%  # remove irrelevant columns for this tutorial
+  mutate(obs = 1:n()) # Add this observation level variable. We'll explain later what it means.
 ```
 
 Now that you have downloaded the data have a look at it, explore the data a little. The `corr_coeff` column is the correlation coefficient and the `sample_size` is the size of the sample used to estimate the correlation. The correlation coefficient itself is a unit less measure that captures both the strength and direction of relationship between two variables. The raw correlation coefficient ranges from -1 to 1. If a correlation is positive it indicates that, as the value of one variable increases so to does the value of the second variable. The magnitude of the value indicates how strong they co-vary. For example, a correlation of 1 indicates that variable 1 perfectly co-varies with variable 2. 
@@ -148,4 +147,38 @@ zr_data$r <- tanh(zr_data$Zr)
 
 zr_data %>% dplyr::select(corr_coeff, r) %>% slice_head(n = 5)
 ```
+
+
+## **Task 3: Multilevel meta-analysis**
+
+Our data is now ready for analysis! We will use the `rma.mv` function in `metafor` to fit our first multilevel meta-analysis model. The model takes Zr as a response variable and accounts for it's sampling variance (`V` = V_Zr). 
+
+We are also going to estimate a random effect variance for species (i.e., `species`), between study (i.e., `study_id`) and within-study (i.e., `obs`) grouping variables to control for non-independence and understand sources driving effect size variability. These are all denoted in the `random` argument of `metafor` which takes a list of all the random effects. 
+
+You will notice that we write out the formula for the model `Zr ~ 1`. This means that we want Zr as our response variable and we only want to estimate an 'intercept' (i.e., denoted with 1) which is the overall mean estimate for Zr, our effect size. 
+
+The full model describe above can be coded as follows:
+
+```{r, mlmaZr, class.source='klippy'}
+
+# Multi-level meta-analytic model
+MLMA <- metafor::rma.mv(Zr ~ 1, V = V_Zr, 
+                   method="REML",
+                   random=list(~1|species,
+                               ~1|study_ID,
+                               ~1|obs), 
+                   dfs = "contain",
+                   test="t",
+                   data=zr_data)
+MLMA
+
+```
+
+In meta-analysis, the intercept has a lot of meaning because it provides us with an overall estimate of the effect from all experiments published in the literature. We also like to know other important aspects of the model, such as 1) how variable the effect size across studies/experiments and 2) what drives variability in effects across studies/experiments. We'll get to that shortly.
+
+You will notice two additional arguments being specified: 
+
+* The first, `dfs`, which calculates the degrees of freedom for the inferential tests in the model. `dfs = "contain"` will calculate the degrees of freedom based on the lowest clustering level minus 1 (in this case study). Simulations have shown that this is a more robust measure to protect against type I errors [@Nakagawa2021]. 
+
+* The second argument, `test` specifies the test statistic used. `metafor` defaults to z values based on the standard normal distribution, however, simulations have shown [@Pappalardo2021] and it has been recommended [@Rosenberg2013b], that the t-distribution be used because samples sizes are often small and the true variance of the test is being estimated. 
 
