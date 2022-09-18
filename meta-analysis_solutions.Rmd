@@ -15,7 +15,7 @@ editor_options:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, cache = FALSE, tidy = TRUE)
-options(digits=2)
+options(digits=3)
 ```
 
 ## **Load the necessary R Packages**
@@ -172,7 +172,7 @@ You will notice two additional arguments being specified in the model below:
 
 * The second argument, `test` specifies the test statistic used. `metafor` defaults to z values based on the standard normal distribution, however, simulations have shown [@Pappalardo2021] and it has been recommended [@Rosenberg2013b], that the t-distribution be used because samples sizes are often small and the true variance of the test is being estimated. 
 
-The full model describe above can be coded as follows:
+The full model described above can be coded as follows:
 
 ```{r, mlmaZr, class.source='klippy'}
 
@@ -191,7 +191,18 @@ MLMA
 
 In meta-analysis, the intercept has a lot of meaning because it provides us with an overall estimate of the effect from all experiments published in the literature. We would also like to know other important aspects of the model, such as 1) the variability in effect size across studies/experiments and 2) what drives variability in effects across studies/experiments. We'll get to that shortly.
 
-First, lets dissect out the meaning of all the meta-analytic results. 
+Lets dissect out the meaning of all the meta-analytic results. 
+
+#### Overall meta-analytic mean
+ + We want to know what the overall meta-analytic mean effect size across the studies actually is estimated to be. We can see that from the model by extracting the intercept (labeled 'estimate' in the model). Recall that the model is just an object that stores all the values for us. We can extract the estimate using the `coef` function, it is estimated to be `r coef(MLMA)`, which tells us that the mean Zr value is positive, but there is a rather weak overall association between physiology and dispersal / movement when we pool across all studies. 
+
+
+#### Uncertainty in the overall meta-analytic mean: 95% Confidence Intervals
++ Of course, that's just the point estimate, we can see that the 95% confidence intervals range from `r MLMA$ci.lb` to `r MLMA$ci.ub`. In other words, 95% of the time we would expect the true mean to fall between Zr values of `r MLMA$ci.lb` to `r MLMA$ci.ub`. 
+
+
+#### Testing the null hypthesis about whether the overall meta-analtic mean is different from 0.
++ We can also see that the null hypothesis that Zr = 0 can be rejected because there is a significantly larger estimate, which we can see from the p-value being < 0.05. To be more exact, the p-value is `r MLMA$pval`. 
 
 
 
