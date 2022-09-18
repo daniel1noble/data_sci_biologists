@@ -32,7 +32,7 @@ p_load(bookdown, tidyverse, ggforce, GGally, flextable, latex2exp, png, magick, 
 
 ## **Setting the scene: Meta-analysis of studies estimating the correlation between physiology and movement patterns**
 
-Physiology is expected to drive movement, including short-term activity, exploration of unfamiliar environments, and larger scale dispersal which can influence species distributions in an environmentally sensitive manner. To test whether there is a relationship between physiology and movement pattern (separated as activity, exploration, and dispersal), [Wu & Seebacher 2022](https://doi.org/10.1038/s42003-022-03055-y) extracted correlations from the literature between common physiological traits (e.g., metabolic rate, hormone levels, body condition) and either activity, exploration, and dispersal at the individual level. 
+Physiology is expected to drive movement, including short-term activity, exploration of unfamiliar environments, and larger scale dispersal which can influence species distributions in an environmentally sensitive manner. To test whether there is a relationship between physiology and movement pattern (categorized as activity, exploration, and dispersal movement types), [Wu & Seebacher 2022](https://doi.org/10.1038/s42003-022-03055-y) extracted correlations from the literature between common physiological traits (e.g., metabolic rate, hormone levels, body condition) and either activity, exploration, and dispersal at the individual level. 
 
 Here, we will conduct a meta-analysis of correlations taken from the literature using the Zr effect size (see below and your readings). Throughout, there will be coding tasks for you to do so that you engage with key concepts and functions that will be useful for your assignment. 
 
@@ -45,17 +45,17 @@ Recall the formula for calculating correlation-based effect size estimates:
 $$
 Zr = \frac{1}{2}log \left( \frac{1+r}{1-r}\right)
 $$
-Here, r, is the correlation coefficient. The reason why we z-transform the correlation coefficient is because correlations range from -1 to 1. Since they are bounded, they are not normally distributed. Z-transformation will make the distribution of correlations normal to satisfy the assumptions of meta-analytic models. recall that the associated sampling variance calculation for Zr can be calculated as:
+Here, r, is the correlation coefficient. The reason why we z-transform the correlation coefficient is because correlations range from -1 to 1. Since they are bounded, they are not necessarily normally distributed. Z-transformation will make the distribution of correlations normal to satisfy the assumptions of meta-analytic models. Recall that the associated sampling variance calculation for Zr can be calculated as:
 
 $$
 v_{Zr} = \frac{1}{N - 3}
 $$
 
-Here, you will conduct a simple simulation to show the $v_{Zr}$ indeed is a good estimate of sampling error. Below we have provided code-chunks for you. Where it says "ADD YOUR CODE HERE" you should provide the necessary code to complete the task.
+Here, you will conduct a simple simulation to show  $v_{Zr}$ is indeed a good approximation of its sampling error. Below we have provided code-chunks for you. Where it says "ADD YOUR CODE HERE" you should provide the necessary code to complete the task.
 
 ```{r}
 
-# Lets set up the simulated experiment. We'll again conduct 10000 simulations, or experiments, where we sample 20 individuals from a population and measure 2 traits on those individuals that have a correlation of 0.70. 
+# Lets set up the simulated experiment. We'll conduct 10000 simulations, or experiments, where we sample 20 individuals from a population and measure 2 traits on those individuals that have a correlation of 0.70. 
      nsim = 10000
         n = 20
         r = 0.70
@@ -66,14 +66,20 @@ covMatrix = matrix(c(1, r, r, 1), nrow = 2, ncol = 2)
 
 # Run our simulation. Here, we need to estimate the correlation between two randomly drawn traits, convert this to Zr and store it.
  for(i in 1:nsim){
-    sim_r <- MASS::mvrnorm(n = n, mu = c(0,0), Sigma = covMatrix)
-      cor <- cor(sim_r)[1,2] #"ADD YOUR CODE HERE"
-      Zr_tmp <- 0.5*log((1 + cor) / (1 - cor)) # "ADD YOUR CODE HERE"
-      Zr <- c(Zr, Zr_tmp)
+    # This code will simulate two variables by sampling them from a multivariate normal distribution (mvnorm). mvnorm requires the sample size (number of rows in the data frame), the mean of the two variables, in this case they are centered on 0 for simplicity, and the covariance matrix (which here is just the correlation matrix as the variables will be standardized)
+        sim_r <- MASS::mvrnorm(n = n, mu = c(0,0), Sigma = covMatrix)
+  
+    # From the data frame sim_r we now want to calculate the correlation
+          cor <- cor(sim_r)[1,2] #"ADD YOUR CODE HERE"
+          
+    # Now, we want to convert this correlation value to Zr
+       Zr_tmp <- 0.5*log((1 + cor) / (1 - cor)) # "ADD YOUR CODE HERE"
+    
+    # Finally, we'll merge the empty Zr vector with the value of Zr_tmp.    
+       Zr <- c(Zr, Zr_tmp)
   }
 
 ```
-
 
 In the code chunk below. Plot the sampling distribution of Zr values. Add the true mean and the sample mean to the plot as was done in the readings
 
