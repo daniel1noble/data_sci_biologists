@@ -2,6 +2,7 @@
 title: "Meta-analysis: Multi-level models"
 author: "<your name and u number>"
 date: "`r Sys.Date()`"
+bibliography: "./bib/refs.bib"
 output: 
   bookdown::html_document2:
     code_folding: show
@@ -205,6 +206,6 @@ Lets dissect out the meaning of all the meta-analytic results.
 + We can also see that the null hypothesis that Zr = 0 can be rejected because there is a significantly larger estimate, which we can see from the p-value being < 0.05. To be more exact, the p-value is `r MLMA$pval`. 
 
 
-
+## **References**
 
 
