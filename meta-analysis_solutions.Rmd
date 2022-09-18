@@ -118,7 +118,7 @@ zr_data <- read.csv("https://raw.githubusercontent.com/daniel1noble/meta-worksho
   mutate(obs = 1:n()) # Add this observation level variable. We'll explain later what it means.
 ```
 
-Now that you have downloaded the data have a look at it, explore the data a little. The `corr_coeff` column is the correlation coefficient and the `sample_size` is the size of the sample used to estimate the correlation. The correlation coefficient itself is a unit less measure that captures both the strength and direction of relationship between two variables. The raw correlation coefficient ranges from -1 to 1. If a correlation is positive it indicates that, as the value of one variable increases so to does the value of the second variable. The magnitude of the value indicates how strong they co-vary. For example, a correlation of 1 indicates that variable 1 perfectly co-varies with variable 2. 
+Now that you have downloaded the data have a look at it, explore the data a little. The `corr_coeff` column is the correlation coefficient and the `sample_size` is the size of the sample used to estimate the correlation. The correlation coefficient itself is a unitless measure that captures both the strength and direction of relationship between two variables. The raw correlation coefficient ranges from -1 to 1. If a correlation is positive it indicates that, as the value of one variable increases so to does the value of the second variable. The magnitude of the value indicates how strong they co-vary. For example, a correlation of 1 indicates that variable 1 perfectly co-varies with variable 2. 
 
 Other important variables in the dataset are `study_ID`, which is the identifier for the study the effect size (i.e., correlation) was extracted, and `species` which identifies the species the effect size was extracted for. 
 
@@ -133,10 +133,11 @@ std_taxa %>% ggplot(aes(x = taxa, y = stdy)) +
              labs(y = "Number of Studies", x = "Taxonomic Group", colour = "# Effects") + 
              theme_bw()
 
-ggpairs(zr_data, columns = c(2,9:10), aes(colour=disp_trait), columnLabels = c("Taxa", "Correlation (r)", "Sample size (n)"))
+ggpairs(zr_data, columns = c(2,9:10), aes(colour=disp_trait), 
+        columnLabels = c("Taxa", "Correlation (r)", "Sample size (n)"))
 ```
 
-We now want to convert the correlation (`corr_coeff`) to Zr instead of using the correlation (r) itself because Zr will satisfy assumptions of normality that are inherent to meta-analytic models. We can use the `escalc` function in the R package `metafor` to do that for us. Explore the help file for `escalc` and write some code to calculate Zr, and it's associated sampling variance, and add it to the data frame. Use the `var.names` argument to rename the effect size and sampling variance to "Zr" and "V_Zr". In other words, set the argument to `var.names = c("Zr", "V_Zr")`.
+We now want to convert the correlation (`corr_coeff`) to Zr instead of using the correlation (r) itself because Zr will satisfy assumptions of normality that are inherent to meta-analytic models. We can use the `escalc` function in the R package `metafor` to do that for us. Explore the help file for `escalc` and write some code to calculate Zr and its associated sampling variance. `escalc` can do this and add it to the data frame. Use the `var.names` argument to rename the effect size and sampling variance to "Zr" and "V_Zr". In other words, set the argument to `var.names = c("Zr", "V_Zr")`.
 
 ```{r, Zrcalc}
 # Calculate Fisher's r-to-z transformed correlation coefficient (ZCOR) as yi = effect size and vi = sampling variances, where ri = raw correlation coefficients, and ni = sample size.
@@ -145,7 +146,7 @@ zr_data <- metafor::escalc(measure = "ZCOR", ri = corr_coeff, ni = sample_size, 
 zr_data %>% slice_head(n = 5)
 ```
 
-It's improtant to note that we can, however, convert back to the original correlation coefficient quite easily as follows:
+It's important to note that we can convert back to the original correlation coefficient quite easily as follows:
 
 ```{r}
 # We can easily convert back to r as follows
@@ -157,11 +158,19 @@ zr_data %>% dplyr::select(corr_coeff, r) %>% slice_head(n = 5)
 
 ## **Task 3: Multilevel meta-analysis**
 
-Our data is now ready for analysis! We will use the `rma.mv` function in `metafor` to fit our first multilevel meta-analysis model. The model takes Zr as a response variable and accounts for it's sampling variance (`V` = V_Zr). 
+Our data is now ready for analysis! We will use the `rma.mv` function in `metafor` to fit our first multilevel meta-analysis model. The model takes Zr as a response variable and accounts for it's sampling variance (`V` = V_Zr). `metafor` takes the effect size sampling variance through the `V` argument.
 
-We are also going to estimate a random effect variance for species (i.e., `species`), between study (i.e., `study_id`) and within-study (i.e., `obs`) grouping variables to control for non-independence and understand sources driving effect size variability. These are all denoted in the `random` argument of `metafor` which takes a list of all the random effects. 
+You will notice that we write out the formula for the model in the `rma.mv` function `Zr ~ 1`. This means that we want Zr as our response variable and we only want to estimate an 'intercept' (i.e., denoted with 1) which is the overall mean estimate for Zr, our effect size. 
 
-You will notice that we write out the formula for the model `Zr ~ 1`. This means that we want Zr as our response variable and we only want to estimate an 'intercept' (i.e., denoted with 1) which is the overall mean estimate for Zr, our effect size. 
+We are also going to estimate a random effect variance for species (i.e., `species`), between study (i.e., `study_id`) and within-study (i.e., `obs`) grouping variables to control for non-independence and understand sources driving effect size variability. These are all denoted in the `random` argument of `metafor` which takes a list of all the random effects. The random effects are denoted with a formula like structure `~1|grouping variable`, where the `grouping_variable` is the variable you want to estimate a variance for, such as `species` and/or `study_id`. 
+
+You will see below that we are also estimate a random effect at the observation / row level. This is called `obs`. Why do we do this? We do this because we want to explicitly estimate the within study variation. You can think of it as a 'residual` variance. `metafor` does not estimate this by default (this is for historical reasons). 
+
+You will notice two additional arguments being specified in the model below: 
+
+* The first, `dfs`, which calculates the degrees of freedom for the inferential tests in the model. `dfs = "contain"` will calculate the degrees of freedom based on the lowest clustering level minus 1 (in this case study). Simulations have shown that this is a more robust measure to protect against type I errors [@Nakagawa2021]. 
+
+* The second argument, `test` specifies the test statistic used. `metafor` defaults to z values based on the standard normal distribution, however, simulations have shown [@Pappalardo2021] and it has been recommended [@Rosenberg2013b], that the t-distribution be used because samples sizes are often small and the true variance of the test is being estimated. 
 
 The full model describe above can be coded as follows:
 
@@ -180,11 +189,11 @@ MLMA
 
 ```
 
-In meta-analysis, the intercept has a lot of meaning because it provides us with an overall estimate of the effect from all experiments published in the literature. We also like to know other important aspects of the model, such as 1) how variable the effect size across studies/experiments and 2) what drives variability in effects across studies/experiments. We'll get to that shortly.
+In meta-analysis, the intercept has a lot of meaning because it provides us with an overall estimate of the effect from all experiments published in the literature. We would also like to know other important aspects of the model, such as 1) the variability in effect size across studies/experiments and 2) what drives variability in effects across studies/experiments. We'll get to that shortly.
 
-You will notice two additional arguments being specified: 
+First, lets dissect out the meaning of all the meta-analytic results. 
 
-* The first, `dfs`, which calculates the degrees of freedom for the inferential tests in the model. `dfs = "contain"` will calculate the degrees of freedom based on the lowest clustering level minus 1 (in this case study). Simulations have shown that this is a more robust measure to protect against type I errors [@Nakagawa2021]. 
 
-* The second argument, `test` specifies the test statistic used. `metafor` defaults to z values based on the standard normal distribution, however, simulations have shown [@Pappalardo2021] and it has been recommended [@Rosenberg2013b], that the t-distribution be used because samples sizes are often small and the true variance of the test is being estimated. 
+
+
 
