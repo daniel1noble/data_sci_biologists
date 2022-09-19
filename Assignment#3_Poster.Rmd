@@ -28,9 +28,17 @@ The paper **must** provide data that can be re-analysed so that you can present 
 
 There are a host of resources for you to learn about how to make good quality scientific posters. You may want to look [here](https://guides.nyu.edu/posters), [here](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://students.unimelb.edu.au/__data/assets/pdf_file/0007/470059/Academic_posters_Update_051112.pdf), [here](https://www.science.org/content/article/how-prepare-scientific-poster) and [here](https://www.animateyour.science/post/how-to-design-an-award-winning-conference-poster) as starting places.
 
-**You will be required to provide a pdf version of your poster through Wattle by October 25th, 2022**. We will organise printing of the poster for you for Friday's (October 28th, 2022) workshop. At the workshop you will be required to stand by your poster and answer any questions that other students, demonstrators, Eric or Dan have about your paper and re-analysis of their data. 
+**You will be required to provide a pdf version of your poster through Wattle by October 24th at 5:00PM 2022**. We need the posters by this point in order to organise printing. We will organise printing of the poster for you for Friday's (October 28th, 2022) workshop. At the workshop you will be required to stand by your poster and answer any questions that other students, demonstrators, Eric or Dan have about your paper and re-analysis of the data. 
 
 The poster conference is meant to be fun! We will provide pizza and drinks and it will be a great way to end the semester. 
+
+<br>
+
+#### Just some examples of good posters!
+![](./pics/Wu_1.png)
+
+![](./pics/Wu_2.png)
+![](./pics/Wu_3.png)
 
 ## **Assessment** {.tabset .tabset-fade .tabset-pills}
 
