@@ -26,7 +26,11 @@ options(digits=3)
 library(pacman)
 
 # Install bookdown for rendering because we'll need this. While we're at it, lets also install /load the tidyverse
-p_load(bookdown, tidyverse, ggforce, GGally, flextable, latex2exp, png, magick, metafor, MASS) # basically just list all the packages you want here
+p_load(bookdown, devtools, tidyverse, ggforce, GGally, flextable, latex2exp, png, magick, metafor, MASS, emmeans, R.rsp) # basically just list all the packages you want here
+
+# Install the orchaRd package 
+devtools::install_github("daniel1noble/orchaRd", force = TRUE)
+library(orchaRd)
 
 ```
 
@@ -238,6 +242,54 @@ $$
 From your meta-analytic model you get an estimate for all these variances, but we can use the sampling variance for each Zr effect size to calculate $\sigma^2_{m}$. 
 
 If all this looks and sounds scary, don't panic! We have R packages and functions that can do these calculations for us.
+
+```{r, het}
+
+## Calculate I2
+i2_vals <- orchaRd::i2_ml(MLMA)
+
+## Make a pretty table. First, lets clean up the names of the different I2 estimates. Lets remove I2_. It's a string, so, we can use some regular expressions to fix that. `gsub` is pretty useful. You put a pattern in and tell it what you would like to replace the text with. In this case, just blank will do! Then, we'll make the first letter of what is left capitalised.
+i2 <- tibble(type = firstup(gsub("I2_", "",names(i2_vals))), I2 = i2_vals)
+
+
+# You remember flextable. Now, lets make a pretty table. We can so some nice modifications here too.
+
+flextable(i2) %>% 
+    align(part = "header", align = "center") %>% 
+  compose(part = "header", j = 1, value = as_paragraph(as_b("Type"))) %>% 
+  compose(part = "header", j = 2, value = as_paragraph(as_b("I"), as_b(as_sup("2"))))
+
+```
+
+#### **Interpreting $I^2$ Estimates** {.tabset .tabset-fade .tabset-pills} 
+
+##### First Task! {.tabset .tabset-fade .tabset-pills} 
+
+>**Interpret the meaning of $I_{Total}^2$ from the multilevel meta-analytic model**
+
+<br>
+
+##### First Answer! {.tabset .tabset-fade .tabset-pills} 
+
+>Overall, we have highly heterogeneous effect size data because sampling variation only contributes to `r 100 - i2[1, "I2"]`% of the total variation in effects.  
+
+<br>
+
+##### Second Task! {.tabset .tabset-fade .tabset-pills} 
+
+>**Interpret the meaning of $I_{study}^2$ from the multilevel meta-analytic model**
+
+<br>
+
+##### Second Answer! {.tabset .tabset-fade .tabset-pills} 
+
+>From the multilevel meta-analytic model we find that only `r i2[3, "I2"]`%  of the total variation in effect size estimates is the result of differences between studies.
+
+<br>
+
+
+### Quantifying heterogeneity using prediction intervals
+
 
 
 ## **References**
