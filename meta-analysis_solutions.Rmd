@@ -1,6 +1,5 @@
 ---
-title: "Meta-analysis: Multi-level models"
-author: "<your name and u number>"
+title: "Meta-analysis: Multi-level meta-analytic models"
 date: "`r Sys.Date()`"
 bibliography: "./bib/refs.bib"
 output: 
@@ -46,7 +45,7 @@ Recall the formula for calculating correlation-based effect size estimates:
 $$
 Zr = \frac{1}{2}log \left( \frac{1+r}{1-r}\right)
 $$
-Here, r, is the correlation coefficient. The reason why we z-transform the correlation coefficient is because correlations range from -1 to 1. Since they are bounded, they are not necessarily normally distributed. Z-transformation will make the distribution of correlations normal to satisfy the assumptions of meta-analytic models. Recall that the associated sampling variance calculation for Zr can be calculated as:
+Here, r, is the correlation coefficient. The reason why we z-transform the correlation coefficient is because correlations range from -1 to 1. Since they are bounded, they are not necessarily normally distributed. Z-transformation will make the distribution of correlations normal to satisfy the assumptions of meta-analytic models. Remember, these are just linear mixed effect models that assume the response variable (in this case an effect size) is normally distributed. Recall that the associated sampling variance calculation for Zr can be calculated as:
 
 $$
 v_{Zr} = \frac{1}{N - 3}
@@ -142,7 +141,7 @@ We now want to convert the correlation (`corr_coeff`) to Zr instead of using the
 
 ```{r, Zrcalc}
 # Calculate Fisher's r-to-z transformed correlation coefficient (ZCOR) as yi = effect size and vi = sampling variances, where ri = raw correlation coefficients, and ni = sample size.
-zr_data <- metafor::escalc(measure = "ZCOR", ri = corr_coeff, ni = sample_size, data = zr_data, var.names = c("Zr", "V_Zr"))
+zr_data <- metafor::escalc(measure = "ZCOR", ri = corr_coeff, ni = sample_size, data = zr_data, var.names = c("Zr", "V_Zr")) #"ADD YOUR CODE HERE"
 
 zr_data %>% slice_head(n = 5)
 ```
@@ -165,11 +164,11 @@ You will notice that we write out the formula for the model in the `rma.mv` func
 
 We are also going to estimate a random effect variance for species (i.e., `species`), between study (i.e., `study_id`) and within-study (i.e., `obs`) grouping variables to control for non-independence and understand sources driving effect size variability. These are all denoted in the `random` argument of `metafor` which takes a list of all the random effects. The random effects are denoted with a formula like structure `~1|grouping variable`, where the `grouping_variable` is the variable you want to estimate a variance for, such as `species` and/or `study_id`. 
 
-You will see below that we are also estimate a random effect at the observation / row level. This is called `obs`. Why do we do this? We do this because we want to explicitly estimate the within study variation. You can think of it as a 'residual` variance. `metafor` does not estimate this by default (this is for historical reasons). 
+You will see below that we are also estimating a random effect at the observation / row level. This is called `obs`. Why do we do this? We do this because we want to explicitly estimate the within study variation. You can think of it as a 'residual` variance. `metafor` does not estimate this by default. 
 
 You will notice two additional arguments being specified in the model below: 
 
-* The first, `dfs`, which calculates the degrees of freedom for the inferential tests in the model. `dfs = "contain"` will calculate the degrees of freedom based on the lowest clustering level minus 1 (in this case study). Simulations have shown that this is a more robust measure to protect against type I errors [@Nakagawa2021]. 
+* The first, `dfs`, which calculates the degrees of freedom for the inferential tests in the model. `dfs = "contain"` will calculate the degrees of freedom based on the lowest clustering level minus 1 (in this case study).
 
 * The second argument, `test` specifies the test statistic used. `metafor` defaults to z values based on the standard normal distribution, however, simulations have shown [@Pappalardo2021] and it has been recommended [@Rosenberg2013b], that the t-distribution be used because samples sizes are often small and the true variance of the test is being estimated. 
 
@@ -190,20 +189,55 @@ MLMA
 
 ```
 
-In meta-analysis, the intercept has a lot of meaning because it provides us with an overall estimate of the effect from all experiments published in the literature. We would also like to know other important aspects of the model, such as 1) the variability in effect size across studies/experiments and 2) what drives variability in effects across studies/experiments. We'll get to that shortly.
+In meta-analysis, the intercept has a lot of meaning because it provides us with an overall estimate of the effect from all experiments published in the literature. We would also like to know other important aspects of the model, such as: 
+
+1) the variability in effect size across studies/experiments and 
+2) what drives variability in effects across studies/experiments. We'll get to that shortly.
 
 Lets dissect out the meaning of all the meta-analytic results. 
 
 #### Overall meta-analytic mean
- + We want to know what the overall meta-analytic mean effect size across the studies actually is estimated to be. We can see that from the model by extracting the intercept (labeled 'estimate' in the model). Recall that the model is just an object that stores all the values for us. We can extract the estimate using the `coef` function, it is estimated to be `r coef(MLMA)`, which tells us that the mean Zr value is positive, but there is a rather weak overall association between physiology and dispersal / movement when we pool across all studies. 
-
+ + We want to know what the overall meta-analytic mean effect size across the studies actually is estimated to be. We can see that from the model by extracting the intercept (labeled 'estimate' in the model). Recall that the model is just an object that stores all the values for us. 
+ 
+ + We can extract the estimate using the `coef` function, it is estimated to be `r coef(MLMA)`, which tells us that the mean Zr value is positive, but there is a rather weak overall association between physiology and dispersal / movement when we pool across all studies. 
 
 #### Uncertainty in the overall meta-analytic mean: 95% Confidence Intervals
 + Of course, that's just the point estimate, we can see that the 95% confidence intervals range from `r MLMA$ci.lb` to `r MLMA$ci.ub`. In other words, 95% of the time we would expect the true mean to fall between Zr values of `r MLMA$ci.lb` to `r MLMA$ci.ub`. 
 
++ In other words, if we were to repeat the experiment many times, 95% of the confidence intervals constructed would contain the true meta-analytic mean.
 
 #### Testing the null hypthesis about whether the overall meta-analtic mean is different from 0.
-+ We can also see that the null hypothesis that Zr = 0 can be rejected because there is a significantly larger estimate, which we can see from the p-value being < 0.05. To be more exact, the p-value is `r MLMA$pval`. 
++ We can also see that the null hypothesis that Zr = 0 can be rejected because there is a significantly larger estimate that a correlation of 0, which we can see from the p-value being < 0.05. To be more exact, the p-value is `r MLMA$pval`. 
+
+
+## **Task 4: Understanding how much effects vary across studies -- heterogeneity**
+
+Meta-analytic mean estimates need to be interpreted in the context of how much variation in effects exist within and across studies. As such, reporting upon measures of variability, or what is referred to as 'heterogeneity' in meta-analysis, is essential to meta-analysis and should never be ignored (even though it often is unfortunately) [@ODea2021; @NakagawaSantos2012; @Borenstein2019; @Nakagawa2017; @Gurevitch2018]. 
+
+### Proportion of Total Heterogeneity: $I_{total}^2$
+
+$I^2$ estimates are probably most commonly presented in the literature [@Higgins2003; @Higgins2002; @Nakagawa2017; @Senior2016; @Borenstein2019]. Meta-analysis is unique because we know the total sampling variation in the response variable. As such, we can calculate it and 'remove' it from other sources of variation. 
+
+There are different forms of $I^2$ that can be calculated, but the one that describes the proportion of effect size variation after accounting for total sampling variation is $I_{total}^2$ [@NakagawaSantos2012]. Assuming we're using our multilevel model described above, it's calculated as follows:
+
+$$ 
+\begin{equation} 
+I^2_{total} = \frac{\sigma^2_{study} + \sigma^2_{species} + \sigma^2_{obs}}{\sigma^2_{study} +  \sigma^2_{species} + \sigma^2_{obs} +\sigma^2_{m}} \
+(\#eq:itot)
+\end{equation} 
+$$
+
+where $\sigma^2_{total} = \sigma^2_{study} + \sigma^2_{species} + \sigma^2_{obs} +\sigma^2_{m}$ is the total effect size variance and $\sigma^2_{m}$ is the 'typical' sampling error variance calculated as:
+
+$$
+\begin{equation} 
+\sigma_{m}^2 = \sum w_{i}\left( k-1\right) / \left[ \left( \sum w_{i}\right)^2  + \sum w_{i}^2\right] \
+(\#eq:w)
+\end{equation} 
+$$
+From your meta-analytic model you get an estimate for all these variances, but we can use the sampling variance for each Zr effect size to calculate $\sigma^2_{m}$. 
+
+If all this looks and sounds scary, don't panic! We have R packages and functions that can do these calculations for us.
 
 
 ## **References**
