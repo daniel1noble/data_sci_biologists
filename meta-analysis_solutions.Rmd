@@ -239,7 +239,7 @@ $$
 (\#eq:w)
 \end{equation} 
 $$
-From your meta-analytic model you get an estimate for all these variances, but we can use the sampling variance for each Zr effect size to calculate $\sigma^2_{m}$. 
+From your meta-analytic model you get an estimate for all these variances, but we can use the sampling variance for each Zr effect size to calculate $\sigma^2_{m}$. To do this, we need to convert these to 'weights' which is simply $w_{i} = \frac{1}{v_{Zr}}$. $k$ in thsi equation is simply the total number of effects in the data set.
 
 If all this looks and sounds scary, don't panic! We have R packages and functions that can do these calculations for us.
 
@@ -261,7 +261,7 @@ flextable(i2) %>%
 
 ```
 
-#### **Interpreting $I^2$ Estimates** {.tabset .tabset-fade .tabset-pills} 
+#### Interpreting $I^2$ Estimates {.tabset .tabset-fade .tabset-pills} 
 
 ##### First Task! {.tabset .tabset-fade .tabset-pills} 
 
