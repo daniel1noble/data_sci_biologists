@@ -239,7 +239,7 @@ $$
 (\#eq:w)
 \end{equation} 
 $$
-From your meta-analytic model you get an estimate for all these variances, but we can use the sampling variance for each Zr effect size to calculate $\sigma^2_{m}$. To do this, we need to convert these to 'weights' which is simply $w_{i} = \frac{1}{v_{Zr}}$. $k$ in thsi equation is simply the total number of effects in the data set.
+From your meta-analytic model you get an estimate for all these variances, but we can use the sampling variance for each Zr effect size to calculate $\sigma^2_{m}$. To do this, we need to convert these to 'weights' which is simply $w_{i} = \frac{1}{v_{Zr}}$. $k$ in this equation is simply the total number of effects in the data set.
 
 If all this looks and sounds scary, don't panic! We have R packages and functions that can do these calculations for us.
 
@@ -287,9 +287,31 @@ flextable(i2) %>%
 
 <br>
 
-
 ### Quantifying heterogeneity using prediction intervals
 
+Prediction intervals (PI) are probably the best and most intuitive way to report heterogeneity of meta-analytic results [@Borenstein2019; @Noble2022; @Nakagawa2021c]. Predictions intervals tell us how much we can expect a given effect size to vary across studies. More specifically, if we were to go out and conduct another study or experiment they tell us what the range of effect size estimates we are expected to observe 95% of the time from that new study [@Borenstein2019; @Noble2022; @Nakagawa2021c]. 
+
+We can get these quite easily using the `predict` function in `metafor`:
+
+```{r pis, echo=TRUE}
+# Calculate the prediction intervals
+pis <- predict(MLMA)
+pis
+```
+
+#### Interpreting Prediction Intervals {.tabset .tabset-fade .tabset-pills}
+
+##### Task! {.tabset .tabset-fade .tabset-pills}
+
+>**If the meta-analytic mean Zr is `r predict(MLMA)[[1]]` what would be the expected range of effect size we would expect in a future study? Are the studies consistent or inconsistent?**
+
+<br> 
+
+##### Answer! {.tabset .tabset-fade .tabset-pills}
+
+>Our 95% prediction intervals are wide. Effect sizes (ARR) we are expected to get range from `r predict(MLMA)[[5]]` to `r predict(MLMA)[[6]]`, suggesting a lot of inconsistency between studies. 
+
+<br>
 
 
 ## **References**
