@@ -299,6 +299,8 @@ pis <- predict(MLMA)
 pis
 ```
 
+The prediction intervals are labelled `pi.lb` (lower bound) and `pi.ub` (upper bound).
+
 #### Interpreting Prediction Intervals {.tabset .tabset-fade .tabset-pills}
 
 ##### Task! {.tabset .tabset-fade .tabset-pills}
@@ -309,7 +311,7 @@ pis
 
 ##### Answer! {.tabset .tabset-fade .tabset-pills}
 
->Our 95% prediction intervals are wide. Effect sizes (ARR) we are expected to get range from `r predict(MLMA)[[5]]` to `r predict(MLMA)[[6]]`, suggesting a lot of inconsistency between studies. 
+>Our 95% prediction intervals are wide. Effect sizes (Zr) we are expected to get range from `r predict(MLMA)[[5]]` to `r predict(MLMA)[[6]]`, suggesting a lot of inconsistency between studies. 
 
 <br>
 
