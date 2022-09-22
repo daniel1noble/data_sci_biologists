@@ -1,0 +1,324 @@
+---
+title: "Meta-analysis: Multi-level meta-analytic models"
+date: "`r Sys.Date()`"
+bibliography: "./bib/refs.bib"
+output: 
+  bookdown::html_document2:
+    code_folding: show
+    number_sections: no
+    toc: yes
+    toc_depth: 6
+    toc_float: yes
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, cache = FALSE, tidy = TRUE)
+options(digits=3)
+```
+
+## **Load the necessary R Packages**
+
+```{r loadpacks, message=FALSE, results='hide'}
+# Install a load of packages that we'll use. I'll show you a shortcut that I love to use. Try using the p_load function in the "pacman" package. p_load will execute both the install.packages and library commands in one shot so they only need to be used once to install pacman itself.
+#install.packages("pacman", repos = "http://cran.us.r-project.org")
+library(pacman)
+
+# Install bookdown for rendering because we'll need this. While we're at it, lets also install /load the tidyverse
+p_load(bookdown, devtools, tidyverse, ggforce, GGally, flextable, latex2exp, png, magick, metafor, MASS, emmeans, R.rsp) # basically just list all the packages you want here
+
+# Install the orchaRd package 
+devtools::install_github("daniel1noble/orchaRd", force = TRUE)
+library(orchaRd)
+
+```
+
+## **Setting the scene: Meta-analysis of studies estimating the correlation between physiology and movement patterns**
+
+Physiology is expected to drive movement, including short-term activity, exploration of unfamiliar environments, and larger scale dispersal which can influence species distributions in an environmentally sensitive manner. To test whether there is a relationship between physiology and movement pattern (categorized as activity, exploration, and dispersal movement types), [Wu & Seebacher 2022](https://doi.org/10.1038/s42003-022-03055-y) extracted correlations from the literature between common physiological traits (e.g., metabolic rate, hormone levels, body condition) and either activity, exploration, and dispersal at the individual level. 
+
+Here, we will conduct a meta-analysis of correlations taken from the literature using the Zr effect size (see below and your readings). Throughout, there will be coding tasks for you to do so that you engage with key concepts and functions that will be useful for your assignment. Below we have provided code-chunks for you. Where it says "ADD YOUR CODE HERE" you should delete this text and provide the necessary code to complete the task.
+
+## **Task 1: Understanding Sampling Variance for Zr**
+
+In your readings for the week you would have been introduced to various types of effect size estimates (see Table 1). There we showed you what the sampling variance actually means and how the formulas are shortcuts to estimating sampling variance. Before embarking on the meta-analysis using Zr, your first task is to understand why the formula for Zr sampling variance does in fact estimate it's sampling variance correctly. 
+
+Recall the formula for calculating correlation-based effect size estimates:
+
+$$
+Zr = \frac{1}{2}log \left( \frac{1+r}{1-r}\right)
+$$
+Here, r, is the correlation coefficient. The reason why we z-transform the correlation coefficient is because correlations range from -1 to 1. Since they are bounded, they are not necessarily normally distributed. Z-transformation will make the distribution of correlations normal to satisfy the assumptions of meta-analytic models. Remember, these are just linear mixed effect models that assume the response variable (in this case an effect size) is normally distributed. Recall that the associated sampling variance calculation for Zr can be calculated as:
+
+$$
+v_{Zr} = \frac{1}{N - 3}
+$$
+
+Here, you will conduct a simple simulation to show  $v_{Zr}$ is indeed a good approximation of its sampling error. 
+
+```{r}
+
+# Lets set up the simulated experiment. We'll conduct 10000 simulations, or experiments, where we sample 20 individuals from a population and measure 2 traits on those individuals that have a correlation of 0.70. 
+     nsim = 10000
+        n = 20
+        r = 0.70
+covMatrix = matrix(c(1, r, r, 1), nrow = 2, ncol = 2)
+
+# Create an empty vector to store our simulated Zr values.
+  Zr <- c()
+
+# Run our simulation. Here, we need to estimate the correlation between two randomly drawn traits, convert this to Zr and store it.
+ for(i in 1:nsim){
+    # This code will simulate two variables by sampling them from a multivariate normal distribution (mvnorm). mvnorm requires the sample size (number of rows in the data frame), the mean of the two variables, in this case they are centered on 0 for simplicity, and the covariance matrix (which here is just the correlation matrix as the variables will be standardized)
+        sim_r <- MASS::mvrnorm(n = n, mu = c(0,0), Sigma = covMatrix)
+  
+    # From the data frame sim_r we now want to calculate the correlation
+          cor <-  #"ADD YOUR CODE HERE"
+          
+    # Now, we want to convert this correlation value to Zr
+       Zr_tmp <-  # "ADD YOUR CODE HERE"
+    
+    # Finally, we'll merge the empty Zr vector with the value of Zr_tmp.    
+       Zr <- c(Zr, Zr_tmp)
+  }
+
+```
+
+In the code chunk below. Plot the sampling distribution of Zr values. Add the true mean and the sample mean to the plot as was done in the readings
+
+```{r sampldistZr}
+
+#"ADD YOUR CODE HERE"
+```
+
+```{r}
+# We know the 'true' values so we can use them to calculate what the sampling variance for this specific situation should be. 
+     sv_Zr <-  #"ADD YOUR CODE HERE"
+
+# We just did a simple simulation of the situation where we only calculate the effect size statistic, now lets see what the sampling variance is of the Zr sampling distribution that we calculated.
+samp_dist_Zr <-  #"ADD YOUR CODE HERE"
+
+# Again, let's create a table to contrast these a little more clearly
+tab <- data.frame(Approach = c("Analytical", "Simulation"), `Sampling Variance` = c(sv_Zr,samp_dist_Zr), check.names = FALSE)
+flextable(tab)
+```
+
+
+## **Task 2: Downloading and calculating Zr from the raw meta-analytic data**
+
+Now that you understand Zr and it's sampling variance better, download the data using the code chunk below. The following code illustrates how to calculate the Fisher z-transformed effect size (Zr) and sampling variance (V_Zr).
+
+```{r datadownload, message=FALSE}
+# Download and clean data
+zr_data <- read.csv("https://raw.githubusercontent.com/daniel1noble/meta-workshop/gh-pages/data/ind_disp_raw_data.csv") %>%
+  dplyr::select(study_ID, taxa, species, trait, response, response_unit, disp_trait, disp_unit, corr_coeff, sample_size) %>%  # remove irrelevant columns for this tutorial
+  mutate(obs = 1:n()) # Add this observation level variable. We'll explain later what it means.
+```
+
+Now that you have downloaded the data have a look at it, explore the data a little. The `corr_coeff` column is the correlation coefficient and the `sample_size` is the size of the sample used to estimate the correlation. The correlation coefficient itself is a unitless measure that captures both the strength and direction of relationship between two variables. The raw correlation coefficient ranges from -1 to 1. If a correlation is positive it indicates that, as the value of one variable increases so to does the value of the second variable. The magnitude of the value indicates how strong they co-vary. For example, a correlation of 1 indicates that variable 1 perfectly co-varies with variable 2. 
+
+Other important variables in the dataset are `study_ID`, which is the identifier for the study the effect size (i.e., correlation) was extracted, and `species` which identifies the species the effect size was extracted for. 
+
+
+```{r, exploredata}
+
+#"ADD YOUR CODE HERE"
+
+```
+
+We now want to convert the correlation (`corr_coeff`) to Zr instead of using the correlation (r) itself because Zr will satisfy assumptions of normality that are inherent to meta-analytic models. We can use the `escalc` function in the R package `metafor` to do that for us. Explore the help file for `escalc` and write some code to calculate Zr and its associated sampling variance. `escalc` can do this and add it to the data frame. Use the `var.names` argument to rename the effect size and sampling variance to "Zr" and "V_Zr". In other words, set the argument to `var.names = c("Zr", "V_Zr")`.
+
+```{r, Zrcalc}
+# Calculate Fisher's r-to-z transformed correlation coefficient (ZCOR) as yi = effect size and vi = sampling variances, where ri = raw correlation coefficients, and ni = sample size.
+zr_data <-  #"ADD YOUR CODE HERE"
+
+zr_data %>% slice_head(n = 5)
+```
+
+It's important to note that we can convert back to the original correlation coefficient quite easily as follows:
+
+```{r}
+# We can easily convert back to r as follows
+zr_data$r <- tanh(zr_data$Zr)
+
+zr_data %>% dplyr::select(corr_coeff, r) %>% slice_head(n = 5)
+```
+
+
+## **Task 3: Multilevel meta-analysis**
+
+Our data is now ready for analysis! We will use the `rma.mv` function in `metafor` to fit our first multilevel meta-analysis model. The model takes Zr as a response variable and accounts for it's sampling variance (`V` = V_Zr). `metafor` takes the effect size sampling variance through the `V` argument.
+
+You will notice that we write out the formula for the model in the `rma.mv` function `Zr ~ 1`. This means that we want Zr as our response variable and we only want to estimate an 'intercept' (i.e., denoted with 1) which is the overall mean estimate for Zr, our effect size. 
+
+We are also going to estimate a random effect variance for species (i.e., `species`), between study (i.e., `study_id`) and within-study (i.e., `obs`) grouping variables to control for non-independence and understand sources driving effect size variability. These are all denoted in the `random` argument of `metafor` which takes a list of all the random effects. The random effects are denoted with a formula like structure `~1|grouping variable`, where the `grouping_variable` is the variable you want to estimate a variance for, such as `species` and/or `study_id`. 
+
+You will see below that we are also estimating a random effect at the observation / row level. This is called `obs`. Why do we do this? We do this because we want to explicitly estimate the within study variation. You can think of it as a 'residual` variance. `metafor` does not estimate this by default. 
+
+You will notice two additional arguments being specified in the model below: 
+
+* The first, `dfs`, which calculates the degrees of freedom for the inferential tests in the model. `dfs = "contain"` will calculate the degrees of freedom based on the lowest clustering level minus 1 (in this case study).
+
+* The second argument, `test` specifies the test statistic used. `metafor` defaults to z values based on the standard normal distribution, however, simulations have shown [@Pappalardo2021] and it has been recommended [@Rosenberg2013b], that the t-distribution be used because samples sizes are often small and the true variance of the test is being estimated. 
+
+The full model described above can be coded as follows:
+
+```{r, mlmaZr, class.source='klippy'}
+
+# Multi-level meta-analytic model
+MLMA <- metafor::rma.mv(Zr ~ 1, V = V_Zr, 
+                   method="REML",
+                   random=list(~1|species,
+                               ~1|study_ID,
+                               ~1|obs), 
+                   dfs = "contain",
+                   test="t",
+                   data=zr_data)
+MLMA
+
+```
+
+In meta-analysis, the intercept has a lot of meaning because it provides us with an overall estimate of the effect from all experiments published in the literature. We would also like to know other important aspects of the model, such as: 
+
+1) the variability in effect size across studies/experiments and 
+2) what drives variability in effects across studies/experiments. We'll get to that shortly.
+
+Lets dissect out the meaning of all the meta-analytic results. 
+
+#### Overall meta-analytic mean
+ + We want to know what the overall meta-analytic mean effect size across the studies actually is estimated to be. We can see that from the model by extracting the intercept (labeled 'estimate' in the model). Recall that the model is just an object that stores all the values for us. 
+ 
+ + We can extract the estimate using the `coef` function, it is estimated to be `r #"ADD YOUR CODE HERE"`, which tells us that the mean Zr value is positive, but there is a rather weak overall association between physiology and dispersal / movement when we pool across all studies. 
+ 
+ + If we want to convert the overall meta-analytic mean back to the correlation coefficient we can use the `predict` function to help with that. We can use the `transf` argument within the function:
+ 
+```{r}
+predict(MLMA, transf = "transf.ztor")
+```
+ 
+There are LOTS of different transformations that can be done depending on which effect size you plan on using. Get familiar with the `predict` function and the `transf` argument by looking at it's help file (i.e., `?predict.rma`). This function will be useful for your assignment. 
+
+#### Uncertainty in the overall meta-analytic mean: 95% Confidence Intervals
++ Of course, that's just the point estimate. 95% confidence intervals are important to provide. They are stored in the MLMA object (i.e., have a look at `str(MLMA)`) as `ci.lb` and `ci.up`. 
+
++ Knowing this, we can extract the 95% confidence intervals which range from `r #"ADD YOUR CODE HERE"` to `r #"ADD YOUR CODE HERE"`. In other words, 95% of the time we would expect the true mean to fall between Zr values of `r #"ADD YOUR CODE HERE"` to `r #"ADD YOUR CODE HERE"`. 
+
++ In other words, if we were to repeat the experiment many times, 95% of the confidence intervals constructed would contain the true meta-analytic mean.
+
+#### Testing the null hypthesis about whether the overall meta-analtic mean is different from 0.
++ We can also see that the null hypothesis that Zr = 0 can be rejected because there is a significantly larger estimate that a correlation of 0, which we can see from the p-value being < 0.05. To be more exact, the p-value is `r #"ADD YOUR CODE HERE"`. 
+
+## **Task 4: Understanding how much effects vary across studies -- heterogeneity**
+
+Meta-analytic mean estimates need to be interpreted in the context of how much variation in effects exist within and across studies. As such, reporting upon measures of variability, or what is referred to as 'heterogeneity' in meta-analysis, is essential to meta-analysis and should never be ignored (even though it often is unfortunately) [@ODea2021; @NakagawaSantos2012; @Borenstein2019; @Nakagawa2017; @Gurevitch2018]. 
+
+### Proportion of Total Heterogeneity: $I_{total}^2$
+
+$I^2$ estimates are probably most commonly presented in the literature [@Higgins2003; @Higgins2002; @Nakagawa2017; @Senior2016; @Borenstein2019]. Meta-analysis is unique because we know the total sampling variation in the response variable. As such, we can calculate it and 'remove' it from other sources of variation. 
+
+There are different forms of $I^2$ that can be calculated, but the one that describes the proportion of effect size variation after accounting for total sampling variation is $I_{total}^2$ [@NakagawaSantos2012]. Assuming we're using our multilevel model described above, it's calculated as follows:
+
+$$ 
+\begin{equation} 
+I^2_{total} = \frac{\sigma^2_{study} + \sigma^2_{species} + \sigma^2_{obs}}{\sigma^2_{study} +  \sigma^2_{species} + \sigma^2_{obs} +\sigma^2_{m}} \
+(\#eq:itot)
+\end{equation} 
+$$
+
+where $\sigma^2_{total} = \sigma^2_{study} + \sigma^2_{species} + \sigma^2_{obs} +\sigma^2_{m}$ is the total effect size variance and $\sigma^2_{m}$ is the 'typical' sampling error variance calculated as:
+
+$$
+\begin{equation} 
+\sigma_{m}^2 = \sum w_{i}\left( k-1\right) / \left[ \left( \sum w_{i}\right)^2  + \sum w_{i}^2\right] \
+(\#eq:w)
+\end{equation} 
+$$
+From your meta-analytic model you get an estimate for all these variances, but we can use the sampling variance for each Zr effect size to calculate $\sigma^2_{m}$. To do this, we need to convert these to 'weights' which is simply $w_{i} = \frac{1}{v_{Zr}}$. $k$ in this equation is simply the total number of effects in the data set.
+
+If all this looks and sounds scary, don't panic! We have R packages and functions that can do these calculations for us.
+
+```{r, het, tab.cap = "Total effect size hetereogneity (Total), as well as the proportion of hetereogeneity in effects resulting from Species, Study and Residual / Observational" }
+
+## Calculate I2
+i2_vals <- orchaRd::i2_ml(MLMA)
+
+## Make a pretty table. First, lets clean up the names of the different I2 estimates. Lets remove I2_. It's a string, so, we can use some regular expressions to fix that. `gsub` is pretty useful. You put a pattern in and tell it what you would like to replace the text with. In this case, just blank will do! Then, we'll make the first letter of what is left capitalised.
+i2 <- tibble(type = firstup(gsub("I2_", "",names(i2_vals))), I2 = i2_vals)
+
+
+# You remember flextable. Now, lets make a pretty table. We can so some nice modifications here too.
+
+flextable(i2) %>% 
+    align(part = "header", align = "center") %>% 
+  compose(part = "header", j = 1, value = as_paragraph(as_b("Type"))) %>% 
+  compose(part = "header", j = 2, value = as_paragraph(as_b("I"), as_b(as_sup("2")), as_b("(%)")))
+
+```
+
+#### Interpreting $I^2$ Estimates {.tabset .tabset-fade .tabset-pills} 
+
+In the tasks below, complete the inline R code chunks to extract the relevant values.
+
+##### First Task! {.tabset .tabset-fade .tabset-pills} 
+
+>**Interpret the meaning of $I_{Total}^2$ from the multilevel meta-analytic model**
+
+<br>
+
+##### First Answer! {.tabset .tabset-fade .tabset-pills} 
+
+>Overall, we have highly heterogeneous effect size data because sampling variation only contributes to `r #"ADD YOUR CODE HERE"`% of the total variation in effects.  
+
+<br>
+
+##### Second Task! {.tabset .tabset-fade .tabset-pills} 
+
+>**Interpret the meaning of $I_{study}^2$ from the multilevel meta-analytic model**
+
+<br>
+
+##### Second Answer! {.tabset .tabset-fade .tabset-pills} 
+
+>From the multilevel meta-analytic model we find that only `r #"ADD YOUR CODE HERE"`%  of the total variation in effect size estimates is the result of differences between studies.
+
+<br>
+
+
+### Quantifying heterogeneity using prediction intervals
+
+Prediction intervals (PI) are probably the best and most intuitive way to report heterogeneity of meta-analytic results [@Borenstein2019; @Noble2022; @Nakagawa2021c]. Predictions intervals tell us how much we can expect a given effect size to vary across studies. More specifically, if we were to go out and conduct another study or experiment they tell us what the range of effect size estimates we are expected to observe 95% of the time from that new study [@Borenstein2019; @Noble2022; @Nakagawa2021c]. 
+
+We can get these quite easily using the `predict` function in `metafor`:
+
+```{r pis, echo=TRUE}
+# Calculate the prediction intervals
+pis <- predict(MLMA)
+pis
+```
+
+The prediction intervals are labelled `pi.lb` (lower bound) and `pi.ub` (upper bound).
+
+#### Interpreting Prediction Intervals {.tabset .tabset-fade .tabset-pills}
+
+In the tasks below, complete the inline R code chunks to extract the relevant values.
+
+##### Task! {.tabset .tabset-fade .tabset-pills}
+
+>**If the meta-analytic mean Zr is `r predict(MLMA)[[1]]` what would be the expected range of effect size we would expect in a future study? Are the studies consistent or inconsistent?**
+
+<br> 
+
+##### Answer! {.tabset .tabset-fade .tabset-pills}
+
+>Our 95% prediction intervals are wide. Effect sizes (Zr) are expected to range from `r #"ADD YOUR CODE HERE"` to `r #"ADD YOUR CODE HERE"` 95% of the time with repeated experiments, suggesting a lot of inconsistency between studies. 
+
+<br>
+
+## **Rendering**
+
+>Now that you have completed the Rmarkdown document try rendering it as an HTML. Does it work? Why not?
+
+## **References**
+
+
