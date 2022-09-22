@@ -315,9 +315,78 @@ In the tasks below, complete the inline R code chunks to extract the relevant va
 
 <br>
 
+## **Task 5: Multilevel meta-regression**
+
+Meta-analysis often reveals substantial heterogeneity among effect estimates included in the analysis [@Senior2016]. While many meta-analysts are interested in 'overall mean effects' we need to couch these effects in context by reporting on their variability and work hard to understand what factors drive effect variability and why [@Noble2022; @Lag2010]. 
+
+Explaining variation in effects should probably be the main goal of every meta-analysis. Sampling variance often explains only a little amount of the total heterogeneity, so it's important that we think hard, *a priori*, about what factors are likely to explain effect size variation.
+
+Just like in normal linear mixed effects models, we can include fixed effects to understand how the mean effect size changes. Fixed effects in meta-analysis are called 'moderators' because these are biological or methodological factors that 'moderate' the effect or change the effect within or across studies. 
+
+From the original study aim, the first thing @WuSeebacher2022 were interested in is the relationship of physiology with activity, exploration and dispersal (Zr). In addition to the random effects  --  `es_ID` (effect size identity), `study_ID`(unique study identity), `species`(unique species identity), they were also interested in comparing whether the correlation (or Zr) differences depending on whether the behavioural trait of interest was activity, exploration or dispersal. As such, we can fit a meta-regression model, (which includes fixed effects) that includes a moderator `disp_trait` (activity, exploration, or dispersal) to explicitly test whether Zr varies across these effect types.
+
+We can easily extend our multi-level meta-analysis model, or, intercept only model, to include fixed effects (moderators). That can be done by adjusting the formula to include the fixed effect of interest:
+
+```{r, metareg}
+
+# Multi-level meta-regression model
+MLMR <- metafor::rma.mv(Zr ~ disp_trait, V = V_Zr, 
+                   method="REML",
+                   random=list(~1|species,
+                               ~1|study_ID,
+                               ~1|obs), 
+                   dfs = "contain",
+                   test="t",
+                   data=zr_data)
+MLMR
+```
+
+This model is very useful. You will notice that it now categorizes effect sizes based on whether they are correlations between physiology and either activity, dispersal or exploration. The `intrcpt` is the mean Zr between physiology and activity. We can see that this is `r coef(MLMR)[1]`. 
+
+> Question: In words, what is the null hypothesis being tested for the `intrcpt` estimate?
+
+> Answer:  #"ADD YOUR ANSWER HERE"
+
+The two additional coefficients estimated, `disp_traitDispersal` and `disp_traitExploration` are the contrasts between the mean Zr for physiology-activity and the mean Zr for both physiology-dispersal (`disp_traitDispersal`) and physiology-exploration (`disp_traitExploration`). By contrasts, we mean the difference in mean Zr. 
+
+
+> Question: In words, what is the null hypothesis being tested for the `disp_traitDispersal` estimate?
+
+> Answer:  #"ADD YOUR ANSWER HERE"
+
+Often what we do in meta-analysis is suppress the intercept so that we estimate the overall mean for each different type of Zr. We can do this easily to our model using `~-1 + disp_trait` in the formula. Let's try that out:
+
+```{r, metareg2}
+
+# Multi-level meta-regression model
+MLMR2 <- metafor::rma.mv(Zr ~ disp_trait - 1, V = V_Zr, 
+                   method="REML",
+                   random=list(~1|species,
+                               ~1|study_ID,
+                               ~1|obs), 
+                   dfs = "contain",
+                   test="t",
+                   data=zr_data)
+MLMR2
+```
+
+Wow, there are some big changes here! Why? Well, because we are now estimating the mean and the null hypotheses being tested are different. 
+
++ First, we see that the `intrcpt` goes away and is replaced by `disp_traitActivity`. It is no surprise that the value of this estimate remains the same at `r coef(MLMR)[1]`. That's because, well, it's the same thing, the mean Zr for the effects in the `disp_traitActivity` category. 
+
++ Second, you'll notice that the `disp_traitDispersal` and `disp_traitExploration` coefficients totally change. That's because these are no longer contrasts, but they are the mean Zr in each of those levels in `disp_trait`. You will notice here that only the mean Zr for physiology-activity correlations are significantly different from 0. 
+
+There are some nice graphical approaches that capture the meta-analytic model results. We can use "orchard" plots which are modifications to what are called forest plots. We can do this with the `orchaRd` R package:
+
+```{r rochard, fig.cap= "Orchard plot showing the mean Zr for correlation coefficients estimated between physiology and activity, dispersal and behaviour. k = the number of effect sizes and the number of studies are in brackets. The size of the effect is scaled by the precision of each effect size value, which is 1 / the sqrt(v_Zr)"}
+# Make an orchard plot using the model object
+orchaRd::orchard_plot(MLMR, mod = "disp_trait", group = "study_ID", data = zr_data, xlab = "Z-Transformed Correlation Coefficient (Zr)", angle = 45)
+```
+
 ## **Rendering**
 
->Now that you have completed the Rmarkdown document try rendering it as an HTML. Does it work? Why not?
+>Now that you have completed the Rmarkdown document try rendering it as an HTML. Does it work? If not, why not? If it's working one code chunk at a time try to clear your working directory (i.e., `rm(list = ls()`) and re-run each code chunk. 
+
 
 ## **References**
 
