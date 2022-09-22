@@ -22,7 +22,7 @@ remotes::install_github("rlesur/klippy")
 klippy::klippy(tooltip_message = 'Click to Copy Code', tooltip_success = 'Done', position = 'right', color = "red")
 
 # Load packages
-pacman::p_load(metafor, flextable, tidyverse, orchaRd, pander, mathjaxr, equatags, vembedr)
+pacman::p_load(metafor, flextable, tidyverse, orchaRd, pander, mathjaxr, equatags, vembedr, tidyverse)
 
 # To use mathjaxr you need to run equatags::mathjax_install()
 ```
@@ -49,7 +49,7 @@ First, lets download the data and do some cleaning. Use your coding skills to cl
 pacman::p_load(tidyverse, metafor, orchaRd)
 
 # Download the data. Exclude NA in r and sample size columns
-arnold_data <- read.csv("https://raw.githubusercontent.com/pieterarnold/fitness-rmr-meta/main/MR_Fitness_Data_revised.csv")
+arnold_data <- read_csv("https://raw.githubusercontent.com/pieterarnold/fitness-rmr-meta/main/MR_Fitness_Data_revised.csv")
 
 # Exclude some NA's in sample size and r
 arnold_data <- arnold_data[complete.cases(arnold_data$n.rep) & complete.cases(arnold_data$r),] #"ADD YOUR CODE HERE"
@@ -62,7 +62,7 @@ arnold_data_endo <- arnold_data %>%
                mutate(endos = ifelse(Class %in% c("Mammalia", "Aves"), "endo", "ecto")) %>% 
                filter(endos == "endo" & Zr <= 3) # Note that one sample that was an extreme outlier was removed in the paper.
 
-# Add in observation-level (residual) 
+# Add in observation-level (residual) column. This column simply counts, from 1 to the number of rows
 arnold_data_endo$obs <- 1:dim(arnold_data_endo)[1] #"ADD YOUR CODE HERE"
 ```
 
@@ -83,16 +83,24 @@ Lets use `metafor` to make these plots for us. To do that you can use the `funne
 ```{r funnel, echo=TRUE, fig.align='center', fig.cap= "Funnel plot depicting the correlation between metabolism and fitness as a function of precision (1 / SE). The dotted lines are the theoretical 95% sampling variance intervals - the interval with which we expect effect size estimates to fall within if only sampling variance drives differences in effects. Shaded regions represent the p-value of studies. The white region indicates studies where the p-value is between 0.1 and 1; dark gray where the p-value of studies is between 0.05 and 0.1 and the lighter gray regions where the p-value of studies is significant." }
 
 # Lets make a funnel plot to visualize the data in relation to the precision, inverse sampling standard error, 
-metafor::funnel(x = arnold_data_endo$Zr, vi = arnold_data_endo$Zr_v, yaxis = "seinv", digits = 2, level = c(0.1, 0.05, 0.01), shade = c("white", "gray55", "gray 75"), las = 1, xlab = "Correlation Coefficient (r)", atransf=tanh, legend = TRUE)
+metafor::funnel(x = arnold_data_endo$Zr, vi = arnold_data_endo$Zr_v, 
+                yaxis = "seinv", digits = 2, 
+                level = c(0.1, 0.05, 0.01), 
+                shade = c("white", "gray55", "gray 75"), las = 1, 
+                xlab = "Correlation Coefficient (r)", atransf=tanh, legend = TRUE)
 ```
 
 Here, we are setting a number of arguments. For greater detail you can look at the help file (`?funnel`), but we'll explain a bit here:
 
 1) `x` is the vector of effect sizes, Zr, you want plotted
 2) `vi` is the vector of sampling variance estimates for each effect size, Zr_v
-3) `yaxis` sets the type of sampling variance you want plitted `seinv` is the precision, or the inverse of the sampling standard error. Remember, to get from the sampling variance to the sampling standard error we just sqrt(`vi`). 
+3) `yaxis` sets the type of sampling variance you want plotted `seinv` is the precision, or the inverse of the sampling standard error. Remember, to get from the sampling variance to the sampling standard error we just sqrt(`vi`).
+4) The `level` argument will plot contours, making this plot what we call a `contour enhanced funnel plot`. The contours relate to the level of statistical significance for each effect. See the legend.
+5) `atransf` will transform Zr back to the correlation coefficient. 
 
 We can see from Fig. \@ref(fig:funnel) above the typical funnel shape. You will notice that most effects lie in the positive correlation space -- in other words there is a strong positive correlation between BMR and fitness. However, we also find some studies that show the opposite pattern. We expect that based on sampling theory alone, and indeed many of these effects fall close to the dotted sampling error intervals. Studies in the light grey regions are studies where the p-value was significant. 
+
+<br>
 
 #### **What do we expect if publication bias were present?** {.tabset .tabset-fade .tabset-pills} 
 
