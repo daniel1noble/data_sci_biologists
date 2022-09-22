@@ -254,7 +254,7 @@ From your meta-analytic model you get an estimate for all these variances, but w
 
 If all this looks and sounds scary, don't panic! We have R packages and functions that can do these calculations for us.
 
-```{r, het}
+```{r, het, tab.cap = "Total effect size hetereogneity (Total), as well as the proportion of hetereogeneity in effects resulting from Species, Study and Residual / Observational" }
 
 ## Calculate I2
 i2_vals <- orchaRd::i2_ml(MLMA)
@@ -268,7 +268,7 @@ i2 <- tibble(type = firstup(gsub("I2_", "",names(i2_vals))), I2 = i2_vals)
 flextable(i2) %>% 
     align(part = "header", align = "center") %>% 
   compose(part = "header", j = 1, value = as_paragraph(as_b("Type"))) %>% 
-  compose(part = "header", j = 2, value = as_paragraph(as_b("I"), as_b(as_sup("2"))))
+  compose(part = "header", j = 2, value = as_paragraph(as_b("I"), as_b(as_sup("2")), as_b("(%)")))
 
 ```
 
@@ -327,11 +327,11 @@ In the tasks below, complete the inline R code chunks to extract the relevant va
 
 ##### Answer! {.tabset .tabset-fade .tabset-pills}
 
->Our 95% prediction intervals are wide. Effect sizes (Zr) we are expected to get range from `r predict(MLMA)[[5]] #"ADD YOUR CODE HERE"` to `r predict(MLMA)[[6]] #"ADD YOUR CODE HERE"`, suggesting a lot of inconsistency between studies. 
+>Our 95% prediction intervals are wide. Effect sizes (Zr) are expected to range from `r predict(MLMA)[[5]] #"ADD YOUR CODE HERE"` to `r predict(MLMA)[[6]] #"ADD YOUR CODE HERE"` 95% of the time with repeated experiments, suggesting a lot of inconsistency between studies. 
 
 <br>
 
-## Rendering
+## **Rendering**
 
 >Now that you have completed the Rmarkdown document try rendering it as an HTML. Does it work? Why not?
 
