@@ -38,7 +38,7 @@ library(orchaRd)
 
 Physiology is expected to drive movement, including short-term activity, exploration of unfamiliar environments, and larger scale dispersal which can influence species distributions in an environmentally sensitive manner. To test whether there is a relationship between physiology and movement pattern (categorized as activity, exploration, and dispersal movement types), [Wu & Seebacher 2022](https://doi.org/10.1038/s42003-022-03055-y) extracted correlations from the literature between common physiological traits (e.g., metabolic rate, hormone levels, body condition) and either activity, exploration, and dispersal at the individual level. 
 
-Here, we will conduct a meta-analysis of correlations taken from the literature using the Zr effect size (see below and your readings). Throughout, there will be coding tasks for you to do so that you engage with key concepts and functions that will be useful for your assignment. 
+Here, we will conduct a meta-analysis of correlations taken from the literature using the Zr effect size (see below and your readings). Throughout, there will be coding tasks for you to do so that you engage with key concepts and functions that will be useful for your assignment. Below we have provided code-chunks for you. Where it says "ADD YOUR CODE HERE" you should delete this text and provide the necessary code to complete the task.
 
 ## **Task 1: Understanding Sampling Variance for Zr**
 
@@ -55,7 +55,7 @@ $$
 v_{Zr} = \frac{1}{N - 3}
 $$
 
-Here, you will conduct a simple simulation to show  $v_{Zr}$ is indeed a good approximation of its sampling error. Below we have provided code-chunks for you. Where it says "ADD YOUR CODE HERE" you should provide the necessary code to complete the task.
+Here, you will conduct a simple simulation to show  $v_{Zr}$ is indeed a good approximation of its sampling error. 
 
 ```{r}
 
@@ -128,6 +128,8 @@ Other important variables in the dataset are `study_ID`, which is the identifier
 
 
 ```{r, exploredata}
+
+#"ADD YOUR CODE HERE"
 # There's a bunch of free stuff they can do here. 
 #Studies / taxa
 std_taxa <- zr_data %>% group_by(taxa) %>% summarise(stdy = length(unique(study_ID)),
@@ -203,16 +205,25 @@ Lets dissect out the meaning of all the meta-analytic results.
 #### Overall meta-analytic mean
  + We want to know what the overall meta-analytic mean effect size across the studies actually is estimated to be. We can see that from the model by extracting the intercept (labeled 'estimate' in the model). Recall that the model is just an object that stores all the values for us. 
  
- + We can extract the estimate using the `coef` function, it is estimated to be `r coef(MLMA)`, which tells us that the mean Zr value is positive, but there is a rather weak overall association between physiology and dispersal / movement when we pool across all studies. 
+ + We can extract the estimate using the `coef` function, it is estimated to be `r coef(MLMA) #"ADD YOUR CODE HERE"`, which tells us that the mean Zr value is positive, but there is a rather weak overall association between physiology and dispersal / movement when we pool across all studies. 
+ 
+ + If we want to convert the overall meta-analytic mean back to the correlation coefficient we can use the `predict` function to help with that. We can use the `transf` argument within the function:
+ 
+```{r}
+predict(MLMA, transf = "transf.ztor")
+```
+ 
+There are LOTS of different transformations that can be done depending on which effect size you plan on using. Get familiar with the `predict` function and the `transf` argument by looking at it's help file (i.e., `?predict.rma`). This function will be useful for your assignment. 
 
 #### Uncertainty in the overall meta-analytic mean: 95% Confidence Intervals
-+ Of course, that's just the point estimate, we can see that the 95% confidence intervals range from `r MLMA$ci.lb` to `r MLMA$ci.ub`. In other words, 95% of the time we would expect the true mean to fall between Zr values of `r MLMA$ci.lb` to `r MLMA$ci.ub`. 
++ Of course, that's just the point estimate. 95% confidence intervals are important to provide. They are stored in the MLMA object (i.e., have a look at `str(MLMA)`) as `ci.lb` and `ci.up`. 
+
++ Knowing this, we can extract the 95% confidence intervals which range from `r MLMA$ci.lb #"ADD YOUR CODE HERE"` to `r MLMA$ci.ub #"ADD YOUR CODE HERE"`. In other words, 95% of the time we would expect the true mean to fall between Zr values of `r MLMA$ci.lb #"ADD YOUR CODE HERE"` to `r MLMA$ci.ub #"ADD YOUR CODE HERE"`. 
 
 + In other words, if we were to repeat the experiment many times, 95% of the confidence intervals constructed would contain the true meta-analytic mean.
 
 #### Testing the null hypthesis about whether the overall meta-analtic mean is different from 0.
-+ We can also see that the null hypothesis that Zr = 0 can be rejected because there is a significantly larger estimate that a correlation of 0, which we can see from the p-value being < 0.05. To be more exact, the p-value is `r MLMA$pval`. 
-
++ We can also see that the null hypothesis that Zr = 0 can be rejected because there is a significantly larger estimate that a correlation of 0, which we can see from the p-value being < 0.05. To be more exact, the p-value is `r MLMA$pval #"ADD YOUR CODE HERE"`. 
 
 ## **Task 4: Understanding how much effects vary across studies -- heterogeneity**
 
@@ -263,6 +274,8 @@ flextable(i2) %>%
 
 #### Interpreting $I^2$ Estimates {.tabset .tabset-fade .tabset-pills} 
 
+In the tasks below, complete the inline R code chunks to extract the relevant values.
+
 ##### First Task! {.tabset .tabset-fade .tabset-pills} 
 
 >**Interpret the meaning of $I_{Total}^2$ from the multilevel meta-analytic model**
@@ -271,7 +284,7 @@ flextable(i2) %>%
 
 ##### First Answer! {.tabset .tabset-fade .tabset-pills} 
 
->Overall, we have highly heterogeneous effect size data because sampling variation only contributes to `r 100 - i2[1, "I2"]`% of the total variation in effects.  
+>Overall, we have highly heterogeneous effect size data because sampling variation only contributes to `r 100 - i2[1, "I2"] #"ADD YOUR CODE HERE"`% of the total variation in effects.  
 
 <br>
 
@@ -283,9 +296,10 @@ flextable(i2) %>%
 
 ##### Second Answer! {.tabset .tabset-fade .tabset-pills} 
 
->From the multilevel meta-analytic model we find that only `r i2[3, "I2"]`%  of the total variation in effect size estimates is the result of differences between studies.
+>From the multilevel meta-analytic model we find that only `r i2[3, "I2"] #"ADD YOUR CODE HERE"`%  of the total variation in effect size estimates is the result of differences between studies.
 
 <br>
+
 
 ### Quantifying heterogeneity using prediction intervals
 
@@ -303,6 +317,8 @@ The prediction intervals are labelled `pi.lb` (lower bound) and `pi.ub` (upper b
 
 #### Interpreting Prediction Intervals {.tabset .tabset-fade .tabset-pills}
 
+In the tasks below, complete the inline R code chunks to extract the relevant values.
+
 ##### Task! {.tabset .tabset-fade .tabset-pills}
 
 >**If the meta-analytic mean Zr is `r predict(MLMA)[[1]]` what would be the expected range of effect size we would expect in a future study? Are the studies consistent or inconsistent?**
@@ -311,10 +327,13 @@ The prediction intervals are labelled `pi.lb` (lower bound) and `pi.ub` (upper b
 
 ##### Answer! {.tabset .tabset-fade .tabset-pills}
 
->Our 95% prediction intervals are wide. Effect sizes (Zr) we are expected to get range from `r predict(MLMA)[[5]]` to `r predict(MLMA)[[6]]`, suggesting a lot of inconsistency between studies. 
+>Our 95% prediction intervals are wide. Effect sizes (Zr) we are expected to get range from `r predict(MLMA)[[5]] #"ADD YOUR CODE HERE"` to `r predict(MLMA)[[6]] #"ADD YOUR CODE HERE"`, suggesting a lot of inconsistency between studies. 
 
 <br>
 
+## Rendering
+
+>Now that you have completed the Rmarkdown document try rendering it as an HTML. Does it work? Why not?
 
 ## **References**
 
