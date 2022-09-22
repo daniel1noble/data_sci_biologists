@@ -140,7 +140,7 @@ We can do that by recognizing that the sampling error is expected to co-vary wit
 
 To better understand this, lets think about flipping around the funnel plot:
 
-```{r}
+```{r, egger, fig.cap= "Plot of Fisher's Zr against sampling variance for Zr. A linear model was fit to the data."}
 ggplot(arnold_data_endo, aes(y = Zr, x = Zr_v)) + 
   geom_point() + 
   geom_smooth(method = lm) + 
@@ -148,7 +148,11 @@ ggplot(arnold_data_endo, aes(y = Zr, x = Zr_v)) +
   theme_classic()
 ```
 
-Let's now apply the methods proposed above to @Arnold2021's data. To simplify, we are just going to remove other moderators and only fit SE and/ or V. This just simplifies the interpretation of the intercept, but we could always include the fitness trait type moderator in these models as well. 
+We can see from Figure \@ref(fig:egger) that this is essential our funnel plot flipped around. We did this because we now are trying to predict drivers of variation in Zr as a function of sampling variance. We can see from the linear model fit that there appears to be a clear positive slope where the mean effect size is dragged 'up' when the sampling variance is large. This is what you would expect with publication bias because there are few effects in the opposite direction, the direction **not** predicted by theory when sample sizes are small, and therefore sampling variance is large. 
+
+However, high heterogeneity / variability in effects could cause this relationship. So too could sources of non-independence or other moderators. @Nakagawa2021b suggests fitting a multilevel meta-regression model with sampling variance along with other moderators or random effects to account for as many drivers of effect size heterogeneity as possible when testing if the slope is significant or not.
+
+Let's now apply the method proposed above to @Arnold2021's data. To simplify, we are just going to remove other moderators and only fit Zr_V. This just simplifies the interpretation of the intercept, but we could always include other moderators in this model as well. We will, however, control for a key source of non-independence, study id (called `Ref`), and we'll explicitly estimate a within study variance (`obs`) as well. 
 
 ```{r V, echo=TRUE}
 # Including sampling variance as moderator
@@ -160,16 +164,17 @@ metareg_v <- rma.mv(Zr ~ Zr_v, V = Zr_v,
 summary(metareg_v)
 ```
 
-#### **Interpreting the results**  {.tabset .tabset-fade .tabset-pills} 
+<br>
 
-##### Task! {.tabset .tabset-fade .tabset-pills}
->**Is there evidence for publication bias? If so, what is the adjusted meta-analytic mean estimate?**
+#### **Question 2: Is there evidence for publication bias? If so, what is the adjusted meta-analytic mean estimate?**  {.tabset .tabset-fade .tabset-pills} 
+
+> **Note**: Write out your answer using in-line code chunks that extract the relevant values from the model object.
 
 <br>
 
-##### Answer! {.tabset .tabset-fade .tabset-pills}
+##### Your Answer! {.tabset .tabset-fade .tabset-pills}
 
->Yes, there is evidence for publication bias because the slope estimate for `sqrt(Zr)` or the sampling standard error is significant. Given that the `intrcpt` is not significant we can interpret the model using SE instead of V. We can see from this model that the adjusted `Zr` when there is *no* uncertainty is `r metareg_v$b[1]`with a 95% confidence interval that overlaps zero (i.e., 95% CI = `r metareg_v$ci.lb[1]` to `r metareg_v$ci.ub[1]`). In other words, if no uncertainty around estimates exists, or we have a very high powered set of studies than we would expect the correlation to be, on average, `r tanh(metareg_v$b[1])`. 
+>Yes, there is evidence for publication bias because the slope estimate for `sqrt(Zr)` or the sampling standard error is significant. Given that the `intrcpt` is not significant we can interpret the model using SE instead of V. We can see from this model that the adjusted `Zr` when there is *no* uncertainty is `r metareg_v$b[1]`with a 95% confidence interval that overlaps zero (i.e., 95% CI = `r metareg_v$ci.lb[1]` to `r metareg_v$ci.ub[1]`). In other words, if no uncertainty around estimates exists, or we have a very high powered set of studies than we would expect the correlation to be, on average, `r tanh(metareg_v$b[1])`. "ADD YOUR ANSWER HERE"
 
 <br>
 
