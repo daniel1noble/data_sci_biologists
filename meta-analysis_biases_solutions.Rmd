@@ -113,23 +113,26 @@ ggplot(arnold_data_endo, aes(y = 1/sqrt(Zr_v), x = tanh(Zr))) +
 
 <br>
 
-#### **What do we expect if publication bias were present?** {.tabset .tabset-fade .tabset-pills} 
+#### **Question 1: What do we expect if publication bias were present?** {.tabset .tabset-fade .tabset-pills} 
 
-##### Task! {.tabset .tabset-fade .tabset-pills}
 >**In the literature we predict a positive correlation between metabolic rate and fitness. Think about what you would expect the funnel plot to look like, and why, if a 'file-drawer' bias existed.**
 
 <br>
 
-##### Answer! {.tabset .tabset-fade .tabset-pills}
+
+##### Your answer! {.tabset .tabset-fade .tabset-pills}
 
 >We might expect under a file-drawer situation (i.e., where researchers stash away poorer quality studies showing opposite effects in their desk drawers) that studies with low power  (i.e., low precision, wide standard errors, and small sample sizes) and non-significant correlations will go unpublished. This should be particularly true for studies that show the opposite to what we might predict by theory -- specifically, negative correlations from studies with small sample sizes / low precision that are not significant. This is one factor that can drive what we call funnel asymmetry, showing a bunch of missing effect sizes in the bottom left corner of the funnel. "ADD YOUR ANSWER HERE"
 
 <br>
 
-##### Interpreting our Funnel Plot {.tabset .tabset-fade .tabset-pills}
+##### Interpret the Funnel Plot {.tabset .tabset-fade .tabset-pills}
 >If we look at Fig. \@ref(fig:funnel) we do see some hint of this scenario. There is a noticeable blank space in the bottom left corner with negative correlations  based on very small sample sizes that are generally small to moderate in magnitude going unpublished. The contour-enhanced funnel plot also tells us that these are studies that failed to find a significant correlation. But, interestingly, we also see that if the magnitude of correlation is large enough in the negative direction even with small sample sizes these can get published, but for the most part these are significant at 0.05. We can only speculate as to why or if this is even a real signature of publication bias. However, this might suggest that if folks estimate large enough correlations and these are in the opposite direction to what one might expect these arguably 'surprising' results are more likely to be published than if the correlation is weak and in the opposite direction. "ADD YOUR ANSWER HERE"
 
 <br>
+
+## **Task 3: Visual inspections of possible publication bias -- bubble plots**
+
 
 
 ## **References**
