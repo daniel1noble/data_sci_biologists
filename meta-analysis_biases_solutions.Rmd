@@ -88,17 +88,30 @@ metafor::funnel(x = arnold_data_endo$Zr, vi = arnold_data_endo$Zr_v,
                 level = c(0.1, 0.05, 0.01), 
                 shade = c("white", "gray55", "gray 75"), las = 1, 
                 xlab = "Correlation Coefficient (r)", atransf=tanh, legend = TRUE)
+
 ```
 
 Here, we are setting a number of arguments. For greater detail you can look at the help file (`?funnel`), but we'll explain a bit here:
 
 1) `x` is the vector of effect sizes, Zr, you want plotted
 2) `vi` is the vector of sampling variance estimates for each effect size, Zr_v
-3) `yaxis` sets the type of sampling variance you want plotted `seinv` is the precision, or the inverse of the sampling standard error. Remember, to get from the sampling variance to the sampling standard error we just sqrt(`vi`).
+3) `yaxis` sets the type of sampling variance you want plotted `seinv` is the precision, or the inverse of the sampling standard error. Remember, to get from the sampling variance to the sampling standard error we just sqrt(Zr_v).
 4) The `level` argument will plot contours, making this plot what we call a `contour enhanced funnel plot`. The contours relate to the level of statistical significance for each effect. See the legend.
 5) `atransf` will transform Zr back to the correlation coefficient. 
 
 We can see from Fig. \@ref(fig:funnel) above the typical funnel shape. You will notice that most effects lie in the positive correlation space -- in other words there is a strong positive correlation between BMR and fitness. However, we also find some studies that show the opposite pattern. We expect that based on sampling theory alone, and indeed many of these effects fall close to the dotted sampling error intervals. Studies in the light grey regions are studies where the p-value was significant. 
+
+You can also make these funnel plots using `ggplot`. Try that out in the code chunk below:
+
+```{r}
+
+ggplot(arnold_data_endo, aes(y = 1/sqrt(Zr_v), x = tanh(Zr))) + 
+  geom_point() + geom_vline(aes(xintercept = 0)) + labs(y = "Precision (1/SE)", x = "Correlation Coefficient (r)") +
+  theme_bw()
+
+```
+
+
 
 <br>
 
