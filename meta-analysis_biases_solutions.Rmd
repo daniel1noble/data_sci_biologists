@@ -34,17 +34,41 @@ Meta-analyst's have worked hard to develop tools that can be used to try and und
 Visual and quantitative tools have been developed try and identify and 'correct' for such biases on meta-analytic results [@Jennions2013; @Nakagawa2021b; @Rothstein2005]. Having said that, aside from working hard to try and incorporate 'gray literature' (unpublished theses, government reports, etc.) and working hard to include work done in non-English speaking languages, there is little one can truly due to counteract publication biases beyond a few simple tools. We cannot know for certain what isn't published in many cases or how a sample of existing work on a topic might be biased. Nonetheless, exploring the possibility of publication bias and its possible effects on conclusions is a core component of meta-analysis [@ODea2021]. 
 
 
-## **Load the necessary R Packages**
+## **Setting the scene: Meta-analysis of studies estimating the correlation between metabolism and fitness**
 
-```{r loadpacks, message=FALSE, results='hide'}
-# Install a load of packages that we'll use. I'll show you a shortcut that I love to use. Try using the p_load function in the "pacman" package. p_load will execute both the install.packages and library commands in one shot so they only need to be used once to install pacman itself.
-install.packages("pacman", repos = "http://cran.us.r-project.org")
-library(pacman)
+We're going to have a look at a meta-analysis by @Arnold2021 that explores the relationship between resting metabolic rate and fitness in animals. Publication bias is slightly subtle in this particular meta-analysis, but it does appear to be present in some form both visually and analytically. 
 
-# Install bookdown for rendering because we'll need this. While we're at it, lets also install /load the tidyverse
-p_load(bookdown, tidyverse, ggforce, flextable, latex2exp, png, magick, metafor) # basically just list all the packages you want here
+Below we have provided code-chunks for you. Where it says "ADD YOUR CODE HERE" or "ADD YOUR ANSWER HERE" you should delete this text and provide the necessary code or answer to complete the task.
 
+## **Task 1: Download the Data and Clean it up**
+
+First, lets download the data and do some cleaning. Use your coding skills to clean up the dataset based on what the annotated text is telling you to do:
+
+```{r rawdata, message=FALSE, warning=FALSE}
+# Packages
+pacman::p_load(tidyverse, metafor, orchaRd)
+
+# Download the data. Exclude NA in r and sample size columns
+arnold_data <- read.csv("https://raw.githubusercontent.com/pieterarnold/fitness-rmr-meta/main/MR_Fitness_Data_revised.csv")
+
+# Exclude some NA's in sample size and r
+arnold_data <- arnold_data[complete.cases(arnold_data$n.rep) & complete.cases(arnold_data$r),] #"ADD YOUR CODE HERE"
+
+# Calculate the effect size, ZCOR
+arnold_data <- metafor::escalc(measure = "ZCOR", ri = r, ni = n.rep, data = arnold_data, var.names = c("Zr", "Zr_v")) #"ADD YOUR CODE HERE"
+
+# Lets subset to endotherms 
+arnold_data_endo <- arnold_data %>% 
+               mutate(endos = ifelse(Class %in% c("Mammalia", "Aves"), "endo", "ecto")) %>% 
+               filter(endos == "endo" & Zr <= 3) # Note that one sample that was an extreme outlier was removed in the paper.
+
+# Add in observation-level (residual) 
+arnold_data_endo$obs <- 1:dim(arnold_data_endo)[1] #"ADD YOUR CODE HERE"
 ```
+
+## **Task 2: Visual inspections of possible publication bias -- funnel plots**
+
+
 
 
 ## **References**
