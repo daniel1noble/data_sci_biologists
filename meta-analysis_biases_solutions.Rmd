@@ -131,7 +131,51 @@ ggplot(arnold_data_endo, aes(y = 1/sqrt(Zr_v), x = tanh(Zr))) +
 
 <br>
 
-## **Task 3: Visual inspections of possible publication bias -- bubble plots**
+
+## **Task 3: Fitting a Multilevel Meta-Regression model to Test and Correct for Publication bias**
+
+So far, the funnel plot has only been a visual tool to determine whether there is a possibility of publication bias existing. While useful, it does have a lot of limitations. We can, however, more formally quantifying (i.e., statistically) if publication bias exists. We can also use meta-regression approaches to try and get a handle on how our meta-analytic mean effect size might change if there were no biases. 
+
+We can do that by recognizing that the sampling error is expected to co-vary with the magnitude and direction of effect size. In other words, we are making the prediction that, if we fit a meta-regression model that uses sampling variance as a fixed effect / moderator, we expect there to be a significant slope coefficient. That's because there is an unequal distribution of effect sizes on either side of the funnel plot and the mean effect size when the sampling variance is high get shifted resulting in the slope being different from 0. 
+
+To better understand this, lets think about flipping around the funnel plot:
+
+```{r}
+ggplot(arnold_data_endo, aes(y = Zr, x = Zr_v)) + 
+  geom_point() + 
+  geom_smooth(method = lm) + 
+  labs(y = "Fisher's Z-transformed Correlation Coefficient (Zr)", x = "Sampling Variance of Zr") +
+  theme_classic()
+```
+
+Let's now apply the methods proposed above to @Arnold2021's data. To simplify, we are just going to remove other moderators and only fit SE and/ or V. This just simplifies the interpretation of the intercept, but we could always include the fitness trait type moderator in these models as well. 
+
+```{r V, echo=TRUE}
+# Including sampling variance as moderator
+metareg_v <- rma.mv(Zr ~ Zr_v, V = Zr_v, 
+                    random = list(~1|Ref, 
+                                  ~1|obs), 
+                    test = "t", dfs = "contain", 
+                    data = arnold_data_endo)
+summary(metareg_v)
+```
+
+#### **Interpreting the results**  {.tabset .tabset-fade .tabset-pills} 
+
+##### Task! {.tabset .tabset-fade .tabset-pills}
+>**Is there evidence for publication bias? If so, what is the adjusted meta-analytic mean estimate?**
+
+<br>
+
+##### Answer! {.tabset .tabset-fade .tabset-pills}
+
+>Yes, there is evidence for publication bias because the slope estimate for `sqrt(Zr)` or the sampling standard error is significant. Given that the `intrcpt` is not significant we can interpret the model using SE instead of V. We can see from this model that the adjusted `Zr` when there is *no* uncertainty is `r metareg_v$b[1]`with a 95% confidence interval that overlaps zero (i.e., 95% CI = `r metareg_v$ci.lb[1]` to `r metareg_v$ci.ub[1]`). In other words, if no uncertainty around estimates exists, or we have a very high powered set of studies than we would expect the correlation to be, on average, `r tanh(metareg_v$b[1])`. 
+
+<br>
+
+
+
+## **Task 4: Visual inspections of possible publication bias -- bubble plots**
 
 
 
