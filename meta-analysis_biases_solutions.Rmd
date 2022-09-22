@@ -16,11 +16,7 @@ knitr::opts_chunk$set(echo = TRUE, cache = FALSE, tidy = TRUE)
 options(digits=2)
 ```
 
-```{r klippy, echo=FALSE, include=TRUE, message=FALSE, warning=FALSE}
-#install.packages("devtools")
-remotes::install_github("rlesur/klippy")
-klippy::klippy(tooltip_message = 'Click to Copy Code', tooltip_success = 'Done', position = 'right', color = "red")
-
+```{r libraries, echo=FALSE, include=TRUE, message=FALSE, warning=FALSE}
 # Load packages
 pacman::p_load(metafor, flextable, tidyverse, orchaRd, pander, mathjaxr, equatags, vembedr, tidyverse)
 
@@ -162,6 +158,9 @@ metareg_v <- rma.mv(Zr ~ Zr_v, V = Zr_v,
                     test = "t", dfs = "contain", 
                     data = arnold_data_endo)
 summary(metareg_v)
+
+# How much variation does this model explain in Zr?
+orchaRd::r2_ml(metareg_v)
 ```
 
 <br>
@@ -170,11 +169,9 @@ summary(metareg_v)
 
 > **Note**: Write out your answer using in-line code chunks that extract the relevant values from the model object.
 
-<br>
-
 ##### Your Answer! {.tabset .tabset-fade .tabset-pills}
 
->Yes, there is evidence for publication bias because the slope estimate for `sqrt(Zr)` or the sampling standard error is significant. Given that the `intrcpt` is not significant we can interpret the model using SE instead of V. We can see from this model that the adjusted `Zr` when there is *no* uncertainty is `r metareg_v$b[1]`with a 95% confidence interval that overlaps zero (i.e., 95% CI = `r metareg_v$ci.lb[1]` to `r metareg_v$ci.ub[1]`). In other words, if no uncertainty around estimates exists, or we have a very high powered set of studies than we would expect the correlation to be, on average, `r tanh(metareg_v$b[1])`. "ADD YOUR ANSWER HERE"
+>Yes, there is evidence for publication bias because the slope estimate for `Zr_V` is significant. We can see from this model that the adjusted `Zr` when there is *no* uncertainty (i.e., the intercept) is `r metareg_v$b[1]`with a 95% confidence interval that overlaps zero (i.e., 95% CI = `r metareg_v$ci.lb[1]` to `r metareg_v$ci.ub[1]`). In other words, if no uncertainty around estimates exists, or we have a very high powered set of studies than we would expect the correlation to be, on average, `r tanh(metareg_v$b[1])`. "ADD YOUR ANSWER HERE"
 
 <br>
 
