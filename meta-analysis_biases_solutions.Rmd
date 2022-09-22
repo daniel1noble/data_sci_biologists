@@ -1,9 +1,7 @@
 ---
-title: "Meta-analysis: Multi-level models"
-author: "<your name and u number>"
+title: "Meta-analysis: Understanding and detecting publication biases"
 date: "`r Sys.Date()`"
 bibliography: ./bib/refs.bib
-csl: ./bib/the-journal-of-experimental-biology.csl
 output: 
   bookdown::html_document2:
     code_folding: show
@@ -31,9 +29,10 @@ pacman::p_load(metafor, flextable, tidyverse, orchaRd, pander, mathjaxr, equatag
 
 ## **Introduction: Publication biases and what to do about them?**
 
-Meta-analyst's have also worked hard to develop tools that can be used to try and understand different forms of publication practices and biases within the scientific literature. Such biases can occur if studies reporting non-significant or opposite results to what is predicted are not found in systematic searches ['i.e., the 'file-drawer' problem; @Jennions2013]. Alternatively, biases could result from selective reporting or 'p-hacking'. Visual and quantitative tools that have been developed try and identify and 'correct' for such biases on meta-analytic results [@Jennions2013; @Nakagawa2021b; @Rothstein2005]. Having said that, aside from working hard to try and incorporate 'gray literature' (unpublished theses, government reports, etc.) and working hard to include work done in non-English speaking languages, there is little one can truly due to counteract publication biases beyond a few simple tools. We cannot know for certain what isn't published in many cases or how a sample of existing work on a topic might be biased. Nonetheless, exploring the possibility of publication bias and its possible effects on conclusions is a core component of meta-analysis [@ODea2021]. 
+Meta-analyst's have worked hard to develop tools that can be used to try and understand different forms of publication practices and biases within the scientific literature. Such biases can occur if studies reporting non-significant or opposite results to what is predicted are not found in systematic searches ['i.e., the 'file-drawer' problem; @Jennions2013]. Alternatively, biases could result from selective reporting or 'p-hacking'. 
 
-Applying the statistical tools of meta-analysis is therefore fundamental to establishing the generality of findings, testing hypotheses about what might drive variation among effects and identifying publication biases that may result in a skewed picture of existing work. Such insights have the potential to shape future research in important ways [@KortichevaGure2013].
+Visual and quantitative tools have been developed try and identify and 'correct' for such biases on meta-analytic results [@Jennions2013; @Nakagawa2021b; @Rothstein2005]. Having said that, aside from working hard to try and incorporate 'gray literature' (unpublished theses, government reports, etc.) and working hard to include work done in non-English speaking languages, there is little one can truly due to counteract publication biases beyond a few simple tools. We cannot know for certain what isn't published in many cases or how a sample of existing work on a topic might be biased. Nonetheless, exploring the possibility of publication bias and its possible effects on conclusions is a core component of meta-analysis [@ODea2021]. 
+
 
 ## **Load the necessary R Packages**
 
