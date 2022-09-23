@@ -23,7 +23,7 @@ pacman::p_load(metafor, flextable, tidyverse, orchaRd, pander, mathjaxr, equatag
 # To use mathjaxr you need to run equatags::mathjax_install()
 ```
 
-## **Introduction: Publication biases and what to do about them?**
+## **Publication biases and what to do about them?**
 
 Meta-analyst's have worked hard to develop tools that can be used to try and understand different forms of publication practices and biases within the scientific literature. Such biases can occur if studies reporting non-significant or opposite results to what is predicted are not found in systematic searches ['i.e., the 'file-drawer' problem; @Jennions2013]. Alternatively, biases could result from selective reporting or 'p-hacking'. 
 
@@ -176,9 +176,40 @@ orchaRd::r2_ml(metareg_v)
 <br>
 
 
+## **Task 4: Visual inspections of possible publication bias -- time-lag bias**
 
-## **Task 4: Visual inspections of possible publication bias -- bubble plots**
+Time-lag bias is a very common form of publication bias that results from a change in the average effect size with the accumulation of new studies. Often, under-powered studies that find surprising results are published first, and these initial studies usually stimulate a swath of new experiments seeking to test whether such a pattern exists in the new study system. To some extent, this is a good thing, and is expected. We need studies to replicate the finding so we are not fooled by the result.
 
+We know though that small studies are susceptible to huge sampling error. This can result in over-inflated effect sizes. As more studies accumulate, the average effect size usually converges on the 'true' mean. 
+
+Time-lag bias is usually depicted in two ways. First, using what is called a 'cumulative meta-analysis'. This is where we conduct a meta-analysis on a subset of data adding to this data as we move through time. We usually visualise this using what is called a 'cumulative forest plot'.
+
+Second, we can also test whether the mean effect size changes with the year of publication using visual and meta-regression approaches. 
+
+Given the two methods are similar, we'll focus on the second option to keep things simple. 
+
+Let's first focus on some visuals in this task. Let's visualize whether we see any relationship between *average effect size* and the *year of publication*? Use `ggplot` to do this. Weight the size of the points based on their sampling error. Remember to clearly label the axes and the legend.
+
+
+```{r, yearbubble, fig.cap="Plot of Zr as a function of publication year. Points are scaled in relation to their precision (1/sqrt(Zr_v)). Small points indicate effects with low precision or high sampling varaince"}
+
+ggplot(arnold_data_endo, aes(y = Zr, x = Year, size = 1/sqrt(Zr_v))) + geom_point(alpha = 0.30) + geom_smooth(method = lm, col = "red", show.legend = FALSE) + labs(x = "Publication Year", y = "Fisher's Z-transformed Correlation Coefficient (Zr)", size = "Precision (1/SE)") + theme_classic()
+
+```
+
+Would you look at that! 
+
+<br>
+
+#### **Question 3: There are a few key things to takeaway from Figure \@ref(fig:yearbubble) which seem to support our suspicions about time-lag bias being present in these data. Describe three important features that stand out.**  {.tabset .tabset-fade .tabset-pills} 
+
+##### Your Answer! {.tabset .tabset-fade .tabset-pills}
+
+1) There does appear to be a clear negative relationship with year. 
+2) Also of note are that the earlier year studies have much higher sampling variance (i.e., lower precision), just like we might expect. 
+3) These early studies appear to have a far higher (exaggerated) effect size compared with studies that are done in later years.
+"ADD YOUR ANSWER HERE"
+<br>
 
 
 ## **References**
