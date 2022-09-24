@@ -1908,11 +1908,43 @@ r2_time_sv</code></pre>
 <p>But wait, the intercept in this model is really different from <code>metareg_v</code>. Why? Well, this is expected because the interpretation of the intercept is the mean effect size when <code>Year</code> <strong>and</strong> sampling variance = 0! Well, that’s just weird right? What does Year of 0 mean?</p>
 <p>It turns out we can <code>trick</code> the model in estimating an intercept, which is the overall meta-analytic mean, that is more relevant and interpretable for us. To do that, we can ‘centre’ the <code>Year</code> variable. Remember back to workshop 8 on Statistical Models where we subtracted the mouse mass from the cage mean? Yep, same thing! What does centering do for us here? Well, for simplicity, we can center on the mean of the <code>Year</code> column by simply subtracting every value of <code>Year</code> by the “mean year”. This changes the variable so that 0 is now the mean Year in the data set. Why don’t you do that in the code block below. Use the <code>tidyverse</code> :</p>
 <pre class="r"><code>arnold_data_endo &lt;- arnold_data_endo %&gt;% mutate(Year_c = Year - mean(Year)) # &#39;ADD YOUR CODE HERE&#39;</code></pre>
-</div>
-</div>
-</div>
-<div id="references" class="section level2">
-<h2><strong>References</strong></h2>
+<p>Great, now we have added our centered on the mean Year and called this new variable <code>Year_c</code>. We can now refit the model using <code>Year_c</code> instead of year. Do that in the code chunk below:</p>
+<pre class="r"><code># Including sampling variance and year as moderators to account for both!
+metareg_time_c &lt;- rma.mv(Zr ~ Year_c + Zr_v, V = Zr_v, 
+                    random = list(~1|Ref, 
+                                  ~1|obs), 
+                    test = &quot;t&quot;, dfs = &quot;contain&quot;, 
+                    data = arnold_data_endo)
+summary(metareg_time_c)</code></pre>
+<pre><code>## 
+## Multivariate Meta-Analysis Model (k = 209; method: REML)
+## 
+##   logLik  Deviance       AIC       BIC      AICc  ​ 
+## -73.4782  146.9564  156.9564  173.5957  157.2564   
+## 
+## Variance Components:
+## 
+##             estim    sqrt  nlvls  fixed  factor 
+## sigma^2.1  0.0513  0.2266     62     no     Ref 
+## sigma^2.2  0.0377  0.1942    209     no     obs 
+## 
+## Test for Residual Heterogeneity:
+## QE(df = 206) = 833.3231, p-val &lt; .0001
+## 
+## Test of Moderators (coefficients 2:3):
+## F(df1 = 2, df2 = 59) = 12.2763, p-val &lt; .0001
+## 
+## Model Results:
+## 
+##          estimate      se     tval   df    pval    ci.lb    ci.ub     ​ 
+## intrcpt    0.0697  0.0467   1.4943   59  0.1404  -0.0236   0.1631      
+## Year_c    -0.0125  0.0057  -2.2000   59  0.0317  -0.0238  -0.0011    * 
+## Zr_v       2.5542  0.7116   3.5894  206  0.0004   1.1513   3.9571  *** 
+## 
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<p>Ok, wow! What happened. The model has changed, and in particular the <code>intrcpt</code>. Why? Well, have a think about the meaning of the <code>intrcpt</code>. It is the mean when <code>Year_c</code> and <code>Zr_v</code> are both set to 0. But, remember now that a value of <code>Year_c</code> that is 0 actually means an ’average Year<code>(we could of course have cenetered it on other years...maybe 2022?). So, this changes the interpretation of the</code>intrcpt`!
+## <strong>References</strong></p>
 <div id="refs" class="references csl-bib-body hanging-indent">
 <div id="ref-Arnold2021" class="csl-entry">
 Arnold, Pieter A., Steven Delean, Phillip Cassey, and Craig R. White. 2021. <span>“Meta‐analysis Reveals That Resting Metabolic Rate Is Not Consistently Related to Fitness and Performance in Animals.”</span> <em>Journal of Comparative Physiology B</em> 191: 1097–1110.
@@ -1931,6 +1963,8 @@ Rothstein, H. R., A. J. Sutton, and M. Borenstein. 2005. <span>“Publication Bi
 </div>
 </div>
 <p><br></p>
+</div>
+</div>
 </div>
 
 

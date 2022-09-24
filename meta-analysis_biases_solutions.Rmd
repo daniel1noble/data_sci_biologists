@@ -269,8 +269,21 @@ arnold_data_endo <- arnold_data_endo %>% mutate(Year_c = Year - mean(Year)) # 'A
 
 ```
 
+Great, now we have added our centered on the mean Year and called this new variable `Year_c`. We can now refit the model using `Year_c` instead of year. Do that in the code chunk below:
+
+```{r timelagSvmodelc, echo=TRUE}
+# Including sampling variance and year as moderators to account for both!
+metareg_time_c <- rma.mv(Zr ~ Year_c + Zr_v, V = Zr_v, 
+                    random = list(~1|Ref, 
+                                  ~1|obs), 
+                    test = "t", dfs = "contain", 
+                    data = arnold_data_endo)
+summary(metareg_time_c)
+
+```
 
 
+Ok, wow! What happened. The model has changed, and in particular the `intrcpt`. Why? Well, have a think about the meaning of the `intrcpt`. It is the mean when `Year_c` and `Zr_v` are both set to 0. But, remember now that a value of `Year_c` that is 0 actually means an 'average Year` (we could of course have cenetered it on other years...maybe 2022?). So, this changes the interpretation of the `intrcpt`!
 ## **References**
 
 <div id="refs"></div>
