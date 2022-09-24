@@ -99,7 +99,7 @@ We can see from Fig. \@ref(fig:funnel) above the typical funnel shape. You will 
 
 You can also make funnel plots using `ggplot`. Don't worry about making a contour-enhanced version, just try making a simple funnel plot in the code chunk below. Remember to label your axes nicely. You can do that with the `labs()` function in `ggplot`.
 
-```{r}
+```{r, ggplotfunnel, fig.align='center', fig.cap="Funnel plot showing the precision of effects against their correlation"}
 
 ggplot(arnold_data_endo, aes(y = 1/sqrt(Zr_v), x = tanh(Zr))) + 
   geom_point() + geom_vline(aes(xintercept = 0)) + labs(y = "Precision (1/SE)", x = "Correlation Coefficient (r)") +
@@ -136,7 +136,7 @@ We can do that by recognizing that the sampling error is expected to co-vary wit
 
 To better understand this, lets think about flipping around the funnel plot:
 
-```{r, egger, fig.cap= "Plot of Fisher's Zr against sampling variance for Zr. A linear model was fit to the data."}
+```{r, egger, fig.align='center',fig.cap= "Plot of Fisher's Zr against sampling variance for Zr. A linear model was fit to the data."}
 ggplot(arnold_data_endo, aes(y = Zr, x = Zr_v)) + 
   geom_point() + 
   geom_smooth(method = lm) + 
@@ -160,8 +160,11 @@ metareg_v <- rma.mv(Zr ~ Zr_v, V = Zr_v,
 summary(metareg_v)
 
 # How much variation does this model explain in Zr?
-orchaRd::r2_ml(metareg_v)
+r2 <- orchaRd::r2_ml(metareg_v)
+r2
 ```
+
+We can see that sampling variance explains `r r2[1]*100`% of effect size variance. This is the marginal $R^2$, which tell us how much variation the 'fixed effects' or moderators explain in the model. Conditional $R^2$ tells us that the full model, that accounts for the both the fixed and random effects, explains `r r2[2]*100`% of variance in effect size.
 
 <br>
 
@@ -188,10 +191,10 @@ Second, we can also test whether the mean effect size changes with the year of p
 
 Given the two methods are similar, we'll focus on the second option to keep things simple. 
 
-Let's first focus on some visuals in this task. Let's visualize whether we see any relationship between *average effect size* and the *year of publication*? Use `ggplot` to do this. Weight the size of the points based on their sampling error. Remember to clearly label the axes and the legend.
+Let's first focus on some visuals in this task. Let's visualize whether we see any relationship between *average effect size* and the *year of publication*? Use `ggplot` to do this. Scale the size of the points based on their sampling error. Remember to clearly label the axes and the legend.
 
 
-```{r, yearbubble, fig.cap="Plot of Zr as a function of publication year. Points are scaled in relation to their precision (1/sqrt(Zr_v)). Small points indicate effects with low precision or high sampling varaince"}
+```{r, yearbubble,fig.align='center',fig.cap="Plot of Zr as a function of publication year. Points are scaled in relation to their precision (1/sqrt(Zr_v)). Small points indicate effects with low precision or high sampling varaince"}
 
 ggplot(arnold_data_endo, aes(y = Zr, x = Year, size = 1/sqrt(Zr_v))) + geom_point(alpha = 0.30) + geom_smooth(method = lm, col = "red", show.legend = FALSE) + labs(x = "Publication Year", y = "Fisher's Z-transformed Correlation Coefficient (Zr)", size = "Precision (1/SE)") + theme_classic()
 
@@ -210,6 +213,8 @@ Would you look at that!
 3) These early studies appear to have a far higher (exaggerated) effect size compared with studies that are done in later years.
 "ADD YOUR ANSWER HERE"
 <br>
+
+## **Task 5: Quantifying time lag bias using multilevel meta-regression**
 
 
 ## **References**
