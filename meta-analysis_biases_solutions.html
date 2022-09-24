@@ -10,7 +10,7 @@
 
 
 
-<meta name="date" content="2022-09-24" />
+<meta name="date" content="2022-09-25" />
 
 <title>Meta-analysis: Understanding and detecting publication biases</title>
 
@@ -1607,7 +1607,7 @@ div.tocify {
 
 
 <h1 class="title toc-ignore">Meta-analysis: Understanding and detecting publication biases</h1>
-<h4 class="date">2022-09-24</h4>
+<h4 class="date">2022-09-25</h4>
 
 </div>
 
@@ -1906,7 +1906,7 @@ r2_time_sv</code></pre>
 ##           0.36           0.73</code></pre>
 <p>Great! That was easy. Just like any old linear mixed effect model we can just add moderators / fixed effects to the formula. Here, we can see that there is clear evidence, even when accounting for the covariance between the two, both file-drawer and time-lag biases in these data.</p>
 <p>But wait, the intercept in this model is really different from <code>metareg_v</code>. Why? Well, this is expected because the interpretation of the intercept is the mean effect size when <code>Year</code> <strong>and</strong> sampling variance = 0! Well, that’s just weird right? What does Year of 0 mean?</p>
-<p>It turns out we can <code>trick</code> the model in estimating an intercept, which is the overall meta-analytic mean, that is more relevant and interpretable for us. To do that, we can ‘centre’ the <code>Year</code> variable. What does centering do? Well, for simplicity, we can center on the mean of the <code>Year</code> column by simply subtracting every value of <code>Year</code> by the “mean year”. This changes the variable so that 0 is now the mean Year in the data set. Why don’t you do that in the code block below. Use the <code>tidyverse</code> :</p>
+<p>It turns out we can <code>trick</code> the model in estimating an intercept, which is the overall meta-analytic mean, that is more relevant and interpretable for us. To do that, we can ‘centre’ the <code>Year</code> variable. Remember back to workshop 8 on Statistical Models where we subtracted the mouse mass from the cage mean? Yep, same thing! What does centering do for us here? Well, for simplicity, we can center on the mean of the <code>Year</code> column by simply subtracting every value of <code>Year</code> by the “mean year”. This changes the variable so that 0 is now the mean Year in the data set. Why don’t you do that in the code block below. Use the <code>tidyverse</code> :</p>
 <pre class="r"><code>arnold_data_endo &lt;- arnold_data_endo %&gt;% mutate(Year_c = Year - mean(Year)) # &#39;ADD YOUR CODE HERE&#39;</code></pre>
 </div>
 </div>
