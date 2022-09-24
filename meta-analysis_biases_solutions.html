@@ -1815,6 +1815,101 @@ Figure 4: Plot of Zr as a function of publication year. Points are scaled in rel
 </div>
 <div id="task-5-quantifying-time-lag-bias-using-multilevel-meta-regression" class="section level2">
 <h2><strong>Task 5: Quantifying time lag bias using multilevel meta-regression</strong></h2>
+<pre class="r"><code># Including sampling variance as moderator
+metareg_time &lt;- rma.mv(Zr ~ Year, V = Zr_v, 
+                    random = list(~1|Ref, 
+                                  ~1|obs), 
+                    test = &quot;t&quot;, dfs = &quot;contain&quot;, 
+                    data = arnold_data_endo)
+summary(metareg_time)</code></pre>
+<pre><code>## 
+## Multivariate Meta-Analysis Model (k = 209; method: REML)
+## 
+##   logLik  Deviance       AIC       BIC      AICc  ​ 
+## -79.7779  159.5557  167.5557  180.8866  167.7537   
+## 
+## Variance Components:
+## 
+##             estim    sqrt  nlvls  fixed  factor 
+## sigma^2.1  0.0725  0.2693     62     no     Ref 
+## sigma^2.2  0.0370  0.1923    209     no     obs 
+## 
+## Test for Residual Heterogeneity:
+## QE(df = 207) = 935.0576, p-val &lt; .0001
+## 
+## Test of Moderators (coefficient 2):
+## F(df1 = 1, df2 = 60) = 9.8414, p-val = 0.0026
+## 
+## Model Results:
+## 
+##          estimate       se     tval  df    pval    ci.lb    ci.ub    ​ 
+## intrcpt   38.1671  12.1138   3.1507  60  0.0025  13.9358  62.3983  ** 
+## Year      -0.0189   0.0060  -3.1371  60  0.0026  -0.0310  -0.0069  ** 
+## 
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<pre class="r"><code># How much variation does time when results were published explain in Zr?
+r2_time &lt;- orchaRd::r2_ml(metareg_time) #&quot;ADD YOUR CODE HERE&quot;
+r2_time</code></pre>
+<pre><code>##    R2_marginal R2_conditional 
+##           0.14           0.71</code></pre>
+<div id="question-4-how-much-variation-in-zr-among-studies-is-driven-by-changes-through-time" class="section level4 tabset tabset-fade tabset-pills">
+<h4><strong>Question 4: How much variation in Zr among studies is driven by changes through time?</strong></h4>
+<blockquote>
+<p><strong>Note</strong>: Write out your answer using in-line code chunks that extract the relevant values from the model object.</p>
+</blockquote>
+<div id="your-answer-3" class="section level5 tabset tabset-fade tabset-pills">
+<h5>Your Answer!</h5>
+<blockquote>
+<p>Time-lag explains 13.83% of the variation in Zr. “ADD YOUR ANSWER HERE”</p>
+</blockquote>
+<p><br></p>
+<p>It’s clear that we have evidence of a time-lag bias. The mean effect size is predicted to decrease as more studies accumulate! But, wait, we also have evidence for other possible publication biases, such as the file-drawer effects. We can actually create a model that accounts for <strong>both</strong> of these effects, and that accounts for possible covariance between the two (i.e., sampling variance is expected to be high in early years). Let’s fit that model.</p>
+<pre class="r"><code># Including sampling variance and year as moderators to account for both!
+metareg_time &lt;- rma.mv(Zr ~ Year + Zr_v, V = Zr_v, 
+                    random = list(~1|Ref, 
+                                  ~1|obs), 
+                    test = &quot;t&quot;, dfs = &quot;contain&quot;, 
+                    data = arnold_data_endo)
+summary(metareg_time)</code></pre>
+<pre><code>## 
+## Multivariate Meta-Analysis Model (k = 209; method: REML)
+## 
+##   logLik  Deviance       AIC       BIC      AICc  ​ 
+## -73.4782  146.9564  156.9564  173.5957  157.2564   
+## 
+## Variance Components:
+## 
+##             estim    sqrt  nlvls  fixed  factor 
+## sigma^2.1  0.0513  0.2266     62     no     Ref 
+## sigma^2.2  0.0377  0.1942    209     no     obs 
+## 
+## Test for Residual Heterogeneity:
+## QE(df = 206) = 833.3231, p-val &lt; .0001
+## 
+## Test of Moderators (coefficients 2:3):
+## F(df1 = 2, df2 = 59) = 12.2763, p-val &lt; .0001
+## 
+## Model Results:
+## 
+##          estimate       se     tval   df    pval    ci.lb    ci.ub     ​ 
+## intrcpt   25.0498  11.3651   2.2041   59  0.0314   2.3082  47.7914    * 
+## Year      -0.0125   0.0057  -2.2000   59  0.0317  -0.0238  -0.0011    * 
+## Zr_v       2.5542   0.7116   3.5894  206  0.0004   1.1513   3.9571  *** 
+## 
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
+<pre class="r"><code># How much variation does time when results were published explain in Zr?
+r2_time_sv &lt;- orchaRd::r2_ml(metareg_time) #&quot;ADD YOUR CODE HERE&quot;
+r2_time_sv</code></pre>
+<pre><code>##    R2_marginal R2_conditional 
+##           0.36           0.73</code></pre>
+<p>Great! That was easy. Just like any old linear mixed effect model we can just add moderators / fixed effects to the formula. Here, we can see that there is clear evidence, even when accounting for the covariance between the two, both file-drawer and time-lag biases in these data.</p>
+<p>But wait, the intercept in this model is really different from <code>metareg_v</code>. Why? Well, this is expected because the interpretation of the intercept is the mean effect size when <code>Year</code> <strong>and</strong> sampling variance = 0! Well, that’s just weird right? What does Year of 0 mean?</p>
+<p>It turns out we can <code>trick</code> the model in estimating an intercept, which is the overall meta-analytic mean, that is more relevant and interpretable for us. To do that, we can ‘centre’ the <code>Year</code> variable. What does centering do? Well, for simplicity, we can center on the mean of the <code>Year</code> column by simply subtracting every value of <code>Year</code> by the “mean year”. This changes the variable so that 0 is now the mean Year in the data set. Why don’t you do that in the code block below. Use the <code>tidyverse</code> :</p>
+<pre class="r"><code>arnold_data_endo &lt;- arnold_data_endo %&gt;% mutate(Year_c = Year - mean(Year)) # &#39;ADD YOUR CODE HERE&#39;</code></pre>
+</div>
+</div>
 </div>
 <div id="references" class="section level2">
 <h2><strong>References</strong></h2>

@@ -216,6 +216,60 @@ Would you look at that!
 
 ## **Task 5: Quantifying time lag bias using multilevel meta-regression**
 
+```{r timelagmodel, echo=TRUE}
+# Including sampling variance as moderator
+metareg_time <- rma.mv(Zr ~ Year, V = Zr_v, 
+                    random = list(~1|Ref, 
+                                  ~1|obs), 
+                    test = "t", dfs = "contain", 
+                    data = arnold_data_endo)
+summary(metareg_time)
+
+# How much variation does time when results were published explain in Zr?
+r2_time <- orchaRd::r2_ml(metareg_time) #"ADD YOUR CODE HERE"
+r2_time
+```
+
+#### **Question 4: How much variation in Zr among studies is driven by changes through time?**  {.tabset .tabset-fade .tabset-pills} 
+
+> **Note**: Write out your answer using in-line code chunks that extract the relevant values from the model object.
+
+##### Your Answer! {.tabset .tabset-fade .tabset-pills}
+
+> Time-lag explains `r r2_time[1]*100`% of the variation in Zr.  "ADD YOUR ANSWER HERE"
+
+<br>
+
+
+It's clear that we have evidence of a time-lag bias. The mean effect size is predicted to decrease as more studies accumulate! But, wait, we also have evidence for other possible publication biases, such as the file-drawer effects. We can actually create a model that accounts for **both** of these effects, and that accounts for possible covariance between the two (i.e., sampling variance is expected to be high in early years). Let's fit that model.
+
+
+```{r timelagSvmodel, echo=TRUE}
+# Including sampling variance and year as moderators to account for both!
+metareg_time <- rma.mv(Zr ~ Year + Zr_v, V = Zr_v, 
+                    random = list(~1|Ref, 
+                                  ~1|obs), 
+                    test = "t", dfs = "contain", 
+                    data = arnold_data_endo)
+summary(metareg_time)
+
+# How much variation does time when results were published explain in Zr?
+r2_time_sv <- orchaRd::r2_ml(metareg_time) #"ADD YOUR CODE HERE"
+r2_time_sv
+```
+
+Great! That was easy. Just like any old linear mixed effect model we can just add moderators / fixed effects to the formula. Here, we can see that there is clear evidence, even when accounting for the covariance between the two, both file-drawer and time-lag biases in these data. 
+
+But wait, the intercept in this model is really different from `metareg_v`. Why? Well, this is expected because the interpretation of the intercept is the mean effect size when `Year` **and** sampling variance = 0! Well, that's just weird right? What does Year of 0 mean?
+
+It turns out we can `trick` the model in estimating an intercept, which is the overall meta-analytic mean, that is more relevant and interpretable for us. To do that, we can 'centre' the `Year` variable. What does centering do? Well, for simplicity, we can center on the mean of the `Year` column by simply subtracting every value of `Year` by the "mean year". This changes the variable so that 0 is now the mean Year in the data set. Why don't you do that in the code block below. Use the `tidyverse` :
+
+```{r, centering}
+arnold_data_endo <- arnold_data_endo %>% mutate(Year_c = Year - mean(Year)) # 'ADD YOUR CODE HERE'
+
+```
+
+
 
 ## **References**
 
