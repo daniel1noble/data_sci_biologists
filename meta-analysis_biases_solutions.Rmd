@@ -260,9 +260,11 @@ r2_time_sv
 
 Great! That was easy. Just like any old linear mixed effect model we can just add moderators / fixed effects to the formula. Here, we can see that there is clear evidence, even when accounting for the covariance between the two, both file-drawer and time-lag biases in these data. 
 
-But wait, the intercept in this model is really different from `metareg_v`. Why? Well, this is expected because the interpretation of the intercept is the mean effect size when `Year` **and** sampling variance = 0! Well, that's just weird right? What does Year of 0 mean?
+But wait, the intercept in this model is really different from `metareg_v`. Why? Well, this is expected because the interpretation of the intercept is the mean effect size when `Year` **and** sampling variance = 0! That's just weird right? What does a Year of 0 really mean?
 
-It turns out we can `trick` the model in estimating an intercept, which is the overall meta-analytic mean, that is more relevant and interpretable for us. To do that, we can 'centre' the `Year` variable. Remember back to workshop 8 on Statistical Models where we subtracted the mouse mass from the cage mean? Yep, same thing! What does centering do for us here? Well, for simplicity, we can center on the mean of the `Year` column by simply subtracting every value of `Year` by the "mean year". This changes the variable so that 0 is now the mean Year in the data set. Why don't you do that in the code block below. Use the `tidyverse` :
+It turns out we can `trick` the model into estimating an intercept -- the overall meta-analytic mean -- that is more relevant and interpretable for us. To do that, we can 'centre' the `Year` variable. Remember back to *workshop 8 on Statistical Models* where we subtracted the mouse mass from the cage mean? Yep, it's the same thing! 
+
+What does centering do for us here? Well, for simplicity, we can center on the mean of the `Year` column by simply subtracting every value of `Year` by the "mean year". This changes the variable so that 0 is now the mean Year in the data set. Why don't you do that in the code block below. Use the `tidyverse` :
 
 ```{r, centering}
 arnold_data_endo <- arnold_data_endo %>% mutate(Year_c = Year - mean(Year)) # 'ADD YOUR CODE HERE'
@@ -272,18 +274,34 @@ arnold_data_endo <- arnold_data_endo %>% mutate(Year_c = Year - mean(Year)) # 'A
 Great, now we have added our centered on the mean Year and called this new variable `Year_c`. We can now refit the model using `Year_c` instead of year. Do that in the code chunk below:
 
 ```{r timelagSvmodelc, echo=TRUE}
-# Including sampling variance and year as moderators to account for both!
+# Including sampling variance and mean centered year as moderators to account for both!
 metareg_time_c <- rma.mv(Zr ~ Year_c + Zr_v, V = Zr_v, 
                     random = list(~1|Ref, 
                                   ~1|obs), 
                     test = "t", dfs = "contain", 
                     data = arnold_data_endo)
-summary(metareg_time_c)
+summary(metareg_time_c) # 'ADD YOUR CODE HERE'
 
 ```
 
+What happened? The model has changed, and in particular the `intrcpt`. Why? Well, have a think about the meaning of the `intrcpt`. It is the mean when `Year_c` and `Zr_v` are both set to 0. But, remember now that a value of `Year_c` that is 0 actually means an 'average Year' (we could of course have centered it on other years...maybe 2022?). This changes the interpretation of the `intrcpt`! That explains why the value of `intrcpt` is different. 
 
-Ok, wow! What happened. The model has changed, and in particular the `intrcpt`. Why? Well, have a think about the meaning of the `intrcpt`. It is the mean when `Year_c` and `Zr_v` are both set to 0. But, remember now that a value of `Year_c` that is 0 actually means an 'average Year` (we could of course have cenetered it on other years...maybe 2022?). So, this changes the interpretation of the `intrcpt`!
+What's really cool here is that, now, we have been able to deal with both types of publication bias in a single model and re-estimate (i.e., predict) what the mean Zr value is when sampling variance is 0 and for an average year in the dataset.
+
+<br>
+
+#### **Question 5: What is the average correlation between metabolism and fitness now predicted to be when we account for publication biases?**  {.tabset .tabset-fade .tabset-pills} 
+
+> **Note**: Write out your answer using in-line code chunks that extract the relevant values from the model object.
+
+##### Your Answer! {.tabset .tabset-fade .tabset-pills}
+
+> The overall mean correlation (r) when small sample and time-lag biases are controlled for is `r tanh(coef(metareg_time_c)[1])`.  "ADD YOUR ANSWER HERE"
+
+<br>
+
+
+
 ## **References**
 
 <div id="refs"></div>
