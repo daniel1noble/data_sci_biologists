@@ -1,0 +1,518 @@
+---
+title: "Statistical Models"
+author: "<your name and u number>"
+date: "30 September 2022"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+
+Today we focus on linear models, building the intuition and statistical machinery from first principles. Much of this may already be familiar, and so the goal is to fill whatever gaps exist in your understanding.
+
+We will use simulated data in what follows. For consistency of results, we use `set.seed()` to synchonise our "random" values. The quotation marks are to emphasise that the R-generated values are not truly random; instead, they arise from an algorithm that depends on the random seed. Choosing a seed ensures the same sequence of values.
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+# There is nothing special about this particular choice of seed
+set.seed(2)
+```
+
+## Packages and Libraries
+
+We begin, as always, by attaching the necessary libraries.
+
+```{r echo = FALSE, warning = FALSE, message = FALSE}
+# Tidyverse, as always
+library(tidyverse)
+
+# Including emmeans as a useful tool for interpreting linear models
+# --- be sure to install this first!
+library(emmeans)
+
+# Including janitor because it is useful for cleaning up messy things like names with spaces
+# --- be sure to install this first!
+library(janitor)
+
+# Including knitr because it is useful for making prettier tables
+# --- be sure to install this first
+library(knitr)
+
+```
+
+## Building Blocks
+
+### Simulating Data
+
+Let's start by imagining a cage of mice and simulate their body mass in grams.
+
+```{r}
+# choose the number of mice in the cage
+n_mice <- 40
+# sample the mass of each mouse from a normal distribution with specified mean and standard deviation, rounding the values to two decimal places
+df <- tibble(mass = round(rnorm(n = n_mice,mean = 24, sd = 4),digits=2))
+glimpse(df)
+```
+
+We'll sort the mice by increasing mass and label them by their sorted rank. 
+
+```{r}
+# sort the values
+df$mass <- sort(df$mass,decreasing=FALSE)
+# add labels (1,2,...) as the first column
+df <- add_column(df,label = 1:n_mice,.before=1)
+head(df)
+```
+
+Let's visualise values to get a sense of their distribution
+
+```{r}
+ggplot(df,aes(x=label,y=mass)) + geom_col() + ggtitle("Masses of mices :-)") + theme(plot.title = element_text(hjust = 0.5))
+```
+
+### From Values to Differences from the Mean
+
+Suppose now that for each mouse we instead plot the difference in mass from the cage mean.
+
+```{r}
+df %>% mutate(difference_from_mean = mass - mean(mass)) %>% ggplot(aes(x=label,y=difference_from_mean)) + geom_col() + ggtitle("Difference from mean") + theme(plot.title = element_text(hjust = 0.5))
+```
+
+Suppose you were told the mean mass of the caged mice (i.e. `mean(df$mass)`) and then asked to predict the mass of a mouse randomly chosen from the cage. You might respond by asking what the penalty is for being wrong. In the preceding plot, difference_from_mean could be considered a reasonable measure of "wrongness"; however, negative "wrongness" is confusing and it doesn't make sense for the average "wrongness" to be zero (**check this in R if it is not clear**). Instead, the most commonly used measure of "wrongness" comes from *squaring* the difference from mean. Let's see what that looks like for our data.
+
+```{r}
+# Run this code block to observe that the average difference from mean is zero.
+# --- Note that average and mean are the same and used interchangeably
+# --- using the function round to remove very small rounding errors
+df %>% mutate(difference_from_mean = mass - mean(mass)) %>% group_by() %>% summarise(average_difference_from_mean = round(mean(difference_from_mean),15))
+```
+
+```{r}
+df %>% mutate(squared_difference_from_mean = (mass - mean(mass))^2) %>% ggplot(aes(x=label,y=squared_difference_from_mean)) + geom_col()+ ggtitle("Squared difference from mean") + theme(plot.title = element_text(hjust = 0.5))
+```
+
+Now we have a non-negative measure of "wrongness" and it becomes meaningful to quantify how wrong we are on average. Let's calculate that:
+
+
+```{r}
+df %>% mutate(squared_difference_from_mean = (mass - mean(mass))^2) %>% group_by() %>% summarise(average_squared_difference_from_mean = (mean(squared_difference_from_mean)))
+```
+
+As you may already know, this number has a familiar name: **variance**.
+
+```{r}
+# compute the variance of mouse mass
+# --- note that the R function var uses the denominator n_mice-1
+# --- multiplying by (n_mice-1)/n_mice changes the denominator to n
+variance_mass <- ((n_mice-1)/n_mice)*var(df$mass)
+variance_mass
+```
+
+### An Intercept-Only Linear Model
+
+Let's consider our mouse-mass guessing game in a different way. Implicitly, what we are doing is modelling mass as a constant and then estimating the constant (red in the plot below) that best explains mass.
+
+```{r}
+df %>% add_column(one = 1) %>% ggplot(aes(x=one,y=mass)) + geom_point(alpha = 0.4) + geom_hline(yintercept=mean(df$mass), colour = "red")
+```
+
+We can see this arising from `lm()` as well. What we are doing here is fitting mass to a line with zero slope. We do indicate this with `mass ~ 1`, which tasks R to find the coefficient that, when multiplied to a constant vector of ones, best explains the variable mass. 
+
+```{r}
+lm0 <- lm(mass ~ 1, data = df)
+lm0
+```
+
+The intercept of the model -- that is, where the red line intersects the y-axis -- is just the mean mass:
+
+```{r}
+mean(df$mass)
+```
+
+The mean, or equivalently the intercept, is also the model-based prediction for every mouse:
+
+```{r}
+lm0$fitted.values
+```
+
+We can also evaluate the model using an analysis of variance:
+
+```{r}
+anova(lm0)
+```
+
+The sum of squares (Sum Sq) is just the total "wrongness" from above!
+
+```{r}
+df %>% mutate(squared_difference_from_mean = (mass - mean(mass))^2) %>% group_by() %>% summarise(sum_of_squared_difference_from_mean = (sum(squared_difference_from_mean)))
+```
+The mean square is just the sum of squared divided by n_mice-1; that is, it is the result of the `var()` function in R:
+
+```{r}
+# as above, without changing the denominator
+var(df$mass)
+```
+
+### Male and Female Mice
+
+Now assume, hypothetically of course, that there are an equal number of male and female mice, and that all of the male mice are heavier than all of the female mice.
+
+```{r}
+df <- add_column(df,sex = factor(c(rep("FEMALE",n_mice/2),rep("MALE",n_mice/2))))
+head(df)
+```
+
+### Sex-Specific Mean Differences
+
+Supposing we were to play the same guessing game as before, would knowing the sex help you to predict the mass of a mouse randomly chosen from the cage? The answer is obviously yes! Predicting mass *conditional on sex* reduces our "wrongness" because the individual masses are much closer to their sex-specific means than they are to the overall mean. Let's try to visualise that as above, and check out the nifty wrangling!
+
+```{r}
+df %>% group_by(sex) %>% mutate(difference_from_mean_by_sex = mass - mean(mass)) %>% ggplot(aes(x=label,y=difference_from_mean_by_sex,fill=sex)) + geom_col() + ggtitle("Difference from sex-specific mean") + theme(plot.title = element_text(hjust = 0.5))
+```
+
+```{r}
+df %>% group_by(sex) %>% mutate(squared_difference_from_mean_by_sex = (mass - mean(mass))^2) %>% ggplot(aes(x=label,y=squared_difference_from_mean_by_sex,fill=sex)) + geom_col() + ggtitle("Squared difference from sex-specific mean") + theme(plot.title = element_text(hjust = 0.5))
+```
+
+Let's quickly compute our total "wrongness" when we are allowed to predict after knowing the sex:
+
+```{r}
+df %>% group_by(sex) %>% mutate(squared_difference_from_mean = (mass - mean(mass))^2) %>% group_by() %>% summarise(sum_of_squared_difference_from_mean = (sum(squared_difference_from_mean)))
+```
+
+### A Model with an Intercept and a Difference from the Intercept
+
+This time, what we are doing is modelling mass as a constant for each sex and then estimating the constants that best explains sex-specific mass.
+
+```{r}
+sex_specific_means <- df %>% group_by(sex) %>% summarise(val = mean(mass)) %>% pull(val)
+df %>% add_column(one = 1) %>% ggplot(aes(x=one,y=mass,colour=sex)) + geom_point() + geom_hline(yintercept=sex_specific_means[1],colour="red") + geom_hline(yintercept=sex_specific_means[2],colour="turquoise")
+```
+
+Let's now approach this with a linear model. This time we fitting female mass to one line with zero slope and male mass to another line with zero slope.
+
+```{r}
+lm1 <- lm(mass ~ sex, data = df)
+lm1
+```
+
+Take a look at the coefficients. The coefficient "Intercept" is the mean mass among female mice (i.e. `sex_specific_means[1]`) and corresponds to the red line in the plot above. Why is this the intercept?
+
+```{r}
+levels(df$sex)
+```
+
+Because of how we constructed the dataset, FEMALE is the first level of the factor sex. For this reason, FEMALE is chosen as the intercept. By contrast, the coefficient "sexMALE" is the *difference* between the mean mass among male mice and the mean mass among female mice (i.e. `sex_specific_means[2] - sex_specific_means[1]`) and corresponds to the height difference between the blue line and the red line.
+
+There is a good reason to choose as parameters an arbitrary intercept and differences. This is because the goal is often to *test* for a difference between levels rather than to *infer* the mean of each level. Even so, the means are more intuitive, and for that reason the package `emmeans` can be very useful.
+
+```{r}
+emmeans(lm1,~sex)
+```
+
+Observe that the column "emmean" reports the means of female and male mice, as compared to the coefficients reported in the linear model.
+
+### The ANOVA Interpretation
+
+Now let's inspect the analysis of variance table:
+
+```{r}
+anova(lm1)
+```
+
+OK, let's break this down. Start with the sum of squares for Residuals and notice that this is exactly our total "wrongness" when we are allowed to predict after knowing the sex. Moreover, when we add the sums of squares for sex and Residuals, we get our total "wrongness" from before we had knowledge of the sex. The column "Df", short for degrees of freedom, is a bit of statistical bookkeeping. We start with `r n_mice` mice and effectively spend one degree of freedom to compute the overall mean. In parallel to the plot sequence above, imagine that by computing the mean, we are subsequently considering differences in mass from the mean rather than the masses themselves. Because these differences sum to zero (see above), once we know `r n_mice - 1` of them, we can solve for the remaining one. Thus, the actual *degrees of freedom* is `r n_mice - 1`. When we include sex, we use/lose one more degree of freedom, because knowing the overall mean and the mean mass of one sex allows us to compute the mean mass of the other. This leaves `r n_mice - 2` residual degrees of freedom.
+
+The word "Residual", by definition, means what's left over. We actually computed the residuals already when we created the plotting variable `difference_from_mean_by_sex`. This time, let's extract them from the linear model and take their variance:
+
+```{r}
+var(lm1$residuals)
+```
+
+You'll notice that this is close to, but not quite, the value listed for Residuals under Mean Sq. The issue, once again, is the denominator, and this is why we calculated the degrees of freedom:
+
+```{r}
+# Computing Mean Sq by gently scaling the variance
+((n_mice-1)/(n_mice-2))*var(lm1$residuals)
+# Computing Mean Sq from the anova table
+# --- note the use of clean_names, and consider what happens when you don't use it
+aov1 <- clean_names(anova(lm1))
+aov1$sum_sq[2]/aov1$df[2]
+```
+
+The F value in the anova table is effectively a signal-to-noise ratio. The signal in this case is the Mean Sq for sex divided by its corresponding degrees of freedom. The noise is the Residual Mean Sq divided by its corresponding degrees of freedom. In those terms, the F value is then signal/noise. When the linear modelling assumptions are satisfied, under the null hypothesis that sex has no effect, the F value follows an F distribution on `r aov1$df[1]` and `r aov1$df[2]` degrees of freedom.
+
+### Equality of Approaches in the Simple Case
+
+Having mentioned this particular null hypothesis, you may be thinking about a t-test, as no effect of sex implies that the sex-specific means are the same. This is indeed equivalent:
+
+```{r}
+t0 <- t.test(df %>% filter(sex=="FEMALE") %>% pull(mass),df %>% filter(sex=="MALE") %>% pull(mass),var.equal = TRUE)
+t0
+```
+
+Observe that the p-values for both tests are the same, and that the F value is simply the square of the t statistic. Note also that the setting `var.equal = TRUE`, which is an assumption of the linear model: the variance is assumed to be the same across levels of a factor, in this case sex. Speaking of the linear model, we can also find the t statistic there, although in parallel to the F value it is referenced as the t value.
+
+
+```{r}
+summary(lm1)
+```
+
+We are also provided an R-squared value, which is generally interpreted as the proportion of variance explained by the model. Loosely speaking, this quantifies how well the model reduces our "wrongness". We can compute this is a couple of ways:
+
+```{r}
+aov1$sum_sq[1]/(sum(aov1$sum_sq))
+1 - var(lm1$residuals)/var(df$mass)
+```
+
+### Adding a Second Factor
+
+We began in consideration of mouse mass, a response variable that we sought to predict/explain. We then introduced an explanatory variable, sex, as a factor with two levels (FEMALE and MALE). We now imagine trialing an experimental obesity drug on the mice by introducing a second factor, treatment (trt for short), with the levels CONTROL and TREATMENT. Let's keep the number of mice at `r n_mice` and assume an equal number of mice in each of the four classes as in the table below:
+
+```{r}
+tt <- matrix(c(n_mice/4,n_mice/4,n_mice/4,n_mice/4),2,2)
+colnames(tt) <- c("CONTROL","TREATMENT")
+rownames(tt) <- c("FEMALE","MALE")
+kable(tt)
+```
+
+We first consider an **additive** model that has no interaction term. Following the convention in R, we will first specify the mean mass among control females (the intercept). Then we specify both the mean difference between males and females and the mean difference between treatment and control. Let's assume that males are on average heavier and that the treatment is an obesity drug that leads to a mean weight reduction. Finally, we'll also need to specify how much variation there is around these means.
+
+```{r}
+# mean of CONTROL & FEMALE
+intercept <- 28
+# change in mean CONTROL -> TREATMENT
+treatment_effect <- -5
+# change in mean FEMALE -> MALE
+sex_effect <- 3
+# standard deviation around means
+noise <- 2
+two_factor <- tibble(mouse_id = 1:n_mice, sex = c(rep("FEMALE",n_mice/2),rep("MALE",n_mice/2)), trt = rep(c(rep("CONTROL",n_mice/4),rep("TREATMENT",n_mice/4)),2)) %>% mutate(mass = ifelse(trt == "CONTROL",intercept,intercept+treatment_effect)) %>% mutate(mass = ifelse(sex == "FEMALE",mass,mass+sex_effect)) %>% mutate(mass = mass + rnorm(n_mice,0,noise))
+two_factor
+```
+
+Let's look at the treatment effect by sex:
+
+```{r}
+ggplot(two_factor,aes(x = trt, y = mass, colour = sex)) + geom_violin() + geom_point(size=2,alpha=0.5) + stat_summary(fun = "mean",
+               geom = "crossbar", 
+               width = 0.5) + theme(axis.title.x=element_blank(),legend.position = "none") + facet_wrap(~sex)
+```
+
+The left panel illustrates the treatment effect among females as the mean difference between TREATMENT and CONTROL groups. The right panel illustrates the treatment effect among males as the mean difference between TREATMENT and CONTROL groups. The data suggests that the model is additive because the treatment effect appears consistent across males and females.
+
+Let's confirm our observations with `lm()`:
+
+```{r}
+lm_two_factor <- lm(mass ~ sex+trt+sex:trt,data=two_factor)
+summary(lm_two_factor)
+```
+
+The additive model does not include a sex:trt interaction term. We explicitly included this term in `lm()` in order to observe whether the coefficient sexMALE:trtTREATMENT was significantly different from zero. We could have specified the additive model directly with `lm(mass ~ sex + trt)`. The model we used instead, including the interaction term, can also be specified with `lm(mass ~ sex * trt)`.
+
+Before we move on, let's also call emmeans to get the estimated means for each class. How do these compare to the coefficients returned by `lm()`? Can you figure out what sexMALE:trtTREATMENT represents?
+
+```{r}
+emmeans(lm_two_factor, ~sex*trt)
+```
+
+Let's next try out a model the includes an interaction term. Before we specified the change in mean CONTROL -> TREATMENT and the change in mean FEMALE -> MALE. When these factors interact, we need to go further.
+
+```{r}
+# mean of CONTROL & FEMALE
+intercept <- 28
+# change in mean FEMALE -> MALE
+sex_effect <- 3
+# change in mean CONTROL -> TREATMENT among FEMALES
+treatment_effect_female <- -5
+# change in mean CONTROL -> TREATMENT among MALES
+treatment_effect_male <- -1
+# standard deviation around means
+noise <- 2
+two_factor_interaction <- tibble(mouse_id = 1:n_mice, sex = c(rep("FEMALE",n_mice/2),rep("MALE",n_mice/2)), trt = rep(c(rep("CONTROL",n_mice/4),rep("TREATMENT",n_mice/4)),2)) %>% mutate(mass = ifelse(sex == "FEMALE",intercept,intercept+sex_effect)) %>% mutate(mass = ifelse(trt == "CONTROL",mass,ifelse(sex == "FEMALE",mass+treatment_effect_female,mass+treatment_effect_male))) %>% mutate(mass = mass + rnorm(n_mice,0,noise))
+two_factor_interaction
+```
+
+```{r}
+ggplot(two_factor_interaction,aes(x = trt, y = mass, colour = sex)) + geom_violin() + geom_point(size=2,alpha=0.5) + stat_summary(fun = "mean",
+               geom = "crossbar", 
+               width = 0.5) + theme(axis.title.x=element_blank(),legend.position = "none") + facet_wrap(~sex)
+```
+
+Can you tell that there is an interaction? What about the plot gives it away?
+
+Let's confirm with another call to `lm()`:
+
+```{r}
+lm_two_factor_interact <- lm(mass ~ sex*trt,data=two_factor)
+summary(lm_two_factor_interact)
+```
+
+We can also look at the analysis of variance table:
+
+```{r}
+anova(lm_two_factor_interact)
+```
+
+The two factors and their interaction do an excellent job of explaining the variation in mass, as evidenced by the reduction in sum of squares (remember: total "wrongness"). Here we can see this in action:
+
+```{r}
+ggplot(two_factor_interaction,aes(x = interaction(sex,trt), y = mass, colour = interaction(sex,trt))) + geom_violin() + geom_point(size=2,alpha=0.5) + stat_summary(fun = "mean", geom = "crossbar", width = 0.5) + theme(axis.title.x=element_blank(),legend.position = "none")
+```
+
+Compare that to what happens when the data is grouped together!
+
+```{r}
+ggplot(two_factor_interaction,aes(x = factor(1), y = mass)) + geom_violin() + geom_point(size=2,alpha=0.5) + stat_summary(fun = "mean",
+               geom = "crossbar", 
+               width = 0.5) + theme(axis.title.x=element_blank(),axis.text.x=element_blank(),legend.position = "none") 
+```
+
+### Introducing a Continuous Predictor
+
+Let's next introduce age as a continuous predictor; in other words, mouse age will be an explanatory variable but not a factor with discrete levels. We'll imagine that mice get heavier with age and that male mice get heavier with age faster. 
+
+```{r}
+# mean weight of newborn mouse in grams 
+intercept <- 5
+# mean daily increase in mass for females
+female_slope <- 1
+# mean daily increase in mass for males
+male_slope <- 1.4
+# standard deviation around means
+noise <- 2
+age_sex_df <- tibble(mouse_id = 1:n_mice, age = rpois(n_mice,20), sex = c(rep("FEMALE",n_mice/2),rep("MALE",n_mice/2))) %>% mutate(mass = ifelse(sex == "FEMALE",intercept+age*female_slope,intercept+age*male_slope)) %>% mutate(mass = mass + rnorm(n_mice,0,noise))
+age_sex_df
+```
+
+Let's take a look at this using our old friend `geom_smooth()`:
+
+```{r}
+ggplot(age_sex_df,aes(x=age,y=mass,colour=sex)) + geom_point() + geom_smooth(method="lm")
+```
+
+The unequal slopes in this plot are analogous to the inconsistent mean differences observed in the two factor example. This is evidence of an interaction, and indeed we created the interaction by setting female_slope and male_slope to be different.
+
+Let's check with `lm()`:
+
+```{r}
+lm_age_sex <- lm(mass ~ age*sex, data = age_sex_df)
+summary(lm_age_sex)
+```
+
+Let's try to make sense on the coefficients. The intercept corresponds to the mean mass of newborn females (age 0). The coefficient sexMALE corresponds to the difference in mass between newborn males and newborn females. The coefficient age is the slope when female mass is regressed on female age. The coefficient age:sexMALE is the difference is slope when instead male mass is regressed on male age. All of this is implied in the plot, and in fact `geom_smooth(method="lm")` is showing both of these regression lines. That's what method="lm" means!
+
+### Putting it all together
+
+Now let's return to the fictional experiment by reintroducing treatment as a factor. We'll take this one step further by conducting the experiment on mice of various ages and measuring the change in mass across two time points. We'll let age and sex determine the mass at the start of the experiment (before) and let age and treatment determine how mass changes in the course of the 14-day experiment (after-before).
+
+```{r}
+# mean weight of newborn mouse in grams 
+intercept <- 5
+# mean daily increase in mass for females
+female_slope <- 1
+# mean daily increase in mass for males
+male_slope <- 1.4
+
+# let's assume that the treatment reduces the slope of weight gain by 0.5 in both sexes
+delta_treatment_slope <- -0.5
+days <- 14
+
+# standard deviation around means
+noise <- 2
+
+age_sex_trt_df <- tibble(mouse_id = 1:n_mice, age = rpois(n_mice,20), sex = c(rep("FEMALE",n_mice/2),rep("MALE",n_mice/2)), trt = rep(c(rep("CONTROL",n_mice/4),rep("TREATMENT",n_mice/4)),2)) %>% mutate(before = ifelse(sex == "FEMALE",intercept+age*female_slope,intercept+age*male_slope)) %>% mutate(before = before + rnorm(n_mice,0,noise)) %>% mutate(after = ifelse(trt == "CONTROL",ifelse(sex == "FEMALE",before+(days*female_slope),before+(days*male_slope)),ifelse(sex == "FEMALE",before+(days*(female_slope+delta_treatment_slope)),before+(days*(male_slope+delta_treatment_slope))))) %>% mutate(after = after + rnorm(n_mice,0,noise))
+age_sex_trt_df
+```
+
+Wow, that was some crazy code. Let's attempt to visualise what we've created. As we've experienced in the past, ggplot requires "before" and "after" to be stacked in a column. Use `pivot_longer()` to combine them into a single column named "time" (a factor) whose values are called "mass".
+
+```{r}
+age_sex_trt_df_long <- pivot_longer(age_sex_trt_df,cols = c("before","after"),names_to="time",values_to="mass") %>% mutate(time = as_factor(time))
+head(age_sex_trt_df_long)
+```
+
+The plot reveals strong treatment and sex effects. Is there also evidence of a treatment by sex effect?
+
+```{r}
+ggplot(age_sex_trt_df_long,aes(x=age,y=mass,colour=sex,shape=time)) + geom_point() + geom_line(aes(group = mouse_id),alpha=.2) + facet_wrap(~trt)
+```
+
+As we like to do, let's complement the plot with a model.
+
+```{r}
+lm_age_sex_trt <- lm(mass ~ age*sex*trt*time,data = age_sex_trt_df_long)
+summary(lm_age_sex_trt)
+```
+
+This is a mess. With so many coefficients (parameters) to estimate and so few data points (number of mice), this model is very difficult to fit. Moreover, as noted in the tutorial, it commits a serious error by treating the paired before/after measurements as two independent data points. The summary of the linear model notes more degrees of freedom than there are mice in the study, which to the trained eye should be a giant red flag.
+
+As discussed on Monday, we can handle this by including mouse_id as a **random effect**. For now, however, we'll simply summarise the paired measurements by a single new variable called change_in_mass.
+
+```{r}
+paired_age_sex_trt_df <- age_sex_trt_df %>% mutate(change_in_mass = after-before)
+lm_paired_age_sex_trt <- lm(change_in_mass ~ age*sex*trt,data = paired_age_sex_trt_df)
+summary(lm_paired_age_sex_trt)
+```
+
+This is much better in that the degrees of freedom make sense (number of mice minus number of parameters). But we are still estimating many parameters with few data points, which makes it difficult to fit the model and also to conclude the presence of non-zero effects. Take a moment to test your understanding of the model from which the data was generated. Which coefficients are zero and which are nonzero?
+
+To see the answer, let's cheat and change this to a huge experiment.
+
+```{r}
+### Multiplying the number of mice by 10!
+n_mice <- n_mice*10
+# mean weight of newborn mouse in grams 
+intercept <- 5
+# mean daily increase in mass for females
+female_slope <- 1
+# mean daily increase in mass for males
+male_slope <- 1.4
+
+# let's assume that the treatment reduces the slope of weight gain by 0.5 in both sexes
+delta_treatment_slope <- -0.5
+days <- 14
+
+# standard deviation around means
+noise <- 2
+
+age_sex_trt_df <- tibble(mouse_id = 1:n_mice, age = rpois(n_mice,20), sex = c(rep("FEMALE",n_mice/2),rep("MALE",n_mice/2)), trt = rep(c(rep("CONTROL",n_mice/4),rep("TREATMENT",n_mice/4)),2)) %>% mutate(before = ifelse(sex == "FEMALE",intercept+age*female_slope,intercept+age*male_slope)) %>% mutate(before = before + rnorm(n_mice,0,noise)) %>% mutate(after = ifelse(trt == "CONTROL",ifelse(sex == "FEMALE",before+(days*female_slope),before+(days*male_slope)),ifelse(sex == "FEMALE",before+(days*(female_slope+delta_treatment_slope)),before+(days*(male_slope+delta_treatment_slope))))) %>% mutate(after = after + rnorm(n_mice,0,noise))
+paired_age_sex_trt_df <- age_sex_trt_df %>% mutate(change_in_mass = after-before)
+lm_paired_age_sex_trt <- lm(change_in_mass ~ age*sex*trt,data = paired_age_sex_trt_df)
+summary(lm_paired_age_sex_trt)
+```
+
+Now we can see which effects stand out. Recall that our response variable is change in mass. We created the model by assuming the males gained weight more quickly than females. We also assumed that the treatment reduced weight gain by the same amount in each sex. Thus, we observe a sex effect and a treatment effect, but no age effect and no interactions. With enough data, `lm()` has reproduced the generating model.
+
+### An explicit random effect
+
+Now let's introduce what is unambiguously a random effect. To do so, we will assume that there are multiple cages of experimental mice. Perhaps some cages are more combative, impacting mean stress levels and weight gain. Perhaps this cage-to-cage variability for some other reason. To safeguard against this, and to acknowledge that a shared environment may jointly impact mice in the same cage, cage should be included as a factor in the model.
+
+We'll keep the dimensions of the larger experiment, imagining that the smaller experiment is replicated in each cage.
+
+```{r}
+# Remember that n_mice was multiplied by 10
+cages_paired_age_sex_trt_df <- paired_age_sex_trt_df %>% mutate(cage = factor(rep(1:10,n_mice/10))) %>% arrange(cage)
+ggplot(cages_paired_age_sex_trt_df,aes(x = cage,y = change_in_mass)) + geom_boxplot();
+```
+
+Now we'll introduce a cage effect.
+
+```{r}
+sd_of_cage_effects <- 5
+cage_effects <- rnorm(10,0,sd_of_cage_effects)
+# Take a look at this line of code -- do you follow what it's doing?
+cages_paired_age_sex_trt_df <- cages_paired_age_sex_trt_df %>% mutate(change_in_mass = change_in_mass + cage_effects[as.numeric(cage)])
+ggplot(cages_paired_age_sex_trt_df,aes(x = cage,y = change_in_mass)) + geom_boxplot();
+```
+
+We literally made cage a random effect by sampling from the Normal distribution to obtain the change in change in mean for each cage. We could treat each of these cage-specific values as a parameter to be estimated in the model, but consider how they came to be. We specified a single parameter, sd_of_cage_effects, and then sampled the cage-specific values from a Normal distribution with mean zero and standard deviation sd_of_cage_effects. Therefore, there is truly only a single parameter: one that governs the variability of the cage-specific values. When we model cage as a random effect, we use only this parameter (sd_of_cage_effects) rather than assigning a parameter to each cage. This does not change the other estimated coefficients; however, it impacts their significance by affecting the degrees of freedom. Recalling that the degrees of freedom are calculated as the difference between the number of data points and the number of parameters in the model, fewer parameters lead to greater degrees of freedom.
+
+## Modelling cage as a random effect
+
+If cage is best modeled as a random effect how do we do this? `lm()` doesn't provide a way for us to include random effect. We'll need to resort to other packages for this. Remember, regardless of whether cage is a random effect or not, these are still just linear models. 
+
+We'll introduce a couple of new packages that will allow you to extend the linear models you have already learnt to include random effects. The packages, `lme4` and `metafor` are both very useful. We'll actually use `metafor` in the coming weeks 
