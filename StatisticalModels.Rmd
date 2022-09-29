@@ -5,6 +5,8 @@ date: "30 September 2022"
 output:
   html_document: default
   pdf_document: default
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
@@ -509,10 +511,74 @@ cages_paired_age_sex_trt_df <- cages_paired_age_sex_trt_df %>% mutate(change_in_
 ggplot(cages_paired_age_sex_trt_df,aes(x = cage,y = change_in_mass)) + geom_boxplot();
 ```
 
-We literally made cage a random effect by sampling from the Normal distribution to obtain the change in change in mean for each cage. We could treat each of these cage-specific values as a parameter to be estimated in the model, but consider how they came to be. We specified a single parameter, sd_of_cage_effects, and then sampled the cage-specific values from a Normal distribution with mean zero and standard deviation sd_of_cage_effects. Therefore, there is truly only a single parameter: one that governs the variability of the cage-specific values. When we model cage as a random effect, we use only this parameter (sd_of_cage_effects) rather than assigning a parameter to each cage. This does not change the other estimated coefficients; however, it impacts their significance by affecting the degrees of freedom. Recalling that the degrees of freedom are calculated as the difference between the number of data points and the number of parameters in the model, fewer parameters lead to greater degrees of freedom.
+We literally made cage a random effect by sampling from the Normal distribution to obtain the change in change in mean for each cage. We could treat each of these cage-specific values as a parameter to be estimated in the model, but think about what this would mean for the model interpretation and our power. Just for demonstration purposes, lets fit that model using `lm()`
+
+```{r, cagelm}
+lm_paired_age_sex_trt_cage <- lm(change_in_mass ~ cage+age*sex*trt,data = cages_paired_age_sex_trt_df)
+summary(lm_paired_age_sex_trt_cage)
+```
+
+
+As you can see, this is just a mess and we are using a total of 16 degrees of freedom here and over complicating the interpretation of our coefficients. Now, consider how cage effects came to be. We specified a single parameter, sd_of_cage_effects, and then sampled the cage-specific values from a Normal distribution with mean zero and standard deviation sd_of_cage_effects. Therefore, there is truly only a single parameter: one that governs the variability of the cage-specific values. When we model cage as a random effect, we use only this parameter (sd_of_cage_effects) rather than assigning a parameter to each cage. This does not change the other estimated coefficients; however, it impacts their significance by affecting the degrees of freedom. Recalling that the degrees of freedom are calculated as the difference between the number of data points and the number of parameters in the model, fewer parameters lead to greater degrees of freedom.
 
 ## Modelling cage as a random effect
 
-If cage is best modeled as a random effect how do we do this? `lm()` doesn't provide a way for us to include random effect. We'll need to resort to other packages for this. Remember, regardless of whether cage is a random effect or not, these are still just linear models. 
+If cage is best modeled as a random effect then how do we do this? `lm()` doesn't provide a way for us to include random effects. We'll need to resort to other packages for this. Remember, regardless of whether cage is a random effect or not, these are still just linear models. Keep that in mind as we move through...
 
-We'll introduce a couple of new packages that will allow you to extend the linear models you have already learnt to include random effects. The packages, `lme4` and `metafor` are both very useful. We'll actually use `metafor` in the coming weeks 
+We'll introduce you to a couple of new packages that will allow you to extend the linear models you have already learnt to include random effects. The packages, `lme4` and `metafor` are both very useful for this purpose. We'll actually use `metafor` in the coming weeks as it can also fit meta-analytic models and provide useful statistics relevant for meta-analysis.
+
+First, lets download these new packages
+
+```{r, mixed, results='hide', message=FALSE}
+# Install and load the two packages we need. Remember to install these first.
+library(lme4)
+library(metafor)
+library(lmerTest)
+
+```
+
+Now, lets start with `lme4` and fit cage as a random effect:
+
+```{r}
+# Lets fit a mixed effects model. We call this a mixed effects model because we are estimated both fixed and random effects.
+model_mixed_lme <- lmer(change_in_mass ~ age*sex*trt + (1|cage), data = cages_paired_age_sex_trt_df)
+summary(model_mixed_lme)
+```
+
+There we go! That looks much cleaner. But what happened. You will notice a few very similar things.
+
+1) First, the fixed effects are specified in the exact same way using the formula call. In this case, we used `change_in_mass ~ age*sex*trt`. That doesn't change. And, you can see nor does the output from the model. The fixed effects are interpreted in exactly the same was as discussed above.
+2) Second, you will notice that we still have our "Residual" estimated in both models.
+
+There's also some new things. 
+
+1) In addition to the fixed effects, in the formula we can also add random effects. We just keep adding them to the formula call. Random effects can be specified in different ways depending on the package, but with `lme4` we specify the grouping variable, in this case `cage` as `(1|cage)`. Loosely speaking, what this is saying is that we would like to include a random intercept for `cage`. We can see now that `lme4` gives us a `Random Effects` output. This includes the Residual, which after all is just a random effect, and `cage` which we can see is estimated at about 5, which is close to what we specified (remember, we expect some variation from the true value). We can extract these random effect variance (well, SD) estimates as below:
+
+```{r}
+VarCorr(model_mixed_lme)
+```
+
+We can infer from this model that there is quite a lot to variation in mass change driven by the cage that mice are in, which makes sense as we added a cage effect here. 
+
+In the coming weeks we'll use the `metafor` package to fit similar mixed / multilevel models. We can do that quite easily, but the syntax is a little different for random effects. The same model can be fit using the following code:
+
+```{r, metafor}
+# We first need to add an observation-level random effect because this is our "residual". Metafor doesn't add this by default.
+cages_paired_age_sex_trt_df$residual <- 1:nrow(cages_paired_age_sex_trt_df)
+
+model_mixed_metafor <- rma.mv(change_in_mass ~ age*sex*trt, V = 0, 
+                              random = list(~1|cage,
+                                            ~1|residual), dfs = "contain",
+                   test="t", data = cages_paired_age_sex_trt_df)
+summary(model_mixed_metafor)
+
+```
+
+You'll notice that there are some new things to the model, and we've had to code it in a slightly different way. 
+
+1) First, we have to physically 'add' the residual. We'll explain why this is the case in the meta-analysis section next week. It's a historical contingency! 
+2) Random effects, in this case `cage` and `residual`, are added in as a list using `~1|cage` (for example). It's similar to lmer but not quite the same. 
+2) Second, there is a `V` argument. We set this to 0 for now, but this is the sampling variance. We'll again explain this in the coming weeks. 
+
+It's clear this is giving us pretty much the same results, and it's MUCH better to include `cage` as a random effect because it greatly simplifies the model and it's interpretation. 
+
