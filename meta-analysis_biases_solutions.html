@@ -10,7 +10,7 @@
 
 
 
-<meta name="date" content="2022-09-27" />
+<meta name="date" content="2022-10-01" />
 
 <title>Meta-analysis: Understanding and detecting publication biases</title>
 
@@ -1607,7 +1607,7 @@ div.tocify {
 
 
 <h1 class="title toc-ignore">Meta-analysis: Understanding and detecting publication biases</h1>
-<h4 class="date">2022-09-27</h4>
+<h4 class="date">2022-10-01</h4>
 
 </div>
 
@@ -1615,7 +1615,7 @@ div.tocify {
 <div id="publication-biases-and-what-to-do-about-them" class="section level2">
 <h2><strong>Publication biases and what to do about them?</strong></h2>
 <p>Meta-analyst’s have worked hard to develop tools that can be used to try and understand different forms of publication practices and biases within the scientific literature. Such biases can occur if studies reporting non-significant or opposite results to what is predicted are not found in systematic searches [‘i.e., the ’file-drawer’ problem; <span class="citation">Jennions et al. (2013)</span>]. Alternatively, biases could result from selective reporting or ‘p-hacking’.</p>
-<p>Visual and quantitative tools have been developed try and identify and ‘correct’ for such biases on meta-analytic results <span class="citation">(Jennions et al. 2013; Nakagawa et al. 2022; Rothstein, Sutton, and Borenstein 2005)</span>. Having said that, aside from working hard to try and incorporate ‘gray literature’ (unpublished theses, government reports, etc.) and working hard to include work done in non-English speaking languages, there is little one can truly due to counteract publication biases beyond a few simple tools. We cannot know for certain what isn’t published in many cases or how a sample of existing work on a topic might be biased. Nonetheless, exploring the possibility of publication bias and its possible effects on conclusions is a core component of meta-analysis <span class="citation">(O’Dea et al. 2021)</span>.</p>
+<p>Visual and quantitative tools have been developed to try and identify and ‘correct’ for such effects on meta-analytic results <span class="citation">(Jennions et al. 2013; Nakagawa et al. 2022; Rothstein, Sutton, and Borenstein 2005)</span>. Having said that, aside from working hard to try and incorporate ‘gray literature’ (unpublished theses, government reports, etc.) and work done in non-English speaking languages, there is little one can truly due to counteract publication biases beyond a few simple tools. We cannot know for certain what isn’t published in many cases or how a sample of existing work on a topic might be biased. Nonetheless, exploring the possibility of publication bias and its possible effects on conclusions is a core component of meta-analysis <span class="citation">(O’Dea et al. 2021)</span>.</p>
 </div>
 <div id="setting-the-scene-meta-analysis-of-studies-estimating-the-correlation-between-metabolism-and-fitness" class="section level2">
 <h2><strong>Setting the scene: Meta-analysis of studies estimating the correlation between metabolism and fitness</strong></h2>
@@ -1648,7 +1648,7 @@ arnold_data_endo$obs &lt;- 1:dim(arnold_data_endo)[1] #&quot;ADD YOUR CODE HERE&
 <div id="task-2-visual-inspections-of-possible-publication-bias-funnel-plots" class="section level2">
 <h2><strong>Task 2: Visual inspections of possible publication bias – funnel plots</strong></h2>
 <p>Funnel plots are by far the most common visual tool for assessing the possibility of publication bias <span class="citation">(Nakagawa et al. 2022)</span>. Just like any exploratory analysis, these are just visual tools. Let’s have a look at a funnel plot of the data.</p>
-<p>Funnel plots plot the the effect size (in this case Zr, on the x-axis) against some form of uncertainty around the effect size, such as sampling variance or precision (such as v_Zr or 1 / sqrt(v_Zr), on the y-axis).</p>
+<p>Funnel plots plot the effect size (in this case Zr, on the x-axis) against some form of uncertainty around the effect size, such as sampling variance (e.g., v_Zr) or precision (1 / sqrt(v_Zr)) on the y-axis.</p>
 <p>If no publication bias exists then we would expect the plot to look fairly symmetrical and funnel shaped (hence why it’s called a funnel plot!). The reason why the shape is a funnel is because the sampling variance is expected to decrease (or the precision increase) when the sample size, and thus power, increases.</p>
 <p>‘High-powered’ studies are at the top of the ‘funnel’ in the narrow-necked region, so to say, because we expect the effect size from these studies to fluctuate very little based on the sampling process. Think back to your sampling distribution. When sample sizes were very large, the sampling distribution becomes very narrow!</p>
 <p>In contrast, as the power of studies decrease (small sample sizes), and therefore their sampling variance increases, we expect the spread of effect sizes to increase simply because small sample sizes results in greater variability of effects and effects that are larger in magnitude (by chance alone).</p>
@@ -1673,7 +1673,7 @@ Figure 1: Funnel plot depicting the correlation between metabolism and fitness a
 <li>The <code>level</code> argument will plot contours, making this plot what we call a <code>contour enhanced funnel plot</code>. The contours relate to the level of statistical significance for each effect. See the legend.</li>
 <li><code>atransf</code> will transform Zr back to the correlation coefficient.</li>
 </ol>
-<p>We can see from Fig. <a href="#fig:funnel">1</a> above the typical funnel shape. You will notice that most effects lie in the positive correlation space – in other words there is a strong positive correlation between BMR and fitness. However, we also find some studies that show the opposite pattern. We expect that based on sampling theory alone, and indeed many of these effects fall close to the dotted sampling error intervals. Studies in the light grey regions are studies where the p-value was significant.</p>
+<p>We can see from Fig. <a href="#fig:funnel">1</a> above the typical funnel shape. You will notice that most effects lie in the positive correlation space – in other words there is a positive correlation between BMR and fitness. However, we also find some studies that show the opposite pattern. We expect that based on sampling theory alone, and indeed many of these effects fall close to the dotted sampling error intervals. Studies in the light grey regions are studies where the p-value was significant.</p>
 <p>You can also make funnel plots using <code>ggplot</code>. Don’t worry about making a contour-enhanced version, just try making a simple funnel plot in the code chunk below. Remember to label your axes nicely. You can do that with the <code>labs()</code> function in <code>ggplot</code>.</p>
 <pre class="r"><code>ggplot(arnold_data_endo, aes(y = 1/sqrt(Zr_v), x = tanh(Zr))) + 
   geom_point() + geom_vline(aes(xintercept = 0)) + labs(y = &quot;Precision (1/SE)&quot;, x = &quot;Correlation Coefficient (r)&quot;) +
@@ -1685,8 +1685,8 @@ Figure 2: Funnel plot showing the precision of effects against their correlation
 </p>
 </div>
 <p><br></p>
-<div id="question-1-what-do-we-expect-if-publication-bias-were-present" class="section level4 tabset tabset-fade tabset-pills">
-<h4><strong>Question 1: What do we expect if publication bias were present?</strong></h4>
+<div id="question-1-what-do-we-expect-to-see-in-the-funnel-plot-if-publication-bias-were-present" class="section level4 tabset tabset-fade tabset-pills">
+<h4><strong>Question 1: What do we expect to see in the funnel plot if publication bias were present?</strong></h4>
 <blockquote>
 <p><strong>In the literature we predict a positive correlation between metabolic rate and fitness. Think about what you would expect the funnel plot to look like, and why, if a ‘file-drawer’ bias existed.</strong></p>
 </blockquote>

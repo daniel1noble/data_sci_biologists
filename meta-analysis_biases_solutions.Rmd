@@ -66,7 +66,7 @@ arnold_data_endo$obs <- 1:dim(arnold_data_endo)[1] #"ADD YOUR CODE HERE"
 
 Funnel plots are by far the most common visual tool for assessing the possibility of publication bias [@Nakagawa2021b]. Just like any exploratory analysis, these are just visual tools. Let's have a look at a funnel plot of the data. 
 
-Funnel plots plot the the effect size (in this case Zr, on the x-axis) against some form of uncertainty around the effect size, such as sampling variance or precision (such as v_Zr or 1 / sqrt(v_Zr), on the y-axis). 
+Funnel plots plot the effect size (in this case Zr, on the x-axis) against some form of uncertainty around the effect size, such as sampling variance (e.g., v_Zr) or precision (1 / sqrt(v_Zr)) on the y-axis. 
 
 If no publication bias exists then we would expect the plot to look fairly symmetrical and funnel shaped (hence why it's called a funnel plot!). The reason why the shape is a funnel is because the sampling variance is expected to decrease (or the precision increase) when the sample size, and thus power, increases. 
 
@@ -95,7 +95,7 @@ Here, we are setting a number of arguments. For greater detail you can look at t
 4) The `level` argument will plot contours, making this plot what we call a `contour enhanced funnel plot`. The contours relate to the level of statistical significance for each effect. See the legend.
 5) `atransf` will transform Zr back to the correlation coefficient. 
 
-We can see from Fig. \@ref(fig:funnel) above the typical funnel shape. You will notice that most effects lie in the positive correlation space -- in other words there is a strong positive correlation between BMR and fitness. However, we also find some studies that show the opposite pattern. We expect that based on sampling theory alone, and indeed many of these effects fall close to the dotted sampling error intervals. Studies in the light grey regions are studies where the p-value was significant. 
+We can see from Fig. \@ref(fig:funnel) above the typical funnel shape. You will notice that most effects lie in the positive correlation space -- in other words there is a positive correlation between BMR and fitness. However, we also find some studies that show the opposite pattern. We expect that based on sampling theory alone, and indeed many of these effects fall close to the dotted sampling error intervals. Studies in the light grey regions are studies where the p-value was significant. 
 
 You can also make funnel plots using `ggplot`. Don't worry about making a contour-enhanced version, just try making a simple funnel plot in the code chunk below. Remember to label your axes nicely. You can do that with the `labs()` function in `ggplot`.
 
@@ -109,7 +109,7 @@ ggplot(arnold_data_endo, aes(y = 1/sqrt(Zr_v), x = tanh(Zr))) +
 
 <br>
 
-#### **Question 1: What do we expect if publication bias were present?** {.tabset .tabset-fade .tabset-pills} 
+#### **Question 1: What do we expect to see in the funnel plot if publication bias were present?** {.tabset .tabset-fade .tabset-pills} 
 
 >**In the literature we predict a positive correlation between metabolic rate and fitness. Think about what you would expect the funnel plot to look like, and why, if a 'file-drawer' bias existed.**
 
