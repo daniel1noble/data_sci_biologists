@@ -3,7 +3,6 @@ title: "Introduction to Meta-analysis"
 author: Daniel W.A. Noble
 date: '`r Sys.Date()`'
 bibliography: ./bib/refs.bib
-csl: ./bib/the-journal-of-experimental-biology.csl
 output:
   bookdown::html_document2:
     css: style.css
@@ -153,8 +152,8 @@ Let's now have a look at our sampling distribution of means that we calculated f
 # Now lets plot the sampling distribution. We'll show the real, true mean, 10.8, and the actual mean of the sampling distribution.
 ggplot2::ggplot(tibble(means), aes(x = means)) + 
   geom_histogram(binwidth = 0.02) + 
-  geom_vline(xintercept = 10.8, col = "red") +                     # Add the true mean in red
-  geom_vline(xintercept = mean(means), col = "blue", linetype = 2) # Add the mean of the means
+  geom_vline(xintercept = 10.8, col = "red") +                  
+  geom_vline(xintercept = mean(means), col = "blue", linetype = 2)
 ```
 
 Great. We can see that our mean of the sampling distribution matches our true mean, just like we expect. 
@@ -200,8 +199,8 @@ I'm going to assume here that you're super critical and you don't believe me (go
 # Now lets plot the sampling distribution. We'll show the real, true mean, 0.67, and the actual mean of the sampling distribution.
 ggplot2::ggplot(tibble(lnrr), aes(x = lnrr)) + 
   geom_histogram(binwidth = 0.02) +
-  geom_vline(xintercept = log(10.8 / 5.5), col = "red") +                     # Add the true mean in red
-  geom_vline(xintercept = mean(lnrr), col = "blue", linetype = 2) + # Add the mean of the means
+  geom_vline(xintercept = log(10.8 / 5.5), col = "red") + 
+  geom_vline(xintercept = mean(lnrr), col = "blue", linetype = 2) +
   labs(x = "log Response Ratio (lnRR)")
 ```
 
