@@ -262,9 +262,9 @@ Great! That was easy. Just like any old linear mixed effect model we can just ad
 
 But wait, the intercept in this model is really different from `metareg_v`. Why? Well, this is expected because the interpretation of the intercept is the mean effect size when `Year` **and** sampling variance = 0! That's just weird right? What does a Year of 0 really mean?
 
-It turns out that we can `trick` the model into estimating an intercept -- the overall meta-analytic mean -- that is more relevant and interpretable for us. To do that, we can 'centre' the `Year` variable. Remember back to *workshop 8 on Statistical Models* where we subtracted the mouse mass from the cage mean? Yep, it's the same thing! 
+It turns out that we can `trick` the model into estimating an intercept -- the overall meta-analytic mean -- that is more relevant and interpretable for us. To do that, we can 'centre' the `Year` variable. Remember back to *workshop 8 on Statistical Models* where we subtracted the mouse mass from the cage mean? Yep, it's the same thing, we just don't square it.
 
-What does centering do for us here? Well, for simplicity, we can center on the mean of the `Year` column by simply subtracting every value of `Year` by the "mean year". This changes the variable so that 0 is now the mean Year in the data set. Why don't you do that in the code block below. Use the `tidyverse` :
+What does centering do for us here? Well, for simplicity, we can centre on the mean of the `Year` column by simply subtracting every value of `Year` by the "mean year". This changes the variable so that 0 is now the mean Year in the data set. Why don't you do that in the code block below. Create a new column called `Year_c`. Use the `tidyverse` :
 
 ```{r, centering}
 arnold_data_endo <- arnold_data_endo %>% mutate(Year_c = Year - mean(Year)) # 'ADD YOUR CODE HERE'
