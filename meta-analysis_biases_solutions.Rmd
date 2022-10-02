@@ -130,9 +130,9 @@ ggplot(arnold_data_endo, aes(y = 1/sqrt(Zr_v), x = tanh(Zr))) +
 
 ## **Task 3: Fitting a Multilevel Meta-Regression model to Test and Correct for Publication bias**
 
-So far, the funnel plot has only been a visual tool to determine whether there is a possibility of publication bias existing. While useful, it does have a lot of limitations. We can, however, more formally quantifying (i.e., statistically) if publication bias exists. We can also use meta-regression approaches to try and get a handle on how our meta-analytic mean effect size might change if there were no biases. 
+So far, the funnel plot has only been a visual tool to determine whether there is a possibility of publication bias existing. While useful, it does have a lot of limitations. We can, however, more formally quantify (i.e., statistically) if publication bias exists. We can also use meta-regression approaches to try and get a handle on how our meta-analytic mean effect size might change if there were no biases. 
 
-We can do that by recognizing that the sampling error is expected to co-vary with the magnitude and direction of effect size. In other words, we are making the prediction that, if we fit a meta-regression model that uses sampling variance as a fixed effect / moderator, we expect there to be a significant slope coefficient. That's because there is an unequal distribution of effect sizes on either side of the funnel plot and the mean effect size when the sampling variance is high get shifted resulting in the slope being different from 0. 
+We can do that by recognizing that the sampling error is expected to co-vary with the magnitude and direction of effect size. In other words, we are making the prediction that, if we fit a meta-regression model that uses sampling variance as a fixed effect / moderator, we expect there to be a significant slope coefficient. That's because there is an unequal distribution of effect sizes on either side of the funnel plot and the mean effect size when the sampling variance is high gets shifted resulting in the slope being different from 0. 
 
 To better understand this, lets think about flipping around the funnel plot:
 
