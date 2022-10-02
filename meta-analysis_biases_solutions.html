@@ -10,7 +10,7 @@
 
 
 
-<meta name="date" content="2022-10-01" />
+<meta name="date" content="2022-10-02" />
 
 <title>Meta-analysis: Understanding and detecting publication biases</title>
 
@@ -1607,7 +1607,7 @@ div.tocify {
 
 
 <h1 class="title toc-ignore">Meta-analysis: Understanding and detecting publication biases</h1>
-<h4 class="date">2022-10-01</h4>
+<h4 class="date">2022-10-02</h4>
 
 </div>
 
@@ -1643,7 +1643,7 @@ arnold_data_endo &lt;- arnold_data %&gt;%
                filter(endos == &quot;endo&quot; &amp; Zr &lt;= 3) # Note that one sample that was an extreme outlier was removed in the paper.
 
 # Add in observation-level (residual) column. This column simply counts, from 1 to the number of rows
-arnold_data_endo$obs &lt;- 1:dim(arnold_data_endo)[1] #&quot;ADD YOUR CODE HERE&quot;</code></pre>
+arnold_data_endo$residual &lt;- 1:dim(arnold_data_endo)[1] #&quot;ADD YOUR CODE HERE&quot;</code></pre>
 </div>
 <div id="task-2-visual-inspections-of-possible-publication-bias-funnel-plots" class="section level2">
 <h2><strong>Task 2: Visual inspections of possible publication bias – funnel plots</strong></h2>
@@ -1709,8 +1709,8 @@ Figure 2: Funnel plot showing the precision of effects against their correlation
 </div>
 <div id="task-3-fitting-a-multilevel-meta-regression-model-to-test-and-correct-for-publication-bias" class="section level2">
 <h2><strong>Task 3: Fitting a Multilevel Meta-Regression model to Test and Correct for Publication bias</strong></h2>
-<p>So far, the funnel plot has only been a visual tool to determine whether there is a possibility of publication bias existing. While useful, it does have a lot of limitations. We can, however, more formally quantifying (i.e., statistically) if publication bias exists. We can also use meta-regression approaches to try and get a handle on how our meta-analytic mean effect size might change if there were no biases.</p>
-<p>We can do that by recognizing that the sampling error is expected to co-vary with the magnitude and direction of effect size. In other words, we are making the prediction that, if we fit a meta-regression model that uses sampling variance as a fixed effect / moderator, we expect there to be a significant slope coefficient. That’s because there is an unequal distribution of effect sizes on either side of the funnel plot and the mean effect size when the sampling variance is high get shifted resulting in the slope being different from 0.</p>
+<p>So far, the funnel plot has only been a visual tool to determine whether there is a possibility of publication bias existing. While useful, it does have a lot of limitations. We can, however, more formally quantify (i.e., statistically) if publication bias exists. We can also use meta-regression approaches to try and get a handle on how our meta-analytic mean effect size might change if there were no biases.</p>
+<p>We can do that by recognizing that the sampling error is expected to co-vary with the magnitude and direction of effect size. In other words, we are making the prediction that, if we fit a meta-regression model that uses sampling variance as a fixed effect / moderator, we expect there to be a significant slope coefficient. That’s because there is an unequal distribution of effect sizes on either side of the funnel plot and the mean effect size when the sampling variance is high gets shifted resulting in the slope being different from 0.</p>
 <p>To better understand this, lets think about flipping around the funnel plot:</p>
 <pre class="r"><code>ggplot(arnold_data_endo, aes(y = Zr, x = Zr_v)) + 
   geom_point() + 
@@ -1724,13 +1724,13 @@ Figure 2: Funnel plot showing the precision of effects against their correlation
 Figure 3: Plot of Fisher’s Zr against sampling variance for Zr. A linear model was fit to the data.
 </p>
 </div>
-<p>We can see from Figure <a href="#fig:egger">3</a> that this is essential our funnel plot flipped around. We did this because we now are trying to predict drivers of variation in Zr as a function of sampling variance. We can see from the linear model fit that there appears to be a clear positive slope where the mean effect size is dragged ‘up’ when the sampling variance is large. This is what you would expect with publication bias because there are few effects in the opposite direction, the direction <strong>not</strong> predicted by theory when sample sizes are small, and therefore sampling variance is large.</p>
-<p>However, high heterogeneity / variability in effects could cause this relationship. So too could sources of non-independence or other moderators. <span class="citation">Nakagawa et al. (2022)</span> suggests fitting a multilevel meta-regression model with sampling variance along with other moderators or random effects to account for as many drivers of effect size heterogeneity as possible when testing if the slope is significant or not.</p>
-<p>Let’s now apply the method proposed above to <span class="citation">Arnold et al. (2021)</span>’s data. To simplify, we are just going to remove other moderators and only fit Zr_V. This just simplifies the interpretation of the intercept, but we could always include other moderators in this model as well. We will, however, control for a key source of non-independence, study id (called <code>Ref</code>), and we’ll explicitly estimate a within study variance (<code>obs</code>) as well.</p>
+<p>We can see from Figure <a href="#fig:egger">3</a> that this is essentially our funnel plot flipped around. We did this because we now are trying to predict variation in Zr as a function of sampling variance. We can see from the linear model fit that there appears to be a clear positive slope where the mean effect size is dragged ‘up’ when the sampling variance is large. This is what you would expect with publication bias because there are few effects in the opposite direction, the direction <strong>not</strong> predicted by our hypothesis when sample sizes are small, and therefore sampling variance is large. The idea here is that these studies are hard to publish or authors are just less likely to belive them, and therefore not publish them.</p>
+<p>However, high heterogeneity / variability in effects could cause this relationship. So to could sources of non-independence or other moderators. <span class="citation">Nakagawa et al. (2022)</span> suggests fitting a multilevel meta-regression model with sampling variance along with other moderators or random effects to account for as many drivers of effect size heterogeneity as possible when testing if the slope is significant or not.</p>
+<p>Let’s now apply the method proposed above to <span class="citation">Arnold et al. (2021)</span>’s data. To simplify, we are just going to remove other moderators and only fit Zr_V. This just simplifies the interpretation of the intercept, but we could always include other moderators in this model as well. We will, however, control for a key source of non-independence, study id (called <code>Ref</code>), and we’ll explicitly estimate a within study variance (`residual``) as well.</p>
 <pre class="r"><code># Including sampling variance as moderator
 metareg_v &lt;- rma.mv(Zr ~ Zr_v, V = Zr_v, 
                     random = list(~1|Ref, 
-                                  ~1|obs), 
+                                  ~1|residual), 
                     test = &quot;t&quot;, dfs = &quot;contain&quot;, 
                     data = arnold_data_endo)
 summary(metareg_v)</code></pre>
@@ -1742,9 +1742,9 @@ summary(metareg_v)</code></pre>
 ## 
 ## Variance Components:
 ## 
-##             estim    sqrt  nlvls  fixed  factor 
-## sigma^2.1  0.0559  0.2364     62     no     Ref 
-## sigma^2.2  0.0381  0.1953    209     no     obs 
+##             estim    sqrt  nlvls  fixed    factor 
+## sigma^2.1  0.0559  0.2364     62     no       Ref 
+## sigma^2.2  0.0381  0.1953    209     no  residual 
 ## 
 ## Test for Residual Heterogeneity:
 ## QE(df = 207) = 840.6907, p-val &lt; .0001
@@ -1783,7 +1783,7 @@ r2</code></pre>
 </div>
 <div id="task-4-visual-inspections-of-possible-publication-bias-time-lag-bias" class="section level2">
 <h2><strong>Task 4: Visual inspections of possible publication bias – time-lag bias</strong></h2>
-<p>Time-lag bias is a very common form of publication bias that results from a change in the average effect size with the accumulation of new studies. Often, under-powered studies that find surprising results are published first, and these initial studies usually stimulate a swath of new experiments seeking to test whether such a pattern exists in the new study system. To some extent, this is a good thing, and is expected. We need studies to replicate the finding so we are not fooled by the result.</p>
+<p>Time-lag bias is a very common form of publication bias that results from a change in the average effect size with the accumulation of new studies. Often, under-powered studies that find surprising results are published first, and these initial studies usually stimulate a swath of new experiments seeking to test whether such a pattern exists in a new study system. To some extent, this is a good thing, and is expected. We need studies to replicate the finding so we are not fooled by the result.</p>
 <p>We know though that small studies are susceptible to huge sampling error. This can result in over-inflated effect sizes. As more studies accumulate, the average effect size usually converges on the ‘true’ mean.</p>
 <p>Time-lag bias is usually depicted in two ways. First, using what is called a ‘cumulative meta-analysis’. This is where we conduct a meta-analysis on a subset of data adding to this data as we move through time. We usually visualise this using what is called a ‘cumulative forest plot’.</p>
 <p>Second, we can also test whether the mean effect size changes with the year of publication using visual and meta-regression approaches.</p>
@@ -1818,7 +1818,7 @@ Figure 4: Plot of Zr as a function of publication year. Points are scaled in rel
 <pre class="r"><code># Including sampling variance as moderator
 metareg_time &lt;- rma.mv(Zr ~ Year, V = Zr_v, 
                     random = list(~1|Ref, 
-                                  ~1|obs), 
+                                  ~1|residual), 
                     test = &quot;t&quot;, dfs = &quot;contain&quot;, 
                     data = arnold_data_endo)
 summary(metareg_time)</code></pre>
@@ -1830,9 +1830,9 @@ summary(metareg_time)</code></pre>
 ## 
 ## Variance Components:
 ## 
-##             estim    sqrt  nlvls  fixed  factor 
-## sigma^2.1  0.0725  0.2693     62     no     Ref 
-## sigma^2.2  0.0370  0.1923    209     no     obs 
+##             estim    sqrt  nlvls  fixed    factor 
+## sigma^2.1  0.0725  0.2693     62     no       Ref 
+## sigma^2.2  0.0370  0.1923    209     no  residual 
 ## 
 ## Test for Residual Heterogeneity:
 ## QE(df = 207) = 935.0576, p-val &lt; .0001
@@ -1864,11 +1864,11 @@ r2_time</code></pre>
 <p>Time-lag explains 13.83% of the variation in Zr. “ADD YOUR ANSWER HERE”</p>
 </blockquote>
 <p><br></p>
-<p>It’s clear that we have evidence of a time-lag bias. The mean effect size is predicted to decrease as more studies accumulate! But, wait, we also have evidence for other possible publication biases, such as the file-drawer effects. We can actually create a model that accounts for <strong>both</strong> of these effects, and that accounts for possible covariance between the two (i.e., sampling variance is expected to be high in early years). Let’s fit that model.</p>
+<p>It’s clear that we have evidence of a time-lag bias. The mean effect size is predicted to decrease as more studies accumulate! But, wait, we also have evidence for other possible publication biases, such as the file-drawer effects. We can actually create a model that accounts for <strong>both</strong> of these effects, and that accounts for the possible covariance between the two (i.e., sampling variance is expected to be high in early years). Let’s fit that model.</p>
 <pre class="r"><code># Including sampling variance and year as moderators to account for both!
 metareg_time &lt;- rma.mv(Zr ~ Year + Zr_v, V = Zr_v, 
                     random = list(~1|Ref, 
-                                  ~1|obs), 
+                                  ~1|residual), 
                     test = &quot;t&quot;, dfs = &quot;contain&quot;, 
                     data = arnold_data_endo)
 summary(metareg_time)</code></pre>
@@ -1880,9 +1880,9 @@ summary(metareg_time)</code></pre>
 ## 
 ## Variance Components:
 ## 
-##             estim    sqrt  nlvls  fixed  factor 
-## sigma^2.1  0.0513  0.2266     62     no     Ref 
-## sigma^2.2  0.0377  0.1942    209     no     obs 
+##             estim    sqrt  nlvls  fixed    factor 
+## sigma^2.1  0.0513  0.2266     62     no       Ref 
+## sigma^2.2  0.0377  0.1942    209     no  residual 
 ## 
 ## Test for Residual Heterogeneity:
 ## QE(df = 206) = 833.3231, p-val &lt; .0001
@@ -1904,16 +1904,16 @@ r2_time_sv &lt;- orchaRd::r2_ml(metareg_time) #&quot;ADD YOUR CODE HERE&quot;
 r2_time_sv</code></pre>
 <pre><code>##    R2_marginal R2_conditional 
 ##           0.36           0.73</code></pre>
-<p>Great! That was easy. Just like any old linear mixed effect model we can just add moderators / fixed effects to the formula. Here, we can see that there is clear evidence, even when accounting for the covariance between the two, both file-drawer and time-lag biases in these data.</p>
+<p>Great! That was easy. Just like any old linear mixed effect model we can just add moderators / fixed effects to the formula. Here, we can see that there is clear evidence, even when accounting for the covariance between the two, for both file-drawer and time-lag biases in these data.</p>
 <p>But wait, the intercept in this model is really different from <code>metareg_v</code>. Why? Well, this is expected because the interpretation of the intercept is the mean effect size when <code>Year</code> <strong>and</strong> sampling variance = 0! That’s just weird right? What does a Year of 0 really mean?</p>
-<p>It turns out we can <code>trick</code> the model into estimating an intercept – the overall meta-analytic mean – that is more relevant and interpretable for us. To do that, we can ‘centre’ the <code>Year</code> variable. Remember back to <em>workshop 8 on Statistical Models</em> where we subtracted the mouse mass from the cage mean? Yep, it’s the same thing!</p>
+<p>It turns out that we can <code>trick</code> the model into estimating an intercept – the overall meta-analytic mean – that is more relevant and interpretable for us. To do that, we can ‘centre’ the <code>Year</code> variable. Remember back to <em>workshop 8 on Statistical Models</em> where we subtracted the mouse mass from the cage mean? Yep, it’s the same thing!</p>
 <p>What does centering do for us here? Well, for simplicity, we can center on the mean of the <code>Year</code> column by simply subtracting every value of <code>Year</code> by the “mean year”. This changes the variable so that 0 is now the mean Year in the data set. Why don’t you do that in the code block below. Use the <code>tidyverse</code> :</p>
 <pre class="r"><code>arnold_data_endo &lt;- arnold_data_endo %&gt;% mutate(Year_c = Year - mean(Year)) # &#39;ADD YOUR CODE HERE&#39;</code></pre>
 <p>Great, now we have added our centered on the mean Year and called this new variable <code>Year_c</code>. We can now refit the model using <code>Year_c</code> instead of year. Do that in the code chunk below:</p>
 <pre class="r"><code># Including sampling variance and mean centered year as moderators to account for both!
 metareg_time_c &lt;- rma.mv(Zr ~ Year_c + Zr_v, V = Zr_v, 
                     random = list(~1|Ref, 
-                                  ~1|obs), 
+                                  ~1|residual), 
                     test = &quot;t&quot;, dfs = &quot;contain&quot;, 
                     data = arnold_data_endo)
 summary(metareg_time_c) # &#39;ADD YOUR CODE HERE&#39;</code></pre>
@@ -1925,9 +1925,9 @@ summary(metareg_time_c) # &#39;ADD YOUR CODE HERE&#39;</code></pre>
 ## 
 ## Variance Components:
 ## 
-##             estim    sqrt  nlvls  fixed  factor 
-## sigma^2.1  0.0513  0.2266     62     no     Ref 
-## sigma^2.2  0.0377  0.1942    209     no     obs 
+##             estim    sqrt  nlvls  fixed    factor 
+## sigma^2.1  0.0513  0.2266     62     no       Ref 
+## sigma^2.2  0.0377  0.1942    209     no  residual 
 ## 
 ## Test for Residual Heterogeneity:
 ## QE(df = 206) = 833.3231, p-val &lt; .0001
@@ -1945,12 +1945,12 @@ summary(metareg_time_c) # &#39;ADD YOUR CODE HERE&#39;</code></pre>
 ## ---
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
 <p>What happened? The model has changed, and in particular the <code>intrcpt</code>. Why? Well, have a think about the meaning of the <code>intrcpt</code>. It is the mean when <code>Year_c</code> and <code>Zr_v</code> are both set to 0. But, remember now that a value of <code>Year_c</code> that is 0 actually means an ‘average Year’ (we could of course have centered it on other years…maybe 2022?). This changes the interpretation of the <code>intrcpt</code>! That explains why the value of <code>intrcpt</code> is different.</p>
-<p>What’s really cool here is that, now, we have been able to deal with both types of publication bias in a single model and re-estimate (i.e., predict) what the mean Zr value is when sampling variance is 0 and for an average year in the dataset.</p>
+<p>What’s really cool here is that, now, we have been able to deal with both types of publication bias in a single model and re-estimate (i.e., predict) what the mean Zr value is when sampling variance is 0 and for an average year in the dataset, which we hope will be around the point when the average effect size begins to converge on the true mean.</p>
 <p><br></p>
 </div>
 </div>
-<div id="question-5-what-is-the-average-correlation-between-metabolism-and-fitness-now-predicted-to-be-when-we-account-for-publication-biases" class="section level4 tabset tabset-fade tabset-pills">
-<h4><strong>Question 5: What is the average correlation between metabolism and fitness now predicted to be when we account for publication biases?</strong></h4>
+<div id="question-5-what-is-the-average-correlation-between-metabolism-and-fitness-now-predicted-to-be-when-we-account-for-both-sources-of-publication-bias" class="section level4 tabset tabset-fade tabset-pills">
+<h4><strong>Question 5: What is the average correlation between metabolism and fitness now predicted to be when we account for both sources of publication bias?</strong></h4>
 <blockquote>
 <p><strong>Note</strong>: Write out your answer using in-line code chunks that extract the relevant values from the model object.</p>
 </blockquote>
