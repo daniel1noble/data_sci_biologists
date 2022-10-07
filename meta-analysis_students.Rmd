@@ -131,7 +131,7 @@ Other important variables in the dataset are `study_ID`, which is the identifier
 We now want to convert the correlation (`corr_coeff`) to Zr instead of using the correlation (r) itself because Zr will satisfy assumptions of normality that are inherent to meta-analytic models. We can use the `escalc` function in the R package `metafor` to do that for us. Explore the help file for `escalc` and write some code to calculate Zr and its associated sampling variance. `escalc` can do this and add it to the data frame. Use the `var.names` argument to rename the effect size and sampling variance to "Zr" and "V_Zr". In other words, set the argument to `var.names = c("Zr", "V_Zr")`.
 
 ```{r, Zrcalc}
-# Calculate Fisher's r-to-z transformed correlation coefficient (ZCOR) as yi = effect size and vi = sampling variances, where ri = raw correlation coefficients, and ni = sample size.
+# Calculate Fisher's r-to-z transformed correlation coefficient (in escalc it's called "ZCOR" and specified in the 'measure' argument. See ?escalc). Additional arguments that are important for this effect size include ri = raw correlation coefficients, and ni = sample size, which are needed based on the formulas above. Remember to also include the var.names = c("Zr", "V_Zr") argument.
 zr_data <-  #"ADD YOUR CODE HERE"
 
 zr_data %>% slice_head(n = 5)
