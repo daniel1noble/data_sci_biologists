@@ -1,0 +1,291 @@
+---
+title: "Meta-analysis: Understanding and detecting publication biases"
+date: "`r Sys.Date()`"
+bibliography: ./bib/refs.bib
+output: 
+  bookdown::html_document2:
+    code_folding: show
+    number_sections: no
+    toc: yes
+    toc_depth: 6
+    toc_float: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, cache = FALSE, tidy = TRUE)
+options(digits=2)
+```
+
+```{r libraries, echo=FALSE, include=TRUE, message=FALSE, warning=FALSE}
+# Load packages
+pacman::p_load(metafor, flextable, tidyverse, orchaRd, pander, mathjaxr, equatags, vembedr, tidyverse)
+
+# To use mathjaxr you need to run equatags::mathjax_install()
+```
+
+## **Publication biases and what to do about them?**
+
+Meta-analyst's have worked hard to develop tools that can be used to try and understand different forms of publication practices and biases within the scientific literature. Such biases can occur if studies reporting non-significant or opposite results to what is predicted are not found in systematic searches ['i.e., the 'file-drawer' problem; @Jennions2013]. Alternatively, biases could result from selective reporting or 'p-hacking'. 
+
+Visual and quantitative tools have been developed to try and identify and 'correct' for such effects on meta-analytic results [@Jennions2013; @Nakagawa2021b; @Rothstein2005]. Having said that, aside from working hard to try and incorporate 'gray literature' (unpublished theses, government reports, etc.) and work done in non-English speaking languages, there is little one can truly due to counteract publication biases beyond a few simple tools. We cannot know for certain what isn't published in many cases or how a sample of existing work on a topic might be biased. Nonetheless, exploring the possibility of publication bias and its possible effects on conclusions is a core component of meta-analysis [@ODea2021]. 
+
+
+## **Setting the scene: Meta-analysis of studies estimating the correlation between metabolism and fitness**
+
+We're going to have a look at a meta-analysis by @Arnold2021 that explores the relationship between resting metabolic rate and fitness in animals. Publication bias is slightly subtle in this particular meta-analysis, but it does appear to be present in some form both visually and analytically. 
+
+Below we have provided code-chunks for you. Where it says "ADD YOUR CODE HERE" or "ADD YOUR ANSWER HERE" you should delete this text and provide the necessary code or answer to complete the task.
+
+## **Task 1: Download the Data and Clean it up**
+
+First, lets download the data and do some cleaning. Use your coding skills to clean up the dataset based on what the annotated text is telling you to do:
+
+```{r rawdata, message=FALSE, warning=FALSE}
+# Packages
+pacman::p_load(tidyverse, metafor, orchaRd)
+
+# Download the data. Exclude NA in r and sample size columns
+arnold_data <- read_csv("https://raw.githubusercontent.com/pieterarnold/fitness-rmr-meta/main/MR_Fitness_Data_revised.csv")
+
+# Exclude some NA's in sample size and r
+arnold_data <-  #"ADD YOUR CODE HERE"
+
+# Calculate the effect size, ZCOR. Make sure to use escalc and add in the "var.names = c("Zr", "Zr_v")" argument.
+arnold_data <-  #"ADD YOUR CODE HERE"
+
+# Lets subset to endotherms 
+arnold_data_endo <- arnold_data %>% 
+               mutate(endos = ifelse(Class %in% c("Mammalia", "Aves"), "endo", "ecto")) %>% 
+               filter(endos == "endo" & Zr <= 3) # Note that one sample that was an extreme outlier was removed in the paper.
+
+# Add in observation-level (residual) column. This column simply counts, from 1 to the number of rows
+arnold_data_endo$residual <-  #"ADD YOUR CODE HERE"
+```
+
+## **Task 2: Visual inspections of possible publication bias -- funnel plots**
+
+Funnel plots are by far the most common visual tool for assessing the possibility of publication bias [@Nakagawa2021b]. Just like any exploratory analysis, these are just visual tools. Let's have a look at a funnel plot of the data. 
+
+Funnel plots plot the effect size (in this case Zr, on the x-axis) against some form of uncertainty around the effect size, such as sampling variance (e.g., v_Zr) or precision (1 / sqrt(v_Zr)) on the y-axis. 
+
+If no publication bias exists then we would expect the plot to look fairly symmetrical and funnel shaped (hence why it's called a funnel plot!). The reason why the shape is a funnel is because the sampling variance is expected to decrease (or the precision increase) when the sample size, and thus power, increases. 
+
+'High-powered' studies are at the top of the 'funnel' in the narrow-necked region, so to say, because we expect the effect size from these studies to fluctuate very little based on the sampling process. Think back to your sampling distribution. When sample sizes were very large, the sampling distribution becomes very narrow! 
+
+In contrast, as the power of studies decrease (small sample sizes), and therefore their sampling variance increases, we expect the spread of effect sizes to increase simply because small sample sizes results in greater variability of effects and effects that are larger in magnitude (by chance alone). 
+
+Lets use `metafor` to make these plots for us. To do that you can use the `funnel` function:
+
+```{r funnel, echo=TRUE, fig.align='center', fig.cap= "Funnel plot depicting the correlation between metabolism and fitness as a function of precision (1 / SE). The dotted lines are the theoretical 95% sampling variance intervals - the interval with which we expect effect size estimates to fall within if only sampling variance drives differences in effects. Shaded regions represent the p-value of studies. The white region indicates studies where the p-value is between 0.1 and 1; dark gray where the p-value of studies is between 0.05 and 0.1 and the lighter gray regions where the p-value of studies is significant." }
+
+# Lets make a funnel plot to visualize the data in relation to the precision, inverse sampling standard error, 
+metafor::funnel(x = arnold_data_endo$Zr, vi = arnold_data_endo$Zr_v, 
+                yaxis = "seinv", digits = 2, 
+                level = c(0.1, 0.05, 0.01), 
+                shade = c("white", "gray55", "gray 75"), las = 1, 
+                xlab = "Correlation Coefficient (r)", atransf=tanh, legend = TRUE)
+
+```
+
+Here, we are setting a number of arguments. For greater detail you can look at the help file (`?funnel`), but we'll explain a bit here:
+
+1) `x` is the vector of effect sizes, Zr, you want plotted
+2) `vi` is the vector of sampling variance estimates for each effect size, Zr_v
+3) `yaxis` sets the type of sampling variance you want plotted `seinv` is the precision, or the inverse of the sampling standard error. Remember, to get from the sampling variance to the sampling standard error we just sqrt(Zr_v).
+4) The `level` argument will plot contours, making this plot what we call a `contour enhanced funnel plot`. The contours relate to the level of statistical significance for each effect. See the legend.
+5) `atransf` will transform Zr back to the correlation coefficient. 
+
+We can see from Fig. \@ref(fig:funnel) above the typical funnel shape. You will notice that most effects lie in the positive correlation space -- in other words there is a positive correlation between BMR and fitness. However, we also find some studies that show the opposite pattern. We expect that based on sampling theory alone, and indeed many of these effects fall close to the dotted sampling error intervals. Studies in the light grey regions are studies where the p-value was significant. 
+
+You can also make funnel plots using `ggplot`. Don't worry about making a contour-enhanced version, just try making a simple funnel plot in the code chunk below. Remember to label your axes nicely. You can do that with the `labs()` function in `ggplot`.
+
+```{r, ggplotfunnel, fig.align='center', fig.cap="Funnel plot showing the precision of effects against their correlation"}
+
+"ADD YOUR CODE HERE"
+
+```
+
+<br>
+
+#### **Question 1: What do we expect to see in the funnel plot if publication bias were present?** {.tabset .tabset-fade .tabset-pills} 
+
+>**In the literature we predict a positive correlation between metabolic rate and fitness. Think about what you would expect the funnel plot to look like, and why, if a 'file-drawer' bias existed.**
+
+<br>
+
+
+##### Your answer! {.tabset .tabset-fade .tabset-pills}
+
+> "ADD YOUR ANSWER HERE"
+
+<br>
+
+##### Interpret the Funnel Plot {.tabset .tabset-fade .tabset-pills}
+>"ADD YOUR ANSWER HERE"
+
+<br>
+
+
+## **Task 3: Fitting a Multilevel Meta-Regression model to Test and Correct for Publication bias**
+
+So far, the funnel plot has only been a visual tool to determine whether there is a possibility of publication bias existing. While useful, it does have a lot of limitations. We can, however, more formally quantify (i.e., statistically) if publication bias exists. We can also use meta-regression approaches to try and get a handle on how our meta-analytic mean effect size might change if there were no biases. 
+
+We can do that by recognizing that the sampling error is expected to co-vary with the magnitude and direction of effect size. In other words, we are making the prediction that, if we fit a meta-regression model that uses sampling variance as a fixed effect / moderator, we expect there to be a significant slope coefficient. That's because there is an unequal distribution of effect sizes on either side of the funnel plot and the mean effect size when the sampling variance is high gets shifted resulting in the slope being different from 0. 
+
+To better understand this, lets think about flipping around the funnel plot:
+
+```{r, egger, fig.align='center',fig.cap= "Plot of Fisher's Zr against sampling variance for Zr. A linear model was fit to the data."}
+"ADD YOUR CODE HERE"
+```
+
+We can see from Figure \@ref(fig:egger) that this is essentially our funnel plot flipped around. We did this because we now are trying to predict variation in Zr as a function of sampling variance. We can see from the linear model fit that there appears to be a clear positive slope where the mean effect size is dragged 'up' when the sampling variance is large. This is what you would expect with publication bias because there are few effects in the opposite direction, the direction **not** predicted by our hypothesis when sample sizes are small, and therefore sampling variance is large. The idea here is that these studies are hard to publish or authors are just less likely to believe them, and therefore not publish them.
+
+However, high heterogeneity / variability in effects could cause this relationship. So to could sources of non-independence or other moderators. @Nakagawa2021b suggests fitting a multilevel meta-regression model with sampling variance along with other moderators or random effects to account for as many drivers of effect size heterogeneity as possible when testing if the slope is significant or not.
+
+Let's now apply the method proposed above to @Arnold2021's data. To simplify, we are just going to remove other moderators and only fit Zr_V. This just simplifies the interpretation of the intercept, but we could always include other moderators in this model as well. We will, however, control for a key source of non-independence, study id (called `Ref`), and we'll explicitly estimate a within study variance (`residual`) as well. 
+
+```{r V, echo=TRUE}
+# Including sampling variance as moderator
+metareg_v <- rma.mv(Zr ~ Zr_v, V = Zr_v, 
+                    random = list(~1|Ref, 
+                                  ~1|residual), 
+                    test = "t", dfs = "contain", 
+                    data = arnold_data_endo)
+summary(metareg_v)
+
+# How much variation does this model explain in Zr?
+r2 <- orchaRd::r2_ml(metareg_v)
+r2
+```
+
+We can see that sampling variance explains `r r2[1]*100`% of effect size variance. This is the marginal $R^2$, which tell us how much variation the 'fixed effects' or moderators explain in the model. Conditional $R^2$ tells us that the full model, that accounts for the both the fixed and random effects, explains `r r2[2]*100`% of variance in effect size.
+
+<br>
+
+#### **Question 2: Is there evidence for publication bias? If so, what is the adjusted meta-analytic mean estimate?**  {.tabset .tabset-fade .tabset-pills} 
+
+> **Note**: Write out your answer using in-line code chunks that extract the relevant values from the model object.
+
+##### Your Answer! {.tabset .tabset-fade .tabset-pills}
+
+> "ADD YOUR ANSWER HERE"
+
+<br>
+
+
+## **Task 4: Visual inspections of possible publication bias -- time-lag bias**
+
+Time-lag bias is a very common form of publication bias that results from a change in the average effect size with the accumulation of new studies. Often, under-powered studies that find surprising results are published first, and these initial studies usually stimulate a swath of new experiments seeking to test whether such a pattern exists in a new study system. To some extent, this is a good thing, and is expected. We need studies to replicate the finding so we are not fooled by the result.
+
+We know though that small studies are susceptible to huge sampling error. This can result in over-inflated effect sizes. As more studies accumulate, the average effect size usually converges on the 'true' mean. 
+
+Time-lag bias is usually depicted in two ways. First, using what is called a 'cumulative meta-analysis'. This is where we conduct a meta-analysis on a subset of data adding to this data as we move through time. We usually visualise this using what is called a 'cumulative forest plot'.
+
+Second, we can also test whether the mean effect size changes with the year of publication using visual and meta-regression approaches. 
+
+Given the two methods are similar, we'll focus on the second option to keep things simple. 
+
+Let's first focus on some visuals in this task. Let's visualize whether we see any relationship between *average effect size* and the *year of publication*? Use `ggplot` to do this. Scale the size of the points based on their sampling error. Remember to clearly label the axes and the legend.
+
+
+```{r, yearbubble,fig.align='center',fig.cap="Plot of Zr as a function of publication year. Points are scaled in relation to their precision (1/sqrt(Zr_v)). Small points indicate effects with low precision or high sampling varaince"}
+
+"ADD YOUR CODE HERE"
+
+```
+
+Would you look at that! 
+
+<br>
+
+#### **Question 3: There are a few key things to takeaway from Figure \@ref(fig:yearbubble) which seem to support our suspicions about time-lag bias being present in these data. Describe three important features that stand out.**  {.tabset .tabset-fade .tabset-pills} 
+
+##### Your Answer! {.tabset .tabset-fade .tabset-pills}
+
+"ADD YOUR ANSWER HERE"
+
+<br>
+
+## **Task 5: Quantifying time lag bias using multilevel meta-regression**
+
+```{r timelagmodel, echo=TRUE}
+# Including Year as moderator
+metareg_time <- #"ADD YOUR CODE HERE"
+summary(metareg_time)
+
+# How much variation does time when results were published explain in Zr?
+r2_time <-  #"ADD YOUR CODE HERE"
+r2_time
+```
+
+#### **Question 4: How much variation in Zr among studies is driven by changes through time?**  {.tabset .tabset-fade .tabset-pills} 
+
+> **Note**: Write out your answer using in-line code chunks that extract the relevant values from the model object.
+
+##### Your Answer! {.tabset .tabset-fade .tabset-pills}
+
+>   "ADD YOUR ANSWER HERE"
+
+<br>
+
+
+It's clear that we have evidence of a time-lag bias. The mean effect size is predicted to decrease as more studies accumulate! But, wait, we also have evidence for other possible publication biases, such as 'file-drawer' effects. We can actually create a model that accounts for **both** of these effects, and that accounts for the possible covariance between the two (i.e., sampling variance is expected to be high in early years). Let's fit that model.
+
+
+```{r timelagSvmodel, echo=TRUE}
+# Including sampling variance and year as moderators to account for both!
+metareg_time <- #"ADD YOUR CODE HERE"
+summary(metareg_time)
+
+# How much variation does time when results were published explain in Zr?
+r2_time_sv <-  #"ADD YOUR CODE HERE"
+r2_time_sv
+```
+
+Great! That was easy. Just like any old linear mixed effect model we can just add moderators / fixed effects to the formula. Here, we can see that there is clear evidence, even when accounting for the covariance between the two, for both file-drawer and time-lag biases in these data. 
+
+But wait, the intercept in this model is really different from `metareg_v`. Why? Well, this is expected because the interpretation of the intercept is the mean effect size when `Year` **and** sampling variance = 0! That's just weird right? What does a Year of 0 really mean?
+
+It turns out that we can `trick` the model into estimating an intercept -- the overall meta-analytic mean -- that is more relevant and more easily interpreted for us. To do that, we can 'centre' the `Year` variable. Remember back to *workshop 8 on Statistical Models* where we subtracted the mouse mass from the cage mean? Yep, it's the same thing, we just don't square it.
+
+What does centering do for us here? Well, for simplicity, we can centre on the mean of the `Year` column by simply subtracting every value of `Year` by the "mean year". This changes the variable so that 0 is now the mean Year in the data set. Why don't you do that in the code block below. Create a new column called `Year_c`. Use the `tidyverse` :
+
+```{r, centering}
+arnold_data_endo <-  # 'ADD YOUR CODE HERE'
+
+```
+
+Great, now we have added our 'centered on the mean' Year and called this new variable `Year_c`. We can now refit the model using `Year_c` instead of year. Do that in the code chunk below:
+
+```{r timelagSvmodelc, echo=TRUE}
+# Including sampling variance and mean centered year as moderators to account for both!
+metareg_time_c <- # 'ADD YOUR CODE HERE'
+summary(metareg_time_c) 
+
+```
+
+What happened? The model has changed, and in particular the `intrcpt`. Why? Well, have a think about the meaning of the `intrcpt`. It is the mean when `Year_c` and `Zr_v` are both set to 0. But, remember now that a value of `Year_c` that is 0 actually means an 'average Year' (we could of course have centered it on other years...maybe 2022?). This changes the interpretation of the `intrcpt`! That explains why the value of `intrcpt` is different. 
+
+What's really cool here is that, now, we have been able to deal with both types of publication bias in a single model and re-estimate (i.e., predict) what the mean Zr value is when sampling variance is 0 and for an average year in the dataset, which we hope will be around the point when the average effect size begins to converge on the true mean.
+
+<br>
+
+#### **Question 5: What is the average correlation between metabolism and fitness now predicted to be when we account for both sources of publication bias?**  {.tabset .tabset-fade .tabset-pills} 
+
+> **Note**: Write out your answer using in-line code chunks that extract the relevant values from the model object.
+
+##### Your Answer! {.tabset .tabset-fade .tabset-pills}
+
+>  "ADD YOUR ANSWER HERE"
+
+<br>
+
+## **Rendering**
+
+>Now that you have completed the Rmarkdown document try rendering it as an HTML. Does it work? If not, why not? If it's working one code chunk at a time try to clear your working directory (i.e., `rm(list = ls()`) and re-run each code chunk. 
+
+## **References**
+
+<div id="refs"></div>
+
+<br>
