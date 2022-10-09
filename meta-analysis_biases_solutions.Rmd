@@ -144,11 +144,11 @@ ggplot(arnold_data_endo, aes(y = Zr, x = Zr_v)) +
   theme_classic()
 ```
 
-We can see from Figure \@ref(fig:egger) that this is essentially our funnel plot flipped around. We did this because we now are trying to predict variation in Zr as a function of sampling variance. We can see from the linear model fit that there appears to be a clear positive slope where the mean effect size is dragged 'up' when the sampling variance is large. This is what you would expect with publication bias because there are few effects in the opposite direction, the direction **not** predicted by our hypothesis when sample sizes are small, and therefore sampling variance is large. The idea here is that these studies are hard to publish or authors are just less likely to belive them, and therefore not publish them.
+We can see from Figure \@ref(fig:egger) that this is essentially our funnel plot flipped around. We did this because we now are trying to predict variation in Zr as a function of sampling variance. We can see from the linear model fit that there appears to be a clear positive slope where the mean effect size is dragged 'up' when the sampling variance is large. This is what you would expect with publication bias because there are few effects in the opposite direction, the direction **not** predicted by our hypothesis when sample sizes are small, and therefore sampling variance is large. The idea here is that these studies are hard to publish or authors are just less likely to believe them, and therefore not publish them.
 
 However, high heterogeneity / variability in effects could cause this relationship. So to could sources of non-independence or other moderators. @Nakagawa2021b suggests fitting a multilevel meta-regression model with sampling variance along with other moderators or random effects to account for as many drivers of effect size heterogeneity as possible when testing if the slope is significant or not.
 
-Let's now apply the method proposed above to @Arnold2021's data. To simplify, we are just going to remove other moderators and only fit Zr_V. This just simplifies the interpretation of the intercept, but we could always include other moderators in this model as well. We will, however, control for a key source of non-independence, study id (called `Ref`), and we'll explicitly estimate a within study variance (`residual``) as well. 
+Let's now apply the method proposed above to @Arnold2021's data. To simplify, we are just going to remove other moderators and only fit Zr_V. This just simplifies the interpretation of the intercept, but we could always include other moderators in this model as well. We will, however, control for a key source of non-independence, study id (called `Ref`), and we'll explicitly estimate a within study variance (`residual`) as well. 
 
 ```{r V, echo=TRUE}
 # Including sampling variance as moderator
@@ -241,7 +241,7 @@ r2_time
 <br>
 
 
-It's clear that we have evidence of a time-lag bias. The mean effect size is predicted to decrease as more studies accumulate! But, wait, we also have evidence for other possible publication biases, such as the file-drawer effects. We can actually create a model that accounts for **both** of these effects, and that accounts for the possible covariance between the two (i.e., sampling variance is expected to be high in early years). Let's fit that model.
+It's clear that we have evidence of a time-lag bias. The mean effect size is predicted to decrease as more studies accumulate! But, wait, we also have evidence for other possible publication biases, such as 'file-drawer' effects. We can actually create a model that accounts for **both** of these effects, and that accounts for the possible covariance between the two (i.e., sampling variance is expected to be high in early years). Let's fit that model.
 
 
 ```{r timelagSvmodel, echo=TRUE}
@@ -262,7 +262,7 @@ Great! That was easy. Just like any old linear mixed effect model we can just ad
 
 But wait, the intercept in this model is really different from `metareg_v`. Why? Well, this is expected because the interpretation of the intercept is the mean effect size when `Year` **and** sampling variance = 0! That's just weird right? What does a Year of 0 really mean?
 
-It turns out that we can `trick` the model into estimating an intercept -- the overall meta-analytic mean -- that is more relevant and interpretable for us. To do that, we can 'centre' the `Year` variable. Remember back to *workshop 8 on Statistical Models* where we subtracted the mouse mass from the cage mean? Yep, it's the same thing, we just don't square it.
+It turns out that we can `trick` the model into estimating an intercept -- the overall meta-analytic mean -- that is more relevant and more easily interpreted for us. To do that, we can 'centre' the `Year` variable. Remember back to *workshop 8 on Statistical Models* where we subtracted the mouse mass from the cage mean? Yep, it's the same thing, we just don't square it.
 
 What does centering do for us here? Well, for simplicity, we can centre on the mean of the `Year` column by simply subtracting every value of `Year` by the "mean year". This changes the variable so that 0 is now the mean Year in the data set. Why don't you do that in the code block below. Create a new column called `Year_c`. Use the `tidyverse` :
 
@@ -271,7 +271,7 @@ arnold_data_endo <- arnold_data_endo %>% mutate(Year_c = Year - mean(Year)) # 'A
 
 ```
 
-Great, now we have added our centered on the mean Year and called this new variable `Year_c`. We can now refit the model using `Year_c` instead of year. Do that in the code chunk below:
+Great, now we have added our 'centered on the mean' Year and called this new variable `Year_c`. We can now refit the model using `Year_c` instead of year. Do that in the code chunk below:
 
 ```{r timelagSvmodelc, echo=TRUE}
 # Including sampling variance and mean centered year as moderators to account for both!
