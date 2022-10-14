@@ -134,7 +134,7 @@ So far, the funnel plot has only been a visual tool to determine whether there i
 
 We can do that by recognizing that the sampling error is expected to co-vary with the magnitude and direction of effect size. In other words, we are making the prediction that, if we fit a meta-regression model that uses sampling variance as a fixed effect / moderator, we expect there to be a significant slope coefficient. That's because there is an unequal distribution of effect sizes on either side of the funnel plot and the mean effect size when the sampling variance is high gets shifted resulting in the slope being different from 0. 
 
-To better understand this, lets think about flipping around the funnel plot:
+To better understand this, lets think about flipping around the funnel plot, but this time lets use the sampling variance, not precision:
 
 ```{r, egger, fig.align='center',fig.cap= "Plot of Fisher's Zr against sampling variance for Zr. A linear model was fit to the data."}
 ggplot(arnold_data_endo, aes(y = Zr, x = Zr_v)) + 
