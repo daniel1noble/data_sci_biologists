@@ -302,7 +302,7 @@ What's really cool here is that, now, we have been able to deal with both types 
 
 ## **Rendering**
 
->Now that you have completed the Rmarkdown document try rendering it as an HTML. Does it work? If not, why not? If it's working one code chunk at a time try to clear your working directory (i.e., `rm(list = ls()`) and re-run each code chunk. 
+>Now that you have completed the Rmarkdown document try rendering it as an HTML. Does it work? If not, why not? Remember that you were giving a ref.bib file. Make sure you have this file in your working directory. Also check that the yaml header (right at the top of the RMarkdown) has the correct path. If it's working one code chunk at a time try to clear your working directory (i.e., `rm(list = ls()`) and re-run each code chunk. 
 
 ## **References**
 
