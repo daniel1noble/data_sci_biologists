@@ -11,7 +11,7 @@
 
 <meta name="author" content />
 
-<meta name="date" content="2022-09-16" />
+<meta name="date" content="2022-10-26" />
 
 <title>Assignment #2: Meta-analysis of Ocean Acidification Effects on Behaviour</title>
 
@@ -363,23 +363,17 @@ overflow-y: auto;
 border: 1px solid #ddd;
 border-radius: 4px;
 }
-.tabset-dropdown > .nav-tabs > li.active:before {
-content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+content: "\e259";
 font-family: 'Glyphicons Halflings';
 display: inline-block;
 padding: 10px;
 border-right: 1px solid #ddd;
 }
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-content: "";
-border: none;
-}
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-content: "";
+content: "\e258";
 font-family: 'Glyphicons Halflings';
-display: inline-block;
-padding: 10px;
-border-right: 1px solid #ddd;
+border: none;
 }
 .tabset-dropdown > .nav-tabs > li.active {
 display: block;
@@ -433,7 +427,7 @@ display: none;
 
 <h1 class="title toc-ignore">Assignment #2: Meta-analysis of Ocean Acidification Effects on Behaviour</h1>
 <h4 class="author"><your name and u number></h4>
-<h4 class="date">2022-09-16</h4>
+<h4 class="date">2022-10-26</h4>
 
 </div>
 
@@ -486,7 +480,7 @@ The goal of this assignment is to conduct a meta-analysis on ocean acidification
 </ol></li>
 <li><strong>Reproducibility (30%)</strong>:
 <ol style="list-style-type: decimal">
-<li>Code, analysis and data is setup in a <strong>public</strong> <em>GitHub</em> Repository</li>
+<li>Code, analysis and data is setup in a <strong>public</strong> <em>GitHub</em> Repository. Make sure you put the <strong>link</strong> to your GitHub repository inside your report.</li>
 <li>Workflow, meta-data and file structure is clearly documented (using a README file) as is the history of changes for each file.</li>
 <li>Rmarkdown documents follow reproducibility principles:
 <ul>

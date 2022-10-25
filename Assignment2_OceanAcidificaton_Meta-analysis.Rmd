@@ -62,7 +62,7 @@ i) **Statistical Analysis and Interpretation (50%)**
     12) Identify any studies contributing to publication bias. How do your updated meta-analysis results compare with a meta-analysis by [Clement *et. al.* (2022)](https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3001511&fbclid=IwAR0RN6uUAu-7ISkFJKe61zN_NSeEcoA6PftgeyEcbFYzqiTfVP9qbtvoG_8)? Are there any concerns about these studies? If so, describe using references to existing papers what concerns have been raised?
 
 ii) **Reproducibility (30%)**:
-    1) Code, analysis and data is setup in a **public** *GitHub* Repository
+    1) Code, analysis and data is setup in a **public** *GitHub* Repository. Make sure you put the **link** to your GitHub repository inside your report.
     2) Workflow, meta-data and file structure is clearly documented (using a README file) as is the history of changes for each file.
     3) Rmarkdown documents follow reproducibility principles:
         + Rmarkdown document rendered as an html!
